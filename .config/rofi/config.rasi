@@ -1,0 +1,9 @@
+configuration {
+    show-icons: true;
+    display-window: "Window";
+    display-drun: "Search";
+}
+
+listview {
+    lines: 12;
+}

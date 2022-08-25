@@ -1,0 +1,8 @@
+2022/08/25-15:43:36.823 38d3 Recovering log #6
+2022/08/25-15:43:36.827 38d3 Level-0 table #8: started
+2022/08/25-15:43:36.839 38d3 Level-0 table #8: 195329 bytes OK
+2022/08/25-15:43:36.844 38d3 Delete type=0 #6
+2022/08/25-15:43:36.844 38d3 Delete type=3 #4
+2022/08/25-15:58:02.684 3b12 Level-0 table #11: started
+2022/08/25-15:58:02.687 3b12 Level-0 table #11: 95705 bytes OK
+2022/08/25-15:58:02.691 3b12 Delete type=0 #9

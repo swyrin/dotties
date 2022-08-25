@@ -1,0 +1,91 @@
+{
+   "author": "JUNO_OKYO",
+   "background": {
+      "scripts": [ "scripts/background.js" ]
+   },
+   "browser_action": {
+      "default_icon": {
+         "19": "images/icon-19.png",
+         "38": "images/icon-38.png"
+      },
+      "default_title": "__MSG_appName__"
+   },
+   "commands": {
+      "_execute_browser_action": {
+         "suggested_key": {
+            "default": "Ctrl+Shift+S",
+            "mac": "Command+Shift+S"
+         }
+      },
+      "toggle_block_seen": {
+         "description": "__MSG_toggleBlockSeen__",
+         "global": false,
+         "suggested_key": {
+            "default": "Alt+S"
+         }
+      },
+      "toggle_block_typing": {
+         "description": "__MSG_toggleBlockTypingChat__",
+         "global": false,
+         "suggested_key": {
+            "default": "Alt+T"
+         }
+      }
+   },
+   "content_scripts": [ {
+      "js": [ "scripts/facebook-middleware.js" ],
+      "matches": [ "https://www.facebook.com/*", "https://www.messenger.com/t/*" ],
+      "run_at": "document_start"
+   }, {
+      "include_globs": [ "https://*/*fbclid=*" ],
+      "js": [ "scripts/contentscript.js" ],
+      "matches": [ "http://*/*", "https://*/*" ],
+      "run_at": "document_start"
+   }, {
+      "all_frames": true,
+      "js": [ "scripts/anti-fb-phishing.js", "scripts/anti-clickjacking.js" ],
+      "matches": [ "http://*/*", "https://*/*" ],
+      "run_at": "document_idle"
+   }, {
+      "all_frames": false,
+      "exclude_matches": [ "https://m.facebook.com/*", "https://touch.facebook.com/*", "https://mobile.facebook.com/*", "https://mbasic.facebook.com/*", "https://graph.facebook.com/*", "https://developers.facebook.com/*", "https://code.facebook.com/*" ],
+      "js": [ "scripts/fb-timer.js" ],
+      "matches": [ "https://*.facebook.com/*" ],
+      "run_at": "document_idle"
+   }, {
+      "all_frames": false,
+      "exclude_matches": [ "https://m.facebook.com/*", "https://touch.facebook.com/*", "https://mobile.facebook.com/*", "https://mbasic.facebook.com/*", "https://graph.facebook.com/*", "https://developers.facebook.com/*", "https://code.facebook.com/*" ],
+      "js": [ "scripts/dark-theme-base.js", "scripts/facebook-dark-theme.js" ],
+      "matches": [ "https://*.facebook.com/*" ],
+      "run_at": "document_start"
+   }, {
+      "all_frames": false,
+      "exclude_matches": [ "https://www.google.com/maps/*" ],
+      "js": [ "scripts/dark-theme-base.js" ],
+      "matches": [ "https://www.google.com/*", "https://www.google.com.vn/*", "https://www.google.com.co/*", "https://www.google.com.bz/*", "https://www.google.co.uk/*", "https://encrypted.google.com/*" ],
+      "run_at": "document_start"
+   }, {
+      "all_frames": false,
+      "js": [ "scripts/shopeefood-analytics-loader.js" ],
+      "matches": [ "https://shopeefood.vn/*" ],
+      "run_at": "document_start"
+   } ],
+   "content_security_policy": "script-src 'self' 'unsafe-eval' https://www.google-analytics.com https://ssl.google-analytics.com https://ajax.googleapis.com https://cdnjs.cloudflare.com; object-src 'self'",
+   "default_locale": "en",
+   "description": "__MSG_appDescription__",
+   "externally_connectable": {
+      "matches": [ "https://j2team.dev/*", "https://j2team.org/*", "https://www.j2team.org/*", "https://giamgia.to/*", "http://localhost:3000/*" ]
+   },
+   "homepage_url": "https://j2team.org/",
+   "icons": {
+      "128": "images/icon-128.png",
+      "16": "images/icon-16.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAqepQd+6I94dIYhNB19WS05uv3lZtW+QSVHjutYO3TGu/zrDEI3Jf8AXDdk97QwM+QQiqsTN8EXpGWFVgCno/TpQVWFhs89BRcnLtKzxCKx8P+hpuRi5wPGGtpAPhrydNdFr5necXjWvzs+xdLzHhCZ2P9EDLY6T+8it3itHcEwkfZAMjvPJq1CNVw8hDA2b8uKIGOfrHYv1LMbDQKgCw9HLRalhoeZ9kccxVrxv13QRlPUBN+6Us/aeuCe85vPyERPUiRCSnmS6a+JJYRwTqtdnHuWd6aMlDRHKonOtaanzBtZf1YaB0XI9mNdlhUl53j3YC9HGu5MynUjVgCRFSIQIDAQAB",
+   "manifest_version": 2,
+   "name": "__MSG_appName__",
+   "permissions": [ "tabs", "http://*/*", "https://*/*", "notifications", "contextMenus", "cookies", "storage", "unlimitedStorage", "webRequest", "webRequestBlocking", "alarms" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.3.8",
+   "web_accessible_resources": [ "images/icon-16.png", "images/icon-48.png", "images/facebook-group.png", "scripts/facebook-content-script.js", "scripts/shopeefood-analytics.js" ]
+}

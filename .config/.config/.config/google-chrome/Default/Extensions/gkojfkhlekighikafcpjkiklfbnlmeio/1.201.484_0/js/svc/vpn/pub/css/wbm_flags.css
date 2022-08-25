@@ -1,0 +1,3906 @@
+.flag {
+  display: inline-block;
+  vertical-align: text-top;
+}
+.f16 i,
+.f16 .flag {
+  width: 16px;
+  height: 16px;
+  line-height: 16px;
+}
+.f16 .ad {
+  background: url('../img/flag/16/ad.png') no-repeat;
+}
+.f16 .ae {
+  background: url('../img/flag/16/ae.png') no-repeat;
+}
+.f16 .af {
+  background: url('../img/flag/16/af.png') no-repeat;
+}
+.f16 .ag {
+  background: url('../img/flag/16/ag.png') no-repeat;
+}
+.f16 .ai {
+  background: url('../img/flag/16/ai.png') no-repeat;
+}
+.f16 .al {
+  background: url('../img/flag/16/al.png') no-repeat;
+}
+.f16 .am {
+  background: url('../img/flag/16/am.png') no-repeat;
+}
+.f16 .an {
+  background: url('../img/flag/16/an.png') no-repeat;
+}
+.f16 .ao {
+  background: url('../img/flag/16/ao.png') no-repeat;
+}
+.f16 .aq {
+  background: url('../img/flag/16/aq.png') no-repeat;
+}
+.f16 .ar {
+  background: url('../img/flag/16/ar.png') no-repeat;
+}
+.f16 .as {
+  background: url('../img/flag/16/as.png') no-repeat;
+}
+.f16 .at {
+  background: url('../img/flag/16/at.png') no-repeat;
+}
+.f16 .au {
+  background: url('../img/flag/16/au.png') no-repeat;
+}
+.f16 .aw {
+  background: url('../img/flag/16/aw.png') no-repeat;
+}
+.f16 .ax {
+  background: url('../img/flag/16/ax.png') no-repeat;
+}
+.f16 .az {
+  background: url('../img/flag/16/az.png') no-repeat;
+}
+.f16 .ba {
+  background: url('../img/flag/16/ba.png') no-repeat;
+}
+.f16 .bb {
+  background: url('../img/flag/16/bb.png') no-repeat;
+}
+.f16 .bd {
+  background: url('../img/flag/16/bd.png') no-repeat;
+}
+.f16 .be {
+  background: url('../img/flag/16/be.png') no-repeat;
+}
+.f16 .bf {
+  background: url('../img/flag/16/bf.png') no-repeat;
+}
+.f16 .bg {
+  background: url('../img/flag/16/bg.png') no-repeat;
+}
+.f16 .bh {
+  background: url('../img/flag/16/bh.png') no-repeat;
+}
+.f16 .bi {
+  background: url('../img/flag/16/bi.png') no-repeat;
+}
+.f16 .bj {
+  background: url('../img/flag/16/bj.png') no-repeat;
+}
+.f16 .bl {
+  background: url('../img/flag/16/bl.png') no-repeat;
+}
+.f16 .bm {
+  background: url('../img/flag/16/bm.png') no-repeat;
+}
+.f16 .bn {
+  background: url('../img/flag/16/bn.png') no-repeat;
+}
+.f16 .bo {
+  background: url('../img/flag/16/bo.png') no-repeat;
+}
+.f16 .br {
+  background: url('../img/flag/16/br.png') no-repeat;
+}
+.f16 .bs {
+  background: url('../img/flag/16/bs.png') no-repeat;
+}
+.f16 .bt {
+  background: url('../img/flag/16/bt.png') no-repeat;
+}
+.f16 .bw {
+  background: url('../img/flag/16/bw.png') no-repeat;
+}
+.f16 .by {
+  background: url('../img/flag/16/by.png') no-repeat;
+}
+.f16 .bz {
+  background: url('../img/flag/16/bz.png') no-repeat;
+}
+.f16 .ca {
+  background: url('../img/flag/16/ca.png') no-repeat;
+}
+.f16 .cc {
+  background: url('../img/flag/16/cc.png') no-repeat;
+}
+.f16 .cd {
+  background: url('../img/flag/16/cd.png') no-repeat;
+}
+.f16 .cf {
+  background: url('../img/flag/16/cf.png') no-repeat;
+}
+.f16 .cg {
+  background: url('../img/flag/16/cg.png') no-repeat;
+}
+.f16 .ch {
+  background: url('../img/flag/16/ch.png') no-repeat;
+}
+.f16 .ci {
+  background: url('../img/flag/16/ci.png') no-repeat;
+}
+.f16 .ck {
+  background: url('../img/flag/16/ck.png') no-repeat;
+}
+.f16 .cl {
+  background: url('../img/flag/16/cl.png') no-repeat;
+}
+.f16 .cm {
+  background: url('../img/flag/16/cm.png') no-repeat;
+}
+.f16 .cn {
+  background: url('../img/flag/16/cn.png') no-repeat;
+}
+.f16 .co {
+  background: url('../img/flag/16/co.png') no-repeat;
+}
+.f16 .cr {
+  background: url('../img/flag/16/cr.png') no-repeat;
+}
+.f16 .cu {
+  background: url('../img/flag/16/cu.png') no-repeat;
+}
+.f16 .cv {
+  background: url('../img/flag/16/cv.png') no-repeat;
+}
+.f16 .cw {
+  background: url('../img/flag/16/cw.png') no-repeat;
+}
+.f16 .cx {
+  background: url('../img/flag/16/cx.png') no-repeat;
+}
+.f16 .cy {
+  background: url('../img/flag/16/cy.png') no-repeat;
+}
+.f16 .cz {
+  background: url('../img/flag/16/cz.png') no-repeat;
+}
+.f16 .de {
+  background: url('../img/flag/16/de.png') no-repeat;
+}
+.f16 .dj {
+  background: url('../img/flag/16/dj.png') no-repeat;
+}
+.f16 .dk {
+  background: url('../img/flag/16/dk.png') no-repeat;
+}
+.f16 .dm {
+  background: url('../img/flag/16/dm.png') no-repeat;
+}
+.f16 .do {
+  background: url('../img/flag/16/do.png') no-repeat;
+}
+.f16 .dz {
+  background: url('../img/flag/16/dz.png') no-repeat;
+}
+.f16 .ec {
+  background: url('../img/flag/16/ec.png') no-repeat;
+}
+.f16 .ee {
+  background: url('../img/flag/16/ee.png') no-repeat;
+}
+.f16 .eg {
+  background: url('../img/flag/16/eg.png') no-repeat;
+}
+.f16 .eh {
+  background: url('../img/flag/16/eh.png') no-repeat;
+}
+.f16 .er {
+  background: url('../img/flag/16/er.png') no-repeat;
+}
+.f16 .es {
+  background: url('../img/flag/16/es.png') no-repeat;
+}
+.f16 .et {
+  background: url('../img/flag/16/et.png') no-repeat;
+}
+.f16 .eu {
+  background: url('../img/flag/16/eu.png') no-repeat;
+}
+.f16 .fi {
+  background: url('../img/flag/16/fi.png') no-repeat;
+}
+.f16 .fj {
+  background: url('../img/flag/16/fj.png') no-repeat;
+}
+.f16 .fk {
+  background: url('../img/flag/16/fk.png') no-repeat;
+}
+.f16 .fm {
+  background: url('../img/flag/16/fm.png') no-repeat;
+}
+.f16 .fo {
+  background: url('../img/flag/16/fo.png') no-repeat;
+}
+.f16 .fr {
+  background: url('../img/flag/16/fr.png') no-repeat;
+}
+.f16 .ga {
+  background: url('../img/flag/16/ga.png') no-repeat;
+}
+.f16 .gb {
+  background: url('../img/flag/16/gb.png') no-repeat;
+}
+.f16 .gd {
+  background: url('../img/flag/16/gd.png') no-repeat;
+}
+.f16 .ge {
+  background: url('../img/flag/16/ge.png') no-repeat;
+}
+.f16 .gg {
+  background: url('../img/flag/16/gg.png') no-repeat;
+}
+.f16 .gh {
+  background: url('../img/flag/16/gh.png') no-repeat;
+}
+.f16 .gi {
+  background: url('../img/flag/16/gi.png') no-repeat;
+}
+.f16 .gl {
+  background: url('../img/flag/16/gl.png') no-repeat;
+}
+.f16 .gm {
+  background: url('../img/flag/16/gm.png') no-repeat;
+}
+.f16 .gn {
+  background: url('../img/flag/16/gn.png') no-repeat;
+}
+.f16 .gq {
+  background: url('../img/flag/16/gq.png') no-repeat;
+}
+.f16 .gr {
+  background: url('../img/flag/16/gr.png') no-repeat;
+}
+.f16 .gs {
+  background: url('../img/flag/16/gs.png') no-repeat;
+}
+.f16 .gt {
+  background: url('../img/flag/16/gt.png') no-repeat;
+}
+.f16 .gu {
+  background: url('../img/flag/16/gu.png') no-repeat;
+}
+.f16 .gw {
+  background: url('../img/flag/16/gw.png') no-repeat;
+}
+.f16 .gy {
+  background: url('../img/flag/16/gy.png') no-repeat;
+}
+.f16 .hk {
+  background: url('../img/flag/16/hk.png') no-repeat;
+}
+.f16 .hn {
+  background: url('../img/flag/16/hn.png') no-repeat;
+}
+.f16 .hr {
+  background: url('../img/flag/16/hr.png') no-repeat;
+}
+.f16 .ht {
+  background: url('../img/flag/16/ht.png') no-repeat;
+}
+.f16 .hu {
+  background: url('../img/flag/16/hu.png') no-repeat;
+}
+.f16 .ic {
+  background: url('../img/flag/16/ic.png') no-repeat;
+}
+.f16 .id {
+  background: url('../img/flag/16/id.png') no-repeat;
+}
+.f16 .ie {
+  background: url('../img/flag/16/ie.png') no-repeat;
+}
+.f16 .il {
+  background: url('../img/flag/16/il.png') no-repeat;
+}
+.f16 .im {
+  background: url('../img/flag/16/im.png') no-repeat;
+}
+.f16 .in {
+  background: url('../img/flag/16/in.png') no-repeat;
+}
+.f16 .iq {
+  background: url('../img/flag/16/iq.png') no-repeat;
+}
+.f16 .ir {
+  background: url('../img/flag/16/ir.png') no-repeat;
+}
+.f16 .is {
+  background: url('../img/flag/16/is.png') no-repeat;
+}
+.f16 .it {
+  background: url('../img/flag/16/it.png') no-repeat;
+}
+.f16 .je {
+  background: url('../img/flag/16/je.png') no-repeat;
+}
+.f16 .jm {
+  background: url('../img/flag/16/jm.png') no-repeat;
+}
+.f16 .jo {
+  background: url('../img/flag/16/jo.png') no-repeat;
+}
+.f16 .jp {
+  background: url('../img/flag/16/jp.png') no-repeat;
+}
+.f16 .ke {
+  background: url('../img/flag/16/ke.png') no-repeat;
+}
+.f16 .kg {
+  background: url('../img/flag/16/kg.png') no-repeat;
+}
+.f16 .kh {
+  background: url('../img/flag/16/kh.png') no-repeat;
+}
+.f16 .ki {
+  background: url('../img/flag/16/ki.png') no-repeat;
+}
+.f16 .km {
+  background: url('../img/flag/16/km.png') no-repeat;
+}
+.f16 .kn {
+  background: url('../img/flag/16/kn.png') no-repeat;
+}
+.f16 .kp {
+  background: url('../img/flag/16/kp.png') no-repeat;
+}
+.f16 .kr {
+  background: url('../img/flag/16/kr.png') no-repeat;
+}
+.f16 .kw {
+  background: url('../img/flag/16/kw.png') no-repeat;
+}
+.f16 .ky {
+  background: url('../img/flag/16/ky.png') no-repeat;
+}
+.f16 .kz {
+  background: url('../img/flag/16/kz.png') no-repeat;
+}
+.f16 .la {
+  background: url('../img/flag/16/la.png') no-repeat;
+}
+.f16 .lb {
+  background: url('../img/flag/16/lb.png') no-repeat;
+}
+.f16 .lc {
+  background: url('../img/flag/16/lc.png') no-repeat;
+}
+.f16 .li {
+  background: url('../img/flag/16/li.png') no-repeat;
+}
+.f16 .lk {
+  background: url('../img/flag/16/lk.png') no-repeat;
+}
+.f16 .lr {
+  background: url('../img/flag/16/lr.png') no-repeat;
+}
+.f16 .ls {
+  background: url('../img/flag/16/ls.png') no-repeat;
+}
+.f16 .lt {
+  background: url('../img/flag/16/lt.png') no-repeat;
+}
+.f16 .lu {
+  background: url('../img/flag/16/lu.png') no-repeat;
+}
+.f16 .lv {
+  background: url('../img/flag/16/lv.png') no-repeat;
+}
+.f16 .ly {
+  background: url('../img/flag/16/ly.png') no-repeat;
+}
+.f16 .ma {
+  background: url('../img/flag/16/ma.png') no-repeat;
+}
+.f16 .mc {
+  background: url('../img/flag/16/mc.png') no-repeat;
+}
+.f16 .md {
+  background: url('../img/flag/16/md.png') no-repeat;
+}
+.f16 .me {
+  background: url('../img/flag/16/me.png') no-repeat;
+}
+.f16 .mf {
+  background: url('../img/flag/16/mf.png') no-repeat;
+}
+.f16 .mg {
+  background: url('../img/flag/16/mg.png') no-repeat;
+}
+.f16 .mh {
+  background: url('../img/flag/16/mh.png') no-repeat;
+}
+.f16 .mk {
+  background: url('../img/flag/16/mk.png') no-repeat;
+}
+.f16 .ml {
+  background: url('../img/flag/16/ml.png') no-repeat;
+}
+.f16 .mm {
+  background: url('../img/flag/16/mm.png') no-repeat;
+}
+.f16 .mn {
+  background: url('../img/flag/16/mn.png') no-repeat;
+}
+.f16 .mo {
+  background: url('../img/flag/16/mo.png') no-repeat;
+}
+.f16 .mp {
+  background: url('../img/flag/16/mp.png') no-repeat;
+}
+.f16 .mq {
+  background: url('../img/flag/16/mq.png') no-repeat;
+}
+.f16 .mr {
+  background: url('../img/flag/16/mr.png') no-repeat;
+}
+.f16 .ms {
+  background: url('../img/flag/16/ms.png') no-repeat;
+}
+.f16 .mt {
+  background: url('../img/flag/16/mt.png') no-repeat;
+}
+.f16 .mu {
+  background: url('../img/flag/16/mu.png') no-repeat;
+}
+.f16 .mv {
+  background: url('../img/flag/16/mv.png') no-repeat;
+}
+.f16 .mw {
+  background: url('../img/flag/16/mw.png') no-repeat;
+}
+.f16 .mx {
+  background: url('../img/flag/16/mx.png') no-repeat;
+}
+.f16 .my {
+  background: url('../img/flag/16/my.png') no-repeat;
+}
+.f16 .mz {
+  background: url('../img/flag/16/mz.png') no-repeat;
+}
+.f16 .na {
+  background: url('../img/flag/16/na.png') no-repeat;
+}
+.f16 .nc {
+  background: url('../img/flag/16/nc.png') no-repeat;
+}
+.f16 .ne {
+  background: url('../img/flag/16/ne.png') no-repeat;
+}
+.f16 .nf {
+  background: url('../img/flag/16/nf.png') no-repeat;
+}
+.f16 .ng {
+  background: url('../img/flag/16/ng.png') no-repeat;
+}
+.f16 .ni {
+  background: url('../img/flag/16/ni.png') no-repeat;
+}
+.f16 .nl {
+  background: url('../img/flag/16/nl.png') no-repeat;
+}
+.f16 .no {
+  background: url('../img/flag/16/no.png') no-repeat;
+}
+.f16 .np {
+  background: url('../img/flag/16/np.png') no-repeat;
+}
+.f16 .nr {
+  background: url('../img/flag/16/nr.png') no-repeat;
+}
+.f16 .nu {
+  background: url('../img/flag/16/nu.png') no-repeat;
+}
+.f16 .nz {
+  background: url('../img/flag/16/nz.png') no-repeat;
+}
+.f16 .om {
+  background: url('../img/flag/16/om.png') no-repeat;
+}
+.f16 .pa {
+  background: url('../img/flag/16/pa.png') no-repeat;
+}
+.f16 .pe {
+  background: url('../img/flag/16/pe.png') no-repeat;
+}
+.f16 .pf {
+  background: url('../img/flag/16/pf.png') no-repeat;
+}
+.f16 .pg {
+  background: url('../img/flag/16/pg.png') no-repeat;
+}
+.f16 .ph {
+  background: url('../img/flag/16/ph.png') no-repeat;
+}
+.f16 .pk {
+  background: url('../img/flag/16/pk.png') no-repeat;
+}
+.f16 .pl {
+  background: url('../img/flag/16/pl.png') no-repeat;
+}
+.f16 .pn {
+  background: url('../img/flag/16/pn.png') no-repeat;
+}
+.f16 .pr {
+  background: url('../img/flag/16/pr.png') no-repeat;
+}
+.f16 .ps {
+  background: url('../img/flag/16/ps.png') no-repeat;
+}
+.f16 .pt {
+  background: url('../img/flag/16/pt.png') no-repeat;
+}
+.f16 .pw {
+  background: url('../img/flag/16/pw.png') no-repeat;
+}
+.f16 .py {
+  background: url('../img/flag/16/py.png') no-repeat;
+}
+.f16 .qa {
+  background: url('../img/flag/16/qa.png') no-repeat;
+}
+.f16 .ro {
+  background: url('../img/flag/16/ro.png') no-repeat;
+}
+.f16 .rs {
+  background: url('../img/flag/16/rs.png') no-repeat;
+}
+.f16 .ru {
+  background: url('../img/flag/16/ru.png') no-repeat;
+}
+.f16 .rw {
+  background: url('../img/flag/16/rw.png') no-repeat;
+}
+.f16 .sa {
+  background: url('../img/flag/16/sa.png') no-repeat;
+}
+.f16 .sb {
+  background: url('../img/flag/16/sb.png') no-repeat;
+}
+.f16 .sc {
+  background: url('../img/flag/16/sc.png') no-repeat;
+}
+.f16 .sd {
+  background: url('../img/flag/16/sd.png') no-repeat;
+}
+.f16 .se {
+  background: url('../img/flag/16/se.png') no-repeat;
+}
+.f16 .sg {
+  background: url('../img/flag/16/sg.png') no-repeat;
+}
+.f16 .sh {
+  background: url('../img/flag/16/sh.png') no-repeat;
+}
+.f16 .si {
+  background: url('../img/flag/16/si.png') no-repeat;
+}
+.f16 .sk {
+  background: url('../img/flag/16/sk.png') no-repeat;
+}
+.f16 .sl {
+  background: url('../img/flag/16/sl.png') no-repeat;
+}
+.f16 .sm {
+  background: url('../img/flag/16/sm.png') no-repeat;
+}
+.f16 .sn {
+  background: url('../img/flag/16/sn.png') no-repeat;
+}
+.f16 .so {
+  background: url('../img/flag/16/so.png') no-repeat;
+}
+.f16 .sr {
+  background: url('../img/flag/16/sr.png') no-repeat;
+}
+.f16 .ss {
+  background: url('../img/flag/16/ss.png') no-repeat;
+}
+.f16 .st {
+  background: url('../img/flag/16/st.png') no-repeat;
+}
+.f16 .sv {
+  background: url('../img/flag/16/sv.png') no-repeat;
+}
+.f16 .sy {
+  background: url('../img/flag/16/sy.png') no-repeat;
+}
+.f16 .sz {
+  background: url('../img/flag/16/sz.png') no-repeat;
+}
+.f16 .tc {
+  background: url('../img/flag/16/tc.png') no-repeat;
+}
+.f16 .td {
+  background: url('../img/flag/16/td.png') no-repeat;
+}
+.f16 .tf {
+  background: url('../img/flag/16/tf.png') no-repeat;
+}
+.f16 .tg {
+  background: url('../img/flag/16/tg.png') no-repeat;
+}
+.f16 .th {
+  background: url('../img/flag/16/th.png') no-repeat;
+}
+.f16 .tj {
+  background: url('../img/flag/16/tj.png') no-repeat;
+}
+.f16 .tk {
+  background: url('../img/flag/16/tk.png') no-repeat;
+}
+.f16 .tl {
+  background: url('../img/flag/16/tl.png') no-repeat;
+}
+.f16 .tm {
+  background: url('../img/flag/16/tm.png') no-repeat;
+}
+.f16 .tn {
+  background: url('../img/flag/16/tn.png') no-repeat;
+}
+.f16 .to {
+  background: url('../img/flag/16/to.png') no-repeat;
+}
+.f16 .tr {
+  background: url('../img/flag/16/tr.png') no-repeat;
+}
+.f16 .tt {
+  background: url('../img/flag/16/tt.png') no-repeat;
+}
+.f16 .tv {
+  background: url('../img/flag/16/tv.png') no-repeat;
+}
+.f16 .tw {
+  background: url('../img/flag/16/tw.png') no-repeat;
+}
+.f16 .tz {
+  background: url('../img/flag/16/tz.png') no-repeat;
+}
+.f16 .ua {
+  background: url('../img/flag/16/ua.png') no-repeat;
+}
+.f16 .ug {
+  background: url('../img/flag/16/ug.png') no-repeat;
+}
+.f16 .uk {
+  background: url('../img/flag/16/uk.png') no-repeat;
+}
+.f16 .us {
+  background: url('../img/flag/16/us.png') no-repeat;
+}
+.f16 .uy {
+  background: url('../img/flag/16/uy.png') no-repeat;
+}
+.f16 .uz {
+  background: url('../img/flag/16/uz.png') no-repeat;
+}
+.f16 .va {
+  background: url('../img/flag/16/va.png') no-repeat;
+}
+.f16 .vc {
+  background: url('../img/flag/16/vc.png') no-repeat;
+}
+.f16 .ve {
+  background: url('../img/flag/16/ve.png') no-repeat;
+}
+.f16 .vg {
+  background: url('../img/flag/16/vg.png') no-repeat;
+}
+.f16 .vi {
+  background: url('../img/flag/16/vi.png') no-repeat;
+}
+.f16 .vn {
+  background: url('../img/flag/16/vn.png') no-repeat;
+}
+.f16 .vu {
+  background: url('../img/flag/16/vu.png') no-repeat;
+}
+.f16 .wf {
+  background: url('../img/flag/16/wf.png') no-repeat;
+}
+.f16 .ws {
+  background: url('../img/flag/16/ws.png') no-repeat;
+}
+.f16 .ye {
+  background: url('../img/flag/16/ye.png') no-repeat;
+}
+.f16 .yt {
+  background: url('../img/flag/16/yt.png') no-repeat;
+}
+.f16 .za {
+  background: url('../img/flag/16/za.png') no-repeat;
+}
+.f16 .zm {
+  background: url('../img/flag/16/zm.png') no-repeat;
+}
+.f16 .zw {
+  background: url('../img/flag/16/zw.png') no-repeat;
+}
+.f19 i,
+.f19 .flag {
+  width: 19px;
+  height: 19px;
+  line-height: 19px;
+}
+.f19 .ad {
+  background: url('../img/flag/19/ad.png') no-repeat;
+}
+.f19 .ae {
+  background: url('../img/flag/19/ae.png') no-repeat;
+}
+.f19 .af {
+  background: url('../img/flag/19/af.png') no-repeat;
+}
+.f19 .ag {
+  background: url('../img/flag/19/ag.png') no-repeat;
+}
+.f19 .ai {
+  background: url('../img/flag/19/ai.png') no-repeat;
+}
+.f19 .al {
+  background: url('../img/flag/19/al.png') no-repeat;
+}
+.f19 .am {
+  background: url('../img/flag/19/am.png') no-repeat;
+}
+.f19 .an {
+  background: url('../img/flag/19/an.png') no-repeat;
+}
+.f19 .ao {
+  background: url('../img/flag/19/ao.png') no-repeat;
+}
+.f19 .aq {
+  background: url('../img/flag/19/aq.png') no-repeat;
+}
+.f19 .ar {
+  background: url('../img/flag/19/ar.png') no-repeat;
+}
+.f19 .as {
+  background: url('../img/flag/19/as.png') no-repeat;
+}
+.f19 .at {
+  background: url('../img/flag/19/at.png') no-repeat;
+}
+.f19 .au {
+  background: url('../img/flag/19/au.png') no-repeat;
+}
+.f19 .aw {
+  background: url('../img/flag/19/aw.png') no-repeat;
+}
+.f19 .ax {
+  background: url('../img/flag/19/ax.png') no-repeat;
+}
+.f19 .az {
+  background: url('../img/flag/19/az.png') no-repeat;
+}
+.f19 .ba {
+  background: url('../img/flag/19/ba.png') no-repeat;
+}
+.f19 .bb {
+  background: url('../img/flag/19/bb.png') no-repeat;
+}
+.f19 .bd {
+  background: url('../img/flag/19/bd.png') no-repeat;
+}
+.f19 .be {
+  background: url('../img/flag/19/be.png') no-repeat;
+}
+.f19 .bf {
+  background: url('../img/flag/19/bf.png') no-repeat;
+}
+.f19 .bg {
+  background: url('../img/flag/19/bg.png') no-repeat;
+}
+.f19 .bh {
+  background: url('../img/flag/19/bh.png') no-repeat;
+}
+.f19 .bi {
+  background: url('../img/flag/19/bi.png') no-repeat;
+}
+.f19 .bj {
+  background: url('../img/flag/19/bj.png') no-repeat;
+}
+.f19 .bl {
+  background: url('../img/flag/19/bl.png') no-repeat;
+}
+.f19 .bm {
+  background: url('../img/flag/19/bm.png') no-repeat;
+}
+.f19 .bn {
+  background: url('../img/flag/19/bn.png') no-repeat;
+}
+.f19 .bo {
+  background: url('../img/flag/19/bo.png') no-repeat;
+}
+.f19 .br {
+  background: url('../img/flag/19/br.png') no-repeat;
+}
+.f19 .bs {
+  background: url('../img/flag/19/bs.png') no-repeat;
+}
+.f19 .bt {
+  background: url('../img/flag/19/bt.png') no-repeat;
+}
+.f19 .bw {
+  background: url('../img/flag/19/bw.png') no-repeat;
+}
+.f19 .by {
+  background: url('../img/flag/19/by.png') no-repeat;
+}
+.f19 .bz {
+  background: url('../img/flag/19/bz.png') no-repeat;
+}
+.f19 .ca {
+  background: url('../img/flag/19/ca.png') no-repeat;
+}
+.f19 .cc {
+  background: url('../img/flag/19/cc.png') no-repeat;
+}
+.f19 .cd {
+  background: url('../img/flag/19/cd.png') no-repeat;
+}
+.f19 .cf {
+  background: url('../img/flag/19/cf.png') no-repeat;
+}
+.f19 .cg {
+  background: url('../img/flag/19/cg.png') no-repeat;
+}
+.f19 .ch {
+  background: url('../img/flag/19/ch.png') no-repeat;
+}
+.f19 .ci {
+  background: url('../img/flag/19/ci.png') no-repeat;
+}
+.f19 .ck {
+  background: url('../img/flag/19/ck.png') no-repeat;
+}
+.f19 .cl {
+  background: url('../img/flag/19/cl.png') no-repeat;
+}
+.f19 .cm {
+  background: url('../img/flag/19/cm.png') no-repeat;
+}
+.f19 .cn {
+  background: url('../img/flag/19/cn.png') no-repeat;
+}
+.f19 .co {
+  background: url('../img/flag/19/co.png') no-repeat;
+}
+.f19 .cr {
+  background: url('../img/flag/19/cr.png') no-repeat;
+}
+.f19 .cu {
+  background: url('../img/flag/19/cu.png') no-repeat;
+}
+.f19 .cv {
+  background: url('../img/flag/19/cv.png') no-repeat;
+}
+.f19 .cw {
+  background: url('../img/flag/19/cw.png') no-repeat;
+}
+.f19 .cx {
+  background: url('../img/flag/19/cx.png') no-repeat;
+}
+.f19 .cy {
+  background: url('../img/flag/19/cy.png') no-repeat;
+}
+.f19 .cz {
+  background: url('../img/flag/19/cz.png') no-repeat;
+}
+.f19 .de {
+  background: url('../img/flag/19/de.png') no-repeat;
+}
+.f19 .dj {
+  background: url('../img/flag/19/dj.png') no-repeat;
+}
+.f19 .dk {
+  background: url('../img/flag/19/dk.png') no-repeat;
+}
+.f19 .dm {
+  background: url('../img/flag/19/dm.png') no-repeat;
+}
+.f19 .do {
+  background: url('../img/flag/19/do.png') no-repeat;
+}
+.f19 .dz {
+  background: url('../img/flag/19/dz.png') no-repeat;
+}
+.f19 .ec {
+  background: url('../img/flag/19/ec.png') no-repeat;
+}
+.f19 .ee {
+  background: url('../img/flag/19/ee.png') no-repeat;
+}
+.f19 .eg {
+  background: url('../img/flag/19/eg.png') no-repeat;
+}
+.f19 .eh {
+  background: url('../img/flag/19/eh.png') no-repeat;
+}
+.f19 .er {
+  background: url('../img/flag/19/er.png') no-repeat;
+}
+.f19 .es {
+  background: url('../img/flag/19/es.png') no-repeat;
+}
+.f19 .et {
+  background: url('../img/flag/19/et.png') no-repeat;
+}
+.f19 .eu {
+  background: url('../img/flag/19/eu.png') no-repeat;
+}
+.f19 .fi {
+  background: url('../img/flag/19/fi.png') no-repeat;
+}
+.f19 .fj {
+  background: url('../img/flag/19/fj.png') no-repeat;
+}
+.f19 .fk {
+  background: url('../img/flag/19/fk.png') no-repeat;
+}
+.f19 .fm {
+  background: url('../img/flag/19/fm.png') no-repeat;
+}
+.f19 .fo {
+  background: url('../img/flag/19/fo.png') no-repeat;
+}
+.f19 .fr {
+  background: url('../img/flag/19/fr.png') no-repeat;
+}
+.f19 .ga {
+  background: url('../img/flag/19/ga.png') no-repeat;
+}
+.f19 .gb {
+  background: url('../img/flag/19/gb.png') no-repeat;
+}
+.f19 .gd {
+  background: url('../img/flag/19/gd.png') no-repeat;
+}
+.f19 .ge {
+  background: url('../img/flag/19/ge.png') no-repeat;
+}
+.f19 .gg {
+  background: url('../img/flag/19/gg.png') no-repeat;
+}
+.f19 .gh {
+  background: url('../img/flag/19/gh.png') no-repeat;
+}
+.f19 .gi {
+  background: url('../img/flag/19/gi.png') no-repeat;
+}
+.f19 .gl {
+  background: url('../img/flag/19/gl.png') no-repeat;
+}
+.f19 .gm {
+  background: url('../img/flag/19/gm.png') no-repeat;
+}
+.f19 .gn {
+  background: url('../img/flag/19/gn.png') no-repeat;
+}
+.f19 .gq {
+  background: url('../img/flag/19/gq.png') no-repeat;
+}
+.f19 .gr {
+  background: url('../img/flag/19/gr.png') no-repeat;
+}
+.f19 .gs {
+  background: url('../img/flag/19/gs.png') no-repeat;
+}
+.f19 .gt {
+  background: url('../img/flag/19/gt.png') no-repeat;
+}
+.f19 .gu {
+  background: url('../img/flag/19/gu.png') no-repeat;
+}
+.f19 .gw {
+  background: url('../img/flag/19/gw.png') no-repeat;
+}
+.f19 .gy {
+  background: url('../img/flag/19/gy.png') no-repeat;
+}
+.f19 .hk {
+  background: url('../img/flag/19/hk.png') no-repeat;
+}
+.f19 .hn {
+  background: url('../img/flag/19/hn.png') no-repeat;
+}
+.f19 .hr {
+  background: url('../img/flag/19/hr.png') no-repeat;
+}
+.f19 .ht {
+  background: url('../img/flag/19/ht.png') no-repeat;
+}
+.f19 .hu {
+  background: url('../img/flag/19/hu.png') no-repeat;
+}
+.f19 .ic {
+  background: url('../img/flag/19/ic.png') no-repeat;
+}
+.f19 .id {
+  background: url('../img/flag/19/id.png') no-repeat;
+}
+.f19 .ie {
+  background: url('../img/flag/19/ie.png') no-repeat;
+}
+.f19 .il {
+  background: url('../img/flag/19/il.png') no-repeat;
+}
+.f19 .im {
+  background: url('../img/flag/19/im.png') no-repeat;
+}
+.f19 .in {
+  background: url('../img/flag/19/in.png') no-repeat;
+}
+.f19 .iq {
+  background: url('../img/flag/19/iq.png') no-repeat;
+}
+.f19 .ir {
+  background: url('../img/flag/19/ir.png') no-repeat;
+}
+.f19 .is {
+  background: url('../img/flag/19/is.png') no-repeat;
+}
+.f19 .it {
+  background: url('../img/flag/19/it.png') no-repeat;
+}
+.f19 .je {
+  background: url('../img/flag/19/je.png') no-repeat;
+}
+.f19 .jm {
+  background: url('../img/flag/19/jm.png') no-repeat;
+}
+.f19 .jo {
+  background: url('../img/flag/19/jo.png') no-repeat;
+}
+.f19 .jp {
+  background: url('../img/flag/19/jp.png') no-repeat;
+}
+.f19 .ke {
+  background: url('../img/flag/19/ke.png') no-repeat;
+}
+.f19 .kg {
+  background: url('../img/flag/19/kg.png') no-repeat;
+}
+.f19 .kh {
+  background: url('../img/flag/19/kh.png') no-repeat;
+}
+.f19 .ki {
+  background: url('../img/flag/19/ki.png') no-repeat;
+}
+.f19 .km {
+  background: url('../img/flag/19/km.png') no-repeat;
+}
+.f19 .kn {
+  background: url('../img/flag/19/kn.png') no-repeat;
+}
+.f19 .kp {
+  background: url('../img/flag/19/kp.png') no-repeat;
+}
+.f19 .kr {
+  background: url('../img/flag/19/kr.png') no-repeat;
+}
+.f19 .kw {
+  background: url('../img/flag/19/kw.png') no-repeat;
+}
+.f19 .ky {
+  background: url('../img/flag/19/ky.png') no-repeat;
+}
+.f19 .kz {
+  background: url('../img/flag/19/kz.png') no-repeat;
+}
+.f19 .la {
+  background: url('../img/flag/19/la.png') no-repeat;
+}
+.f19 .lb {
+  background: url('../img/flag/19/lb.png') no-repeat;
+}
+.f19 .lc {
+  background: url('../img/flag/19/lc.png') no-repeat;
+}
+.f19 .li {
+  background: url('../img/flag/19/li.png') no-repeat;
+}
+.f19 .lk {
+  background: url('../img/flag/19/lk.png') no-repeat;
+}
+.f19 .lr {
+  background: url('../img/flag/19/lr.png') no-repeat;
+}
+.f19 .ls {
+  background: url('../img/flag/19/ls.png') no-repeat;
+}
+.f19 .lt {
+  background: url('../img/flag/19/lt.png') no-repeat;
+}
+.f19 .lu {
+  background: url('../img/flag/19/lu.png') no-repeat;
+}
+.f19 .lv {
+  background: url('../img/flag/19/lv.png') no-repeat;
+}
+.f19 .ly {
+  background: url('../img/flag/19/ly.png') no-repeat;
+}
+.f19 .ma {
+  background: url('../img/flag/19/ma.png') no-repeat;
+}
+.f19 .mc {
+  background: url('../img/flag/19/mc.png') no-repeat;
+}
+.f19 .md {
+  background: url('../img/flag/19/md.png') no-repeat;
+}
+.f19 .me {
+  background: url('../img/flag/19/me.png') no-repeat;
+}
+.f19 .mf {
+  background: url('../img/flag/19/mf.png') no-repeat;
+}
+.f19 .mg {
+  background: url('../img/flag/19/mg.png') no-repeat;
+}
+.f19 .mh {
+  background: url('../img/flag/19/mh.png') no-repeat;
+}
+.f19 .mk {
+  background: url('../img/flag/19/mk.png') no-repeat;
+}
+.f19 .ml {
+  background: url('../img/flag/19/ml.png') no-repeat;
+}
+.f19 .mm {
+  background: url('../img/flag/19/mm.png') no-repeat;
+}
+.f19 .mn {
+  background: url('../img/flag/19/mn.png') no-repeat;
+}
+.f19 .mo {
+  background: url('../img/flag/19/mo.png') no-repeat;
+}
+.f19 .mp {
+  background: url('../img/flag/19/mp.png') no-repeat;
+}
+.f19 .mq {
+  background: url('../img/flag/19/mq.png') no-repeat;
+}
+.f19 .mr {
+  background: url('../img/flag/19/mr.png') no-repeat;
+}
+.f19 .ms {
+  background: url('../img/flag/19/ms.png') no-repeat;
+}
+.f19 .mt {
+  background: url('../img/flag/19/mt.png') no-repeat;
+}
+.f19 .mu {
+  background: url('../img/flag/19/mu.png') no-repeat;
+}
+.f19 .mv {
+  background: url('../img/flag/19/mv.png') no-repeat;
+}
+.f19 .mw {
+  background: url('../img/flag/19/mw.png') no-repeat;
+}
+.f19 .mx {
+  background: url('../img/flag/19/mx.png') no-repeat;
+}
+.f19 .my {
+  background: url('../img/flag/19/my.png') no-repeat;
+}
+.f19 .mz {
+  background: url('../img/flag/19/mz.png') no-repeat;
+}
+.f19 .na {
+  background: url('../img/flag/19/na.png') no-repeat;
+}
+.f19 .nc {
+  background: url('../img/flag/19/nc.png') no-repeat;
+}
+.f19 .ne {
+  background: url('../img/flag/19/ne.png') no-repeat;
+}
+.f19 .nf {
+  background: url('../img/flag/19/nf.png') no-repeat;
+}
+.f19 .ng {
+  background: url('../img/flag/19/ng.png') no-repeat;
+}
+.f19 .ni {
+  background: url('../img/flag/19/ni.png') no-repeat;
+}
+.f19 .nl {
+  background: url('../img/flag/19/nl.png') no-repeat;
+}
+.f19 .no {
+  background: url('../img/flag/19/no.png') no-repeat;
+}
+.f19 .np {
+  background: url('../img/flag/19/np.png') no-repeat;
+}
+.f19 .nr {
+  background: url('../img/flag/19/nr.png') no-repeat;
+}
+.f19 .nu {
+  background: url('../img/flag/19/nu.png') no-repeat;
+}
+.f19 .nz {
+  background: url('../img/flag/19/nz.png') no-repeat;
+}
+.f19 .om {
+  background: url('../img/flag/19/om.png') no-repeat;
+}
+.f19 .pa {
+  background: url('../img/flag/19/pa.png') no-repeat;
+}
+.f19 .pe {
+  background: url('../img/flag/19/pe.png') no-repeat;
+}
+.f19 .pf {
+  background: url('../img/flag/19/pf.png') no-repeat;
+}
+.f19 .pg {
+  background: url('../img/flag/19/pg.png') no-repeat;
+}
+.f19 .ph {
+  background: url('../img/flag/19/ph.png') no-repeat;
+}
+.f19 .pk {
+  background: url('../img/flag/19/pk.png') no-repeat;
+}
+.f19 .pl {
+  background: url('../img/flag/19/pl.png') no-repeat;
+}
+.f19 .pn {
+  background: url('../img/flag/19/pn.png') no-repeat;
+}
+.f19 .pr {
+  background: url('../img/flag/19/pr.png') no-repeat;
+}
+.f19 .ps {
+  background: url('../img/flag/19/ps.png') no-repeat;
+}
+.f19 .pt {
+  background: url('../img/flag/19/pt.png') no-repeat;
+}
+.f19 .pw {
+  background: url('../img/flag/19/pw.png') no-repeat;
+}
+.f19 .py {
+  background: url('../img/flag/19/py.png') no-repeat;
+}
+.f19 .qa {
+  background: url('../img/flag/19/qa.png') no-repeat;
+}
+.f19 .ro {
+  background: url('../img/flag/19/ro.png') no-repeat;
+}
+.f19 .rs {
+  background: url('../img/flag/19/rs.png') no-repeat;
+}
+.f19 .ru {
+  background: url('../img/flag/19/ru.png') no-repeat;
+}
+.f19 .rw {
+  background: url('../img/flag/19/rw.png') no-repeat;
+}
+.f19 .sa {
+  background: url('../img/flag/19/sa.png') no-repeat;
+}
+.f19 .sb {
+  background: url('../img/flag/19/sb.png') no-repeat;
+}
+.f19 .sc {
+  background: url('../img/flag/19/sc.png') no-repeat;
+}
+.f19 .sd {
+  background: url('../img/flag/19/sd.png') no-repeat;
+}
+.f19 .se {
+  background: url('../img/flag/19/se.png') no-repeat;
+}
+.f19 .sg {
+  background: url('../img/flag/19/sg.png') no-repeat;
+}
+.f19 .sh {
+  background: url('../img/flag/19/sh.png') no-repeat;
+}
+.f19 .si {
+  background: url('../img/flag/19/si.png') no-repeat;
+}
+.f19 .sk {
+  background: url('../img/flag/19/sk.png') no-repeat;
+}
+.f19 .sl {
+  background: url('../img/flag/19/sl.png') no-repeat;
+}
+.f19 .sm {
+  background: url('../img/flag/19/sm.png') no-repeat;
+}
+.f19 .sn {
+  background: url('../img/flag/19/sn.png') no-repeat;
+}
+.f19 .so {
+  background: url('../img/flag/19/so.png') no-repeat;
+}
+.f19 .sr {
+  background: url('../img/flag/19/sr.png') no-repeat;
+}
+.f19 .ss {
+  background: url('../img/flag/19/ss.png') no-repeat;
+}
+.f19 .st {
+  background: url('../img/flag/19/st.png') no-repeat;
+}
+.f19 .sv {
+  background: url('../img/flag/19/sv.png') no-repeat;
+}
+.f19 .sy {
+  background: url('../img/flag/19/sy.png') no-repeat;
+}
+.f19 .sz {
+  background: url('../img/flag/19/sz.png') no-repeat;
+}
+.f19 .tc {
+  background: url('../img/flag/19/tc.png') no-repeat;
+}
+.f19 .td {
+  background: url('../img/flag/19/td.png') no-repeat;
+}
+.f19 .tf {
+  background: url('../img/flag/19/tf.png') no-repeat;
+}
+.f19 .tg {
+  background: url('../img/flag/19/tg.png') no-repeat;
+}
+.f19 .th {
+  background: url('../img/flag/19/th.png') no-repeat;
+}
+.f19 .tj {
+  background: url('../img/flag/19/tj.png') no-repeat;
+}
+.f19 .tk {
+  background: url('../img/flag/19/tk.png') no-repeat;
+}
+.f19 .tl {
+  background: url('../img/flag/19/tl.png') no-repeat;
+}
+.f19 .tm {
+  background: url('../img/flag/19/tm.png') no-repeat;
+}
+.f19 .tn {
+  background: url('../img/flag/19/tn.png') no-repeat;
+}
+.f19 .to {
+  background: url('../img/flag/19/to.png') no-repeat;
+}
+.f19 .tr {
+  background: url('../img/flag/19/tr.png') no-repeat;
+}
+.f19 .tt {
+  background: url('../img/flag/19/tt.png') no-repeat;
+}
+.f19 .tv {
+  background: url('../img/flag/19/tv.png') no-repeat;
+}
+.f19 .tw {
+  background: url('../img/flag/19/tw.png') no-repeat;
+}
+.f19 .tz {
+  background: url('../img/flag/19/tz.png') no-repeat;
+}
+.f19 .ua {
+  background: url('../img/flag/19/ua.png') no-repeat;
+}
+.f19 .ug {
+  background: url('../img/flag/19/ug.png') no-repeat;
+}
+.f19 .uk {
+  background: url('../img/flag/19/uk.png') no-repeat;
+}
+.f19 .us {
+  background: url('../img/flag/19/us.png') no-repeat;
+}
+.f19 .uy {
+  background: url('../img/flag/19/uy.png') no-repeat;
+}
+.f19 .uz {
+  background: url('../img/flag/19/uz.png') no-repeat;
+}
+.f19 .va {
+  background: url('../img/flag/19/va.png') no-repeat;
+}
+.f19 .vc {
+  background: url('../img/flag/19/vc.png') no-repeat;
+}
+.f19 .ve {
+  background: url('../img/flag/19/ve.png') no-repeat;
+}
+.f19 .vg {
+  background: url('../img/flag/19/vg.png') no-repeat;
+}
+.f19 .vi {
+  background: url('../img/flag/19/vi.png') no-repeat;
+}
+.f19 .vn {
+  background: url('../img/flag/19/vn.png') no-repeat;
+}
+.f19 .vu {
+  background: url('../img/flag/19/vu.png') no-repeat;
+}
+.f19 .wf {
+  background: url('../img/flag/19/wf.png') no-repeat;
+}
+.f19 .ws {
+  background: url('../img/flag/19/ws.png') no-repeat;
+}
+.f19 .ye {
+  background: url('../img/flag/19/ye.png') no-repeat;
+}
+.f19 .yt {
+  background: url('../img/flag/19/yt.png') no-repeat;
+}
+.f19 .za {
+  background: url('../img/flag/19/za.png') no-repeat;
+}
+.f19 .zm {
+  background: url('../img/flag/19/zm.png') no-repeat;
+}
+.f19 .zw {
+  background: url('../img/flag/19/zw.png') no-repeat;
+}
+.f32 i,
+.f32 .flag {
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+}
+.f32 .ad {
+  background: url('../img/flag/32/ad.png') no-repeat;
+}
+.f32 .ae {
+  background: url('../img/flag/32/ae.png') no-repeat;
+}
+.f32 .af {
+  background: url('../img/flag/32/af.png') no-repeat;
+}
+.f32 .ag {
+  background: url('../img/flag/32/ag.png') no-repeat;
+}
+.f32 .ai {
+  background: url('../img/flag/32/ai.png') no-repeat;
+}
+.f32 .al {
+  background: url('../img/flag/32/al.png') no-repeat;
+}
+.f32 .am {
+  background: url('../img/flag/32/am.png') no-repeat;
+}
+.f32 .an {
+  background: url('../img/flag/32/an.png') no-repeat;
+}
+.f32 .ao {
+  background: url('../img/flag/32/ao.png') no-repeat;
+}
+.f32 .aq {
+  background: url('../img/flag/32/aq.png') no-repeat;
+}
+.f32 .ar {
+  background: url('../img/flag/32/ar.png') no-repeat;
+}
+.f32 .as {
+  background: url('../img/flag/32/as.png') no-repeat;
+}
+.f32 .at {
+  background: url('../img/flag/32/at.png') no-repeat;
+}
+.f32 .au {
+  background: url('../img/flag/32/au.png') no-repeat;
+}
+.f32 .aw {
+  background: url('../img/flag/32/aw.png') no-repeat;
+}
+.f32 .ax {
+  background: url('../img/flag/32/ax.png') no-repeat;
+}
+.f32 .az {
+  background: url('../img/flag/32/az.png') no-repeat;
+}
+.f32 .ba {
+  background: url('../img/flag/32/ba.png') no-repeat;
+}
+.f32 .bb {
+  background: url('../img/flag/32/bb.png') no-repeat;
+}
+.f32 .bd {
+  background: url('../img/flag/32/bd.png') no-repeat;
+}
+.f32 .be {
+  background: url('../img/flag/32/be.png') no-repeat;
+}
+.f32 .bf {
+  background: url('../img/flag/32/bf.png') no-repeat;
+}
+.f32 .bg {
+  background: url('../img/flag/32/bg.png') no-repeat;
+}
+.f32 .bh {
+  background: url('../img/flag/32/bh.png') no-repeat;
+}
+.f32 .bi {
+  background: url('../img/flag/32/bi.png') no-repeat;
+}
+.f32 .bj {
+  background: url('../img/flag/32/bj.png') no-repeat;
+}
+.f32 .bl {
+  background: url('../img/flag/32/bl.png') no-repeat;
+}
+.f32 .bm {
+  background: url('../img/flag/32/bm.png') no-repeat;
+}
+.f32 .bn {
+  background: url('../img/flag/32/bn.png') no-repeat;
+}
+.f32 .bo {
+  background: url('../img/flag/32/bo.png') no-repeat;
+}
+.f32 .br {
+  background: url('../img/flag/32/br.png') no-repeat;
+}
+.f32 .bs {
+  background: url('../img/flag/32/bs.png') no-repeat;
+}
+.f32 .bt {
+  background: url('../img/flag/32/bt.png') no-repeat;
+}
+.f32 .bw {
+  background: url('../img/flag/32/bw.png') no-repeat;
+}
+.f32 .by {
+  background: url('../img/flag/32/by.png') no-repeat;
+}
+.f32 .bz {
+  background: url('../img/flag/32/bz.png') no-repeat;
+}
+.f32 .ca {
+  background: url('../img/flag/32/ca.png') no-repeat;
+}
+.f32 .cc {
+  background: url('../img/flag/32/cc.png') no-repeat;
+}
+.f32 .cd {
+  background: url('../img/flag/32/cd.png') no-repeat;
+}
+.f32 .cf {
+  background: url('../img/flag/32/cf.png') no-repeat;
+}
+.f32 .cg {
+  background: url('../img/flag/32/cg.png') no-repeat;
+}
+.f32 .ch {
+  background: url('../img/flag/32/ch.png') no-repeat;
+}
+.f32 .ci {
+  background: url('../img/flag/32/ci.png') no-repeat;
+}
+.f32 .ck {
+  background: url('../img/flag/32/ck.png') no-repeat;
+}
+.f32 .cl {
+  background: url('../img/flag/32/cl.png') no-repeat;
+}
+.f32 .cm {
+  background: url('../img/flag/32/cm.png') no-repeat;
+}
+.f32 .cn {
+  background: url('../img/flag/32/cn.png') no-repeat;
+}
+.f32 .co {
+  background: url('../img/flag/32/co.png') no-repeat;
+}
+.f32 .cr {
+  background: url('../img/flag/32/cr.png') no-repeat;
+}
+.f32 .cu {
+  background: url('../img/flag/32/cu.png') no-repeat;
+}
+.f32 .cv {
+  background: url('../img/flag/32/cv.png') no-repeat;
+}
+.f32 .cw {
+  background: url('../img/flag/32/cw.png') no-repeat;
+}
+.f32 .cx {
+  background: url('../img/flag/32/cx.png') no-repeat;
+}
+.f32 .cy {
+  background: url('../img/flag/32/cy.png') no-repeat;
+}
+.f32 .cz {
+  background: url('../img/flag/32/cz.png') no-repeat;
+}
+.f32 .de {
+  background: url('../img/flag/32/de.png') no-repeat;
+}
+.f32 .dj {
+  background: url('../img/flag/32/dj.png') no-repeat;
+}
+.f32 .dk {
+  background: url('../img/flag/32/dk.png') no-repeat;
+}
+.f32 .dm {
+  background: url('../img/flag/32/dm.png') no-repeat;
+}
+.f32 .do {
+  background: url('../img/flag/32/do.png') no-repeat;
+}
+.f32 .dz {
+  background: url('../img/flag/32/dz.png') no-repeat;
+}
+.f32 .ec {
+  background: url('../img/flag/32/ec.png') no-repeat;
+}
+.f32 .ee {
+  background: url('../img/flag/32/ee.png') no-repeat;
+}
+.f32 .eg {
+  background: url('../img/flag/32/eg.png') no-repeat;
+}
+.f32 .eh {
+  background: url('../img/flag/32/eh.png') no-repeat;
+}
+.f32 .er {
+  background: url('../img/flag/32/er.png') no-repeat;
+}
+.f32 .es {
+  background: url('../img/flag/32/es.png') no-repeat;
+}
+.f32 .et {
+  background: url('../img/flag/32/et.png') no-repeat;
+}
+.f32 .eu {
+  background: url('../img/flag/32/eu.png') no-repeat;
+}
+.f32 .fi {
+  background: url('../img/flag/32/fi.png') no-repeat;
+}
+.f32 .fj {
+  background: url('../img/flag/32/fj.png') no-repeat;
+}
+.f32 .fk {
+  background: url('../img/flag/32/fk.png') no-repeat;
+}
+.f32 .fm {
+  background: url('../img/flag/32/fm.png') no-repeat;
+}
+.f32 .fo {
+  background: url('../img/flag/32/fo.png') no-repeat;
+}
+.f32 .fr {
+  background: url('../img/flag/32/fr.png') no-repeat;
+}
+.f32 .ga {
+  background: url('../img/flag/32/ga.png') no-repeat;
+}
+.f32 .gb {
+  background: url('../img/flag/32/gb.png') no-repeat;
+}
+.f32 .gd {
+  background: url('../img/flag/32/gd.png') no-repeat;
+}
+.f32 .ge {
+  background: url('../img/flag/32/ge.png') no-repeat;
+}
+.f32 .gg {
+  background: url('../img/flag/32/gg.png') no-repeat;
+}
+.f32 .gh {
+  background: url('../img/flag/32/gh.png') no-repeat;
+}
+.f32 .gi {
+  background: url('../img/flag/32/gi.png') no-repeat;
+}
+.f32 .gl {
+  background: url('../img/flag/32/gl.png') no-repeat;
+}
+.f32 .gm {
+  background: url('../img/flag/32/gm.png') no-repeat;
+}
+.f32 .gn {
+  background: url('../img/flag/32/gn.png') no-repeat;
+}
+.f32 .gq {
+  background: url('../img/flag/32/gq.png') no-repeat;
+}
+.f32 .gr {
+  background: url('../img/flag/32/gr.png') no-repeat;
+}
+.f32 .gs {
+  background: url('../img/flag/32/gs.png') no-repeat;
+}
+.f32 .gt {
+  background: url('../img/flag/32/gt.png') no-repeat;
+}
+.f32 .gu {
+  background: url('../img/flag/32/gu.png') no-repeat;
+}
+.f32 .gw {
+  background: url('../img/flag/32/gw.png') no-repeat;
+}
+.f32 .gy {
+  background: url('../img/flag/32/gy.png') no-repeat;
+}
+.f32 .hk {
+  background: url('../img/flag/32/hk.png') no-repeat;
+}
+.f32 .hn {
+  background: url('../img/flag/32/hn.png') no-repeat;
+}
+.f32 .hr {
+  background: url('../img/flag/32/hr.png') no-repeat;
+}
+.f32 .ht {
+  background: url('../img/flag/32/ht.png') no-repeat;
+}
+.f32 .hu {
+  background: url('../img/flag/32/hu.png') no-repeat;
+}
+.f32 .ic {
+  background: url('../img/flag/32/ic.png') no-repeat;
+}
+.f32 .id {
+  background: url('../img/flag/32/id.png') no-repeat;
+}
+.f32 .ie {
+  background: url('../img/flag/32/ie.png') no-repeat;
+}
+.f32 .il {
+  background: url('../img/flag/32/il.png') no-repeat;
+}
+.f32 .im {
+  background: url('../img/flag/32/im.png') no-repeat;
+}
+.f32 .in {
+  background: url('../img/flag/32/in.png') no-repeat;
+}
+.f32 .iq {
+  background: url('../img/flag/32/iq.png') no-repeat;
+}
+.f32 .ir {
+  background: url('../img/flag/32/ir.png') no-repeat;
+}
+.f32 .is {
+  background: url('../img/flag/32/is.png') no-repeat;
+}
+.f32 .it {
+  background: url('../img/flag/32/it.png') no-repeat;
+}
+.f32 .je {
+  background: url('../img/flag/32/je.png') no-repeat;
+}
+.f32 .jm {
+  background: url('../img/flag/32/jm.png') no-repeat;
+}
+.f32 .jo {
+  background: url('../img/flag/32/jo.png') no-repeat;
+}
+.f32 .jp {
+  background: url('../img/flag/32/jp.png') no-repeat;
+}
+.f32 .ke {
+  background: url('../img/flag/32/ke.png') no-repeat;
+}
+.f32 .kg {
+  background: url('../img/flag/32/kg.png') no-repeat;
+}
+.f32 .kh {
+  background: url('../img/flag/32/kh.png') no-repeat;
+}
+.f32 .ki {
+  background: url('../img/flag/32/ki.png') no-repeat;
+}
+.f32 .km {
+  background: url('../img/flag/32/km.png') no-repeat;
+}
+.f32 .kn {
+  background: url('../img/flag/32/kn.png') no-repeat;
+}
+.f32 .kp {
+  background: url('../img/flag/32/kp.png') no-repeat;
+}
+.f32 .kr {
+  background: url('../img/flag/32/kr.png') no-repeat;
+}
+.f32 .kw {
+  background: url('../img/flag/32/kw.png') no-repeat;
+}
+.f32 .ky {
+  background: url('../img/flag/32/ky.png') no-repeat;
+}
+.f32 .kz {
+  background: url('../img/flag/32/kz.png') no-repeat;
+}
+.f32 .la {
+  background: url('../img/flag/32/la.png') no-repeat;
+}
+.f32 .lb {
+  background: url('../img/flag/32/lb.png') no-repeat;
+}
+.f32 .lc {
+  background: url('../img/flag/32/lc.png') no-repeat;
+}
+.f32 .li {
+  background: url('../img/flag/32/li.png') no-repeat;
+}
+.f32 .lk {
+  background: url('../img/flag/32/lk.png') no-repeat;
+}
+.f32 .lr {
+  background: url('../img/flag/32/lr.png') no-repeat;
+}
+.f32 .ls {
+  background: url('../img/flag/32/ls.png') no-repeat;
+}
+.f32 .lt {
+  background: url('../img/flag/32/lt.png') no-repeat;
+}
+.f32 .lu {
+  background: url('../img/flag/32/lu.png') no-repeat;
+}
+.f32 .lv {
+  background: url('../img/flag/32/lv.png') no-repeat;
+}
+.f32 .ly {
+  background: url('../img/flag/32/ly.png') no-repeat;
+}
+.f32 .ma {
+  background: url('../img/flag/32/ma.png') no-repeat;
+}
+.f32 .mc {
+  background: url('../img/flag/32/mc.png') no-repeat;
+}
+.f32 .md {
+  background: url('../img/flag/32/md.png') no-repeat;
+}
+.f32 .me {
+  background: url('../img/flag/32/me.png') no-repeat;
+}
+.f32 .mf {
+  background: url('../img/flag/32/mf.png') no-repeat;
+}
+.f32 .mg {
+  background: url('../img/flag/32/mg.png') no-repeat;
+}
+.f32 .mh {
+  background: url('../img/flag/32/mh.png') no-repeat;
+}
+.f32 .mk {
+  background: url('../img/flag/32/mk.png') no-repeat;
+}
+.f32 .ml {
+  background: url('../img/flag/32/ml.png') no-repeat;
+}
+.f32 .mm {
+  background: url('../img/flag/32/mm.png') no-repeat;
+}
+.f32 .mn {
+  background: url('../img/flag/32/mn.png') no-repeat;
+}
+.f32 .mo {
+  background: url('../img/flag/32/mo.png') no-repeat;
+}
+.f32 .mp {
+  background: url('../img/flag/32/mp.png') no-repeat;
+}
+.f32 .mq {
+  background: url('../img/flag/32/mq.png') no-repeat;
+}
+.f32 .mr {
+  background: url('../img/flag/32/mr.png') no-repeat;
+}
+.f32 .ms {
+  background: url('../img/flag/32/ms.png') no-repeat;
+}
+.f32 .mt {
+  background: url('../img/flag/32/mt.png') no-repeat;
+}
+.f32 .mu {
+  background: url('../img/flag/32/mu.png') no-repeat;
+}
+.f32 .mv {
+  background: url('../img/flag/32/mv.png') no-repeat;
+}
+.f32 .mw {
+  background: url('../img/flag/32/mw.png') no-repeat;
+}
+.f32 .mx {
+  background: url('../img/flag/32/mx.png') no-repeat;
+}
+.f32 .my {
+  background: url('../img/flag/32/my.png') no-repeat;
+}
+.f32 .mz {
+  background: url('../img/flag/32/mz.png') no-repeat;
+}
+.f32 .na {
+  background: url('../img/flag/32/na.png') no-repeat;
+}
+.f32 .nc {
+  background: url('../img/flag/32/nc.png') no-repeat;
+}
+.f32 .ne {
+  background: url('../img/flag/32/ne.png') no-repeat;
+}
+.f32 .nf {
+  background: url('../img/flag/32/nf.png') no-repeat;
+}
+.f32 .ng {
+  background: url('../img/flag/32/ng.png') no-repeat;
+}
+.f32 .ni {
+  background: url('../img/flag/32/ni.png') no-repeat;
+}
+.f32 .nl {
+  background: url('../img/flag/32/nl.png') no-repeat;
+}
+.f32 .no {
+  background: url('../img/flag/32/no.png') no-repeat;
+}
+.f32 .np {
+  background: url('../img/flag/32/np.png') no-repeat;
+}
+.f32 .nr {
+  background: url('../img/flag/32/nr.png') no-repeat;
+}
+.f32 .nu {
+  background: url('../img/flag/32/nu.png') no-repeat;
+}
+.f32 .nz {
+  background: url('../img/flag/32/nz.png') no-repeat;
+}
+.f32 .om {
+  background: url('../img/flag/32/om.png') no-repeat;
+}
+.f32 .pa {
+  background: url('../img/flag/32/pa.png') no-repeat;
+}
+.f32 .pe {
+  background: url('../img/flag/32/pe.png') no-repeat;
+}
+.f32 .pf {
+  background: url('../img/flag/32/pf.png') no-repeat;
+}
+.f32 .pg {
+  background: url('../img/flag/32/pg.png') no-repeat;
+}
+.f32 .ph {
+  background: url('../img/flag/32/ph.png') no-repeat;
+}
+.f32 .pk {
+  background: url('../img/flag/32/pk.png') no-repeat;
+}
+.f32 .pl {
+  background: url('../img/flag/32/pl.png') no-repeat;
+}
+.f32 .pn {
+  background: url('../img/flag/32/pn.png') no-repeat;
+}
+.f32 .pr {
+  background: url('../img/flag/32/pr.png') no-repeat;
+}
+.f32 .ps {
+  background: url('../img/flag/32/ps.png') no-repeat;
+}
+.f32 .pt {
+  background: url('../img/flag/32/pt.png') no-repeat;
+}
+.f32 .pw {
+  background: url('../img/flag/32/pw.png') no-repeat;
+}
+.f32 .py {
+  background: url('../img/flag/32/py.png') no-repeat;
+}
+.f32 .qa {
+  background: url('../img/flag/32/qa.png') no-repeat;
+}
+.f32 .ro {
+  background: url('../img/flag/32/ro.png') no-repeat;
+}
+.f32 .rs {
+  background: url('../img/flag/32/rs.png') no-repeat;
+}
+.f32 .ru {
+  background: url('../img/flag/32/ru.png') no-repeat;
+}
+.f32 .rw {
+  background: url('../img/flag/32/rw.png') no-repeat;
+}
+.f32 .sa {
+  background: url('../img/flag/32/sa.png') no-repeat;
+}
+.f32 .sb {
+  background: url('../img/flag/32/sb.png') no-repeat;
+}
+.f32 .sc {
+  background: url('../img/flag/32/sc.png') no-repeat;
+}
+.f32 .sd {
+  background: url('../img/flag/32/sd.png') no-repeat;
+}
+.f32 .se {
+  background: url('../img/flag/32/se.png') no-repeat;
+}
+.f32 .sg {
+  background: url('../img/flag/32/sg.png') no-repeat;
+}
+.f32 .sh {
+  background: url('../img/flag/32/sh.png') no-repeat;
+}
+.f32 .si {
+  background: url('../img/flag/32/si.png') no-repeat;
+}
+.f32 .sk {
+  background: url('../img/flag/32/sk.png') no-repeat;
+}
+.f32 .sl {
+  background: url('../img/flag/32/sl.png') no-repeat;
+}
+.f32 .sm {
+  background: url('../img/flag/32/sm.png') no-repeat;
+}
+.f32 .sn {
+  background: url('../img/flag/32/sn.png') no-repeat;
+}
+.f32 .so {
+  background: url('../img/flag/32/so.png') no-repeat;
+}
+.f32 .sr {
+  background: url('../img/flag/32/sr.png') no-repeat;
+}
+.f32 .ss {
+  background: url('../img/flag/32/ss.png') no-repeat;
+}
+.f32 .st {
+  background: url('../img/flag/32/st.png') no-repeat;
+}
+.f32 .sv {
+  background: url('../img/flag/32/sv.png') no-repeat;
+}
+.f32 .sy {
+  background: url('../img/flag/32/sy.png') no-repeat;
+}
+.f32 .sz {
+  background: url('../img/flag/32/sz.png') no-repeat;
+}
+.f32 .tc {
+  background: url('../img/flag/32/tc.png') no-repeat;
+}
+.f32 .td {
+  background: url('../img/flag/32/td.png') no-repeat;
+}
+.f32 .tf {
+  background: url('../img/flag/32/tf.png') no-repeat;
+}
+.f32 .tg {
+  background: url('../img/flag/32/tg.png') no-repeat;
+}
+.f32 .th {
+  background: url('../img/flag/32/th.png') no-repeat;
+}
+.f32 .tj {
+  background: url('../img/flag/32/tj.png') no-repeat;
+}
+.f32 .tk {
+  background: url('../img/flag/32/tk.png') no-repeat;
+}
+.f32 .tl {
+  background: url('../img/flag/32/tl.png') no-repeat;
+}
+.f32 .tm {
+  background: url('../img/flag/32/tm.png') no-repeat;
+}
+.f32 .tn {
+  background: url('../img/flag/32/tn.png') no-repeat;
+}
+.f32 .to {
+  background: url('../img/flag/32/to.png') no-repeat;
+}
+.f32 .tr {
+  background: url('../img/flag/32/tr.png') no-repeat;
+}
+.f32 .tt {
+  background: url('../img/flag/32/tt.png') no-repeat;
+}
+.f32 .tv {
+  background: url('../img/flag/32/tv.png') no-repeat;
+}
+.f32 .tw {
+  background: url('../img/flag/32/tw.png') no-repeat;
+}
+.f32 .tz {
+  background: url('../img/flag/32/tz.png') no-repeat;
+}
+.f32 .ua {
+  background: url('../img/flag/32/ua.png') no-repeat;
+}
+.f32 .ug {
+  background: url('../img/flag/32/ug.png') no-repeat;
+}
+.f32 .uk {
+  background: url('../img/flag/32/uk.png') no-repeat;
+}
+.f32 .us {
+  background: url('../img/flag/32/us.png') no-repeat;
+}
+.f32 .uy {
+  background: url('../img/flag/32/uy.png') no-repeat;
+}
+.f32 .uz {
+  background: url('../img/flag/32/uz.png') no-repeat;
+}
+.f32 .va {
+  background: url('../img/flag/32/va.png') no-repeat;
+}
+.f32 .vc {
+  background: url('../img/flag/32/vc.png') no-repeat;
+}
+.f32 .ve {
+  background: url('../img/flag/32/ve.png') no-repeat;
+}
+.f32 .vg {
+  background: url('../img/flag/32/vg.png') no-repeat;
+}
+.f32 .vi {
+  background: url('../img/flag/32/vi.png') no-repeat;
+}
+.f32 .vn {
+  background: url('../img/flag/32/vn.png') no-repeat;
+}
+.f32 .vu {
+  background: url('../img/flag/32/vu.png') no-repeat;
+}
+.f32 .wf {
+  background: url('../img/flag/32/wf.png') no-repeat;
+}
+.f32 .ws {
+  background: url('../img/flag/32/ws.png') no-repeat;
+}
+.f32 .ye {
+  background: url('../img/flag/32/ye.png') no-repeat;
+}
+.f32 .yt {
+  background: url('../img/flag/32/yt.png') no-repeat;
+}
+.f32 .za {
+  background: url('../img/flag/32/za.png') no-repeat;
+}
+.f32 .zm {
+  background: url('../img/flag/32/zm.png') no-repeat;
+}
+.f32 .zw {
+  background: url('../img/flag/32/zw.png') no-repeat;
+}
+.f64 i,
+.f64 .flag {
+  width: 64px;
+  height: 64px;
+  line-height: 64px;
+}
+.f64 .ad {
+  background: url('../img/flag/64/ad.png') no-repeat;
+}
+.f64 .ae {
+  background: url('../img/flag/64/ae.png') no-repeat;
+}
+.f64 .af {
+  background: url('../img/flag/64/af.png') no-repeat;
+}
+.f64 .ag {
+  background: url('../img/flag/64/ag.png') no-repeat;
+}
+.f64 .ai {
+  background: url('../img/flag/64/ai.png') no-repeat;
+}
+.f64 .al {
+  background: url('../img/flag/64/al.png') no-repeat;
+}
+.f64 .am {
+  background: url('../img/flag/64/am.png') no-repeat;
+}
+.f64 .an {
+  background: url('../img/flag/64/an.png') no-repeat;
+}
+.f64 .ao {
+  background: url('../img/flag/64/ao.png') no-repeat;
+}
+.f64 .aq {
+  background: url('../img/flag/64/aq.png') no-repeat;
+}
+.f64 .ar {
+  background: url('../img/flag/64/ar.png') no-repeat;
+}
+.f64 .as {
+  background: url('../img/flag/64/as.png') no-repeat;
+}
+.f64 .at {
+  background: url('../img/flag/64/at.png') no-repeat;
+}
+.f64 .au {
+  background: url('../img/flag/64/au.png') no-repeat;
+}
+.f64 .aw {
+  background: url('../img/flag/64/aw.png') no-repeat;
+}
+.f64 .ax {
+  background: url('../img/flag/64/ax.png') no-repeat;
+}
+.f64 .az {
+  background: url('../img/flag/64/az.png') no-repeat;
+}
+.f64 .ba {
+  background: url('../img/flag/64/ba.png') no-repeat;
+}
+.f64 .bb {
+  background: url('../img/flag/64/bb.png') no-repeat;
+}
+.f64 .bd {
+  background: url('../img/flag/64/bd.png') no-repeat;
+}
+.f64 .be {
+  background: url('../img/flag/64/be.png') no-repeat;
+}
+.f64 .bf {
+  background: url('../img/flag/64/bf.png') no-repeat;
+}
+.f64 .bg {
+  background: url('../img/flag/64/bg.png') no-repeat;
+}
+.f64 .bh {
+  background: url('../img/flag/64/bh.png') no-repeat;
+}
+.f64 .bi {
+  background: url('../img/flag/64/bi.png') no-repeat;
+}
+.f64 .bj {
+  background: url('../img/flag/64/bj.png') no-repeat;
+}
+.f64 .bl {
+  background: url('../img/flag/64/bl.png') no-repeat;
+}
+.f64 .bm {
+  background: url('../img/flag/64/bm.png') no-repeat;
+}
+.f64 .bn {
+  background: url('../img/flag/64/bn.png') no-repeat;
+}
+.f64 .bo {
+  background: url('../img/flag/64/bo.png') no-repeat;
+}
+.f64 .br {
+  background: url('../img/flag/64/br.png') no-repeat;
+}
+.f64 .bs {
+  background: url('../img/flag/64/bs.png') no-repeat;
+}
+.f64 .bt {
+  background: url('../img/flag/64/bt.png') no-repeat;
+}
+.f64 .bw {
+  background: url('../img/flag/64/bw.png') no-repeat;
+}
+.f64 .by {
+  background: url('../img/flag/64/by.png') no-repeat;
+}
+.f64 .bz {
+  background: url('../img/flag/64/bz.png') no-repeat;
+}
+.f64 .ca {
+  background: url('../img/flag/64/ca.png') no-repeat;
+}
+.f64 .cc {
+  background: url('../img/flag/64/cc.png') no-repeat;
+}
+.f64 .cd {
+  background: url('../img/flag/64/cd.png') no-repeat;
+}
+.f64 .cf {
+  background: url('../img/flag/64/cf.png') no-repeat;
+}
+.f64 .cg {
+  background: url('../img/flag/64/cg.png') no-repeat;
+}
+.f64 .ch {
+  background: url('../img/flag/64/ch.png') no-repeat;
+}
+.f64 .ci {
+  background: url('../img/flag/64/ci.png') no-repeat;
+}
+.f64 .ck {
+  background: url('../img/flag/64/ck.png') no-repeat;
+}
+.f64 .cl {
+  background: url('../img/flag/64/cl.png') no-repeat;
+}
+.f64 .cm {
+  background: url('../img/flag/64/cm.png') no-repeat;
+}
+.f64 .cn {
+  background: url('../img/flag/64/cn.png') no-repeat;
+}
+.f64 .co {
+  background: url('../img/flag/64/co.png') no-repeat;
+}
+.f64 .cr {
+  background: url('../img/flag/64/cr.png') no-repeat;
+}
+.f64 .cu {
+  background: url('../img/flag/64/cu.png') no-repeat;
+}
+.f64 .cv {
+  background: url('../img/flag/64/cv.png') no-repeat;
+}
+.f64 .cw {
+  background: url('../img/flag/64/cw.png') no-repeat;
+}
+.f64 .cx {
+  background: url('../img/flag/64/cx.png') no-repeat;
+}
+.f64 .cy {
+  background: url('../img/flag/64/cy.png') no-repeat;
+}
+.f64 .cz {
+  background: url('../img/flag/64/cz.png') no-repeat;
+}
+.f64 .de {
+  background: url('../img/flag/64/de.png') no-repeat;
+}
+.f64 .dj {
+  background: url('../img/flag/64/dj.png') no-repeat;
+}
+.f64 .dk {
+  background: url('../img/flag/64/dk.png') no-repeat;
+}
+.f64 .dm {
+  background: url('../img/flag/64/dm.png') no-repeat;
+}
+.f64 .do {
+  background: url('../img/flag/64/do.png') no-repeat;
+}
+.f64 .dz {
+  background: url('../img/flag/64/dz.png') no-repeat;
+}
+.f64 .ec {
+  background: url('../img/flag/64/ec.png') no-repeat;
+}
+.f64 .ee {
+  background: url('../img/flag/64/ee.png') no-repeat;
+}
+.f64 .eg {
+  background: url('../img/flag/64/eg.png') no-repeat;
+}
+.f64 .eh {
+  background: url('../img/flag/64/eh.png') no-repeat;
+}
+.f64 .er {
+  background: url('../img/flag/64/er.png') no-repeat;
+}
+.f64 .es {
+  background: url('../img/flag/64/es.png') no-repeat;
+}
+.f64 .et {
+  background: url('../img/flag/64/et.png') no-repeat;
+}
+.f64 .eu {
+  background: url('../img/flag/64/eu.png') no-repeat;
+}
+.f64 .fi {
+  background: url('../img/flag/64/fi.png') no-repeat;
+}
+.f64 .fj {
+  background: url('../img/flag/64/fj.png') no-repeat;
+}
+.f64 .fk {
+  background: url('../img/flag/64/fk.png') no-repeat;
+}
+.f64 .fm {
+  background: url('../img/flag/64/fm.png') no-repeat;
+}
+.f64 .fo {
+  background: url('../img/flag/64/fo.png') no-repeat;
+}
+.f64 .fr {
+  background: url('../img/flag/64/fr.png') no-repeat;
+}
+.f64 .ga {
+  background: url('../img/flag/64/ga.png') no-repeat;
+}
+.f64 .gb {
+  background: url('../img/flag/64/gb.png') no-repeat;
+}
+.f64 .gd {
+  background: url('../img/flag/64/gd.png') no-repeat;
+}
+.f64 .ge {
+  background: url('../img/flag/64/ge.png') no-repeat;
+}
+.f64 .gg {
+  background: url('../img/flag/64/gg.png') no-repeat;
+}
+.f64 .gh {
+  background: url('../img/flag/64/gh.png') no-repeat;
+}
+.f64 .gi {
+  background: url('../img/flag/64/gi.png') no-repeat;
+}
+.f64 .gl {
+  background: url('../img/flag/64/gl.png') no-repeat;
+}
+.f64 .gm {
+  background: url('../img/flag/64/gm.png') no-repeat;
+}
+.f64 .gn {
+  background: url('../img/flag/64/gn.png') no-repeat;
+}
+.f64 .gq {
+  background: url('../img/flag/64/gq.png') no-repeat;
+}
+.f64 .gr {
+  background: url('../img/flag/64/gr.png') no-repeat;
+}
+.f64 .gs {
+  background: url('../img/flag/64/gs.png') no-repeat;
+}
+.f64 .gt {
+  background: url('../img/flag/64/gt.png') no-repeat;
+}
+.f64 .gu {
+  background: url('../img/flag/64/gu.png') no-repeat;
+}
+.f64 .gw {
+  background: url('../img/flag/64/gw.png') no-repeat;
+}
+.f64 .gy {
+  background: url('../img/flag/64/gy.png') no-repeat;
+}
+.f64 .hk {
+  background: url('../img/flag/64/hk.png') no-repeat;
+}
+.f64 .hn {
+  background: url('../img/flag/64/hn.png') no-repeat;
+}
+.f64 .hr {
+  background: url('../img/flag/64/hr.png') no-repeat;
+}
+.f64 .ht {
+  background: url('../img/flag/64/ht.png') no-repeat;
+}
+.f64 .hu {
+  background: url('../img/flag/64/hu.png') no-repeat;
+}
+.f64 .ic {
+  background: url('../img/flag/64/ic.png') no-repeat;
+}
+.f64 .id {
+  background: url('../img/flag/64/id.png') no-repeat;
+}
+.f64 .ie {
+  background: url('../img/flag/64/ie.png') no-repeat;
+}
+.f64 .il {
+  background: url('../img/flag/64/il.png') no-repeat;
+}
+.f64 .im {
+  background: url('../img/flag/64/im.png') no-repeat;
+}
+.f64 .in {
+  background: url('../img/flag/64/in.png') no-repeat;
+}
+.f64 .iq {
+  background: url('../img/flag/64/iq.png') no-repeat;
+}
+.f64 .ir {
+  background: url('../img/flag/64/ir.png') no-repeat;
+}
+.f64 .is {
+  background: url('../img/flag/64/is.png') no-repeat;
+}
+.f64 .it {
+  background: url('../img/flag/64/it.png') no-repeat;
+}
+.f64 .je {
+  background: url('../img/flag/64/je.png') no-repeat;
+}
+.f64 .jm {
+  background: url('../img/flag/64/jm.png') no-repeat;
+}
+.f64 .jo {
+  background: url('../img/flag/64/jo.png') no-repeat;
+}
+.f64 .jp {
+  background: url('../img/flag/64/jp.png') no-repeat;
+}
+.f64 .ke {
+  background: url('../img/flag/64/ke.png') no-repeat;
+}
+.f64 .kg {
+  background: url('../img/flag/64/kg.png') no-repeat;
+}
+.f64 .kh {
+  background: url('../img/flag/64/kh.png') no-repeat;
+}
+.f64 .ki {
+  background: url('../img/flag/64/ki.png') no-repeat;
+}
+.f64 .km {
+  background: url('../img/flag/64/km.png') no-repeat;
+}
+.f64 .kn {
+  background: url('../img/flag/64/kn.png') no-repeat;
+}
+.f64 .kp {
+  background: url('../img/flag/64/kp.png') no-repeat;
+}
+.f64 .kr {
+  background: url('../img/flag/64/kr.png') no-repeat;
+}
+.f64 .kw {
+  background: url('../img/flag/64/kw.png') no-repeat;
+}
+.f64 .ky {
+  background: url('../img/flag/64/ky.png') no-repeat;
+}
+.f64 .kz {
+  background: url('../img/flag/64/kz.png') no-repeat;
+}
+.f64 .la {
+  background: url('../img/flag/64/la.png') no-repeat;
+}
+.f64 .lb {
+  background: url('../img/flag/64/lb.png') no-repeat;
+}
+.f64 .lc {
+  background: url('../img/flag/64/lc.png') no-repeat;
+}
+.f64 .li {
+  background: url('../img/flag/64/li.png') no-repeat;
+}
+.f64 .lk {
+  background: url('../img/flag/64/lk.png') no-repeat;
+}
+.f64 .lr {
+  background: url('../img/flag/64/lr.png') no-repeat;
+}
+.f64 .ls {
+  background: url('../img/flag/64/ls.png') no-repeat;
+}
+.f64 .lt {
+  background: url('../img/flag/64/lt.png') no-repeat;
+}
+.f64 .lu {
+  background: url('../img/flag/64/lu.png') no-repeat;
+}
+.f64 .lv {
+  background: url('../img/flag/64/lv.png') no-repeat;
+}
+.f64 .ly {
+  background: url('../img/flag/64/ly.png') no-repeat;
+}
+.f64 .ma {
+  background: url('../img/flag/64/ma.png') no-repeat;
+}
+.f64 .mc {
+  background: url('../img/flag/64/mc.png') no-repeat;
+}
+.f64 .md {
+  background: url('../img/flag/64/md.png') no-repeat;
+}
+.f64 .me {
+  background: url('../img/flag/64/me.png') no-repeat;
+}
+.f64 .mf {
+  background: url('../img/flag/64/mf.png') no-repeat;
+}
+.f64 .mg {
+  background: url('../img/flag/64/mg.png') no-repeat;
+}
+.f64 .mh {
+  background: url('../img/flag/64/mh.png') no-repeat;
+}
+.f64 .mk {
+  background: url('../img/flag/64/mk.png') no-repeat;
+}
+.f64 .ml {
+  background: url('../img/flag/64/ml.png') no-repeat;
+}
+.f64 .mm {
+  background: url('../img/flag/64/mm.png') no-repeat;
+}
+.f64 .mn {
+  background: url('../img/flag/64/mn.png') no-repeat;
+}
+.f64 .mo {
+  background: url('../img/flag/64/mo.png') no-repeat;
+}
+.f64 .mp {
+  background: url('../img/flag/64/mp.png') no-repeat;
+}
+.f64 .mq {
+  background: url('../img/flag/64/mq.png') no-repeat;
+}
+.f64 .mr {
+  background: url('../img/flag/64/mr.png') no-repeat;
+}
+.f64 .ms {
+  background: url('../img/flag/64/ms.png') no-repeat;
+}
+.f64 .mt {
+  background: url('../img/flag/64/mt.png') no-repeat;
+}
+.f64 .mu {
+  background: url('../img/flag/64/mu.png') no-repeat;
+}
+.f64 .mv {
+  background: url('../img/flag/64/mv.png') no-repeat;
+}
+.f64 .mw {
+  background: url('../img/flag/64/mw.png') no-repeat;
+}
+.f64 .mx {
+  background: url('../img/flag/64/mx.png') no-repeat;
+}
+.f64 .my {
+  background: url('../img/flag/64/my.png') no-repeat;
+}
+.f64 .mz {
+  background: url('../img/flag/64/mz.png') no-repeat;
+}
+.f64 .na {
+  background: url('../img/flag/64/na.png') no-repeat;
+}
+.f64 .nc {
+  background: url('../img/flag/64/nc.png') no-repeat;
+}
+.f64 .ne {
+  background: url('../img/flag/64/ne.png') no-repeat;
+}
+.f64 .nf {
+  background: url('../img/flag/64/nf.png') no-repeat;
+}
+.f64 .ng {
+  background: url('../img/flag/64/ng.png') no-repeat;
+}
+.f64 .ni {
+  background: url('../img/flag/64/ni.png') no-repeat;
+}
+.f64 .nl {
+  background: url('../img/flag/64/nl.png') no-repeat;
+}
+.f64 .no {
+  background: url('../img/flag/64/no.png') no-repeat;
+}
+.f64 .np {
+  background: url('../img/flag/64/np.png') no-repeat;
+}
+.f64 .nr {
+  background: url('../img/flag/64/nr.png') no-repeat;
+}
+.f64 .nu {
+  background: url('../img/flag/64/nu.png') no-repeat;
+}
+.f64 .nz {
+  background: url('../img/flag/64/nz.png') no-repeat;
+}
+.f64 .om {
+  background: url('../img/flag/64/om.png') no-repeat;
+}
+.f64 .pa {
+  background: url('../img/flag/64/pa.png') no-repeat;
+}
+.f64 .pe {
+  background: url('../img/flag/64/pe.png') no-repeat;
+}
+.f64 .pf {
+  background: url('../img/flag/64/pf.png') no-repeat;
+}
+.f64 .pg {
+  background: url('../img/flag/64/pg.png') no-repeat;
+}
+.f64 .ph {
+  background: url('../img/flag/64/ph.png') no-repeat;
+}
+.f64 .pk {
+  background: url('../img/flag/64/pk.png') no-repeat;
+}
+.f64 .pl {
+  background: url('../img/flag/64/pl.png') no-repeat;
+}
+.f64 .pn {
+  background: url('../img/flag/64/pn.png') no-repeat;
+}
+.f64 .pr {
+  background: url('../img/flag/64/pr.png') no-repeat;
+}
+.f64 .ps {
+  background: url('../img/flag/64/ps.png') no-repeat;
+}
+.f64 .pt {
+  background: url('../img/flag/64/pt.png') no-repeat;
+}
+.f64 .pw {
+  background: url('../img/flag/64/pw.png') no-repeat;
+}
+.f64 .py {
+  background: url('../img/flag/64/py.png') no-repeat;
+}
+.f64 .qa {
+  background: url('../img/flag/64/qa.png') no-repeat;
+}
+.f64 .ro {
+  background: url('../img/flag/64/ro.png') no-repeat;
+}
+.f64 .rs {
+  background: url('../img/flag/64/rs.png') no-repeat;
+}
+.f64 .ru {
+  background: url('../img/flag/64/ru.png') no-repeat;
+}
+.f64 .rw {
+  background: url('../img/flag/64/rw.png') no-repeat;
+}
+.f64 .sa {
+  background: url('../img/flag/64/sa.png') no-repeat;
+}
+.f64 .sb {
+  background: url('../img/flag/64/sb.png') no-repeat;
+}
+.f64 .sc {
+  background: url('../img/flag/64/sc.png') no-repeat;
+}
+.f64 .sd {
+  background: url('../img/flag/64/sd.png') no-repeat;
+}
+.f64 .se {
+  background: url('../img/flag/64/se.png') no-repeat;
+}
+.f64 .sg {
+  background: url('../img/flag/64/sg.png') no-repeat;
+}
+.f64 .sh {
+  background: url('../img/flag/64/sh.png') no-repeat;
+}
+.f64 .si {
+  background: url('../img/flag/64/si.png') no-repeat;
+}
+.f64 .sk {
+  background: url('../img/flag/64/sk.png') no-repeat;
+}
+.f64 .sl {
+  background: url('../img/flag/64/sl.png') no-repeat;
+}
+.f64 .sm {
+  background: url('../img/flag/64/sm.png') no-repeat;
+}
+.f64 .sn {
+  background: url('../img/flag/64/sn.png') no-repeat;
+}
+.f64 .so {
+  background: url('../img/flag/64/so.png') no-repeat;
+}
+.f64 .sr {
+  background: url('../img/flag/64/sr.png') no-repeat;
+}
+.f64 .ss {
+  background: url('../img/flag/64/ss.png') no-repeat;
+}
+.f64 .st {
+  background: url('../img/flag/64/st.png') no-repeat;
+}
+.f64 .sv {
+  background: url('../img/flag/64/sv.png') no-repeat;
+}
+.f64 .sy {
+  background: url('../img/flag/64/sy.png') no-repeat;
+}
+.f64 .sz {
+  background: url('../img/flag/64/sz.png') no-repeat;
+}
+.f64 .tc {
+  background: url('../img/flag/64/tc.png') no-repeat;
+}
+.f64 .td {
+  background: url('../img/flag/64/td.png') no-repeat;
+}
+.f64 .tf {
+  background: url('../img/flag/64/tf.png') no-repeat;
+}
+.f64 .tg {
+  background: url('../img/flag/64/tg.png') no-repeat;
+}
+.f64 .th {
+  background: url('../img/flag/64/th.png') no-repeat;
+}
+.f64 .tj {
+  background: url('../img/flag/64/tj.png') no-repeat;
+}
+.f64 .tk {
+  background: url('../img/flag/64/tk.png') no-repeat;
+}
+.f64 .tl {
+  background: url('../img/flag/64/tl.png') no-repeat;
+}
+.f64 .tm {
+  background: url('../img/flag/64/tm.png') no-repeat;
+}
+.f64 .tn {
+  background: url('../img/flag/64/tn.png') no-repeat;
+}
+.f64 .to {
+  background: url('../img/flag/64/to.png') no-repeat;
+}
+.f64 .tr {
+  background: url('../img/flag/64/tr.png') no-repeat;
+}
+.f64 .tt {
+  background: url('../img/flag/64/tt.png') no-repeat;
+}
+.f64 .tv {
+  background: url('../img/flag/64/tv.png') no-repeat;
+}
+.f64 .tw {
+  background: url('../img/flag/64/tw.png') no-repeat;
+}
+.f64 .tz {
+  background: url('../img/flag/64/tz.png') no-repeat;
+}
+.f64 .ua {
+  background: url('../img/flag/64/ua.png') no-repeat;
+}
+.f64 .ug {
+  background: url('../img/flag/64/ug.png') no-repeat;
+}
+.f64 .uk {
+  background: url('../img/flag/64/uk.png') no-repeat;
+}
+.f64 .us {
+  background: url('../img/flag/64/us.png') no-repeat;
+}
+.f64 .uy {
+  background: url('../img/flag/64/uy.png') no-repeat;
+}
+.f64 .uz {
+  background: url('../img/flag/64/uz.png') no-repeat;
+}
+.f64 .va {
+  background: url('../img/flag/64/va.png') no-repeat;
+}
+.f64 .vc {
+  background: url('../img/flag/64/vc.png') no-repeat;
+}
+.f64 .ve {
+  background: url('../img/flag/64/ve.png') no-repeat;
+}
+.f64 .vg {
+  background: url('../img/flag/64/vg.png') no-repeat;
+}
+.f64 .vi {
+  background: url('../img/flag/64/vi.png') no-repeat;
+}
+.f64 .vn {
+  background: url('../img/flag/64/vn.png') no-repeat;
+}
+.f64 .vu {
+  background: url('../img/flag/64/vu.png') no-repeat;
+}
+.f64 .wf {
+  background: url('../img/flag/64/wf.png') no-repeat;
+}
+.f64 .ws {
+  background: url('../img/flag/64/ws.png') no-repeat;
+}
+.f64 .ye {
+  background: url('../img/flag/64/ye.png') no-repeat;
+}
+.f64 .yt {
+  background: url('../img/flag/64/yt.png') no-repeat;
+}
+.f64 .za {
+  background: url('../img/flag/64/za.png') no-repeat;
+}
+.f64 .zm {
+  background: url('../img/flag/64/zm.png') no-repeat;
+}
+.f64 .zw {
+  background: url('../img/flag/64/zw.png') no-repeat;
+}
+.fsvg_4x3 i,
+.fsvg_4x3 .flag {
+  width: 100px;
+  height: 75px;
+  line-height: 100px;
+}
+.fsvg_4x3 .ad {
+  background: url('../img/flag/svg_4x3/ad.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .ae {
+  background: url('../img/flag/svg_4x3/ae.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .af {
+  background: url('../img/flag/svg_4x3/af.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .ag {
+  background: url('../img/flag/svg_4x3/ag.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .ai {
+  background: url('../img/flag/svg_4x3/ai.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .al {
+  background: url('../img/flag/svg_4x3/al.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .am {
+  background: url('../img/flag/svg_4x3/am.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .an {
+  background: url('../img/flag/svg_4x3/an.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .ao {
+  background: url('../img/flag/svg_4x3/ao.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .aq {
+  background: url('../img/flag/svg_4x3/aq.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .ar {
+  background: url('../img/flag/svg_4x3/ar.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .as {
+  background: url('../img/flag/svg_4x3/as.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .at {
+  background: url('../img/flag/svg_4x3/at.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .au {
+  background: url('../img/flag/svg_4x3/au.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .aw {
+  background: url('../img/flag/svg_4x3/aw.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .ax {
+  background: url('../img/flag/svg_4x3/ax.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .az {
+  background: url('../img/flag/svg_4x3/az.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .ba {
+  background: url('../img/flag/svg_4x3/ba.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .bb {
+  background: url('../img/flag/svg_4x3/bb.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .bd {
+  background: url('../img/flag/svg_4x3/bd.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .be {
+  background: url('../img/flag/svg_4x3/be.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .bf {
+  background: url('../img/flag/svg_4x3/bf.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .bg {
+  background: url('../img/flag/svg_4x3/bg.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .bh {
+  background: url('../img/flag/svg_4x3/bh.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .bi {
+  background: url('../img/flag/svg_4x3/bi.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .bj {
+  background: url('../img/flag/svg_4x3/bj.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .bl {
+  background: url('../img/flag/svg_4x3/bl.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .bm {
+  background: url('../img/flag/svg_4x3/bm.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .bn {
+  background: url('../img/flag/svg_4x3/bn.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .bo {
+  background: url('../img/flag/svg_4x3/bo.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .br {
+  background: url('../img/flag/svg_4x3/br.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .bs {
+  background: url('../img/flag/svg_4x3/bs.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .bt {
+  background: url('../img/flag/svg_4x3/bt.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .bw {
+  background: url('../img/flag/svg_4x3/bw.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .by {
+  background: url('../img/flag/svg_4x3/by.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .bz {
+  background: url('../img/flag/svg_4x3/bz.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .ca {
+  background: url('../img/flag/svg_4x3/ca.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .cc {
+  background: url('../img/flag/svg_4x3/cc.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .cd {
+  background: url('../img/flag/svg_4x3/cd.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .cf {
+  background: url('../img/flag/svg_4x3/cf.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .cg {
+  background: url('../img/flag/svg_4x3/cg.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .ch {
+  background: url('../img/flag/svg_4x3/ch.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .ci {
+  background: url('../img/flag/svg_4x3/ci.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .ck {
+  background: url('../img/flag/svg_4x3/ck.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .cl {
+  background: url('../img/flag/svg_4x3/cl.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .cm {
+  background: url('../img/flag/svg_4x3/cm.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .cn {
+  background: url('../img/flag/svg_4x3/cn.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .co {
+  background: url('../img/flag/svg_4x3/co.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .cr {
+  background: url('../img/flag/svg_4x3/cr.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .cu {
+  background: url('../img/flag/svg_4x3/cu.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .cv {
+  background: url('../img/flag/svg_4x3/cv.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .cw {
+  background: url('../img/flag/svg_4x3/cw.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .cx {
+  background: url('../img/flag/svg_4x3/cx.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .cy {
+  background: url('../img/flag/svg_4x3/cy.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .cz {
+  background: url('../img/flag/svg_4x3/cz.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .de {
+  background: url('../img/flag/svg_4x3/de.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .dj {
+  background: url('../img/flag/svg_4x3/dj.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .dk {
+  background: url('../img/flag/svg_4x3/dk.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .dm {
+  background: url('../img/flag/svg_4x3/dm.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .do {
+  background: url('../img/flag/svg_4x3/do.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .dz {
+  background: url('../img/flag/svg_4x3/dz.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .ec {
+  background: url('../img/flag/svg_4x3/ec.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .ee {
+  background: url('../img/flag/svg_4x3/ee.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .eg {
+  background: url('../img/flag/svg_4x3/eg.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .eh {
+  background: url('../img/flag/svg_4x3/eh.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .er {
+  background: url('../img/flag/svg_4x3/er.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .es {
+  background: url('../img/flag/svg_4x3/es.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .et {
+  background: url('../img/flag/svg_4x3/et.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .eu {
+  background: url('../img/flag/svg_4x3/eu.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .fi {
+  background: url('../img/flag/svg_4x3/fi.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .fj {
+  background: url('../img/flag/svg_4x3/fj.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .fk {
+  background: url('../img/flag/svg_4x3/fk.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .fm {
+  background: url('../img/flag/svg_4x3/fm.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .fo {
+  background: url('../img/flag/svg_4x3/fo.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .fr {
+  background: url('../img/flag/svg_4x3/fr.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .ga {
+  background: url('../img/flag/svg_4x3/ga.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .gb {
+  background: url('../img/flag/svg_4x3/gb.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .gd {
+  background: url('../img/flag/svg_4x3/gd.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .ge {
+  background: url('../img/flag/svg_4x3/ge.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .gg {
+  background: url('../img/flag/svg_4x3/gg.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .gh {
+  background: url('../img/flag/svg_4x3/gh.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .gi {
+  background: url('../img/flag/svg_4x3/gi.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .gl {
+  background: url('../img/flag/svg_4x3/gl.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .gm {
+  background: url('../img/flag/svg_4x3/gm.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .gn {
+  background: url('../img/flag/svg_4x3/gn.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .gq {
+  background: url('../img/flag/svg_4x3/gq.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .gr {
+  background: url('../img/flag/svg_4x3/gr.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .gs {
+  background: url('../img/flag/svg_4x3/gs.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .gt {
+  background: url('../img/flag/svg_4x3/gt.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .gu {
+  background: url('../img/flag/svg_4x3/gu.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .gw {
+  background: url('../img/flag/svg_4x3/gw.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .gy {
+  background: url('../img/flag/svg_4x3/gy.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .hk {
+  background: url('../img/flag/svg_4x3/hk.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .hn {
+  background: url('../img/flag/svg_4x3/hn.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .hr {
+  background: url('../img/flag/svg_4x3/hr.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .ht {
+  background: url('../img/flag/svg_4x3/ht.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .hu {
+  background: url('../img/flag/svg_4x3/hu.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .ic {
+  background: url('../img/flag/svg_4x3/ic.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .id {
+  background: url('../img/flag/svg_4x3/id.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .ie {
+  background: url('../img/flag/svg_4x3/ie.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .il {
+  background: url('../img/flag/svg_4x3/il.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .im {
+  background: url('../img/flag/svg_4x3/im.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .in {
+  background: url('../img/flag/svg_4x3/in.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .iq {
+  background: url('../img/flag/svg_4x3/iq.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .ir {
+  background: url('../img/flag/svg_4x3/ir.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .is {
+  background: url('../img/flag/svg_4x3/is.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .it {
+  background: url('../img/flag/svg_4x3/it.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .je {
+  background: url('../img/flag/svg_4x3/je.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .jm {
+  background: url('../img/flag/svg_4x3/jm.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .jo {
+  background: url('../img/flag/svg_4x3/jo.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .jp {
+  background: url('../img/flag/svg_4x3/jp.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .ke {
+  background: url('../img/flag/svg_4x3/ke.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .kg {
+  background: url('../img/flag/svg_4x3/kg.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .kh {
+  background: url('../img/flag/svg_4x3/kh.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .ki {
+  background: url('../img/flag/svg_4x3/ki.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .km {
+  background: url('../img/flag/svg_4x3/km.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .kn {
+  background: url('../img/flag/svg_4x3/kn.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .kp {
+  background: url('../img/flag/svg_4x3/kp.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .kr {
+  background: url('../img/flag/svg_4x3/kr.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .kw {
+  background: url('../img/flag/svg_4x3/kw.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .ky {
+  background: url('../img/flag/svg_4x3/ky.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .kz {
+  background: url('../img/flag/svg_4x3/kz.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .la {
+  background: url('../img/flag/svg_4x3/la.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .lb {
+  background: url('../img/flag/svg_4x3/lb.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .lc {
+  background: url('../img/flag/svg_4x3/lc.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .li {
+  background: url('../img/flag/svg_4x3/li.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .lk {
+  background: url('../img/flag/svg_4x3/lk.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .lr {
+  background: url('../img/flag/svg_4x3/lr.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .ls {
+  background: url('../img/flag/svg_4x3/ls.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .lt {
+  background: url('../img/flag/svg_4x3/lt.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .lu {
+  background: url('../img/flag/svg_4x3/lu.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .lv {
+  background: url('../img/flag/svg_4x3/lv.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .ly {
+  background: url('../img/flag/svg_4x3/ly.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .ma {
+  background: url('../img/flag/svg_4x3/ma.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .mc {
+  background: url('../img/flag/svg_4x3/mc.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .md {
+  background: url('../img/flag/svg_4x3/md.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .me {
+  background: url('../img/flag/svg_4x3/me.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .mf {
+  background: url('../img/flag/svg_4x3/mf.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .mg {
+  background: url('../img/flag/svg_4x3/mg.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .mh {
+  background: url('../img/flag/svg_4x3/mh.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .mk {
+  background: url('../img/flag/svg_4x3/mk.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .ml {
+  background: url('../img/flag/svg_4x3/ml.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .mm {
+  background: url('../img/flag/svg_4x3/mm.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .mn {
+  background: url('../img/flag/svg_4x3/mn.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .mo {
+  background: url('../img/flag/svg_4x3/mo.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .mp {
+  background: url('../img/flag/svg_4x3/mp.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .mq {
+  background: url('../img/flag/svg_4x3/mq.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .mr {
+  background: url('../img/flag/svg_4x3/mr.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .ms {
+  background: url('../img/flag/svg_4x3/ms.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .mt {
+  background: url('../img/flag/svg_4x3/mt.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .mu {
+  background: url('../img/flag/svg_4x3/mu.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .mv {
+  background: url('../img/flag/svg_4x3/mv.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .mw {
+  background: url('../img/flag/svg_4x3/mw.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .mx {
+  background: url('../img/flag/svg_4x3/mx.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .my {
+  background: url('../img/flag/svg_4x3/my.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .mz {
+  background: url('../img/flag/svg_4x3/mz.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .na {
+  background: url('../img/flag/svg_4x3/na.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .nc {
+  background: url('../img/flag/svg_4x3/nc.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .ne {
+  background: url('../img/flag/svg_4x3/ne.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .nf {
+  background: url('../img/flag/svg_4x3/nf.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .ng {
+  background: url('../img/flag/svg_4x3/ng.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .ni {
+  background: url('../img/flag/svg_4x3/ni.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .nl {
+  background: url('../img/flag/svg_4x3/nl.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .no {
+  background: url('../img/flag/svg_4x3/no.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .np {
+  background: url('../img/flag/svg_4x3/np.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .nr {
+  background: url('../img/flag/svg_4x3/nr.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .nu {
+  background: url('../img/flag/svg_4x3/nu.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .nz {
+  background: url('../img/flag/svg_4x3/nz.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .om {
+  background: url('../img/flag/svg_4x3/om.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .pa {
+  background: url('../img/flag/svg_4x3/pa.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .pe {
+  background: url('../img/flag/svg_4x3/pe.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .pf {
+  background: url('../img/flag/svg_4x3/pf.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .pg {
+  background: url('../img/flag/svg_4x3/pg.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .ph {
+  background: url('../img/flag/svg_4x3/ph.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .pk {
+  background: url('../img/flag/svg_4x3/pk.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .pl {
+  background: url('../img/flag/svg_4x3/pl.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .pn {
+  background: url('../img/flag/svg_4x3/pn.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .pr {
+  background: url('../img/flag/svg_4x3/pr.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .ps {
+  background: url('../img/flag/svg_4x3/ps.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .pt {
+  background: url('../img/flag/svg_4x3/pt.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .pw {
+  background: url('../img/flag/svg_4x3/pw.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .py {
+  background: url('../img/flag/svg_4x3/py.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .qa {
+  background: url('../img/flag/svg_4x3/qa.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .ro {
+  background: url('../img/flag/svg_4x3/ro.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .rs {
+  background: url('../img/flag/svg_4x3/rs.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .ru {
+  background: url('../img/flag/svg_4x3/ru.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .rw {
+  background: url('../img/flag/svg_4x3/rw.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .sa {
+  background: url('../img/flag/svg_4x3/sa.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .sb {
+  background: url('../img/flag/svg_4x3/sb.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .sc {
+  background: url('../img/flag/svg_4x3/sc.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .sd {
+  background: url('../img/flag/svg_4x3/sd.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .se {
+  background: url('../img/flag/svg_4x3/se.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .sg {
+  background: url('../img/flag/svg_4x3/sg.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .sh {
+  background: url('../img/flag/svg_4x3/sh.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .si {
+  background: url('../img/flag/svg_4x3/si.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .sk {
+  background: url('../img/flag/svg_4x3/sk.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .sl {
+  background: url('../img/flag/svg_4x3/sl.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .sm {
+  background: url('../img/flag/svg_4x3/sm.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .sn {
+  background: url('../img/flag/svg_4x3/sn.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .so {
+  background: url('../img/flag/svg_4x3/so.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .sr {
+  background: url('../img/flag/svg_4x3/sr.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .ss {
+  background: url('../img/flag/svg_4x3/ss.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .st {
+  background: url('../img/flag/svg_4x3/st.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .sv {
+  background: url('../img/flag/svg_4x3/sv.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .sy {
+  background: url('../img/flag/svg_4x3/sy.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .sz {
+  background: url('../img/flag/svg_4x3/sz.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .tc {
+  background: url('../img/flag/svg_4x3/tc.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .td {
+  background: url('../img/flag/svg_4x3/td.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .tf {
+  background: url('../img/flag/svg_4x3/tf.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .tg {
+  background: url('../img/flag/svg_4x3/tg.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .th {
+  background: url('../img/flag/svg_4x3/th.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .tj {
+  background: url('../img/flag/svg_4x3/tj.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .tk {
+  background: url('../img/flag/svg_4x3/tk.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .tl {
+  background: url('../img/flag/svg_4x3/tl.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .tm {
+  background: url('../img/flag/svg_4x3/tm.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .tn {
+  background: url('../img/flag/svg_4x3/tn.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .to {
+  background: url('../img/flag/svg_4x3/to.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .tr {
+  background: url('../img/flag/svg_4x3/tr.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .tt {
+  background: url('../img/flag/svg_4x3/tt.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .tv {
+  background: url('../img/flag/svg_4x3/tv.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .tw {
+  background: url('../img/flag/svg_4x3/tw.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .tz {
+  background: url('../img/flag/svg_4x3/tz.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .ua {
+  background: url('../img/flag/svg_4x3/ua.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .ug {
+  background: url('../img/flag/svg_4x3/ug.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .uk {
+  background: url('../img/flag/svg_4x3/uk.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .us {
+  background: url('../img/flag/svg_4x3/us.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .uy {
+  background: url('../img/flag/svg_4x3/uy.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .uz {
+  background: url('../img/flag/svg_4x3/uz.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .va {
+  background: url('../img/flag/svg_4x3/va.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .vc {
+  background: url('../img/flag/svg_4x3/vc.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .ve {
+  background: url('../img/flag/svg_4x3/ve.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .vg {
+  background: url('../img/flag/svg_4x3/vg.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .vi {
+  background: url('../img/flag/svg_4x3/vi.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .vn {
+  background: url('../img/flag/svg_4x3/vn.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .vu {
+  background: url('../img/flag/svg_4x3/vu.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .wf {
+  background: url('../img/flag/svg_4x3/wf.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .ws {
+  background: url('../img/flag/svg_4x3/ws.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .ye {
+  background: url('../img/flag/svg_4x3/ye.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .yt {
+  background: url('../img/flag/svg_4x3/yt.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .za {
+  background: url('../img/flag/svg_4x3/za.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .zm {
+  background: url('../img/flag/svg_4x3/zm.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.fsvg_4x3 .zw {
+  background: url('../img/flag/svg_4x3/zw.svg') no-repeat;
+  background-size: 100% 100%;
+}

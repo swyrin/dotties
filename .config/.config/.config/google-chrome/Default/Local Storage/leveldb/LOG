@@ -1,0 +1,11 @@
+2022/08/25-15:43:36.845 3 Recovering log #5
+2022/08/25-15:43:36.846 3 Level-0 table #7: started
+2022/08/25-15:43:36.859 3 Level-0 table #7: 5450 bytes OK
+2022/08/25-15:43:36.865 3 Delete type=0 #5
+2022/08/25-15:43:36.865 3 Delete type=3 #4
+2022/08/25-15:52:52.342 a Level-0 table #10: started
+2022/08/25-15:52:52.344 a Level-0 table #10: 19196 bytes OK
+2022/08/25-15:52:52.346 a Delete type=0 #8
+2022/08/25-16:07:18.415 13 Level-0 table #12: started
+2022/08/25-16:07:18.423 13 Level-0 table #12: 21768 bytes OK
+2022/08/25-16:07:18.425 13 Delete type=0 #9

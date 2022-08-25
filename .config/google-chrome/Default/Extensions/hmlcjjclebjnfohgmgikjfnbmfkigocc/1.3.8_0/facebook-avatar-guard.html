@@ -1,0 +1,28 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0,shrink-to-fit=no" name="viewport"><title>J2TEAM Security</title><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200&display=swap"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.1/css/bootstrap.min.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"><link rel="stylesheet" href="styles/juno_okyo.css"><style>.fb-avatar {
+        display: block;
+        border-radius: 100%;
+        border: 4px solid #337ab7;
+        margin-bottom: 20px;
+        width: 200px;
+        height: 200px;
+        user-select: none;
+      }
+
+      ._3016 {
+        position: relative;
+      }
+
+      ._ttp::after {
+        position: absolute;
+        left: 50%;
+        bottom: -12px;
+        background-image: url(https://i.imgur.com/sKPa4fm.png);
+        background-size: auto;
+        background-repeat: no-repeat;
+        background-position: 0px -41px;
+        height: 24px;
+        width: 24px;
+        margin-left: -12px;
+        display: block;
+        content: "";
+      }</style></head><body><div class="wrapper" id="wrapper"><div class="sidebar" id="sidebar" data-color="blue" data-image="https://i.imgur.com/zfvF5UR.jpg"><sidebar-content></sidebar-content></div><div class="main-panel"><nav class="navbar navbar-expand-lg" id="j2team-security-navbar"><navbar-content></navbar-content></nav><div class="content" id="juno_okyo"><div class="container-fluid"><div class="row"><div class="col-12 col-md-8"><div class="card"><div class="card-header"><h4 class="card-title">Profile Picture Guard for Facebook</h4></div><div class="card-body"><div class="_3016" v-bind:class="{_ttp: enable}"><img :src="`https://graph.facebook.com/${user_id}/picture?width=200&height=200`" class="img-fluid mx-auto fb-avatar" alt="facebook-profile-picture-guard" width="200" height="200" onerror="this.onerror=null;this.src='https://i.imgur.com/QsEuaOf.jpg'"></div><div class="text-center mt-4"><img src="images/fb-loading.gif" alt="loading" width="32" height="32" v-if="loading"> <button type="button" class="btn btn-primary" v-bind:class="{disabled: loading}" v-on:click="updateGuard" v-if="!loading"><span class="btn-label"><i class="fa fa-check"></i></span> {{loading ? 'Loading...' : (enable ? i18n('btnDisableProfilePictureGuard') : i18n('btnEnableProfilePictureGuard'))}}</button> <a :href="`https://m.facebook.com/profile.php?id=${user_id}`" target="_blank" class="btn btn-secondary ml-2" v-if="!loading"><span class="btn-label"><i class="fa fa-external-link"></i></span> {{i18n('btnSeeOnMyProfile')}}</a></div><hr><div class="alert alert-info fade show" role="alert">{{i18n('profilePictureGuardInfo')}}</div></div></div></div><div class="col-12 col-md-4"><a href="https://j2team.org/auth" target="_blank" rel="noopener"><img src="https://i.imgur.com/laAnRdV.png" alt="j2team-security-premium" class="img-fluid img-thumbnail" loading="lazy"></a></div></div></div></div><footer class="footer" id="footer"><footer-content></footer-content></footer></div></div><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.1/js/bootstrap.bundle.min.js"></script><script src="scripts/light-bootstrap-dashboard.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.14/vue.min.js"></script><script src="scripts/config.js"></script><script src="scripts/template.js"></script><script src="scripts/facebook-avatar-guard.js"></script></body></html>

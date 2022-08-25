@@ -1,0 +1,247 @@
+html,
+body {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+.moving-anim {
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.moving-anim .moving-item {
+  display: flex;
+}
+.moving-anim .wrapper {
+  visibility: hidden;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+.moving-anim .wrapper .moving-item {
+  position: absolute;
+}
+.moving-anim.up {
+  bottom: 140px;
+}
+.moving-anim.up .wrapper {
+  height: 100%;
+  animation-name: move-up;
+}
+.moving-anim.up .wrapper .arrow {
+  animation-name: moving-arrow-up-down;
+}
+.moving-anim.up .moving-item {
+  bottom: 0;
+  transform: translateY(100%);
+  flex-direction: column;
+}
+.moving-anim.up .arrow {
+  margin-top: 10px;
+  margin-left: 4px;
+}
+.moving-anim.down {
+  top: 140px;
+}
+.moving-anim.down .wrapper {
+  height: 100%;
+  animation-name: move-down;
+}
+.moving-anim.down .wrapper .arrow {
+  animation-name: moving-arrow-up-down;
+}
+.moving-anim.down .moving-item {
+  top: 0;
+  transform: translateY(-100%);
+  flex-direction: column-reverse;
+}
+.moving-anim.down .arrow {
+  margin-bottom: 10px;
+  margin-left: 4px;
+}
+.moving-anim.left {
+  right: 400px;
+}
+.moving-anim.left .wrapper {
+  width: 100%;
+  animation-name: move-left;
+}
+.moving-anim.left .wrapper .arrow {
+  animation-name: moving-arrow-left-right;
+}
+.moving-anim.left .moving-item {
+  right: 0;
+  transform: translateX(100%);
+  flex-direction: row;
+}
+.moving-anim.left .arrow {
+  margin: auto 0 auto 50px;
+}
+.moving-anim.right {
+  left: 400px;
+  right: 15px;
+}
+.moving-anim.right .wrapper {
+  width: 100%;
+  animation-name: move-right;
+}
+.moving-anim.right .wrapper .arrow {
+  animation-name: moving-arrow-left-right;
+}
+.moving-anim.right .moving-item {
+  left: 0;
+  transform: translateX(-100%);
+  flex-direction: row-reverse;
+}
+.moving-anim.right .arrow {
+  margin: auto 50px auto 0;
+}
+.moving-anim.logo-right .moving-item {
+  left: 0;
+}
+.moving-anim.logo-right .logo {
+  right: -39px;
+}
+.moving-anim.logo-left .moving-item {
+  right: 0;
+}
+.moving-anim.logo-left .logo {
+  left: -39px;
+}
+.moving-anim .watermark-image {
+  display: flex;
+  position: relative;
+  margin: 15px 4px 8px 7px;
+  background: #fff;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  opacity: 0.5;
+}
+.moving-anim .watermark-image .logo {
+  width: 23px;
+  height: 31px;
+  background: url(../img/flame_gray.svg?anim_frame) no-repeat;
+  background-size: 100% 100%;
+  position: absolute;
+  margin: auto 0;
+  top: 0;
+  bottom: 0;
+}
+.moving-anim .arrow {
+  display: flex;
+  width: 28px;
+  height: 28px;
+  background-color: #ffffff;
+  border-radius: 14px;
+  animation-duration: 300ms;
+  animation-delay: 300ms;
+  animation-fill-mode: both;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+.moving-anim .arrow .arrow-icon {
+  width: 18px;
+  height: 18px;
+  margin: auto;
+  opacity: 0.5;
+}
+.moving-anim .arrow-icon {
+  height: 100%;
+  width: 100%;
+  background: url(../img/ic_arrow.svg?anim_frame) no-repeat;
+  background-size: 18px 12px;
+  background-position: center;
+}
+.moving-anim .arrow-up .arrow-icon {
+  transform: rotate(90deg);
+}
+.moving-anim .arrow-down .arrow-icon {
+  transform: rotate(270deg);
+}
+.moving-anim .arrow-right .arrow-icon {
+  transform: rotate(180deg);
+}
+@keyframes move-up {
+  0%,
+  15% {
+    visibility: hidden;
+    transform: translateY(0);
+  }
+  30%,
+  85% {
+    visibility: visible;
+    transform: translateY(-100%);
+  }
+  100% {
+    visibility: visible;
+    transform: translateY(-150%);
+  }
+}
+@keyframes move-down {
+  0%,
+  15% {
+    visibility: hidden;
+    transform: translateY(0);
+  }
+  30%,
+  85% {
+    visibility: visible;
+    transform: translateY(100%);
+  }
+  100% {
+    visibility: visible;
+    transform: translateY(150%);
+  }
+}
+@keyframes move-left {
+  0%,
+  15% {
+    visibility: hidden;
+    transform: translateX(0);
+  }
+  30%,
+  85% {
+    visibility: visible;
+    transform: translateX(-100%);
+  }
+  100% {
+    visibility: visible;
+    transform: translateX(-150%);
+  }
+}
+@keyframes move-right {
+  0%,
+  15% {
+    visibility: hidden;
+    transform: translateX(0);
+  }
+  30%,
+  85% {
+    visibility: visible;
+    transform: translateX(100%);
+  }
+  100% {
+    visibility: visible;
+    transform: translateX(150%);
+  }
+}
+@keyframes moving-arrow-up-down {
+  from {
+    transform: translateY(-5px);
+  }
+  to {
+    transform: translateY(5px);
+  }
+}
+@keyframes moving-arrow-left-right {
+  from {
+    transform: translateX(-5px);
+  }
+  to {
+    transform: translateX(5px);
+  }
+}

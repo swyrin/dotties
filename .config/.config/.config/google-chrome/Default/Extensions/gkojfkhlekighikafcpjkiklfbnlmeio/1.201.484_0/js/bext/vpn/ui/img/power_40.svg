@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="40" height="40" viewBox="0 0 40 40">
+    <defs>
+        <radialGradient id="pzly6mnpma" cx="55.71%" cy="24.07%" r="116.809%" fx="55.71%" fy="24.07%">
+            <stop offset="0%" stop-color="#F0F7FF"/>
+            <stop offset="34.721%" stop-color="#D4E0EC"/>
+            <stop offset="100%" stop-color="#A3B5CA"/>
+        </radialGradient>
+        <filter id="tus6rws2dc" width="107.5%" height="107.5%" x="-3.8%" y="-3.8%" filterUnits="objectBoundingBox">
+            <feGaussianBlur in="SourceAlpha" result="shadowBlurInner1" stdDeviation="1"/>
+            <feOffset dy="1" in="shadowBlurInner1" result="shadowOffsetInner1"/>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" k2="-1" k3="1" operator="arithmetic" result="shadowInnerInner1"/>
+            <feColorMatrix in="shadowInnerInner1" values="0 0 0 0 0.637700248 0 0 0 0 0.790591033 0 0 0 0 0.764905982 0 0 0 0.256118881 0"/>
+        </filter>
+        <path id="r30fyxyo1b" d="M56.021 25.258c.476.865.076 1.911-.893 2.336-5.59 2.45-9.218 7.756-9.218 13.754 0 8.391 7.225 15.16 16.09 15.16s16.09-6.769 16.09-15.16c0-5.916-3.627-11.203-9.182-13.696-.965-.433-1.354-1.482-.869-2.344.485-.861 1.66-1.208 2.624-.775C77.543 27.62 82 34.116 82 41.348 82 51.631 73.067 60 62 60s-20-8.369-20-18.652c0-7.317 4.464-13.845 11.405-16.888.969-.425 2.14-.068 2.616.798zM62 20c1.026 0 1.857.831 1.857 1.857v16.696c0 1.026-.831 1.858-1.857 1.858s-1.857-.832-1.857-1.858V21.857c0-1.026.831-1.857 1.857-1.857z"/>
+    </defs>
+    <g fill="none" fill-rule="evenodd" transform="translate(-42 -20)">
+        <use fill="url(#pzly6mnpma)" xlink:href="#r30fyxyo1b"/>
+        <use fill="#000" filter="url(#tus6rws2dc)" xlink:href="#r30fyxyo1b"/>
+    </g>
+</svg>

@@ -1,0 +1,2 @@
+
+//# sourceMappingURL=defaultOrigins.js.map

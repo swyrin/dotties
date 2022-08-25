@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="ic_close" width="24" height="24" viewBox="0 0 24 24">
+    <defs>
+        <style>
+            .cls-1{fill:none}.cls-2{fill:rgba(0,0,0,.38)}
+        </style>
+    </defs>
+    <path id="Rectangle_41" d="M0 0h24v24H0z" class="cls-1" data-name="Rectangle 41"/>
+    <g id="Group_366" data-name="Group 366" transform="translate(5 5)">
+        <path id="Path_66" d="M19 6.4L13.4 12l5.6 5.6-1.4 1.4-5.6-5.6L6.4 19 5 17.6l5.6-5.6L5 6.4 6.4 5l5.6 5.6L17.6 5z" class="cls-2" data-name="Path 66" transform="translate(-5 -5)"/>
+    </g>
+</svg>

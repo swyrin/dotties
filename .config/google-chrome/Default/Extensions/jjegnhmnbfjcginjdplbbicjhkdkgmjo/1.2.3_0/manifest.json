@@ -1,0 +1,32 @@
+{
+   "author": "NguyenLinh-UET",
+   "background": {
+      "persistent": false,
+      "scripts": [ "js/background.js" ]
+   },
+   "browser_action": {
+      "default_icon": "img/icon16.png",
+      "default_popup": "html/popup.html",
+      "default_title": "Edusoft Web Tool by NguyenLinh-UET"
+   },
+   "content_scripts": [ {
+      "css": [ "css/bootstrap.min.css", "css/toastr.css" ],
+      "js": [ "js/autorun.js" ],
+      "matches": [ "*://qldt.ptit.edu.vn/*", "*://daotao.hutech.edu.vn/*", "*://qldt.cs2.ftu.edu.vn/*", "*://sv.bdu.edu.vn/*", "*://daotao.nuce.edu.vn/*", "*://daotao.hvpnvn.edu.vn/*", "*://qldt.hanu.vn/*", "*://qldt2.hanu.vn/*", "*://qldt3.hanu.vn/*", "*://daotao.vnua.edu.vn/*", "*://dkmh.epu.edu.vn/*", "*://qldt.ptit.info/*", "*://congthongtin.hvnh.edu.vn/*", "*://tinchitest.ftu.edu.vn/*", "*://daotao.humg.edu.vn/*", "*://ftugate.ftu.edu.vn/*", "*://edusoftweb.hcmiu.edu.vn/*", "*://sdh.ou.edu.vn/eduweb/*", "*://dangkymonhoc.pyu.edu.vn/*", "*://daotao.vnuf2.edu.vn/*", "*://daotao.pvu.vn/*", "*://daotao.utb.edu.vn/*", "*://uis.ptithcm.edu.vn/*", "*://daotao.qnamuni.edu.vn/*", "*://dkmh.tnut.edu.vn/*", "*://dkmh.oude.edu.vn/*", "*://dkmh.hcmuaf.edu.vn/*", "*://acdm.siu.edu.vn/*", "*://hvsdh.tvu.edu.vn/*", "*://daotao1.stu.edu.vn/*", "*://daotao.ktkt.edu.vn/*", "*://daotao.cfi.edu.vn/*", "*://thongtindaotao.sgu.edu.vn/*", "*://online.vanlanguni.edu.vn/*", "*://dkmh.hitu.edu.vn/web/*", "*://daotao.uef.edu.vn/*" ],
+      "run_at": "document_idle"
+   } ],
+   "description": "Tool đăng kí học cho HANU,VNUA,PTIT,...",
+   "homepage_url": "https://www.facebook.com/nguyenlinh.uet",
+   "icons": {
+      "128": "img/icon128.png",
+      "16": "img/icon16.png",
+      "48": "img/icon48.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA1BZmCwWpQzvvAZ1VkTImD8/NfP35pkeGvoyNTBwI8AXTLQnArjstEZCOx1Gci4J3ENqA/rbqOoKmQXpVE/G4WDcOU1uzkUfItLrGI7fWgkzvhse/Pthngprj3JeyI6BPeXhTTPpR6ysJw+1EMugpmXVWii9e+aa9OTyFUBM4QjKCMpOIGktsnzV0oJvuz5xEvnbOtr6zMfSiEN3u8N5+dHa0xqcSuDh9yfz7+lRkNkI1ysRZbShjboNcKZ6GZdXyMIcost/YwgVBUhBXZDrUupDhUQu1nVHu0928giiWp859Z5zSKnxqzT09yvKpQA3AubWVj5keJLko4E16FqY0WQIDAQAB",
+   "manifest_version": 2,
+   "name": "Edusoft Web Tool by NguyenLinh-UET",
+   "permissions": [ "storage" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.2.3",
+   "web_accessible_resources": [ "js/content.js", "js/toastr.js" ]
+}

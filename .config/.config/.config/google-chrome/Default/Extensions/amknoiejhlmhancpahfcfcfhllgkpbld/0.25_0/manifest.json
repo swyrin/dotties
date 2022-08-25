@@ -1,0 +1,33 @@
+{
+   "applications": {
+      "gecko": {
+         "id": "postwoman-firefox@postwoman.io"
+      }
+   },
+   "background": {
+      "persistent": false,
+      "scripts": [ "index.js" ]
+   },
+   "browser_action": {
+      "default_popup": "popup.html",
+      "default_title": "Hoppscotch Extension"
+   },
+   "browser_specific_settings": {
+      "gecko": {
+         "id": "postwoman-firefox@postwoman.io"
+      }
+   },
+   "description": "Provides more capabilities for Hoppscotch",
+   "icons": {
+      "128": "icons/icon-128x128.png",
+      "16": "icons/icon-16x16.png",
+      "48": "icons/icon-48x48.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAhRnZ+3sE2bg69K6Vf2vYB/8YSqYntJLf52s1gTqE9q3iCHUuc4SSYOHw+0KJVS8tLA2BM72lyXiLUdQUkc17YsNRN9QIB/jJ5II5cS6YcYFbKacrfS+kdLWIjlikqTdV6Batew6s8OF3GDwe6XQGzHysceqTJasLasORgmP8LNLNpc5nZt7OngbDBsK+wkLqWQI7wblQbCjii/IhADXSylNFwBdDOE7lTf7QC3EYhnvYH1uNXh6SNRV4dd39HbzdIDPNxRAcCPUYoP3Y/f7rzo6Gqe7pAFHhD7jmIT5wSVwQ3L59RcjQvkeUKVCs4RLFVJYyEM/fTGuyJHquDd2hVQIDAQAB",
+   "manifest_version": 2,
+   "name": "Hoppscotch Browser Extension",
+   "permissions": [ "storage", "tabs", "cookies", "\u003Call_urls>" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "0.25",
+   "web_accessible_resources": [ "*.js.map" ]
+}

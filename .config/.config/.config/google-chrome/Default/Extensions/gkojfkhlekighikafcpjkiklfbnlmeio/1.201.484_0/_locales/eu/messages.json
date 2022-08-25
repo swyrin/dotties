@@ -1,0 +1,20 @@
+{
+    "appDesc": {
+        "message": "Unblock websites blocked in your country, company or school with Hola VPN. Hola is free and easy to use!"
+    },
+    "appDescChrome": {
+        "message": "Hola VPN - Free (limited) or Premium version. The best Chrome VPN extension to access any website."
+    },
+    "appName": {
+        "message": "Hola Free VPN Proxy Unblocker"
+    },
+    "appName2": {
+        "message": "Hola Free VPN Proxy Unblocker - Best VPN"
+    },
+    "appNameChrome": {
+        "message": "Hola VPN - The Website Unblocker"
+    },
+    "appNameHosted": {
+        "message": "Hola VPN Unblocker"
+    }
+}

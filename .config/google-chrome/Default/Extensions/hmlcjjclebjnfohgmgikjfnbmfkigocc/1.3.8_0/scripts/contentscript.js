@@ -1,1 +1,0 @@
-"use strict";!function(e,c){c.storage.sync.get({removeFbclid:!1},function(c){if(c.removeFbclid){var o=new URL(e.top.location.href);o.searchParams.has("fbclid")&&(o.searchParams["delete"]("fbclid"),e.top.location.replace(o))}})}(window,chrome);

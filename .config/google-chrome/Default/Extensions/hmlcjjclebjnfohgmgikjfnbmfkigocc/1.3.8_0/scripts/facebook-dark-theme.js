@@ -1,1 +1,0 @@
-"use strict";!function(){var i=/http(s)?:\/\/.*\.facebook\.com\/(?!(v[0-9].[0-9]\/)?plugins\/|Fplugins|plugins\/like).*/.test(window.top.location.href);init(i,"facebook")}();

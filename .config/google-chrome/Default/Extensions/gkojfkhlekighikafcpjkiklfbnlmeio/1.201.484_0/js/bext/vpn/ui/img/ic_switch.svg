@@ -1,8 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="64" height="67.999" viewBox="0 0 64 67.999">
-    <defs>
-        <style>
-            .cls-1{fill:#25d366}
-        </style>
-    </defs>
-    <path id="ic_switch" d="M0 36a31.913 31.913 0 0 1 9.946-23.187c5.74-5.461 10.375 1.486 6.142 5.243a23.98 23.98 0 1 0 31.937.1c-4.259-3.822.27-10.786 6.026-5.3A31.987 31.987 0 1 1 0 36zm28-4V4a4 4 0 0 1 8 0v28a4 4 0 0 1-8 0z" class="cls-1" transform="translate(.001 -.001)"/>
-</svg>

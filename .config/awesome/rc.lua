@@ -320,9 +320,8 @@ globalkeys = gears.table.join(
               {description = "restore minimized", group = "client"}),
 
     -- Prompt
-    awful.key({ modkey },            "r",     function () awful.screen.focused().mypromptbox:run() end,
-              {description = "run prompt", group = "launcher"}),
-
+    awful.key({ modkey },            "r",     function () awful.spawn("rofi -modi drun -show drun") end,
+              {description = "run rofi", group = "launcher"}),
 --[[
     awful.key({ modkey }, "x",
               function ()
@@ -580,3 +579,4 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 
 
 awful.spawn.with_shell("$HOME/.config/polybar/launch.sh")
+-- awful.spawn.with_shell(

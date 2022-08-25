@@ -11,8 +11,8 @@
 echo "ParallelDownloads = 5" >> /etc/pacman.conf
 
 # Setup my beloved nano
-pacman -S --noconfirm nano
-pacman -S --noconfirm zip unzip wget
+sudo pacman -S --noconfirm nano
+sudo pacman -S --noconfirm zip unzip wget
 wget https://raw.githubusercontent.com/scopatz/nanorc/master/install.sh -O- | sh
 echo "set linenumbers" >> .nanorc
 echo "set tabstospaces" >> .nanorc
@@ -26,13 +26,13 @@ cd ..
 sudo rm -r yay
 
 # Install polybar
-pacman -S --noconfirm polybar
+sudo pacman -S --noconfirm polybar
 
 # Install Chrome and Discord (optional)
 # yay -S google-chrome discord_arch_electron --answerdiff=None --noconfirm
 
 # Install rofi
-pacman -S --noconfirm rofi
+sudo pacman -S --noconfirm rofi
 
 
 # Setup dotties

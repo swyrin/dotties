@@ -1,7 +1,8 @@
-mimeapps.list
-.config/session
+.config/mimeapps.list
 .config/dolphinrc
-.config/htop
-.config/pulse
-.config/google-chrome
-.config/kde.org
+
+.config/session/
+.config/htop/
+.config/pulse/
+.config/google-chrome/
+.config/kde.org/

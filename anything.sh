@@ -50,4 +50,4 @@ sudo pacman -S --noconfirm rofi
 sudo pacman -S --noconfirm picom
 
 # Setup dotties
-cp .config $HOME/.config
+cp -r .config $HOME/.config

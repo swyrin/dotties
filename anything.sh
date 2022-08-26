@@ -68,6 +68,8 @@ sudo rm -rf cli-visualizer
 # Setup dotties by symbolic links
 sudo rm -rf $HOME/.config/
 sudo chmod 777 -R ./.config/
-sudo ln -s ./.config $HOME/
+sudo ln -s $(pwd)/.config $HOME/
 
 echo "Installation finished!!!"
+echo "And please, for the love of god, DO NOT REMOVE THE $(pwd) FOLDER!!!!"
+echo "They are all symlinked, that is all, have a good day and happy ricing!"

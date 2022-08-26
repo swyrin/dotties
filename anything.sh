@@ -17,7 +17,7 @@ sudo sed -i 's/#ParallelDownloads = 5/ParallelDownloads = 5/g' /etc/pacman.conf
 # You *may* want to double check the $HOME/.xinitrc file!
 
 # Install and setup X
-sudo pacman -S --needed --noconfirm xorg-apps xorg-server xorg-server-utils xorg-xinit mesa libva-intel-driver intel-media-driver vulkan-intel
+sudo pacman -S --needed --noconfirm xorg-apps xorg-server xorg-xinit mesa libva-intel-driver intel-media-driver vulkan-intel
 sudo pacman -S --needed --noconfirm alacritty
 # cp /etc/X11/xinit/xinitrc $HOME/.xinitrc
 # sed -i 's/xterm/alacritty/g' $HOME/.xinitrc

@@ -51,3 +51,11 @@ sudo pacman -S --noconfirm picom
 
 # Setup dotties
 cp -r .config $HOME/.config
+
+# Install and setup LightDM
+sudo pacman -S --noconfirm lightdm lightdm-gtk-greeter
+sudo systemctl enable lightdm.service
+
+# Clear screen and notify that installation is complete!!!
+clear
+echo "Installation finished!!! You may `reboot` now!"

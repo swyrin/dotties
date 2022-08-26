@@ -1,10 +1,6 @@
 env:
     TERM: rxvt-256color
 
-font:
-  normal:
-    family: "MesloLGS NF"
-
 window:
   opacity: 0.8
 

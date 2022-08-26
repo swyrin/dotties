@@ -66,8 +66,8 @@ cd ..
 sudo rm -rf cli-visualizer
 
 # Setup dotties by symbolic links
-sudo mkdir -p $HOME/.config/
+sudo rm -rf $HOME/.config/
 sudo chmod 777 -R ./.config/
-sudo ln -s ./.config $HOME/.config
+sudo ln -s ./.config $HOME/
 
 echo "Installation finished!!!"

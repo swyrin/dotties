@@ -56,6 +56,13 @@ cp -r .config $HOME/.config
 sudo pacman -S --noconfirm lightdm lightdm-gtk-greeter
 sudo systemctl enable lightdm.service
 
+# Install cli_visualizer
+sudo pacman -S --noconfirm ncurses fftw cmake
+git clone https://github.com/dpayne/cli-visualizer.git
+cd cli_visualizer
+./install.sh
+cd ..
+
 # Clear screen and notify that installation is complete!!!
 clear
 echo "Installation finished!!! You may `reboot` now!"

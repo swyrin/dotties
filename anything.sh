@@ -67,8 +67,8 @@ sudo rm -rf cli-visualizer
 
 # Setup dotties
 # And fix some stuffs with file perms, basically 4+2+1 to all!!!!
-sudo chmod 777 -R $HOME/.config/vis/colors/
-sudo chmod 777 -R ./.config/vis/colors/
+sudo chmod 777 -R $HOME/.config/vis/
+sudo chmod 777 -R ./.config/vis/
 sudo cp -rf ./.config $HOME
 
 # Clear screen and notify that installation is complete!!!

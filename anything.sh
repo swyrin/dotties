@@ -16,11 +16,12 @@ sudo sed -i 's/#ParallelDownloads = 5/ParallelDownloads = 5/g' /etc/pacman.conf
 # REMEMBER TO REBOOT!!!! DO **NOT** USE `startx` AFTER THIS!!!
 # You *may* want to double check the $HOME/.xinitrc file!
 
-# sudo pacman -S --noconfirm xorg-server xorg-server-utils xorg-xinit mesa libva-intel-driver intel-media-driver vulkan-intel
-# sudo pacman -S --noconfirm alacritty
+# Install and setup X
+sudo pacman -S --needed --noconfirm xorg-server xorg-server-utils xorg-xinit mesa libva-intel-driver intel-media-driver vulkan-intel
+sudo pacman -S --needed --noconfirm alacritty
 # cp /etc/X11/xinit/xinitrc $HOME/.xinitrc
 # sed -i 's/xterm/alacritty/g' $HOME/.xinitrc
-# echo "exec awesome" >> $HOME/.xinitrc
+# echo "exec awesome" | sudo tee -a $HOME/.xinitrc
 
 # Setup my beloved nano
 sudo pacman -S --needed --noconfirm nano
@@ -36,6 +37,9 @@ cd yay
 makepkg -si --noconfirm
 cd ..
 sudo rm -r yay
+
+# Install awesome
+sudo pacman -S --needed --noconfirm awesome
 
 # Install polybar
 sudo pacman -S --needed --noconfirm polybar
@@ -62,7 +66,10 @@ cd ..
 sudo rm -rf cli-visualizer
 
 # Setup dotties
-sudo cp -rf .config $HOME
+# And fix some stuffs with file perms
+sudo chmod 766 $HOME/.config/vis/colors/
+sudo chmod 766 ./.config/vis/colors/
+sudo cp -rf ./.config $HOME
 
 # Clear screen and notify that installation is complete!!!
 clear

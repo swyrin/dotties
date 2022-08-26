@@ -4,8 +4,6 @@ env:
 window:
   opacity: 0.8
 
-# Colors (Tokyo Night: Storm variant)
-# Source: https://github.com/zatchheems/tokyo-night-alacritty-theme
 schemes:
     mocha: &mocha
         # Default colors

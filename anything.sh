@@ -53,15 +53,12 @@ sudo pacman -S --needed --noconfirm rofi
 # Install picom
 sudo pacman -S --needed --noconfirm picom
 
-# Install needed stuffs:
-# - Dolphin   - File manager
-# - neofetch  - Neofetch
-# - btop      - Better htop
-sudo pacman -S --needed --noconfirm dolphin neofetch btop
-
 # Install and setup LightDM
 sudo pacman -S --needed --noconfirm lightdm lightdm-gtk-greeter
 sudo systemctl enable lightdm.service
+
+# Install feh
+sudo pacman -S --needed --noconfirm feh
 
 # Install cli-visualizer
 sudo pacman -S --needed --noconfirm ncurses fftw cmake
@@ -71,10 +68,20 @@ cd cli-visualizer
 cd ..
 sudo rm -rf cli-visualizer
 
+# Setup needed stuffs (for me, you should change) as final run!!!
+# 1. Packages:
+# - Dolphin   - File manager
+# - neofetch  - Neofetch
+# - btop      - Better htop
+# - Gwenview  - Image viewer
+# 2. A wallpaper
+sudo pacman -S --needed --noconfirm dolphin neofetch btop gwenview
+sudo feh --bg-scale ./desktop.jpg && echo "~/.fehbg &" | tee -a $HOME/.xinitrc
+
 # Setup dotties by symbolic links
 sudo rm -rf $HOME/.config/
 sudo chmod 777 -R ./.config/
-sudo ln -s $(pwd)/.config $HOME/
+sudo ln -s $(pwd)/.config/ $HOME/
 
 echo "Installation finished!!!"
 echo "And please, for the love of god, DO NOT REMOVE THE $(pwd) FOLDER!!!!"

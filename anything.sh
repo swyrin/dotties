@@ -45,7 +45,7 @@ sudo pacman -S --needed --noconfirm awesome
 sudo pacman -S --needed --noconfirm polybar
 
 # Install Chrome and Discord (optional)
-sudo yay -S google-chrome discord_arch_electron --answerdiff=None --noconfirm
+yay -S google-chrome discord_arch_electron --answerdiff=None --noconfirm
 
 # Install rofi
 sudo pacman -S --needed --noconfirm rofi

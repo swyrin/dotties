@@ -62,7 +62,7 @@ cd ..
 sudo rm -rf cli-visualizer
 
 # Setup dotties
-cp -r .config $HOME/.config
+cp -r .config $HOME
 
 # Clear screen and notify that installation is complete!!!
 clear

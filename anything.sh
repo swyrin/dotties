@@ -53,6 +53,12 @@ sudo pacman -S --needed --noconfirm rofi
 # Install picom
 sudo pacman -S --needed --noconfirm picom
 
+# Install needed stuffs:
+# - Dolphin   - File manager
+# - neofetch  - Neofetch
+# - btop      - Better htop
+sudo pacman -S --needed --noconfirm dolphin neofetch btop
+
 # Install and setup LightDM
 sudo pacman -S --needed --noconfirm lightdm lightdm-gtk-greeter
 sudo systemctl enable lightdm.service

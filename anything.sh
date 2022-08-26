@@ -23,8 +23,8 @@ sudo sed -i 's/#ParallelDownloads = 5/ParallelDownloads = 5/g' /etc/pacman.conf
 # echo "exec awesome" >> $HOME/.xinitrc
 
 # Setup my beloved nano
-sudo pacman -S --noconfirm nano
-sudo pacman -S --noconfirm unzip wget
+sudo pacman -S --needed --noconfirm nano
+sudo pacman -S --needed --noconfirm unzip wget
 wget https://raw.githubusercontent.com/scopatz/nanorc/master/install.sh -O- | sh
 echo "set linenumbers" >> $HOME/.nanorc
 echo "set tabstospaces" >> $HOME/.nanorc
@@ -38,23 +38,23 @@ cd ..
 sudo rm -r yay
 
 # Install polybar
-sudo pacman -S --noconfirm polybar
+sudo pacman -S --needed --noconfirm polybar
 
 # Install Chrome and Discord (optional)
-# sudo yay -S google-chrome discord_arch_electron --answerdiff=None --noconfirm
+sudo yay -S google-chrome discord_arch_electron --answerdiff=None --noconfirm
 
 # Install rofi
-sudo pacman -S --noconfirm rofi
+sudo pacman -S --needed --noconfirm rofi
 
 # Install picom
-sudo pacman -S --noconfirm picom
+sudo pacman -S --needed --noconfirm picom
 
 # Install and setup LightDM
-sudo pacman -S --noconfirm lightdm lightdm-gtk-greeter
+sudo pacman -S --needed --noconfirm lightdm lightdm-gtk-greeter
 sudo systemctl enable lightdm.service
 
 # Install cli-visualizer
-sudo pacman -S --noconfirm ncurses fftw cmake
+sudo pacman -S --needed --noconfirm ncurses fftw cmake
 git clone https://github.com/dpayne/cli-visualizer.git
 cd cli-visualizer
 ./install.sh
@@ -62,7 +62,7 @@ cd ..
 sudo rm -rf cli-visualizer
 
 # Setup dotties
-sudo cp -r .config $HOME
+sudo cp -rf .config $HOME
 
 # Clear screen and notify that installation is complete!!!
 clear

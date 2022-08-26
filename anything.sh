@@ -49,9 +49,6 @@ sudo pacman -S --noconfirm rofi
 # Install picom
 sudo pacman -S --noconfirm picom
 
-# Setup dotties
-cp -r .config $HOME/.config
-
 # Install and setup LightDM
 sudo pacman -S --noconfirm lightdm lightdm-gtk-greeter
 sudo systemctl enable lightdm.service
@@ -61,8 +58,13 @@ sudo pacman -S --noconfirm ncurses fftw cmake
 git clone https://github.com/dpayne/cli-visualizer.git
 cd cli_visualizer
 ./install.sh
-cd ..
+# To be honest, I do not know where we at so just do this by default
+cd $HOME/dotties
+
+
+# Setup dotties
+cp -r .config $HOME/.config
 
 # Clear screen and notify that installation is complete!!!
 clear
-echo "Installation finished!!! You may `reboot` now!"
+echo "Installation finished!!!"

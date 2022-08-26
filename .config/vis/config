@@ -1,0 +1,4 @@
+visualizer.fps=60
+audio.stereo.enabled=false
+colors.scheme=mori
+visualizer.spectrum.smoothing.mode=monstercat

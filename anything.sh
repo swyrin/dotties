@@ -26,9 +26,9 @@ sudo sed -i 's/#ParallelDownloads = 5/ParallelDownloads = 5/g' /etc/pacman.conf
 sudo pacman -S --noconfirm nano
 sudo pacman -S --noconfirm unzip wget
 wget https://raw.githubusercontent.com/scopatz/nanorc/master/install.sh -O- | sh
-echo "set linenumbers" >> .nanorc
-echo "set tabstospaces" >> .nanorc
-echo "set tabsize 4" >> .nanorc
+echo "set linenumbers" >> $HOME/.nanorc
+echo "set tabstospaces" >> $HOME/.nanorc
+echo "set tabsize 4" >> $HOME/.nanorc
 
 # Install yay AUR helper
 git clone https://aur.archlinux.org/yay.git

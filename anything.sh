@@ -53,14 +53,13 @@ sudo pacman -S --noconfirm picom
 sudo pacman -S --noconfirm lightdm lightdm-gtk-greeter
 sudo systemctl enable lightdm.service
 
-# Install cli_visualizer
+# Install cli-visualizer
 sudo pacman -S --noconfirm ncurses fftw cmake
 git clone https://github.com/dpayne/cli-visualizer.git
-cd cli_visualizer
+cd cli-visualizer
 ./install.sh
-# To be honest, I do not know where we at so just do this by default
-cd $HOME/dotties
-
+cd ..
+sudo rm -rf cli-visualizer
 
 # Setup dotties
 cp -r .config $HOME/.config

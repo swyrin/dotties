@@ -65,8 +65,9 @@ cd cli-visualizer
 cd ..
 sudo rm -rf cli-visualizer
 
-# Setup dotties
-mkdir -p $HOME/.config
+# Setup dotties by symbolic links
+mkdir -p $HOME/.config/
+chmod 777 -R ./.config/
 ln -s ./.config $HOME/.config
 
 # Clear screen and notify that installation is complete!!!

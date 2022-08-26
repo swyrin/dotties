@@ -33,7 +33,7 @@ echo "set tabsize 4" >> .nanorc
 # Install yay AUR helper
 git clone https://aur.archlinux.org/yay.git
 cd yay
-makepkg -si
+makepkg -si --noconfirm
 cd ..
 sudo rm -r yay
 

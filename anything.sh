@@ -9,7 +9,7 @@
 # Just clone this file, make anything.sh an executable
 
 # Setup parallelism for pacman
-echo "ParallelDownloads = 5" | sudo tee -a /etc/pacman.conf
+sudo sed -i 's/#ParallelDownloads = 5/ParallelDownloads = 5/g' /etc/pacman.conf
 
 # I use archinstall with AwesomeWM profile, so X related packages are installed and properly set up
 # If you are using mininal install, or manually install from Arch Wiki, uncomment them!

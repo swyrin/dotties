@@ -16,7 +16,7 @@ echo "Found and using dotties directory $DOTTIES_DIR"
 echo "The script *should* ask you the password below"
 
 # Setup custom pacman stuffs: parallel downloads, c o l o r s
-sudo sed -i 's/#Color                /Color                /g' /etc/pacman.conf
+sudo sed -i 's/#Color/Color/g' /etc/pacman.conf
 sudo sed -i 's/#ParallelDownloads = 5/ParallelDownloads = 5/g' /etc/pacman.conf
 
 # Install Xorg and friends

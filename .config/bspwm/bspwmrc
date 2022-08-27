@@ -7,8 +7,8 @@ sxhkd -c $HOME/.config/bspwm/sxhkdrc &
 # Customized stuffs
 $HOME/.config/polybar/launch.sh
 picom &
-$HOME/.fehbg &
 wal -R
+$HOME/.fehbg &
 
 bspc monitor -d 1 2 3 4
 

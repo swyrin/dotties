@@ -26,7 +26,7 @@ sudo pacman -Syu
 sudo pacman -S --needed --noconfirm xorg-apps xorg-server xorg-xinit \
                                     mesa libva-intel-driver \
                                     intel-media-driver vulkan-intel \
-                                    xf86-video-noveau
+                                    xf86-video-nouveau
 
 # Setup my beloved nano
 sudo pacman -S --needed --noconfirm nano

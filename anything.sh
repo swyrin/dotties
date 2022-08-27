@@ -11,7 +11,7 @@
 
 # For debugging sake, but it *should* work
 echo "Finding 'dotties' directory..."
-DOTTIES_DIR = $(find $HOME -type d -name "dotties")
+DOTTIES_DIR=$(find $HOME -type d -name "dotties")
 echo "Found and using dotties directory $DOTTIES_DIR"
 echo "The script *should* ask you the password below"
 
@@ -66,11 +66,11 @@ sudo pacman -S --needed --noconfirm dolphin neofetch bashtop gwenview kate alacr
 sudo pacman -S --needed --noconfirm unrar
 
 # Setup dotties by symbolic links
-# ATTENTION: IF THIS IS **NOT** YOUR **FIRST TIME** RUNNING THEM, COMMENT THEM
+# ATTENTION: IF THIS IS **NOT** YOUR **FIRST TIME** RUNNING THIS, COMMENT THEM
 #            OR YOU *MIGHT* GET F**KED UP
-# sudo rm -rf $HOME/.config/
-# sudo chmod 777 -R ./.config/
-# sudo ln -s $(pwd)/.config/ $HOME/
+sudo rm -rf $HOME/.config/
+sudo chmod 777 -R ./.config/
+sudo ln -s $(pwd)/.config/ $HOME/
 
 echo "Installation finished!!!"
 echo "And please, for the love of god, DO NOT REMOVE THE $DOTTIES_DIR FOLDER!!!!"

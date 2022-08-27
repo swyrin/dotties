@@ -61,10 +61,16 @@ sudo rm -rf cli-visualizer
 
 # Install python-pywal
 sudo pacman -Syu --needed --noconfirm python-pywal
-wal -i desktop.jpg
+sudo wal -i desktop.jpg
 
-# Install Redshift
-sudo pacman -S --needed --noconfirm redshift
+# Install zsh and powerlevel10k (+font)
+sudo mkdir -p /usr/share/fonts/ && sudo mv -v $DOTTIES_DIR/fonts/* /usr/share/fonts/
+sudo sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
+yay -S --noconfirm zsh-theme-powerlevel10k-git
+echo 'source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme' >> ~/.zshrc
+
+# Install Redshift, no function
+# sudo pacman -S --needed --noconfirm redshift
 # redshift -l $(curl -s "https://location.services.mozilla.com/v1/geolocate?key=geoclue" | awk 'OFS=":" {print $3,$5}' | tr -d ',}')
 # sudo systemctl enable redshift.service
 

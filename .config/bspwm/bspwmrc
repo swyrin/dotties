@@ -1,7 +1,13 @@
 #! /bin/sh
-
 pgrep -x sxhkd > /dev/null || sxhkd &
 sxhkd -c $HOME/.config/bspwm/sxhkdrc &
+
+# Customized stuffs
+. "${HOME}/.cache/wal/colors.sh"
+$HOME/.config/polybar/launch.sh &
+picom &
+$(find $HOME -type d -name "dotties")/.fehbg &
+wal -R &
 
 bspc monitor -d 1 2 3 4
 
@@ -22,10 +28,3 @@ bspc rule -a Chromium desktop='^2'
 bspc rule -a mplayer2 state=floating
 bspc rule -a Kupfer.py focus=on
 bspc rule -a Screenkey manage=off
-
-# Customized stuffs
-. "${HOME}/.cache/wal/colors.sh"
-$HOME/.config/polybar/launch.sh &
-picom &
-$(find $HOME -type d -name "dotties")/.fehbg &
-wal -R &

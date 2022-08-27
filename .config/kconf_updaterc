@@ -1,0 +1,16 @@
+updateInfoAdded=true
+
+[dolphin_detailsmodesettings.upd]
+ctime=1661505621
+done=rename-leading-padding
+mtime=1660846188
+
+[filepicker.upd]
+ctime=1661505618
+done=filepicker-remove-old-previews-entry
+mtime=1660582591
+
+[gwenview.upd]
+ctime=1661519525
+done=SideBar_StatusBar_Rename,ImageView_AlphaBackgroundMode_Update,DeleteThumbnailSetting_Rename
+mtime=1660846726

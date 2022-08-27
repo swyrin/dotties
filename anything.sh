@@ -19,8 +19,14 @@ echo "The script *should* ask you the password below"
 sudo sed -i 's/#Color/Color/g' /etc/pacman.conf
 sudo sed -i 's/#ParallelDownloads = 5/ParallelDownloads = 5/g' /etc/pacman.conf
 
+# As usual, pacman -Syu
+sudo pacman -Syu
+
 # Install Xorg and friends
-sudo pacman -S --needed --noconfirm xorg-apps xorg-server xorg-xinit mesa libva-intel-driver intel-media-driver vulkan-intel
+sudo pacman -S --needed --noconfirm xorg-apps xorg-server xorg-xinit \
+                                    mesa libva-intel-driver \
+                                    intel-media-driver vulkan-intel \
+                                    xf86-video-noveau
 
 # Setup my beloved nano
 sudo pacman -S --needed --noconfirm nano
@@ -53,6 +59,11 @@ cd cli-visualizer
 cd ..
 sudo rm -rf cli-visualizer
 export vis="$DOTTIES_DIR/viswal.sh"
+
+# Install Redshift
+sudo pacman -S --needed --noconfirm redshift
+# redshift -l $(curl -s "https://location.services.mozilla.com/v1/geolocate?key=geoclue" | awk 'OFS=":" {print $3,$5}' | tr -d ',}')
+# sudo systemctl enable redshift.service
 
 # Setup needed packages (for me, you should change) as final run!!!
 # - Dolphin     - File manager

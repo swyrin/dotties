@@ -27,5 +27,5 @@ bspc rule -a Screenkey manage=off
 . "${HOME}/.cache/wal/colors.sh"
 $HOME/.config/polybar/launch.sh &
 picom &
-$HOME/.fehbg &
+$(find $HOME -type d -name "dotties")/.fehbg &
 wal -R &

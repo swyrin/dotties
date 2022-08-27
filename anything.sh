@@ -58,7 +58,6 @@ cd cli-visualizer
 ./install.sh
 cd ..
 sudo rm -rf cli-visualizer
-export vis="$DOTTIES_DIR/viswal.sh"
 
 # Install python-pywal
 sudo pacman -Syu --needed --noconfirm python-pywal
@@ -89,6 +88,7 @@ sudo ln -s $DOTTIES_DIR/.config/ $HOME/
 
 # Export some environment variables
 export TERM=kitty
+export vis="$DOTTIES_DIR/viswal.sh"
 
 echo "Installation finished!!!"
 echo "And please, for the love of god, DO NOT REMOVE THE $DOTTIES_DIR FOLDER!!!!"

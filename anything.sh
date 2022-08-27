@@ -60,6 +60,9 @@ cd ..
 sudo rm -rf cli-visualizer
 export vis="$DOTTIES_DIR/viswal.sh"
 
+# Install python-pywal
+sudo pacman -Syu --needed --noconfirm python-pywal
+
 # Install Redshift
 sudo pacman -S --needed --noconfirm redshift
 # redshift -l $(curl -s "https://location.services.mozilla.com/v1/geolocate?key=geoclue" | awk 'OFS=":" {print $3,$5}' | tr -d ',}')

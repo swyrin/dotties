@@ -52,7 +52,7 @@ cd cli-visualizer
 ./install.sh
 cd ..
 sudo rm -rf cli-visualizer
-export vis="$(pwd)/viswal.sh"
+export vis="$DOTTIES_DIR/viswal.sh"
 
 # Setup needed packages (for me, you should change) as final run!!!
 # - Dolphin     - File manager
@@ -69,8 +69,8 @@ sudo pacman -S --needed --noconfirm unrar
 # ATTENTION: IF THIS IS **NOT** YOUR **FIRST TIME** RUNNING THIS, COMMENT THEM
 #            OR YOU *MIGHT* GET F**KED UP
 sudo rm -rf $HOME/.config/
-sudo chmod 777 -R ./.config/
-sudo ln -s $(pwd)/.config/ $HOME/
+sudo chmod 777 -R $DOTTIES_DIR/.config/
+sudo ln -s $DOTTIES_DIR/.config/ $HOME/
 
 echo "Installation finished!!!"
 echo "And please, for the love of god, DO NOT REMOVE THE $DOTTIES_DIR FOLDER!!!!"

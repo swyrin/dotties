@@ -1,27 +1,26 @@
 #!/bin/bash
 
-# ########### Arch with AwesomeWM install ###########
-# Yes, run this as sudo please, kthx!
+# ########### Arch with BSPWM install ###########
 # No, this is not Ubuntu!
 # No, DO NOT BLINDLY RUN THIS FILE!!!!
 #
-# Basically this is just my autosetup file when I install a new thing!
-# Just clone this file, make anything.sh an executable
+# Basically this is just my autosetup file when I (re)install Arch (btw)!
+# Just clone this file, make anything.sh an executable, if it was not.
 
-# Setup parallelism for pacman
+# REMEMBER TO REBOOT!!!! DO **NOT** USE `startx` AFTER THIS!!!
+
+# For debugging sake, but it *should* work
+echo "Finding 'dotties' directory..."
+DOTTIES_DIR = $(find $HOME -type d -name "dotties")
+echo "Found and using dotties directory $DOTTIES_DIR"
+echo "The script *should* ask you the password below"
+
+# Setup custom pacman stuffs: parallel downloads, c o l o r s
+sudo sed -i 's/#Color                /Color                /g' /etc/pacman.conf
 sudo sed -i 's/#ParallelDownloads = 5/ParallelDownloads = 5/g' /etc/pacman.conf
 
-# I use archinstall with AwesomeWM profile, so X related packages are installed and properly set up
-# If you are using mininal install, or manually install from Arch Wiki, uncomment them!
-# REMEMBER TO REBOOT!!!! DO **NOT** USE `startx` AFTER THIS!!!
-# You *may* want to double check the $HOME/.xinitrc file!
-
-# Install and setup X
+# Install Xorg and friends
 sudo pacman -S --needed --noconfirm xorg-apps xorg-server xorg-xinit mesa libva-intel-driver intel-media-driver vulkan-intel
-sudo pacman -S --needed --noconfirm alacritty
-# cp /etc/X11/xinit/xinitrc $HOME/.xinitrc
-# sed -i 's/xterm/alacritty/g' $HOME/.xinitrc
-# echo "exec awesome" | sudo tee -a $HOME/.xinitrc
 
 # Setup my beloved nano
 sudo pacman -S --needed --noconfirm nano
@@ -38,51 +37,41 @@ makepkg -si --noconfirm
 cd ..
 sudo rm -r yay
 
-# Install awesome
-sudo pacman -S --needed --noconfirm awesome
+# Install BSPWM, polybar, rofi, picom, sxhkd, feh
+# Technically, setup the desktop
+sudo pacman -S --needed --noconfirm bspwm polybar rofi picom sxhkd feh
 
-# Install polybar
-sudo pacman -S --needed --noconfirm polybar
-
-# Install Chrome and Discord (optional)
-# yay -S google-chrome discord_arch_electron --answerdiff=None --noconfirm
-
-# Install rofi
-sudo pacman -S --needed --noconfirm rofi
-
-# Install picom
-sudo pacman -S --needed --noconfirm picom
-
-# Install and setup LightDM
+# Install and enable LightDM
 sudo pacman -S --needed --noconfirm lightdm lightdm-gtk-greeter
 sudo systemctl enable lightdm.service
 
-# Install feh
-sudo pacman -S --needed --noconfirm feh
-
-# Install cli-visualizer
+# Install cli-visualizer and override with PyWal colors
 sudo pacman -S --needed --noconfirm ncurses fftw cmake
 git clone https://github.com/dpayne/cli-visualizer.git
 cd cli-visualizer
 ./install.sh
 cd ..
 sudo rm -rf cli-visualizer
+export vis="$(pwd)/viswal.sh"
 
-# Setup needed stuffs (for me, you should change) as final run!!!
-# 1. Packages:
-# - Dolphin   - File manager
-# - neofetch  - Neofetch
-# - btop      - Better htop
-# - Gwenview  - Image viewer
-# 2. A wallpaper
-sudo pacman -S --needed --noconfirm dolphin neofetch btop gwenview
-sudo feh --bg-scale ./desktop.jpg && echo "~/.fehbg &" | tee -a $HOME/.xinitrc
+# Setup needed packages (for me, you should change) as final run!!!
+# - Dolphin     - File manager
+# - neofetch    - Neofetch
+# - bashtop     - Better htop
+# - Gwenview    - Image viewer
+# - Kate        - My favorite GUI text editor
+# - Alacritty   - My favorite terminal
+# - Ark         - Archive Manager (+unrar for RAR support)
+sudo pacman -S --needed --noconfirm dolphin neofetch bashtop gwenview kate alacritty ark
+sudo pacman -S --needed --noconfirm unrar
 
 # Setup dotties by symbolic links
-sudo rm -rf $HOME/.config/
-sudo chmod 777 -R ./.config/
-sudo ln -s $(pwd)/.config/ $HOME/
+# ATTENTION: IF THIS IS **NOT** YOUR **FIRST TIME** RUNNING THEM, COMMENT THEM
+#            OR YOU *MIGHT* GET F**KED UP
+# sudo rm -rf $HOME/.config/
+# sudo chmod 777 -R ./.config/
+# sudo ln -s $(pwd)/.config/ $HOME/
 
 echo "Installation finished!!!"
-echo "And please, for the love of god, DO NOT REMOVE THE $(pwd) FOLDER!!!!"
+echo "And please, for the love of god, DO NOT REMOVE THE $DOTTIES_DIR FOLDER!!!!"
 echo "They are all symlinked, that is all, have a good day and happy ricing!"

@@ -2,9 +2,11 @@ import_config.sh
 
 .config/mimeapps.list
 .config/dolphinrc
+.config/arkrc
 
 .config/session/
-.config/htop/
+.config/bashtop/
+.config/vis/vis.log
 .config/pulse/
 .config/google-chrome/
 .config/kde.org/

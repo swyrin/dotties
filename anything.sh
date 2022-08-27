@@ -75,7 +75,7 @@ sudo pacman -S --needed --noconfirm redshift
 # - bashtop     - Better htop
 # - Gwenview    - Image viewer
 # - Kate        - My favorite GUI text editor
-# - Alacritty   - My favorite terminal
+# - Kitty       - My favorite terminal
 # - Ark         - Archive Manager (+unrar for RAR support)
 sudo pacman -S --needed --noconfirm dolphin neofetch bashtop gwenview kate alacritty ark
 sudo pacman -S --needed --noconfirm unrar

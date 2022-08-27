@@ -5,7 +5,7 @@ import_config.sh
 .config/arkrc
 
 .config/session/
-.config/bashtop/
+.config/bashtop/error.log
 .config/vis/vis.log
 .config/pulse/
 .config/google-chrome/

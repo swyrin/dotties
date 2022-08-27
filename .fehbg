@@ -1,0 +1,2 @@
+#!/bin/sh
+feh --no-fehbg --bg-fill 'https://raw.githubusercontent.com/Swyreee/dotties/main/desktop.jpg'

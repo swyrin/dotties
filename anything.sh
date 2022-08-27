@@ -62,6 +62,7 @@ export vis="$DOTTIES_DIR/viswal.sh"
 
 # Install python-pywal
 sudo pacman -Syu --needed --noconfirm python-pywal
+wal -i desktop.jpg
 
 # Install Redshift
 sudo pacman -S --needed --noconfirm redshift

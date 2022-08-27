@@ -72,12 +72,12 @@ sudo pacman -S --needed --noconfirm redshift
 # Setup needed packages (for me, you should change) as final run!!!
 # - Dolphin     - File manager
 # - neofetch    - Neofetch
-# - bashtop     - Better htop
+# - btop        - Better htop
 # - Gwenview    - Image viewer
 # - Kate        - My favorite GUI text editor
 # - Kitty       - My favorite terminal
 # - Ark         - Archive Manager (+unrar for RAR support)
-sudo pacman -S --needed --noconfirm dolphin neofetch bashtop gwenview kate kitty ark
+sudo pacman -S --needed --noconfirm dolphin neofetch btop gwenview kate kitty ark
 sudo pacman -S --needed --noconfirm unrar
 
 # Setup dotties by symbolic links

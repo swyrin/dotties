@@ -23,7 +23,7 @@ sudo sed -i 's/#ParallelDownloads = 5/ParallelDownloads = 5/g' /etc/pacman.conf
 sudo pacman -Syu
 
 # Install Xorg and friends
-sudo pacman -S --needed --noconfirm xorg-apps xorg-server xorg-xinit \
+sudo pacman -S --needed --noconfirm xorg xorg-apps xorg-server xorg-xinit \
                                     mesa libva-intel-driver \
                                     intel-media-driver vulkan-intel \
                                     xf86-video-nouveau

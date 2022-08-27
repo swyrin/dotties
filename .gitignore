@@ -3,9 +3,12 @@ import_config.sh
 .config/mimeapps.list
 .config/dolphinrc
 .config/arkrc
+.config/gwenviewrc
+.config/kconf_updaterc
+.config/kdeglobals
 
 .config/session/
-.config/bashtop/error.log
+.config/btop/error.log
 .config/vis/vis.log
 .config/pulse/
 .config/google-chrome/

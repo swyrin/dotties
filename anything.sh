@@ -87,6 +87,9 @@ sudo rm -rf $HOME/.config/
 sudo chmod 777 -R $DOTTIES_DIR/.config/
 sudo ln -s $DOTTIES_DIR/.config/ $HOME/
 
+# Export some environment variables
+export TERM=kitty
+
 echo "Installation finished!!!"
 echo "And please, for the love of god, DO NOT REMOVE THE $DOTTIES_DIR FOLDER!!!!"
 echo "They are all symlinked, that is all, have a good day and happy ricing!"

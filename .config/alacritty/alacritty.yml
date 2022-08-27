@@ -1,7 +1,0 @@
-env:
-    TERM: rxvt-256color
-
-window:
-    opacity: 0.8
-
-

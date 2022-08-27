@@ -77,7 +77,7 @@ sudo pacman -S --needed --noconfirm redshift
 # - Kate        - My favorite GUI text editor
 # - Kitty       - My favorite terminal
 # - Ark         - Archive Manager (+unrar for RAR support)
-sudo pacman -S --needed --noconfirm dolphin neofetch bashtop gwenview kate alacritty ark
+sudo pacman -S --needed --noconfirm dolphin neofetch bashtop gwenview kate kitty ark
 sudo pacman -S --needed --noconfirm unrar
 
 # Setup dotties by symbolic links

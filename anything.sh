@@ -68,11 +68,12 @@ sudo pacman -S --needed --noconfirm pavucontrol pasystray
 
 # Install zsh, oh-my-zsh and powerlevel10k (+fonts)
 # THIS IS AN INTERACTIVE INSTALLATION, SO **PLEASE** FOLLOW THE SCREEN
-sudo pacman -S --needed --noconfirm zsh zsh-completions
-sudo mkdir -p /usr/share/fonts/ && sudo cp -a $DOTTIES_DIR/fonts/. /usr/share/fonts/
-sudo sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
-yay -S --noconfirm zsh-theme-powerlevel10k-git
-echo 'source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme' >> ~/.zshrc
+# The installation will **EXIT** the installation process, so I kept this as reference!!!
+# sudo pacman -S --needed --noconfirm zsh zsh-completions
+# sudo mkdir -p /usr/share/fonts/ && sudo cp -a $DOTTIES_DIR/fonts/. /usr/share/fonts/
+# sudo sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
+# yay -S --noconfirm zsh-theme-powerlevel10k-git
+# echo 'source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme' >> ~/.zshrc
 
 # Setup needed packages (for me, you should change) as final run!!!
 # - Dolphin     - File manager

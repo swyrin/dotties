@@ -63,16 +63,21 @@ sudo rm -rf cli-visualizer
 sudo pacman -Syu --needed --noconfirm python-pywal
 sudo wal -i desktop.jpg
 
+# Install network-manager-applet
+sudo pacman -S --needed --noconfirm network-manager-applet
+
 # Install zsh and powerlevel10k (+fonts)
 sudo mkdir -p /usr/share/fonts/ && sudo cp -a $DOTTIES_DIR/fonts/. /usr/share/fonts/
 sudo sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
 yay -S --noconfirm zsh-theme-powerlevel10k-git
 echo 'source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme' >> ~/.zshrc
 
-# Install Redshift, no function but I need for future refs
-# sudo pacman -S --needed --noconfirm redshift
-# redshift -l $(curl -s "https://location.services.mozilla.com/v1/geolocate?key=geoclue" | awk 'OFS=":" {print $3,$5}' | tr -d ',}')
-# sudo systemctl enable redshift.service
+# Install Redshift and stuffs
+yay -S redshift-gtk-git
+sudo pacman -S --needed --noconfirm modemmanager
+sudo systemctl enable ModemManager
+sudo systemctl start ModemManager
+mmcli -m 0 --location-enable-gps-raw --location-enable-gps-nmea
 
 # Setup needed packages (for me, you should change) as final run!!!
 # - Dolphin     - File manager

@@ -72,9 +72,9 @@ sudo mkdir -p /usr/share/fonts/ && sudo cp -a $DOTTIES_DIR/fonts/. /usr/share/fo
 sudo pacman -S  --needed --noconfirm  ttf-dejavu ttf-liberation ttf-font-awesome-4 ttf-liberation ttf-droid ttf-ubuntu-font-family \
                                       noto-fonts noto-fonts-cjk noto-fonts-extra noto-fonts-emoji \
                                       adobe-source-han-sans-otc-fonts adobe-source-han-serif-otc-fonts
-yay -S  noto-fonts-tc \
-        siji-git \
-        ttf-unifont ttf-gelasio-ib ttf-caladea ttf-carlito ttf-liberation-sans-narrow ttf-ms-fonts
+yay -S  --noconfirm noto-fonts-tc \
+                    siji-git \
+                    ttf-unifont ttf-gelasio-ib ttf-caladea ttf-carlito ttf-liberation-sans-narrow ttf-ms-fonts
 
 # Install zsh, oh-my-zsh and powerlevel10k
 # THIS IS AN INTERACTIVE INSTALLATION, SO **PLEASE** FOLLOW THE SCREEN

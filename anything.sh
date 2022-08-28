@@ -82,7 +82,8 @@ echo 'source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme' >> ~/.z
 # - Kate        - My favorite GUI text editor
 # - Kitty       - My favorite terminal
 # - Ark         - Archive Manager (+unrar for RAR support)
-sudo pacman -S --needed --noconfirm dolphin neofetch btop gwenview kate kitty ark
+# - xclip       - Command lind clipboard stuffs
+sudo pacman -S --needed --noconfirm dolphin neofetch btop gwenview kate kitty ark xclip
 sudo pacman -S --needed --noconfirm unrar
 
 # Setup dotties by symbolic links

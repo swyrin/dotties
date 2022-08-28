@@ -66,6 +66,9 @@ sudo wal -i desktop.jpg
 # Install network-manager-applet
 sudo pacman -S --needed --noconfirm network-manager-applet
 
+# Install kmix
+sudo pacman -S kmix
+
 # Install zsh and powerlevel10k (+fonts)
 sudo mkdir -p /usr/share/fonts/ && sudo cp -a $DOTTIES_DIR/fonts/. /usr/share/fonts/
 sudo sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"

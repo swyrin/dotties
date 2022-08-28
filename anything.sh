@@ -103,9 +103,9 @@ sudo pacman -S --needed --noconfirm unrar
 sudo rm -rf $HOME/.config/
 sudo chmod 777 -R $DOTTIES_DIR/.config/
 sudo ln -s $DOTTIES_DIR/.config/ $HOME/
-sudo ln -sf $DOTTIES_DIR/.p10k.zsh ~/.p10k.zsh
+sudo ln -sf $DOTTIES_DIR/.p10k.zsh $HOME/.p10k.zsh
 sudo ln -sf $DOTTIES_DIR/.zshrc $HOME/.zshrc
-sudo ln -sf $DOTTIES_DIR/.fehbg ~/.fehbg
+sudo ln -sf $DOTTIES_DIR/.fehbg $HOME/.fehbg
 
 # Export some environment variables
 export TERM=kitty

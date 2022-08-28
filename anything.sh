@@ -68,7 +68,9 @@ sudo pacman -S --needed --noconfirm redshift python-gobject
 sudo pacman -S --needed --noconfirm network-manager-applet
 sudo pacman -S --needed --noconfirm pavucontrol pasystray
 
-# Install zsh and powerlevel10k (+fonts)
+# Install zsh, oh-my-zsh and powerlevel10k (+fonts)
+# THIS IS AN INTERACTIVE INSTALLATION, SO **PLEASE** FOLLOW THE SCREEN
+sudo pacman -S --needed --noconfirm zsh zsh-completions
 sudo mkdir -p /usr/share/fonts/ && sudo cp -a $DOTTIES_DIR/fonts/. /usr/share/fonts/
 sudo sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
 yay -S --noconfirm zsh-theme-powerlevel10k-git

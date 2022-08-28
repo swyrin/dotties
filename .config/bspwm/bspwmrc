@@ -10,6 +10,7 @@ $(find $HOME -type d -name "dotties")/.fehbg &
 wal -R &
 redshift-gtk &
 nm-applet &
+pasystray &
 
 bspc monitor -d 1 2 3 4
 

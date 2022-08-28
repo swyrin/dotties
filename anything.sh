@@ -64,6 +64,7 @@ sudo pacman -Syu --needed --noconfirm python-pywal
 sudo wal -i desktop.jpg
 
 # Install stuffs for system tray
+sudo pacman -S --needed --noconfirm redshift
 sudo pacman -S --needed --noconfirm network-manager-applet
 sudo pacman -S --needed --noconfirm pavucontrol pasystray
 
@@ -72,13 +73,6 @@ sudo mkdir -p /usr/share/fonts/ && sudo cp -a $DOTTIES_DIR/fonts/. /usr/share/fo
 sudo sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
 yay -S --noconfirm zsh-theme-powerlevel10k-git
 echo 'source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme' >> ~/.zshrc
-
-# Install Redshift and stuffs
-yay -S redshift-gtk-git
-sudo pacman -S --needed --noconfirm modemmanager
-sudo systemctl enable ModemManager
-sudo systemctl start ModemManager
-mmcli -m 0 --location-enable-gps-raw --location-enable-gps-nmea
 
 # Setup needed packages (for me, you should change) as final run!!!
 # - Dolphin     - File manager

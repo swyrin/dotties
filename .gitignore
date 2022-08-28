@@ -4,6 +4,7 @@ import_config.sh
 .config/arkrc
 .config/gwenviewrc
 .config/kconf_updaterc
+.config/dolphinrc
 .config/kdeglobals
 
 .config/session/

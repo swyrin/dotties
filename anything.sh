@@ -64,7 +64,7 @@ sudo pacman -Syu --needed --noconfirm python-pywal
 sudo wal -i desktop.jpg
 
 # Install stuffs for system tray
-sudo pacman -S --needed --noconfirm redshift
+sudo pacman -S --needed --noconfirm redshift python-gobject
 sudo pacman -S --needed --noconfirm network-manager-applet
 sudo pacman -S --needed --noconfirm pavucontrol pasystray
 

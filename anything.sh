@@ -7,8 +7,6 @@
 # Basically this is just my autosetup file when I (re)install Arch (btw)!
 # Just clone this file, make anything.sh an executable, if it was not.
 
-# REMEMBER TO REBOOT!!!! DO **NOT** USE `startx` AFTER THIS!!!
-
 # For debugging sake, but it *should* work
 echo "Finding 'dotties' directory..."
 DOTTIES_DIR=$(find $HOME -type d -name "dotties")
@@ -102,3 +100,4 @@ export vis="$DOTTIES_DIR/viswal.sh"
 echo "Installation finished!!!"
 echo "And please, for the love of god, DO NOT REMOVE THE $DOTTIES_DIR FOLDER!!!!"
 echo "They are all symlinked, that is all, have a good day and happy ricing!"
+echo "REMEMBER TO REBOOT!!!! DO **NOT** USE 'startx' AFTER THIS!!!"

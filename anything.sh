@@ -76,6 +76,16 @@ sudo pacman -S  --needed --noconfirm  ttf-dejavu ttf-liberation ttf-font-awesome
 yay -S  --noconfirm noto-fonts-tc \
                     siji-git \
                     ttf-unifont ttf-gelasio-ib ttf-caladea ttf-carlito ttf-liberation-sans-narrow ttf-ms-fonts
+                    
+# Install Papirus icon theme and set to needed apps
+sudo pacman -S  --needed --noconfirm papirus-icon-theme
+
+test -f $HOME/.config/dolphinrc || touch $HOME/.config/dolphinrc
+echo "
+[Icon]
+Theme=ePapirus-Dark
+" >> $HOME/.config/dolphinrc
+
 
 # Install zsh, oh-my-zsh and powerlevel10k
 # THIS IS AN INTERACTIVE INSTALLATION, SO **PLEASE** FOLLOW THE SCREEN

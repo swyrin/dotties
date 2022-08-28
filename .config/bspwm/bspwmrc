@@ -3,12 +3,16 @@ pgrep -x sxhkd > /dev/null || sxhkd &
 sxhkd -c $HOME/.config/bspwm/sxhkdrc &
 
 # Customized stuffs
+
+# When in doubt, f NVIDIA
+# picom --experimental-backends &
+
 DOTTIES_DIR=$(find $HOME -type d -name "dotties")
 feh --bg-fill $DOTTIES_DIR/desktop.jpg
 wal -i $DOTTIES_DIR/desktop.jpg
 . "${HOME}/.cache/wal/colors.sh"
 $HOME/.config/polybar/launch.sh &
-picom --experimental-backends &
+picom &
 redshift-gtk -l $(curl -s "https://location.services.mozilla.com/v1/geolocate?key=geoclue" | awk 'OFS=":" {print $3,$5}' | tr -d ',}') &
 nm-applet &
 pasystray &

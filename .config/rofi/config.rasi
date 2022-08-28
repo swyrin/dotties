@@ -1,19 +1,18 @@
 @import "~/.cache/wal/colors-rofi-dark"
 
 configuration {
-	modes: "window,drun,run,ssh";
+	modes: "window,drun,run,ssh,combi";
 
 	show-icons: true;
-	terminal: "alacritty";
+	terminal: "kitty";
 	ssh-client: "ssh";
 	ssh-command: "{terminal} -e {ssh-client} {host} [-p {port}]";
-	run-command: "{cmd}";
+	run-command: "{terminal} --hold {cmd}";
 	run-shell-command: "{terminal} -e {cmd}";
 	drun-match-fields: "name,generic,exec,categories,keywords";
+	cycle: true;
 	drun-show-actions: true;
-
-	drun-display-format: "{name} [<span weight='light' size='small'><i>({generic})</i></span>]";
-	combi-modes: "window,run,drun";
+	combi-modes: "window,run,drun,ssh";
 
   timeout {
       action: "kb-cancel";

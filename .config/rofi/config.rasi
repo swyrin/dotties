@@ -6,13 +6,10 @@ configuration {
 	show-icons: true;
 	terminal: "kitty";
 	ssh-client: "ssh";
-	ssh-command: "{terminal} -e {ssh-client} {host} [-p {port}]";
-	run-command: "{terminal} --hold {cmd}";
-	run-shell-command: "{terminal} -e {cmd}";
 	drun-match-fields: "name,generic,exec,categories,keywords";
 	cycle: true;
 	drun-show-actions: true;
-	combi-modes: "window,run,drun,ssh";
+	combi-modes: "window,drun,ssh";
 
   timeout {
       action: "kb-cancel";

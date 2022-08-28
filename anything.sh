@@ -63,11 +63,9 @@ sudo rm -rf cli-visualizer
 sudo pacman -Syu --needed --noconfirm python-pywal
 sudo wal -i desktop.jpg
 
-# Install network-manager-applet
+# Install stuffs for system tray
 sudo pacman -S --needed --noconfirm network-manager-applet
-
-# Install kmix
-sudo pacman -S kmix
+sudo pacman -S --needed --noconfirm pavucontrol pasystray
 
 # Install zsh and powerlevel10k (+fonts)
 sudo mkdir -p /usr/share/fonts/ && sudo cp -a $DOTTIES_DIR/fonts/. /usr/share/fonts/

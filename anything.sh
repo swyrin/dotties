@@ -66,14 +66,24 @@ sudo pacman -S --needed --noconfirm redshift python-gobject
 sudo pacman -S --needed --noconfirm network-manager-applet
 sudo pacman -S --needed --noconfirm pavucontrol pasystray
 
-# Install zsh, oh-my-zsh and powerlevel10k (+fonts)
+# Install fonts
+# References: https://www.reddit.com/r/archlinux/comments/a2g77x/what_are_your_default_font_packages_you_install/
+sudo mkdir -p /usr/share/fonts/ && sudo cp -a $DOTTIES_DIR/fonts/. /usr/share/fonts/
+sudo pacman -S  --needed --noconfirm  ttf-dejavu ttf-liberation ttf-font-awesome-4 ttf-liberation ttf-droid ttf-ubuntu-font-family \
+                                      noto-fonts noto-fonts-cjk noto-fonts-extra noto-fonts-emoji \
+                                      adobe-source-han-sans-otc-fonts adobe-source-han-serif-otc-fonts
+yay -S  noto-fonts-tc \
+        siji-git \
+        ttf-unifont ttf-gelasio-ib ttf-caladea ttf-carlito ttf-liberation-sans-narrow ttf-ms-fonts
+
+# Install zsh, oh-my-zsh and powerlevel10k
 # THIS IS AN INTERACTIVE INSTALLATION, SO **PLEASE** FOLLOW THE SCREEN
 # The installation will **EXIT** the installation process, so I kept this as reference!!!
 # sudo pacman -S --needed --noconfirm zsh zsh-completions
-# sudo mkdir -p /usr/share/fonts/ && sudo cp -a $DOTTIES_DIR/fonts/. /usr/share/fonts/
 # sudo sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
 # yay -S --noconfirm zsh-theme-powerlevel10k-git
 # echo 'source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme' >> ~/.zshrc
+# chsh -s $(which zsh)
 
 # Setup needed packages (for me, you should change) as final run!!!
 # - Dolphin     - File manager

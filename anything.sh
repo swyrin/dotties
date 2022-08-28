@@ -41,9 +41,10 @@ makepkg -si --noconfirm
 cd ..
 sudo rm -r yay
 
-# Install BSPWM, polybar, rofi, picom, sxhkd, feh
+# Install BSPWM, polybar, rofi, picom (fork), sxhkd, feh
 # Technically, setup the desktop
-sudo pacman -S --needed --noconfirm bspwm polybar rofi picom sxhkd feh
+sudo pacman -S --needed --noconfirm bspwm polybar rofi sxhkd feh
+yay -S --noconfirm picom-ibhagwan-git
 
 # Install and enable LightDM
 sudo pacman -S --needed --noconfirm lightdm lightdm-gtk-greeter

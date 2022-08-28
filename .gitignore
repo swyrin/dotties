@@ -1,7 +1,6 @@
 import_config.sh
 
 .config/mimeapps.list
-.config/dolphinrc
 .config/arkrc
 .config/gwenviewrc
 .config/kconf_updaterc

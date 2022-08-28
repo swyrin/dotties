@@ -8,6 +8,8 @@ $HOME/.config/polybar/launch.sh &
 picom &
 $(find $HOME -type d -name "dotties")/.fehbg &
 wal -R &
+redshift-gtk &
+nm-applet &
 
 bspc monitor -d 1 2 3 4
 

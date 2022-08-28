@@ -1,2 +1,2 @@
 #!/bin/sh
-feh --no-fehbg --bg-fill '/home/swyrin/dotties/desktop.jpg' 
+feh --no-fehbg --bg-fill '$(pwd)/desktop.jpg'

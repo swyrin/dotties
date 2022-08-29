@@ -153,14 +153,6 @@
 		 :class "right_modules"
 (workspaces)))
 
-
-(defwidget center []
-	(box :orientation "h" 
-		 :space-evenly false  
-         :halign "center"
-		 :class "center_modules"
-(music)))
-
 (defwidget bar_1 []
   (box :class "bar_class"
        :orientation "h"

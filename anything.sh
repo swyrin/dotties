@@ -79,12 +79,14 @@ sudo pacman -Syu --needed --noconfirm python-pywal
 sudo wal -i desktop.jpg
 
 # Install stuffs for sensors
-sudo pacman -S --needed --noconfirm acpi alsa-utils playerctl 
+sudo pacman -S --needed --noconfirm acpi alsa-utils playerctl sysstat
+sudo pacman -S --needed --noconfirm plasma-integration 
 
 # Install stuffs for system tray
 sudo pacman -S --needed --noconfirm redshift python-gobject
 sudo pacman -S --needed --noconfirm network-manager-applet
 sudo pacman -S --needed --noconfirm pa-applet
+sudo pacman -S --needed --noconfirm pavucontrol pasystray
 sudo pacman -S --needed --noconfirm flameshot
 
 # Install fonts

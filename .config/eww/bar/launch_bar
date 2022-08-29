@@ -2,7 +2,7 @@
 
 ## Files and cmd
 FILE="$HOME/.cache/eww_launch.xyz"
-EWW="$HOME/.local/bin/eww/eww -c $HOME/.config/eww/bar"
+EWW="eww -c $HOME/.config/eww/bar"
 
 ## Run eww daemon if not running already
 if [[ ! `pidof eww` ]]; then

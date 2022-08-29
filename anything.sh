@@ -123,14 +123,18 @@ yay -S --needed --noconfirm --removemake google-chrome
 # TODO: use "cp" instead
 # ATTENTION: IF THIS IS **NOT** YOUR **FIRST TIME** RUNNING THIS, COMMENT THEM
 #            OR YOU *MIGHT* GET F**KED UP
-# sudo chmod 777 -R $DOTTIES_DIR/.config/
+
 # sudo rm -rf $HOME/.config/
 # sudo ln -s $DOTTIES_DIR/.config/ $HOME/
 # sudo ln -sf $DOTTIES_DIR/.p10k.zsh $HOME/.p10k.zsh
 # sudo ln -sf $DOTTIES_DIR/.zshrc $HOME/.zshrc
 # sudo ln -sf $DOTTIES_DIR/.fehbg $HOME/.fehbg
 
-sudo chmod 777 -R $DOTTIES_DIR/.config/
+# Braindead perm set
+sudo chmod 777 -R $DOTTIES_DIR
+
+# Might change my mind to:
+# sudo cp -av $DOTTIES_DIR $HOME
 sudo cp -av $DOTTIES_DIR/.config/ $HOME
 sudo cp $DOTTIES_DIR/.p10k.zsh $HOME/.p10k.zsh
 sudo cp $DOTTIES_DIR/.zshrc $HOME/.zshrc

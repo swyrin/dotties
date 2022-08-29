@@ -23,6 +23,7 @@ redshift-gtk -l $(curl -s "https://location.services.mozilla.com/v1/geolocate?ke
 nm-applet &
 pa-applet --disable-key-grabbing --disable-notifications &
 flameshot &
+pasystray &
 
 $HOME/.bscripts/sounds.sh &
 

@@ -127,7 +127,7 @@ sudo pacman -S --needed --noconfirm unrar
 # sudo ln -sf $DOTTIES_DIR/.fehbg $HOME/.fehbg
 
 sudo chmod 777 -R $DOTTIES_DIR/.config/
-sudo cp -av $DOTTIES_DIR/.config/. $HOME/.config
+sudo cp -av $DOTTIES_DIR/.config/ $HOME
 sudo cp $DOTTIES_DIR/.p10k.zsh $HOME/.p10k.zsh
 sudo cp $DOTTIES_DIR/.zshrc $HOME/.zshrc
 sudo cp $DOTTIES_DIR/.fehbg $HOME/.fehbg

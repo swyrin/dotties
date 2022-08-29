@@ -126,6 +126,7 @@ yay -S --needed --noconfirm --removemake gitkraken
 yay -S --needed --noconfirm --removemake google-chrome
 
 # Setup dotties
+sudo chmod -R 777 $DOTTIES_DIR
 sudo cp -av $DOTTIES_DIR/. $HOME
 
 # Export some environment variables

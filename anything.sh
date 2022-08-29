@@ -78,6 +78,9 @@ fi
 sudo pacman -Syu --needed --noconfirm python-pywal
 sudo wal -i desktop.jpg
 
+# Install stuffs for sensors
+sudo pacman -S --needed --noconfirm acpi alsa-utils playerctl 
+
 # Install stuffs for system tray
 sudo pacman -S --needed --noconfirm redshift python-gobject
 sudo pacman -S --needed --noconfirm network-manager-applet
@@ -132,7 +135,7 @@ yay -S --needed --noconfirm --removemake google-chrome
 # sudo ln -sf $DOTTIES_DIR/.fehbg $HOME/.fehbg
 
 # Braindead perm set
-sudo chmod 777 -R $DOTTIES_DIR
+# sudo chmod 777 -R $DOTTIES_DIR
 
 # Might change my mind to:
 # sudo cp -av $DOTTIES_DIR $HOME

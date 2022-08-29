@@ -89,16 +89,16 @@ sudo mkdir -p /usr/share/fonts/ && sudo cp -a $DOTTIES_DIR/fonts/. /usr/share/fo
 sudo pacman -S  --needed --noconfirm  ttf-dejavu ttf-liberation ttf-font-awesome ttf-liberation ttf-droid ttf-ubuntu-font-family \
                                       noto-fonts noto-fonts-cjk noto-fonts-extra noto-fonts-emoji \
                                       adobe-source-han-sans-otc-fonts adobe-source-han-serif-otc-fonts
-yay -S  --noconfirm --removemake  noto-fonts-tc \
-                                  siji-git \
-                                  ttf-unifont ttf-gelasio-ib ttf-caladea ttf-carlito ttf-liberation-sans-narrow ttf-ms-fonts
+yay -S  --needed --noconfirm --removemake noto-fonts-tc \
+                                          siji-git \
+                                          ttf-unifont ttf-gelasio-ib ttf-caladea ttf-carlito ttf-liberation-sans-narrow ttf-ms-fonts
 
 # Install zsh, oh-my-zsh and powerlevel10k
 # THIS IS AN INTERACTIVE INSTALLATION, SO **PLEASE** FOLLOW THE SCREEN
 # The installation will **EXIT** the installation process, so I kept this as reference!!!
 # sudo pacman -S --needed --noconfirm zsh zsh-completions
 # sudo sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
-# yay -S --noconfirm --removemake zsh-theme-powerlevel10k-git
+# yay -S --needed --noconfirm --removemake zsh-theme-powerlevel10k-git
 # echo 'source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme' >> ~/.zshrc
 # chsh -s $(which zsh)
 
@@ -112,8 +112,12 @@ yay -S  --noconfirm --removemake  noto-fonts-tc \
 # - Ark           - Archive Manager (+unrar for RAR support)
 # - xclip         - Command lind clipboard stuffs
 # - font-manager  - Font manager
+# - GitKraken     - I love this Git GUI client
+# - Google Chrome - Web Brower
 sudo pacman -S --needed --noconfirm dolphin neofetch btop viewnior geany kitty ark xclip font-manager
 sudo pacman -S --needed --noconfirm unrar
+yay -S --needed --noconfirm --removemake gitkraken
+yay -S --needed --noconfirm --removemake google-chrome
 
 # Setup dotties by symbolic links, to cp maybe?
 # TODO: use "cp" instead
@@ -137,7 +141,6 @@ export TERM=kitty
 export vis="$DOTTIES_DIR/viswal.sh"
 
 echo "Installation finished!!!"
-echo "And please, for the love of god, DO NOT REMOVE THE $DOTTIES_DIR FOLDER!!!!"
-# echo "They are all symlinked, that is all, have a good day and happy ricing!"
-echo "Why? Reasons."
+echo "And please, for the love of god, DO NOT REMOVE THE $DOTTIES_DIR FOLDER!!!! Why? Reasons!"
+echo "That is all, have a good day and happy ricing!"
 echo "AND REMEMBER TO REBOOT!!!! DO **NOT** USE 'startx' AFTER THIS!!!"

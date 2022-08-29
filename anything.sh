@@ -35,11 +35,16 @@ echo "set tabstospaces" >> $HOME/.nanorc
 echo "set tabsize 4" >> $HOME/.nanorc
 
 # Install yay AUR helper
-git clone https://aur.archlinux.org/yay.git
-cd yay
-makepkg -si --noconfirm
-cd ..
-sudo rm -r yay
+if [[ -z $(which yay) ]]
+then
+  git clone https://aur.archlinux.org/yay.git
+  cd yay
+  makepkg -si --noconfirm
+  cd ..
+  sudo rm -r yay
+else
+  echo "AUR helper yay already installed"
+fi
 
 # Install BSPWM, polybar, rofi, picom (fork), sxhkd, feh
 # Technically, setup the desktop
@@ -50,13 +55,18 @@ yay -S --noconfirm picom-ibhagwan-git
 sudo pacman -S --needed --noconfirm lightdm lightdm-gtk-greeter
 sudo systemctl enable lightdm.service
 
-# Install cli-visualizer and override with PyWal colors
-sudo pacman -S --needed --noconfirm ncurses fftw cmake
-git clone https://github.com/dpayne/cli-visualizer.git
-cd cli-visualizer
-./install.sh
-cd ..
-sudo rm -rf cli-visualizer
+if [[ -z $(which vis) ]]
+then
+  # Install cli-visualizer and override with PyWal colors
+  sudo pacman -S --needed --noconfirm ncurses fftw cmake
+  git clone https://github.com/dpayne/cli-visualizer.git
+  cd cli-visualizer
+  ./install.sh
+  cd ..
+  sudo rm -rf cli-visualizer
+else
+  echo "cli-visualizer already installed"
+fi
 
 # Install python-pywal
 sudo pacman -Syu --needed --noconfirm python-pywal

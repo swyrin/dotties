@@ -54,7 +54,7 @@ fi
 # Install BSPWM, polybar, rofi, picom (fork), sxhkd, feh
 # Technically, setup the desktop
 sudo pacman -S --needed --noconfirm bspwm polybar rofi sxhkd feh
-yay -S --noconfirm picom-ibhagwan-git
+yay -S --noconfirm --removemake picom-ibhagwan-git
 
 # Install and enable LightDM
 sudo pacman -S --needed --noconfirm lightdm lightdm-gtk-greeter
@@ -88,16 +88,16 @@ sudo mkdir -p /usr/share/fonts/ && sudo cp -a $DOTTIES_DIR/fonts/. /usr/share/fo
 sudo pacman -S  --needed --noconfirm  ttf-dejavu ttf-liberation ttf-font-awesome-4 ttf-liberation ttf-droid ttf-ubuntu-font-family \
                                       noto-fonts noto-fonts-cjk noto-fonts-extra noto-fonts-emoji \
                                       adobe-source-han-sans-otc-fonts adobe-source-han-serif-otc-fonts
-yay -S  --noconfirm noto-fonts-tc \
-                    siji-git \
-                    ttf-unifont ttf-gelasio-ib ttf-caladea ttf-carlito ttf-liberation-sans-narrow ttf-ms-fonts
+yay -S  --noconfirm --removemake  noto-fonts-tc \
+                                  siji-git \
+                                  ttf-unifont ttf-gelasio-ib ttf-caladea ttf-carlito ttf-liberation-sans-narrow ttf-ms-fonts
 
 # Install zsh, oh-my-zsh and powerlevel10k
 # THIS IS AN INTERACTIVE INSTALLATION, SO **PLEASE** FOLLOW THE SCREEN
 # The installation will **EXIT** the installation process, so I kept this as reference!!!
 # sudo pacman -S --needed --noconfirm zsh zsh-completions
 # sudo sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
-# yay -S --noconfirm zsh-theme-powerlevel10k-git
+# yay -S --noconfirm --removemake zsh-theme-powerlevel10k-git
 # echo 'source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme' >> ~/.zshrc
 # chsh -s $(which zsh)
 

@@ -125,25 +125,10 @@ sudo pacman -S --needed --noconfirm unrar
 yay -S --needed --noconfirm --removemake gitkraken
 yay -S --needed --noconfirm --removemake google-chrome
 
-# Setup dotties by symbolic links, to cp maybe?
-# TODO: use "cp" instead
-# ATTENTION: IF THIS IS **NOT** YOUR **FIRST TIME** RUNNING THIS, COMMENT THEM
-#            OR YOU *MIGHT* GET F**KED UP
-
-# sudo rm -rf $HOME/.config/
-# sudo ln -s $DOTTIES_DIR/.config/ $HOME/
-# sudo ln -sf $DOTTIES_DIR/.p10k.zsh $HOME/.p10k.zsh
-# sudo ln -sf $DOTTIES_DIR/.zshrc $HOME/.zshrc
-# sudo ln -sf $DOTTIES_DIR/.fehbg $HOME/.fehbg
-
-# Braindead perm set
-# sudo chmod 777 -R $DOTTIES_DIR
-
-# Might change my mind to:
-sudo cp -av $DOTTIES_DIR $HOME
+# Setup dotties
+sudo cp -av $DOTTIES_DIR/. $HOME
 
 # Export some environment variables
-export TERM=kitty
 export vis="$DOTTIES_DIR/viswal.sh"
 
 echo "Installation finished!!!"

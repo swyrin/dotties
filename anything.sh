@@ -51,10 +51,11 @@ else
   echo "AUR helper yay already installed"
 fi
 
-# Install BSPWM, polybar, rofi, picom (fork), sxhkd, feh
+# Install BSPWM, eww, rofi, picom (fork), sxhkd, feh
 # Technically, setup the desktop
-sudo pacman -S --needed --noconfirm bspwm polybar rofi sxhkd feh
+sudo pacman -S --needed --noconfirm bspwm rofi sxhkd feh
 yay -S --noconfirm --removemake picom-ibhagwan-git
+yay -S --noconfirm --removemake eww
 
 # Install and enable LightDM
 sudo pacman -S --needed --noconfirm lightdm lightdm-gtk-greeter

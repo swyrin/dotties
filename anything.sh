@@ -51,9 +51,9 @@ else
   echo "AUR helper yay already installed"
 fi
 
-# Install BSPWM, eww, rofi, picom (fork), sxhkd, feh
+# Install BSPWM, eww, rofi, picom (fork), sxhkd, feh, polybar
 # Technically, setup the desktop
-sudo pacman -S --needed --noconfirm bspwm rofi sxhkd feh
+sudo pacman -S --needed --noconfirm bspwm rofi sxhkd feh polybar
 yay -S --noconfirm --removemake picom-ibhagwan-git
 yay -S --noconfirm --removemake eww
 

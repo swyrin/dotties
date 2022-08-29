@@ -157,7 +157,6 @@
   (box :class "bar_class"
        :orientation "h"
   (right)
-  (center)
   (left)
     ))
 

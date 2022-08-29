@@ -81,7 +81,8 @@ sudo wal -i desktop.jpg
 # Install stuffs for system tray
 sudo pacman -S --needed --noconfirm redshift python-gobject
 sudo pacman -S --needed --noconfirm network-manager-applet
-sudo pacman -S --needed --noconfirm pavucontrol pasystray
+sudo pacman -S --needed --noconfirm pa-applet
+sudo pacman -S --needed --noconfirm flameshot
 
 # Install fonts
 # References: https://www.reddit.com/r/archlinux/comments/a2g77x/what_are_your_default_font_packages_you_install/
@@ -113,7 +114,7 @@ yay -S  --needed --noconfirm --removemake noto-fonts-tc \
 # - xclip         - Command lind clipboard stuffs
 # - font-manager  - Font manager
 # - GitKraken     - I love this Git GUI client
-# - Google Chrome - Web Brower
+# - Google Chrome - Web Browser
 sudo pacman -S --needed --noconfirm dolphin neofetch btop viewnior geany kitty ark xclip font-manager
 sudo pacman -S --needed --noconfirm unrar
 yay -S --needed --noconfirm --removemake gitkraken

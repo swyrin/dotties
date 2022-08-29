@@ -138,11 +138,7 @@ yay -S --needed --noconfirm --removemake google-chrome
 # sudo chmod 777 -R $DOTTIES_DIR
 
 # Might change my mind to:
-# sudo cp -av $DOTTIES_DIR $HOME
-sudo cp -av $DOTTIES_DIR/.config/ $HOME
-sudo cp $DOTTIES_DIR/.p10k.zsh $HOME/.p10k.zsh
-sudo cp $DOTTIES_DIR/.zshrc $HOME/.zshrc
-sudo cp $DOTTIES_DIR/.fehbg $HOME/.fehbg
+sudo cp -av $DOTTIES_DIR $HOME
 
 # Export some environment variables
 export TERM=kitty

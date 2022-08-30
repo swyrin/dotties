@@ -8,14 +8,11 @@
 (defvar ram_reveal false)
 (defvar date_reveal false)
 (defvar battery_reveal false)
-(defvar left_bg "#0E1F2F")
-(defvar center_bg "#0E1F2F")
-(defvar right_bg "#0E1F2F")
+(defvar left_bg "rgba(0,0,0,0)")
+(defvar center_bg "rgba(0,0,0,0)")
+(defvar right_bg "rgba(0,0,0,0)")
 (defvar media_bar_class "bar_normal")
 (defvar media_bar_class_popup "bar_normal_popup")
-(defvar battery_image "images/battery_normal.png")
-(defvar us_color "rgba(255,201,148,1)")
-(defvar es_color "rgba(255,201,148,0.4)")
 (defvar battery_image "images/battery_normal.png")
 (defvar day "0")
 (defvar month "0")
@@ -24,7 +21,6 @@
 (defvar wp1 "○")
 (defvar wp2 "○")
 (defvar wp3 "○")
-(defvar wp4 "○")
 (defvar layout_button "")
 (defvar media_status "")
 (defvar artist "No artist")
@@ -243,8 +239,8 @@
 ;; Left widgets
 (defwidget widgets_left []
   (eventbox
-    :onhover "${eww} update left_bg=\"#193855\""
-    :onhoverlost "${eww} update left_bg=\"#0E1F2F\""
+    :onhover "${eww} update left_bg=\"rgba(0,0,0,0)\""
+    :onhoverlost "${eww} update left_bg=\"rgba(0,0,0,0)\""
     (box 
       :spacing 0
       :space-evenly "false"
@@ -272,7 +268,7 @@
           :cursor "pointer"
           (button 
             :tooltip "Switch to workspace 1"
-            :onclick "bspc desktop -f 0"
+            :onclick "bspc desktop -f 1"
             (label
               :markup wp0 
               :class "workspace_buttons")))
@@ -280,7 +276,7 @@
           :cursor "pointer"
           (button 
             :tooltip "Switch to workspace 2"
-            :onclick "bspc desktop -f 1"
+            :onclick "bspc desktop -f 2"
             (label
               :markup wp1 
               :class "workspace_buttons")))
@@ -288,7 +284,7 @@
           :cursor "pointer"
           (button 
             :tooltip "Switch to workspace 3"
-            :onclick "bspc desktop -f 2"
+            :onclick "bspc desktop -f 3"
             (label
               :markup wp2 
               :class "workspace_buttons")))
@@ -296,17 +292,9 @@
           :cursor "pointer"
           (button 
             :tooltip "Switch to workspace 4"
-            :onclick "bspc desktop -f 3"
-            (label
-              :markup wp3 
-              :class "workspace_buttons")))
-        (eventbox
-          :cursor "pointer"
-          (button 
-            :tooltip "Switch to workspace 5"
             :onclick "bspc desktop -f 4"
             (label
-              :markup wp4 
+              :markup wp3 
               :class "workspace_buttons")))
       )))
 
@@ -320,7 +308,7 @@
         (eventbox 
           :cursor "pointer"
           (button
-            :tooltip "Change current layout"
+            :tooltip "Change current destop layout"
             :onclick "bspc desktop focused --layout next"
             (label
               :class "layout"
@@ -419,8 +407,8 @@
 ;; Central widgets
 (defwidget widgets_center []
   (eventbox
-    :onhover "${eww} update center_bg=\"#193855\""
-    :onhoverlost "${eww} update center_bg=\"#0E1F2F\""
+    :onhover "${eww} update center_bg=\"rgba(0,0,0,0)\""
+    :onhoverlost "${eww} update center_bg=\"rgba(0,0,0,0)\""
     (box 
       :spacing 0
       :space-evenly "true"
@@ -729,8 +717,8 @@
       ;; Right widgets
 (defwidget widgets_right []
   (eventbox
-    :onhover "${eww} update right_bg=\"#193855\""
-    :onhoverlost "${eww} update right_bg=\"#0E1F2F\""
+    :onhover "${eww} update right_bg=\"rgba(0,0,0,0)\""
+    :onhoverlost "${eww} update right_bg=\"rgba(0,0,0,0)\""
     (box 
       :spacing 0
       :space-evenly "false"
@@ -739,9 +727,8 @@
       :valign "fill"
       :hexpand "false"
       :style "background-color: ${right_bg}"
-      (power_button)
+;;      (power_button)
       (time)
-      (keyboard)
       )))
 
 (defwidget power_button []
@@ -782,35 +769,3 @@
             :class "date"
             :markup "<span font-size=\"xx-small\">${date}</span>"
             ))))))
-
-(defwidget keyboard [] 
-  (box 
-    :class "kb_box"
-    :orientation "h"
-    :valign "fill"
-    :halign "center"
-    "|"
-    (box
-      :orientation "v"
-      :space-evenly "false"
-      :valign "fill"
-      :halign "center"
-      (eventbox 
-        :cursor "pointer"
-        :tooltip "Change layout to US english"
-        (button
-          :class "kb_button_us"
-          :onclick "scripts/kb_layouts set us"
-          :style "color: ${us_color}"
-          :valign "center"
-          "US"))
-      (eventbox
-        :cursor "pointer"
-        :tooltip "Change layout to US spanish"
-        (button
-          :class "kb_button_es"
-          :onclick "scripts/kb_layouts set es"
-          :style "color: ${es_color}"
-          :valign "center"
-          "ES")
-          ))))

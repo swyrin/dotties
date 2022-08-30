@@ -20,7 +20,7 @@ case $1 in
         $(( `date "+%m"` -1 ))
         ;;
     "--year")
-        date "+%y"
+        date "+%Y"
         ;;
     *)
         true

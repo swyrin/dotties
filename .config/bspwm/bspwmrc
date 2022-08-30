@@ -5,32 +5,40 @@ sxhkd -c $HOME/.config/bspwm/sxhkdrc &
 # Customized stuffs
 
 # When in doubt, f NVIDIA
-# picom --experimental-backends &
+xrandr -s 1920x1080
 
 DOTTIES_DIR=$(find $HOME -type d -name "dotties")
-feh --bg-fill $DOTTIES_DIR/desktop.jpg
-wal -i $DOTTIES_DIR/desktop.jpg
-. "${HOME}/.cache/wal/colors.sh"
 
+# Kill trash processes
+killall picom
+killall polybar
+killall redshift-gtk
+killall nm-applet
+killall pa-applet
+killall pasystray
+killall flameshot
+
+wal -i $DOTTIES_DIR/ovhn-bg.jpg
+. "${HOME}/.cache/wal/colors.sh"
 eww -c ~/.config/eww/mybar open bar_right
 eww -c ~/.config/eww/mybar open bar_center
 eww -c ~/.config/eww/mybar open bar_left
-killall polybar
 polybar -c ~/.config/eww/mybar/polybar_tray.ini tray&
 
 picom &
 redshift-gtk -l $(curl -s "https://location.services.mozilla.com/v1/geolocate?key=geoclue" | awk 'OFS=":" {print $3,$5}' | tr -d ',}') &
 nm-applet &
 pa-applet --disable-key-grabbing --disable-notifications &
-flameshot &
 pasystray &
+flameshot &
 
 $HOME/.bscripts/sounds.sh &
+# ================================
 
 bspc monitor -d 1 2 3 4
 
-bspc config border_width        0
-bspc config window_gap          5
+bspc config border_width        3
+bspc config window_gap          12
 
 bspc config pointer_action1 move
 bspc config pointer_action2 resize_side
@@ -40,10 +48,9 @@ bspc config split_ratio          0.52
 bspc config borderless_monocle   true
 bspc config gapless_monocle      true
 
-bspc config normal_border_color "$color1"
-bspc config active_border_color "$color2"
-bspc config focused_border_color "$color15"
-bspc config presel_border_color "$color1"
+bspc config normal_border_color "$color3"
+bspc config active_border_color "$color3"
+bspc config focused_border_color "$color3"
 
 bspc rule -a Gimp desktop='^8' state=floating follow=on
 bspc rule -a Chromium desktop='^2'

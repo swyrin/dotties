@@ -51,9 +51,9 @@ else
   echo "AUR helper yay already installed"
 fi
 
-# Install BSPWM, eww, rofi, picom (fork), sxhkd, feh, polybar
+# Install BSPWM, eww, rofi, picom (fork), sxhkd, polybar
 # Technically, setup the desktop
-sudo pacman -S --needed --noconfirm bspwm rofi sxhkd feh polybar
+sudo pacman -S --needed --noconfirm bspwm rofi sxhkd polybar
 yay -S --noconfirm --removemake picom-ibhagwan-git
 yay -S --noconfirm --removemake eww
 
@@ -78,9 +78,9 @@ fi
 sudo pacman -Syu --needed --noconfirm python-pywal
 sudo wal -i desktop.jpg
 
-# Install stuffs for sensors
-sudo pacman -S --needed --noconfirm acpi alsa-utils playerctl sysstat
-sudo pacman -S --needed --noconfirm plasma-integration 
+# Install stuffs for bars
+sudo pacman -S --needed --noconfirm acpi alsa-utils playerctl sysstat xdotool
+sudo pacman -S --needed --noconfirm plasma-integration
 
 # Install stuffs for system tray
 sudo pacman -S --needed --noconfirm redshift python-gobject
@@ -120,17 +120,19 @@ yay -S  --needed --noconfirm --removemake noto-fonts-tc \
 # - font-manager  - Font manager
 # - GitKraken     - I love this Git GUI client
 # - Google Chrome - Web Browser
+# - Discord       - Discord (+with system Electron)
 sudo pacman -S --needed --noconfirm dolphin neofetch btop viewnior geany kitty ark xclip font-manager
 sudo pacman -S --needed --noconfirm unrar
 yay -S --needed --noconfirm --removemake gitkraken
 yay -S --needed --noconfirm --removemake google-chrome
+yay -S --needed --noconfirm --removemake discord_arch_electron
 
 # Setup dotties
 sudo chmod -R 777 $DOTTIES_DIR
 sudo cp -av $DOTTIES_DIR/. $HOME
 
 # Export some environment variables
-export vis="$DOTTIES_DIR/viswal.sh"
+source ./env.sh
 
 echo "Installation finished!!!"
 echo "And please, for the love of god, DO NOT REMOVE THE $DOTTIES_DIR FOLDER!!!! Why? Reasons!"

@@ -18,7 +18,7 @@ killall pa-applet
 killall pasystray
 killall flameshot
 
-wal -i $DOTTIES_DIR/ovhn-bg.jpg
+wal -i $DOTTIES_DIR/desktop.jpg
 . "${HOME}/.cache/wal/colors.sh"
 eww -c ~/.config/eww/mybar open bar_right
 eww -c ~/.config/eww/mybar open bar_center

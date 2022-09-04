@@ -53,7 +53,7 @@ fi
 
 # Install BSPWM, eww, rofi, picom (fork), sxhkd, polybar
 # Technically, setup the desktop
-sudo pacman -S --needed --noconfirm bspwm rofi sxhkd polybar
+sudo pacman -S --needed --noconfirm bspwm rofi sxhkd polybar dunst
 yay -S --noconfirm --removemake picom-ibhagwan-git
 yay -S --noconfirm --removemake eww
 

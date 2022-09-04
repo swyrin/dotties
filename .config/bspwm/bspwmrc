@@ -1,6 +1,5 @@
 #! /bin/sh
 pgrep -x sxhkd > /dev/null || sxhkd &
-sxhkd -c $HOME/.config/bspwm/sxhkdrc &
 
 # Customized stuffs
 
@@ -14,9 +13,10 @@ killall picom
 killall polybar
 killall redshift-gtk
 killall nm-applet
-killall pa-applet
 killall pasystray
 killall flameshot
+killall dunst
+killall sxhkd
 
 wal -i $DOTTIES_DIR/desktop.jpg
 . "${HOME}/.cache/wal/colors.sh"
@@ -25,12 +25,14 @@ eww -c ~/.config/eww/mybar open bar_center
 eww -c ~/.config/eww/mybar open bar_left
 polybar -c ~/.config/eww/mybar/polybar_tray.ini tray&
 
+sxhkd -c $HOME/.config/bspwm/sxhkdrc &
 picom &
 redshift-gtk -l $(curl -s "https://location.services.mozilla.com/v1/geolocate?key=geoclue" | awk 'OFS=":" {print $3,$5}' | tr -d ',}') &
 nm-applet &
 pa-applet --disable-key-grabbing --disable-notifications &
 pasystray &
 flameshot &
+dunst > /dev/null 2> /dev/null &
 
 $HOME/.bscripts/sounds.sh &
 # ================================

@@ -85,7 +85,6 @@ sudo pacman -S --needed --noconfirm plasma-integration
 # Install stuffs for system tray
 sudo pacman -S --needed --noconfirm redshift python-gobject
 sudo pacman -S --needed --noconfirm network-manager-applet
-sudo pacman -S --needed --noconfirm pa-applet
 sudo pacman -S --needed --noconfirm pavucontrol pasystray
 sudo pacman -S --needed --noconfirm flameshot
 

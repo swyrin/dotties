@@ -123,8 +123,8 @@ yay -S  --needed --noconfirm --removemake noto-fonts-tc \
 sudo pacman -S --needed --noconfirm dolphin neofetch btop viewnior geany kitty ark xclip font-manager
 sudo pacman -S --needed --noconfirm unrar
 yay -S --needed --noconfirm --removemake gitkraken
-yay -S --needed --noconfirm --removemake google-chrome
-yay -S --needed --noconfirm --removemake discord_arch_electron
+# yay -S --needed --noconfirm --removemake google-chrome
+# yay -S --needed --noconfirm --removemake discord_arch_electron
 
 # Setup dotties
 sudo chmod -R 777 $DOTTIES_DIR

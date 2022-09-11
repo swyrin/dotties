@@ -122,7 +122,10 @@ sudo pacman -S --needed --noconfirm gvfs thunar-volman thunar-archive-plugin thu
 # yay -S --needed --noconfirm --removemake discord_arch_electron
 
 # Setup files
+# Make all executable(?), backup old ones
 sudo chmod -R 777 $DOTTIES_DIR
+mv $HOME/.config/ $HOME/.config_backup/
+mkdir -p $HOME/.config/
 sudo ln -sf $DOTTIES_DIR/.zshrc $HOME/.zshrc
 sudo ln -sf $DOTTIES_DIR/.p10k.zsh $HOME/.p10k.zsh
 sudo ln -s $DOTTIES_DIR/.config/bspwm/ $HOME/.config/bspwm/
@@ -139,6 +142,7 @@ sudo ln -s $DOTTIES_DIR/.config/rofi/ $HOME/.config/rofi/
 source $DOTTIES_DIR/env.sh
 
 echo "Installation finished!!!"
-echo "And please, for the love of god, DO NOT REMOVE THE $DOTTIES_DIR FOLDER!!!! Why? It is **SYMLINKED**!"
-echo "That is all, have a good day and happy ricing!"
+echo "And please, for the love of god, DO NOT REMOVE THE $DOTTIES_DIR FOLDER!!!! Why? They are **SYMLINKED**!"
+echo "Also remember to move your old config from $HOME/.config_backup/ to $HOME/.config/"
 echo "AND REMEMBER TO REBOOT!!!! DO **NOT** USE 'startx' AFTER THIS!!!"
+echo "That is all, have a good day and happy ricing!"

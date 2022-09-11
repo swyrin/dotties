@@ -51,9 +51,9 @@ else
   echo "AUR helper yay already installed"
 fi
 
-# Install BSPWM, eww, rofi, picom (fork), sxhkd, polybar
+# Install BSPWM, eww, rofi, picom (fork), sxhkd, polybar, feh
 # Technically, setup the desktop
-sudo pacman -S --needed --noconfirm bspwm rofi sxhkd polybar dunst
+sudo pacman -S --needed --noconfirm bspwm rofi sxhkd polybar dunst feh
 yay -S --noconfirm --removemake picom-ibhagwan-git
 yay -S --noconfirm --removemake eww
 
@@ -76,11 +76,11 @@ fi
 
 # Install python-pywal
 sudo pacman -Syu --needed --noconfirm python-pywal
-sudo wal -i desktop.jpg
+sudo wal -i -n $DOTTIES_DIR/desktop.jpg
+sudo feh --bg-fill $DOTTIES_DIR/desktop.jpg
 
 # Install stuffs for bars
 sudo pacman -S --needed --noconfirm acpi alsa-utils playerctl sysstat xdotool
-sudo pacman -S --needed --noconfirm plasma-integration
 
 # Install stuffs for system tray
 sudo pacman -S --needed --noconfirm redshift python-gobject
@@ -108,21 +108,25 @@ yay -S  --needed --noconfirm --removemake noto-fonts-tc \
 # chsh -s $(which zsh)
 
 # Setup needed packages (for me, you should change) as final run!!!
-# - Dolphin       - File manager
+# - Thunar        - File manager (+plugins)
 # - neofetch      - Neofetch
 # - btop          - Better htop
 # - Viewnior      - Image viewer
 # - Geany         - GUI text editor
 # - Kitty         - Terminal
-# - Ark           - Archive Manager (+unrar for RAR support)
+# - Peazip           - Archive Manager (+unrar for RAR support)
 # - xclip         - Command lind clipboard stuffs
 # - font-manager  - Font manager
 # - GitKraken     - I love this Git GUI client
 # - Google Chrome - Web Browser
 # - Discord       - Discord (+with system Electron)
-sudo pacman -S --needed --noconfirm dolphin neofetch btop viewnior geany kitty ark xclip font-manager
+sudo pacman -S --needed --noconfirm thunar neofetch btop viewnior geany kitty ark xclip font-manager
 sudo pacman -S --needed --noconfirm unrar
+sudo pacman -S --needed --noconfirm thunar-volman thunar-archive-plugin thunar-media-tags-plugin
+yay -S --needed --noconfirm peazip-gtk2-bin
 yay -S --needed --noconfirm --removemake gitkraken
+
+# Need to be installed manually I guess?
 # yay -S --needed --noconfirm --removemake google-chrome
 # yay -S --needed --noconfirm --removemake discord_arch_electron
 

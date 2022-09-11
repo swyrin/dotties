@@ -122,18 +122,22 @@ sudo pacman -S --needed --noconfirm gvfs thunar-volman thunar-archive-plugin thu
 # yay -S --needed --noconfirm --removemake discord_arch_electron
 
 # Setup files
-# Make all executable(?), backup old ones
+# Make all executable(?), backup old ones and then, symlink
 sudo chmod -R 777 $DOTTIES_DIR
 mv $HOME/.config/ $HOME/.config_backup/
 mkdir -p $HOME/.config/
 sudo ln -sf $DOTTIES_DIR/.zshrc $HOME/.zshrc
 sudo ln -sf $DOTTIES_DIR/.p10k.zsh $HOME/.p10k.zsh
+
+sudo ln -s $DOTTIES_DIR/.bscripts/ $HOME/
+sudo ln -s $DOTTIES_DIR/Documents/ $HOME/
 sudo ln -s $DOTTIES_DIR/.config/bspwm/ $HOME/.config/
 sudo ln -s $DOTTIES_DIR/.config/eww/ $HOME/.config/
 sudo ln -s $DOTTIES_DIR/.config/systemd/ $HOME/.config/
 sudo ln -s $DOTTIES_DIR/.config/kitty/ $HOME/.config/
 sudo ln -s $DOTTIES_DIR/.config/picom/ $HOME/.config/
 sudo ln -s $DOTTIES_DIR/.config/vis/ $HOME/.config/
+sudo ln -s $DOTTIES_DIR/.config/wal/ $HOME/.config/
 sudo ln -s $DOTTIES_DIR/.config/Thunar/ $HOME/.config/
 sudo ln -s $DOTTIES_DIR/.config/rofi/ $HOME/.config/
 

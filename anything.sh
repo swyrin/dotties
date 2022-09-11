@@ -16,7 +16,7 @@ echo "The script *might* ask you the password below"
 
 # Setup custom pacman stuffs: parallel downloads, c o l o r s
 sudo sed -i 's/#Color/Color/g' /etc/pacman.conf
-sudo sed -i 's/#ParallelDownloads = 8/ParallelDownloads = 8/g' /etc/pacman.conf
+sudo sed -i 's/#ParallelDownloads = 5/ParallelDownloads = 8/g' /etc/pacman.conf
 
 # As usual, pacman -Syu
 sudo pacman -Syu --noconfirm

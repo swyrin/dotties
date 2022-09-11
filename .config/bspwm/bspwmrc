@@ -9,7 +9,6 @@ xrandr -s 1920x1080
 DOTTIES_DIR=$(find $HOME -type d -name "dotties")
 
 # Kill processes
-killall bspc
 killall picom
 killall polybar
 killall redshift-gtk
@@ -19,8 +18,9 @@ killall flameshot
 killall dunst
 killall sxhkd
 
-wal -i $DOTTIES_DIR/desktop.jpg
+wal -i $DOTTIES_DIR/desktop.jpg -n
 . "${HOME}/.cache/wal/colors.sh"
+feh --bg-fill $DOTTIES_DIR/desktop.jpg
 eww -c ~/.config/eww/mybar open bar_right
 eww -c ~/.config/eww/mybar open bar_center
 eww -c ~/.config/eww/mybar open bar_left
@@ -30,10 +30,9 @@ sxhkd -c $HOME/.config/bspwm/sxhkdrc &
 picom &
 redshift-gtk -l $(curl -s "https://location.services.mozilla.com/v1/geolocate?key=geoclue" | awk 'OFS=":" {print $3,$5}' | tr -d ',}') &
 nm-applet &
-pa-applet --disable-key-grabbing --disable-notifications &
 pasystray &
 flameshot &
-dunst > /dev/null 2> /dev/null &
+dunst &
 
 $HOME/.bscripts/sounds.sh &
 # ================================
@@ -56,4 +55,3 @@ bspc config active_border_color "$color3"
 bspc config focused_border_color "$color3"
 
 bspc rule -a Pavucontrol state=floating
-bspc rule -a Chromium state=floating

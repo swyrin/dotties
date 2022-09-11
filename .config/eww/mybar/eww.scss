@@ -7,7 +7,7 @@
 }
 
 .bars {
-    background-color: rgba(0, 0, 0, 0);
+    background-color: #ff0000;
     border: 5px solid #ff4647;
     border-radius: 10px;
 }
@@ -40,7 +40,6 @@
 
 .music_box_popup {
     background-color: #000000;
-    background-image: url("images/background.png");
     border: solid 5px #ff4647;
     border-radius: 0 0 20 20;
 }
@@ -178,27 +177,7 @@
     font-size: 15px;
     margin-bottom: -3px;
     margin-top: 1px;
-    color: #ff4647;
-}
-.center_revealers {
-    border-radius: 5px;
-    background-color: rgba(0, 0, 0, 0);
-    min-height: 32px;
-    border: solid 2px #ffcb83;
-    color: #ffffff;
-}
-.center_info scale trough highlight {
-    all: unset;
-    background: #F1A277;
-    border-radius: 10px;
-    border: solid 2px #ffcb83;
-}
-.center_info scale trough {
-    all: unset;
-    background-color: rgba(255,201,148, 0.4);
-    border-radius: 10px;
-    min-width: 110px;
-    min-height: 10px;
+    color: #ffc994;
 }
 
 .time_box {

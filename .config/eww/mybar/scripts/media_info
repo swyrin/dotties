@@ -94,10 +94,10 @@ while true; do
 	else
 		# Update everything to default values
 		$eww update media_status=""
-		$eww update title_parsed="No title"
+		$eww update title_parsed="No title                       "
 		$eww update title="No title"
 		$eww update artist="No artist"
-		$eww update artist_parsed="No artist"
+		$eww update artist_parsed="No artist                      "
 		$eww update position=0
 		$eww update length=100
 		$eww update cover="images/music.png"

@@ -1,4 +1,4 @@
-#!/bin/python3 
+#!/bin/python3
 
 import sys
 # -*- coding:utf-8 -*-
@@ -35,10 +35,16 @@ def cjk_substrings(string):
     i += 1
 
 ogstring = str(sys.argv[1])
-string = ogstring[0:20]
-if len(ogstring) > len(string):
+
+string = ogstring[0:30]
+
+if len(string) < 31 and len(ogstring)< 31:
+  string = string.ljust(31)
+elif len(ogstring) > len(string):
   string = string + "…"
+
 for sub in cjk_substrings(string):
   string = string.replace(sub, "<span font-family= \"M PLUS 1\" font-size=\"x-small\" rise=\"3pt\" font-weight=\"bold\">" + sub + "</span>")
+
 print(string)
 

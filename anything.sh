@@ -6,8 +6,9 @@
 #
 # Basically this is just my autosetup file when I (re)install Arch (btw)!
 # Just clone this file, make anything.sh an executable, if it was not.
+# ###############################################
 
-# For debugging sake, but it *should* work
+# For debugging sake, but it *should* work as I want
 echo "Finding 'dotties' directory..."
 DOTTIES_DIR=$(find $HOME -type d -name "dotties")
 echo "Found and using dotties directory $DOTTIES_DIR"
@@ -15,15 +16,16 @@ echo "The script *might* ask you the password below"
 
 # Setup custom pacman stuffs: parallel downloads, c o l o r s
 sudo sed -i 's/#Color/Color/g' /etc/pacman.conf
-sudo sed -i 's/#ParallelDownloads = 5/ParallelDownloads = 5/g' /etc/pacman.conf
+sudo sed -i 's/#ParallelDownloads = 8/ParallelDownloads = 8/g' /etc/pacman.conf
 
 # As usual, pacman -Syu
 sudo pacman -Syu --noconfirm
 
 # Install server packages
-# sudo pacman -S --needed --noconfirm pulseaudio networkmanager dhcpcd
-# sudo systemctl enable NetworkManager.service
-# sudo systemctl enable dhcpcd.service
+# I assume that you will run this file after boot Arch for the first time
+sudo pacman -S --needed --noconfirm pulseaudio networkmanager dhcpcd
+sudo systemctl enable NetworkManager.service
+sudo systemctl enable dhcpcd.service
 
 # Install Xorg and friends
 sudo pacman -S --needed --noconfirm xorg xorg-apps xorg-server xorg-xinit \
@@ -77,7 +79,6 @@ fi
 # Install python-pywal
 sudo pacman -Syu --needed --noconfirm python-pywal
 sudo wal -i -n $DOTTIES_DIR/desktop.jpg
-sudo feh --bg-fill $DOTTIES_DIR/desktop.jpg
 
 # Install stuffs for bars
 sudo pacman -S --needed --noconfirm acpi alsa-utils playerctl sysstat xdotool
@@ -98,46 +99,46 @@ yay -S  --needed --noconfirm --removemake noto-fonts-tc \
                                           siji-git \
                                           ttf-unifont ttf-gelasio-ib ttf-caladea ttf-carlito ttf-liberation-sans-narrow ttf-ms-fonts
 
-# Install zsh, oh-my-zsh and powerlevel10k
-# THIS IS AN INTERACTIVE INSTALLATION, SO **PLEASE** FOLLOW THE SCREEN
-# The installation will **EXIT** the installation process, so I kept this as reference!!!
-# sudo pacman -S --needed --noconfirm zsh zsh-completions
-# sudo sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
-# yay -S --needed --noconfirm --removemake zsh-theme-powerlevel10k-git
-# echo 'source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme' >> ~/.zshrc
-# chsh -s $(which zsh)
-
 # Setup needed packages (for me, you should change) as final run!!!
 # - Thunar        - File manager (+plugins)
 # - neofetch      - Neofetch
 # - btop          - Better htop
 # - Viewnior      - Image viewer
 # - Geany         - GUI text editor
-# - Kitty         - Terminal
-# - Peazip           - Archive Manager (+unrar for RAR support)
-# - xclip         - Command lind clipboard stuffs
+# - Kitty         - Terminal emulator
+# - xclip         - Command line clipboard stuffs
 # - font-manager  - Font manager
+sudo pacman -S --needed --noconfirm thunar neofetch btop viewnior geany kitty xclip font-manager
+sudo pacman -S --needed --noconfirm gvfs thunar-volman thunar-archive-plugin thunar-media-tags-plugin
+
+# Need to be installed manually I guess?
 # - GitKraken     - I love this Git GUI client
 # - Google Chrome - Web Browser
 # - Discord       - Discord (+with system Electron)
-sudo pacman -S --needed --noconfirm thunar neofetch btop viewnior geany kitty ark xclip font-manager
-sudo pacman -S --needed --noconfirm unrar
-sudo pacman -S --needed --noconfirm gvfs thunar-volman thunar-archive-plugin thunar-media-tags-plugin
-yay -S --needed --noconfirm peazip-gtk2-bin
-yay -S --needed --noconfirm --removemake gitkraken
-
-# Need to be installed manually I guess?
+# - Peazip        - Archive Manager
+# yay -S --needed --noconfirm --removemake peazip-gtk2-bin
+# yay -S --needed --noconfirm --removemake gitkraken
 # yay -S --needed --noconfirm --removemake google-chrome
 # yay -S --needed --noconfirm --removemake discord_arch_electron
 
-# Setup dotties
+# Setup files
 sudo chmod -R 777 $DOTTIES_DIR
-sudo cp -av $DOTTIES_DIR/. $HOME
+sudo ln -sf $DOTTIES_DIR/.zshrc $HOME/.zshrc
+sudo ln -sf $DOTTIES_DIR/.p10k.zsh $HOME/.p10k.zsh
+sudo ln -s $DOTTIES_DIR/.config/bspwm/ $HOME/.config/bspwm/
+sudo ln -s $DOTTIES_DIR/.config/eww/ $HOME/.config/eww/
+sudo ln -s $DOTTIES_DIR/.config/systemd/ $HOME/.config/systemd/
+sudo ln -s $DOTTIES_DIR/.config/kitty/ $HOME/.config/kitty/
+sudo ln -s $DOTTIES_DIR/.config/picom/ $HOME/.config/picom/
+sudo ln -s $DOTTIES_DIR/.config/vis/ $HOME/.config/vis/
+sudo ln -s $DOTTIES_DIR/.config/wal/ $HOME/.config/wal/
+sudo ln -s $DOTTIES_DIR/.config/Thunar/ $HOME/.config/Thunar/
+sudo ln -s $DOTTIES_DIR/.config/rofi/ $HOME/.config/rofi/
 
 # Export some environment variables
-source ./env.sh
+source $DOTTIES_DIR/env.sh
 
 echo "Installation finished!!!"
-echo "And please, for the love of god, DO NOT REMOVE THE $DOTTIES_DIR FOLDER!!!! Why? Reasons!"
+echo "And please, for the love of god, DO NOT REMOVE THE $DOTTIES_DIR FOLDER!!!! Why? It is **SYMLINKED**!"
 echo "That is all, have a good day and happy ricing!"
 echo "AND REMEMBER TO REBOOT!!!! DO **NOT** USE 'startx' AFTER THIS!!!"

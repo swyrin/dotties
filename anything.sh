@@ -106,17 +106,17 @@ yay -S  --needed --noconfirm --removemake noto-fonts-tc \
 # - Viewnior      - Image viewer
 # - Geany         - GUI text editor
 # - Kitty         - Terminal emulator
-# - xclip         - Command line clipboard stuffs
+# - xclip         - Commandline clipboard stuffs
 # - font-manager  - Font manager
+# - Peazip        - Archive manager
 sudo pacman -S --needed --noconfirm thunar neofetch btop viewnior geany kitty xclip font-manager
 sudo pacman -S --needed --noconfirm gvfs thunar-volman thunar-archive-plugin thunar-media-tags-plugin
+yay -S --needed --noconfirm --removemake peazip-gtk2-bin
 
 # Need to be installed manually I guess?
 # - GitKraken     - I love this Git GUI client
 # - Google Chrome - Web Browser
 # - Discord       - Discord (+with system Electron)
-# - Peazip        - Archive Manager
-# yay -S --needed --noconfirm --removemake peazip-gtk2-bin
 # yay -S --needed --noconfirm --removemake gitkraken
 # yay -S --needed --noconfirm --removemake google-chrome
 # yay -S --needed --noconfirm --removemake discord_arch_electron

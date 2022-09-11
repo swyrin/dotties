@@ -126,24 +126,22 @@ sudo pacman -S --needed --noconfirm gvfs thunar-volman thunar-archive-plugin thu
 sudo chmod -R 777 $DOTTIES_DIR
 mv $HOME/.config/ $HOME/.config_backup/
 mkdir -p $HOME/.config/
-
-sudo ln -sf $HOME/.zshrc $DOTTIES_DIR/.zshrc
-sudo ln -sf $HOME/.p10k.zsh $DOTTIES_DIR/.p10k.zsh
-sudo ln -s $HOME/.config/bspwm/ $DOTTIES_DIR/.config/bspwm/
-sudo ln -s $HOME/.config/eww/ $DOTTIES_DIR/.config/eww/
-sudo ln -s $HOME/.config/systemd/ $DOTTIES_DIR/.config/systemd/
-sudo ln -s $HOME/.config/kitty/ $DOTTIES_DIR/.config/kitty/
-sudo ln -s $HOME/.config/picom/ $DOTTIES_DIR/.config/picom/
-sudo ln -s $HOME/.config/vis/ $DOTTIES_DIR/.config/vis/
-sudo ln -s $HOME/.config/wal/ $DOTTIES_DIR/.config/wal/
-sudo ln -s $HOME/.config/Thunar/ $DOTTIES_DIR/.config/Thunar/
-sudo ln -s $HOME/.config/rofi/ $DOTTIES_DIR/.config/rofi/
+sudo ln -sf $DOTTIES_DIR/.zshrc $HOME/.zshrc
+sudo ln -sf $DOTTIES_DIR/.p10k.zsh $HOME/.p10k.zsh
+sudo ln -s $DOTTIES_DIR/.config/bspwm/ $HOME/.config/
+sudo ln -s $DOTTIES_DIR/.config/eww/ $HOME/.config/
+sudo ln -s $DOTTIES_DIR/.config/systemd/ $HOME/.config/
+sudo ln -s $DOTTIES_DIR/.config/kitty/ $HOME/.config/
+sudo ln -s $DOTTIES_DIR/.config/picom/ $HOME/.config/
+sudo ln -s $DOTTIES_DIR/.config/vis/ $HOME/.config/
+sudo ln -s $DOTTIES_DIR/.config/Thunar/ $HOME/.config/
+sudo ln -s $DOTTIES_DIR/.config/rofi/ $HOME/.config/
 
 # Export some environment variables
 source $DOTTIES_DIR/env.sh
 
 echo "Installation finished!!!"
-echo "And please, for the love of god, DO NOT REMOVE THE $DOTTIES_DIR FOLDER!!!! Why? They are **SYMLINKED**!"
-echo "Also remember to move your old config from $HOME/.config_backup/ to $HOME/.config/"
+echo "And please, for the love of god, DO **NOT** REMOVE THE $DOTTIES_DIR FOLDER!!!! Why? They are **ALL SYMLINKED**!"
+echo "Also remember to move your old config from $HOME/.config_backup/ directory to $HOME/.config/"
 echo "AND REMEMBER TO REBOOT!!!! DO **NOT** USE 'startx' AFTER THIS!!!"
 echo "That is all, have a good day and happy ricing!"

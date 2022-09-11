@@ -122,7 +122,7 @@ yay -S  --needed --noconfirm --removemake noto-fonts-tc \
 # - Discord       - Discord (+with system Electron)
 sudo pacman -S --needed --noconfirm thunar neofetch btop viewnior geany kitty ark xclip font-manager
 sudo pacman -S --needed --noconfirm unrar
-sudo pacman -S --needed --noconfirm thunar-volman thunar-archive-plugin thunar-media-tags-plugin
+sudo pacman -S --needed --noconfirm gvfs thunar-volman thunar-archive-plugin thunar-media-tags-plugin
 yay -S --needed --noconfirm peazip-gtk2-bin
 yay -S --needed --noconfirm --removemake gitkraken
 

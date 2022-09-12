@@ -53,9 +53,9 @@ else
   echo "AUR helper yay already installed"
 fi
 
-# Install BSPWM, eww, rofi, picom (fork), sxhkd, polybar, feh
+# Install BSPWM, eww, rofi, picom (fork), sxhkd, polybar, feh, inetutils
 # Technically, setup the desktop
-sudo pacman -S --needed --noconfirm bspwm rofi sxhkd polybar dunst feh
+sudo pacman -S --needed --noconfirm bspwm rofi sxhkd polybar dunst feh inetutils
 yay -S --noconfirm --removemake picom-ibhagwan-git
 yay -S --noconfirm --removemake eww
 
@@ -140,6 +140,7 @@ sudo ln -s $DOTTIES_DIR/.config/vis/ $HOME/.config/
 sudo ln -s $DOTTIES_DIR/.config/wal/ $HOME/.config/
 sudo ln -s $DOTTIES_DIR/.config/Thunar/ $HOME/.config/
 sudo ln -s $DOTTIES_DIR/.config/rofi/ $HOME/.config/
+sudo ln -s $DOTTIES_DIR/.config/flameshot $HOME/.config/
 
 # Export some environment variables
 source $DOTTIES_DIR/env.sh

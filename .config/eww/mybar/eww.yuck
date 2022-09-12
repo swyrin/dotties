@@ -354,18 +354,14 @@
             :hexpand "false"
             (box
               (scale
-                :active "false"
+                :active "true"
                 :min 0
                 :max length
                 :value position
                 :orientation "h"
-                ;; :tooltip "Seek"
-                ;; :onchange "scripts/media_control --seek {}"
+                :onchange "scripts/media_control --seek {}"
                 ))))
            (box
-            ;; :reveal music_reveal
-            ;; :transition "slideup"
-            ;; :duration "350ms"
             :orientation "h"
             (box 
               :orientation "h"
@@ -498,8 +494,21 @@
       :valign "fill"
       :hexpand "false"
       :style "background-color: ${right_bg}"
+      (power_button)
       (time)
       )))
+
+(defwidget power_button []
+  (eventbox
+    :cursor "pointer"
+    :tooltip "Power options"
+    (button
+      :valign "center"
+      :onclick "~/.config/rofi/powermenu.sh 2> /dev/null"
+      (label
+      	:class "power_button"
+	    :text ""
+      ))))
 
 (defwidget time []
   (eventbox

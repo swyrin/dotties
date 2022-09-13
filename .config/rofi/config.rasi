@@ -18,6 +18,8 @@ configuration {
     	display-filebrowser:        "FILES";
     	display-window:             "WINDOW";
 	hover-select:               true;
+	me-select-entry: 	    "";
+	me-accept-entry: [ MousePrimary, MouseDPrimary ];
 	drun-display-format:        "{name}";
 	window-format:              "{w} · {c} · {t}";
 }

@@ -60,7 +60,7 @@ yay -S --noconfirm --removemake picom-ibhagwan-git
 yay -S --noconfirm --removemake eww
 
 # Install and enable LightDM
-sudo pacman -S --needed --noconfirm lightdm
+sudo pacman -S --needed --noconfirm lightdm lightdm-gtk-greeter
 sudo systemctl enable lightdm.service
 
 if [[ -z $(which vis) ]]
@@ -157,6 +157,5 @@ source $DOTTIES_DIR/env.sh
 # Bye! 
 echo "Installation finished!!!"
 echo "And please, for the love of god, DO **NOT** REMOVE THE $DOTTIES_DIR FOLDER!!!! Why? They are **ALL SYMLINKED**!"
-echo "Also remember to move your old config from $HOME/.config_backup/ directory to $HOME/.config/"
 echo "AND REMEMBER TO REBOOT!!!! DO **NOT** USE 'startx' AFTER THIS!!!"
 echo "That is all, have a good day and happy ricing!"

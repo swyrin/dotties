@@ -2,9 +2,6 @@
 (defvar eww "eww -c $HOME/.config/eww/mybar")
 (defvar music_reveal false)
 (defvar cover "images/music.png")
-(defvar temperature_reveal false)
-(defvar date_reveal false)
-(defvar battery_reveal false)
 (defvar left_bg "rgba(0,0,0,0)")
 (defvar center_bg "rgba(0,0,0,0)")
 (defvar right_bg "rgba(0,0,0,0)")
@@ -414,8 +411,6 @@
 
 (defwidget temperature_status []
   (eventbox
-    :onhover "${eww} update temperature_reveal=\"true\""
-    :onhoverlost "${eww} update temperature_reveal=\"false\""
     (box 
       :orientation "h"
       :space-evenly "false"
@@ -447,8 +442,6 @@
 
 (defwidget battery_status []
   (eventbox
-    :onhover "${eww} update battery_reveal=\"true\""
-    :onhoverlost "${eww} update battery_reveal=\"false\""
     :tooltip "${battery_time} remaining"
     (box 
       :orientation "h"
@@ -509,8 +502,6 @@
 (defwidget time []
   (eventbox
     :tooltip "${date}"
-    :onhover "${eww} update date_reveal=true"
-    :onhoverlost "${eww} update date_reveal=false"
     :cursor "pointer"
     (button 
       :onclick "scripts/popup_calendar"

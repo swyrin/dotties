@@ -5,7 +5,7 @@
 	<name>Open Terminal Here</name>
 	<unique-id>1662868028399422-1</unique-id>
 	<command>kitty -d  %f</command>
-	<description>Example for a custom action</description>
+	<description>Open terminal</description>
 	<patterns>*</patterns>
 	<startup-notify/>
 	<directories/>

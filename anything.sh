@@ -128,7 +128,6 @@ mv $HOME/.config/ $HOME/.config_backup/
 mkdir -p $HOME/.config/
 sudo ln -sf $DOTTIES_DIR/.zshrc $HOME/.zshrc
 sudo ln -sf $DOTTIES_DIR/.p10k.zsh $HOME/.p10k.zsh
-
 sudo ln -s $DOTTIES_DIR/.bscripts/ $HOME/
 sudo ln -s $DOTTIES_DIR/Documents/ $HOME/
 sudo ln -s $DOTTIES_DIR/.config/bspwm/ $HOME/.config/
@@ -141,6 +140,8 @@ sudo ln -s $DOTTIES_DIR/.config/wal/ $HOME/.config/
 sudo ln -s $DOTTIES_DIR/.config/Thunar/ $HOME/.config/
 sudo ln -s $DOTTIES_DIR/.config/rofi/ $HOME/.config/
 sudo ln -s $DOTTIES_DIR/.config/flameshot $HOME/.config/
+sudo cp -av $HOME/.config_backup/. $HOME/.config/
+sudo rm -rf $HOME/.config_backup/
 
 # Export some environment variables
 source $DOTTIES_DIR/env.sh

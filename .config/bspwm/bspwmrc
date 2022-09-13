@@ -57,4 +57,4 @@ bspc config focused_border_color "$color3"
 
 bspc rule -a Pavucontrol state=floating
 bspc rule -a GitKraken state=floating
-
+bspc rule -a Google-chrome state=floating

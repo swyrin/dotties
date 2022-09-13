@@ -2,9 +2,6 @@
 (defvar eww "eww -c $HOME/.config/eww/mybar")
 (defvar music_reveal false)
 (defvar cover "images/music.png")
-(defvar left_bg "rgba(0,0,0,0)")
-(defvar center_bg "rgba(0,0,0,0)")
-(defvar right_bg "rgba(0,0,0,0)")
 (defvar media_bar_class "bar_normal")
 (defvar media_bar_class_popup "bar_normal_popup")
 (defvar battery_image "images/battery_normal.png")
@@ -228,7 +225,6 @@
       :orientation "h"
       :valign "fill"
       :hexpand "false"
-      :style "background-color: ${left_bg}"
       (workspaces)
       (layout)
       (music))))
@@ -399,7 +395,6 @@
       :valign "fill"
       :halign "fill"
       :hexpand "false"
-      :style "background-color: ${center_bg}"
       (box
         :space-evenly "true"
         :orientation "h"
@@ -482,7 +477,6 @@
       :orientation "h"
       :valign "fill"
       :hexpand "false"
-      :style "background-color: ${right_bg}"
       (power_button)
       (time)
       )))

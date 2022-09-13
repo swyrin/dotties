@@ -76,7 +76,7 @@
     (geometry 
       :x "1445px"
       :y "10px"
-      :width "455px"
+      :width "463px"
       :height "50px")
   :stacking "bg"
   :reserve 

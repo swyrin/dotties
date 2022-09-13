@@ -60,7 +60,7 @@ yay -S --noconfirm --removemake picom-ibhagwan-git
 yay -S --noconfirm --removemake eww
 
 # Install and enable LightDM
-sudo pacman -S --needed --noconfirm lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings
+sudo pacman -S --needed --noconfirm lightdm
 sudo systemctl enable lightdm.service
 
 if [[ -z $(which vis) ]]
@@ -110,7 +110,7 @@ yay -S  --needed --noconfirm --removemake noto-fonts-tc \
 # - font-manager  - Font manager
 # - Peazip        - Archive manager
 sudo pacman -S --needed --noconfirm thunar neofetch btop viewnior geany kitty xclip font-manager
-sudo pacman -S --needed --noconfirm gvfs thunar-volman thunar-archive-plugin thunar-media-tags-plugin
+sudo pacman -S --needed --noconfirm gvfs tumbler ffmpegthumbnailer poppler-glib libgsf libgepub libopenraw freetype2 thunar-volman thunar-archive-plugin thunar-media-tags-plugin
 yay -S --needed --noconfirm --removemake peazip-gtk2-bin
 
 # Need to be installed manually I guess?
@@ -126,26 +126,30 @@ yay -S --needed --noconfirm --removemake peazip-gtk2-bin
 sudo chmod -R 777 $DOTTIES_DIR
 mv $HOME/.config/ $HOME/.config_backup/
 mkdir -p $HOME/.config/
-sudo ln -sf $DOTTIES_DIR/.zshrc $HOME/.zshrc
-sudo ln -sf $DOTTIES_DIR/.p10k.zsh $HOME/.p10k.zsh
-sudo ln -s $DOTTIES_DIR/.bscripts/ $HOME/
-sudo ln -s $DOTTIES_DIR/Documents/ $HOME/
-sudo ln -s $DOTTIES_DIR/.config/bspwm/ $HOME/.config/
-sudo ln -s $DOTTIES_DIR/.config/eww/ $HOME/.config/
-sudo ln -s $DOTTIES_DIR/.config/systemd/ $HOME/.config/
-sudo ln -s $DOTTIES_DIR/.config/kitty/ $HOME/.config/
-sudo ln -s $DOTTIES_DIR/.config/picom/ $HOME/.config/
-sudo ln -s $DOTTIES_DIR/.config/vis/ $HOME/.config/
-sudo ln -s $DOTTIES_DIR/.config/wal/ $HOME/.config/
-sudo ln -s $DOTTIES_DIR/.config/Thunar/ $HOME/.config/
-sudo ln -s $DOTTIES_DIR/.config/rofi/ $HOME/.config/
-sudo ln -s $DOTTIES_DIR/.config/flameshot $HOME/.config/
+sudo ln -sfn $HOME/.cache/wal/dunstrc $DOTTIES_DIR/.config/dunst/dunstrc
+
+sudo ln -sfn $DOTTIES_DIR/.bscripts/ $HOME/
+sudo ln -sfn $DOTTIES_DIR/Documents/ $HOME/
+sudo ln -sfn $DOTTIES_DIR/.config/bspwm/ $HOME/.config/
+sudo ln -sfn $DOTTIES_DIR/.config/dunst/ $HOME/.config/
+sudo ln -sfn $DOTTIES_DIR/.config/eww/ $HOME/.config/
+sudo ln -sfn $DOTTIES_DIR/.config/systemd/ $HOME/.config/
+sudo ln -sfn $DOTTIES_DIR/.config/kitty/ $HOME/.config/
+sudo ln -sfn $DOTTIES_DIR/.config/picom/ $HOME/.config/
+sudo ln -sfn $DOTTIES_DIR/.config/vis/ $HOME/.config/
+sudo ln -sfn $DOTTIES_DIR/.config/wal/ $HOME/.config/
+sudo ln -sfn $DOTTIES_DIR/.config/Thunar/ $HOME/.config/
+sudo ln -sfn $DOTTIES_DIR/.config/rofi/ $HOME/.config/
+sudo ln -sfn $DOTTIES_DIR/.config/flameshot/ $HOME/.config/
+sudo ln -sfn $DOTTIES_DIR/.zshrc $HOME/.zshrc
+sudo ln -sfn $DOTTIES_DIR/.p10k.zsh $HOME/.p10k.zsh
 sudo cp -av $HOME/.config_backup/. $HOME/.config/
 sudo rm -rf $HOME/.config_backup/
 
 # Export some environment variables
 source $DOTTIES_DIR/env.sh
 
+# Post-installation steps
 echo "Installation finished!!!"
 echo "And please, for the love of god, DO **NOT** REMOVE THE $DOTTIES_DIR FOLDER!!!! Why? They are **ALL SYMLINKED**!"
 echo "Also remember to move your old config from $HOME/.config_backup/ directory to $HOME/.config/"

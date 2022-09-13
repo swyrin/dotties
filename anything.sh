@@ -101,7 +101,7 @@ yay -S  --needed --noconfirm --removemake noto-fonts-tc \
 
 # Install GTK 3 themes
 wget -qO- https://git.io/papirus-icon-theme-install | sh
-sudo pacman ---needed --noconfirm arc-gtk-theme
+sudo pacman -S --needed --noconfirm arc-gtk-theme
 
 # Setup needed packages (for me, you should change) as final run!!!
 # - Thunar        - File manager (+plugins)

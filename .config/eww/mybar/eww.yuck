@@ -30,9 +30,9 @@
 (deflisten launch1 "scripts/workspaces")
 (deflisten launch2 "scripts/layout")
 (deflisten launch3 "scripts/media_info")
-(defpoll temperature :interval "2s" "scripts/temperature_info")
-(defpoll battery_percent :interval "3s" "scripts/battery_info --percentage")
-(defpoll battery_time :interval "3s" "scripts/battery_info --time")
+(defpoll temperature :interval "5s" "scripts/temperature_info")
+(defpoll battery_percent :interval "60s" "scripts/battery_info --percentage")
+(defpoll battery_time :interval "60s" "scripts/battery_info --time")
 (defpoll hour :interval "1s" "date +\"%H\"")
 (defpoll minutes :interval "1s" "date +\"%M\"")
 (defpoll seconds :interval "1s" "date +\"%S\"")
@@ -139,7 +139,7 @@
         (box
           :valign "center"
           :halign "start"
-	 :style "min-height: 150px;"
+	      :style "min-height: 150px;"
           (image
             :halign "start"
             :class "media_art_popup"
@@ -200,8 +200,7 @@
                 :onclick "scripts/media_control --next"
                 :class "nextprev_popup"
                 :tooltip "Next"
-                ""))
-      
+                ""))      
                 )))
       (eventbox
         :cursor "pointer"
@@ -479,9 +478,6 @@
                 :text "${battery_percent}%"
                 :halign "center")
             )))))
-
-
-
 
       ;; Right widgets
 (defwidget widgets_right []

@@ -55,12 +55,12 @@ fi
 
 # Install BSPWM, eww, rofi, picom (fork), sxhkd, polybar, feh, inetutils
 # Technically, setup the desktop
-sudo pacman -S --needed --noconfirm bspwm rofi sxhkd polybar dunst feh inetutils
+sudo pacman -S --needed --noconfirm bspwm rofi sxhkd polybar dunst feh
 yay -S --noconfirm --removemake picom-ibhagwan-git
 yay -S --noconfirm --removemake eww
 
 # Install and enable LightDM
-sudo pacman -S --needed --noconfirm lightdm lightdm-gtk-greeter
+sudo pacman -S --needed --noconfirm lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings
 sudo systemctl enable lightdm.service
 
 if [[ -z $(which vis) ]]
@@ -78,7 +78,7 @@ fi
 
 # Install python-pywal
 sudo pacman -Syu --needed --noconfirm python-pywal
-sudo wal -i -n $DOTTIES_DIR/desktop.jpg
+sudo wal -i $DOTTIES_DIR/desktop.jpg -n -s -t
 
 # Install stuffs for bars
 sudo pacman -S --needed --noconfirm acpi alsa-utils playerctl sysstat xdotool

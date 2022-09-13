@@ -11,6 +11,7 @@
 
 /*****----- Configuration -----*****/
 configuration {
+    hover-select:               true;
     show-icons:                 false;
 }
 

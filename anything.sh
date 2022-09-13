@@ -99,6 +99,10 @@ yay -S  --needed --noconfirm --removemake noto-fonts-tc \
                                           siji-git \
                                           ttf-unifont ttf-gelasio-ib ttf-caladea ttf-carlito ttf-liberation-sans-narrow ttf-ms-fonts
 
+# Install GTK 3 themes
+wget -qO- https://git.io/papirus-icon-theme-install | sh
+sudo pacman ---needed --noconfirm arc-gtk-theme
+
 # Setup needed packages (for me, you should change) as final run!!!
 # - Thunar        - File manager (+plugins)
 # - neofetch      - Neofetch
@@ -126,30 +130,31 @@ yay -S --needed --noconfirm --removemake peazip-gtk2-bin
 sudo chmod -R 777 $DOTTIES_DIR
 mv $HOME/.config/ $HOME/.config_backup/
 mkdir -p $HOME/.config/
-sudo ln -sfn $HOME/.cache/wal/dunstrc $DOTTIES_DIR/.config/dunst/dunstrc
-
-sudo ln -sfn $DOTTIES_DIR/.bscripts/ $HOME/
-sudo ln -sfn $DOTTIES_DIR/Documents/ $HOME/
-sudo ln -sfn $DOTTIES_DIR/.config/bspwm/ $HOME/.config/
-sudo ln -sfn $DOTTIES_DIR/.config/dunst/ $HOME/.config/
-sudo ln -sfn $DOTTIES_DIR/.config/eww/ $HOME/.config/
-sudo ln -sfn $DOTTIES_DIR/.config/systemd/ $HOME/.config/
-sudo ln -sfn $DOTTIES_DIR/.config/kitty/ $HOME/.config/
-sudo ln -sfn $DOTTIES_DIR/.config/picom/ $HOME/.config/
-sudo ln -sfn $DOTTIES_DIR/.config/vis/ $HOME/.config/
-sudo ln -sfn $DOTTIES_DIR/.config/wal/ $HOME/.config/
-sudo ln -sfn $DOTTIES_DIR/.config/Thunar/ $HOME/.config/
-sudo ln -sfn $DOTTIES_DIR/.config/rofi/ $HOME/.config/
-sudo ln -sfn $DOTTIES_DIR/.config/flameshot/ $HOME/.config/
-sudo ln -sfn $DOTTIES_DIR/.zshrc $HOME/.zshrc
-sudo ln -sfn $DOTTIES_DIR/.p10k.zsh $HOME/.p10k.zsh
+sudo ln -sf $HOME/.cache/wal/dunstrc $DOTTIES_DIR/.config/dunst/dunstrc
+sudo ln -sf $DOTTIES_DIR/.bscripts/ $HOME/
+sudo ln -sf $DOTTIES_DIR/Documents/ $HOME/
+sudo ln -sf $DOTTIES_DIR/.config/bspwm/ $HOME/.config/
+sudo ln -sf $DOTTIES_DIR/.config/dunst/ $HOME/.config/
+sudo ln -sf $DOTTIES_DIR/.config/eww/ $HOME/.config/
+sudo ln -sf $DOTTIES_DIR/.config/systemd/ $HOME/.config/
+sudo ln -sf $DOTTIES_DIR/.config/kitty/ $HOME/.config/
+sudo ln -sf $DOTTIES_DIR/.config/picom/ $HOME/.config/
+sudo ln -sf $DOTTIES_DIR/.config/vis/ $HOME/.config/
+sudo ln -sf $DOTTIES_DIR/.config/wal/ $HOME/.config/
+sudo ln -sf $DOTTIES_DIR/.config/Thunar/ $HOME/.config/
+sudo ln -sf $DOTTIES_DIR/.config/rofi/ $HOME/.config/
+sudo ln -sf $DOTTIES_DIR/.config/flameshot/ $HOME/.config/
+sudo ln -sf $DOTTIES_DIR/.config/gtk-3.0/ $HOME/.config/
+sudo ln -sf $DOTTIES_DIR/.zshrc $HOME/.zshrc
+sudo ln -sf $DOTTIES_DIR/.p10k.zsh $HOME/.p10k.zsh
+sudo ln -sf $DOTTIES_DIR/.gtkrc-2.0 $HOME/.gtkrc-2.0
 sudo cp -av $HOME/.config_backup/. $HOME/.config/
 sudo rm -rf $HOME/.config_backup/
 
 # Export some environment variables
 source $DOTTIES_DIR/env.sh
 
-# Post-installation steps
+# Bye! 
 echo "Installation finished!!!"
 echo "And please, for the love of god, DO **NOT** REMOVE THE $DOTTIES_DIR FOLDER!!!! Why? They are **ALL SYMLINKED**!"
 echo "Also remember to move your old config from $HOME/.config_backup/ directory to $HOME/.config/"

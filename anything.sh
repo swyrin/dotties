@@ -148,8 +148,8 @@ sudo ln -sf $DOTTIES_DIR/.config/gtk-3.0/ $HOME/.config/
 sudo ln -sf $DOTTIES_DIR/.zshrc $HOME/.zshrc
 sudo ln -sf $DOTTIES_DIR/.p10k.zsh $HOME/.p10k.zsh
 sudo ln -sf $DOTTIES_DIR/.gtkrc-2.0 $HOME/.gtkrc-2.0
-sudo cp -av $HOME/.config_backup/. $HOME/.config/
-sudo rm -rf $HOME/.config_backup/
+# sudo cp -av $HOME/.config_backup/. $HOME/.config/
+# sudo rm -rf $HOME/.config_backup/
 
 # Export some environment variables
 source $DOTTIES_DIR/env.sh
@@ -157,5 +157,6 @@ source $DOTTIES_DIR/env.sh
 # Bye! 
 echo "Installation finished!!!"
 echo "And please, for the love of god, DO **NOT** REMOVE THE $DOTTIES_DIR FOLDER!!!! Why? They are **ALL SYMLINKED**!"
+echo "Remember to check $HOME/.config_backup directory"
 echo "AND REMEMBER TO REBOOT!!!! DO **NOT** USE 'startx' AFTER THIS!!!"
 echo "That is all, have a good day and happy ricing!"

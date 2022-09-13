@@ -12,6 +12,8 @@
 /*****----- Configuration -----*****/
 configuration {
     hover-select:               true;
+	me-select-entry: 	        "";
+	me-accept-entry:            [ MousePrimary, MouseDPrimary ];
     show-icons:                 false;
 }
 

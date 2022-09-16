@@ -37,9 +37,27 @@ sudo pacman -S --needed --noconfirm xorg xorg-apps xorg-server xorg-xinit \
 sudo pacman -S --needed --noconfirm nano
 sudo pacman -S --needed --noconfirm unzip wget
 wget https://raw.githubusercontent.com/scopatz/nanorc/master/install.sh -O- | sh
-echo "set linenumbers" >> $HOME/.nanorc
-echo "set tabstospaces" >> $HOME/.nanorc
-echo "set tabsize 4" >> $HOME/.nanorc
+
+if [[ -z $(grep "set linenumbers" $HOME/.nanorc) ]]
+then
+  echo "set linenumbers" >> $HOME/.nanorc
+else
+  echo "'set linenumbers' set in $HOME/.nanorc"
+fi
+
+if [[ -z $(grep "set tabstospaces" $HOME/.nanorc) ]]
+then
+  echo "set tabstospaces" >> $HOME/.nanorc
+else
+  echo "'set tabstospaces' set in $HOME/.nanorc"
+fi
+
+if [[ -z $(grep "set tabsize 4" $HOME/.nanorc) ]]
+then
+  echo "set tabsize" >> $HOME/.nanorc
+else
+  echo "'set tabsize 4' set in $HOME/.nanorc"
+fi
 
 # Install yay AUR helper
 if [[ -z $(which yay) ]]
@@ -148,10 +166,8 @@ sudo ln -sf $DOTTIES_DIR/.config/gtk-3.0/ $HOME/.config/
 sudo ln -sf $DOTTIES_DIR/.zshrc $HOME/.zshrc
 sudo ln -sf $DOTTIES_DIR/.p10k.zsh $HOME/.p10k.zsh
 sudo ln -sf $DOTTIES_DIR/.gtkrc-2.0 $HOME/.gtkrc-2.0
-# sudo cp -av $HOME/.config_backup/. $HOME/.config/
-# sudo rm -rf $HOME/.config_backup/
 
-# Export some environment variables
+# Export some environment
 source $DOTTIES_DIR/env.sh
 
 # Bye! 

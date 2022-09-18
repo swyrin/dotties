@@ -25,8 +25,8 @@
 (deflisten launch2 "scripts/layout")
 (deflisten launch3 "scripts/media_info")
 (defpoll temperature :interval "5s" "scripts/temperature_info")
-(defpoll battery_percent :interval "60s" "scripts/battery_info --percentage")
-(defpoll battery_time :interval "60s" "scripts/battery_info --time")
+(defpoll battery_percent :interval "5s" "scripts/battery_info --percentage")
+(defpoll battery_time :interval "5s" "scripts/battery_info --time")
 (defpoll hour :interval "1s" "date +\"%H\"")
 (defpoll minutes :interval "1s" "date +\"%M\"")
 (defpoll seconds :interval "1s" "date +\"%S\"")
@@ -444,11 +444,7 @@
       :class "battery_box"
       :vexpand "false"
       :hexpand "false"
-        (image
-          :class "center_icons"
-          :path battery_image
-          :image-width 30
-          :image-height 30)
+        (image :class "center_icons" :path battery_image :image-width 30 :image-height 30)
         (box 
           :orientation "v"
           :space-evenly "false"
@@ -456,18 +452,18 @@
           :hexpand "false"
           :valign "center"
           :class "center_boxes"
-        
-            (box
+          (box
               :orientation "v"
               :class "center_info"
               :valign "start"
-              (label
-                :class "center_labels"
-                :text "${battery_percent}%"
-                :halign "center")
-            )))))
+              (label :class "center_labels" :text "${battery_percent}%" :halign "center")
+          )
+        )
+     )
+  )
+)
 
-      ;; Right widgets
+;; Right widgets
 (defwidget widgets_right []
   (eventbox
     (box 
@@ -479,7 +475,9 @@
       :hexpand "false"
       (power_button)
       (time)
-      )))
+    )
+  )
+)
 
 (defwidget power_button []
   (eventbox
@@ -488,10 +486,10 @@
     (button
       :valign "center"
       :onclick "~/.config/rofi/powermenu.sh 2> /dev/null"
-      (label
-      	:class "power_button"
-	    :text ""
-      ))))
+      (label :class "power_button" :text "")
+    )
+  )
+)
 
 (defwidget time []
   (eventbox

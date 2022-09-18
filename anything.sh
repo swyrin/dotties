@@ -8,6 +8,8 @@
 # Just clone this file, make anything.sh an executable, if it was not.
 # ###############################################
 
+# ONE MORE LAST WORD: THIS SCRIPT IS MEANT FOR **ME**!!!!!!!!!!!!!!!!!
+
 # For debugging sake, but it *should* work as I want
 echo "Finding 'dotties' directory..."
 DOTTIES_DIR=$(find $HOME -type d -name "dotties")
@@ -173,7 +175,14 @@ source $DOTTIES_DIR/env.sh
 source $HOME/.bashrc
 
 # After setup:
-env DCONF_PROFILE=ibus dconf write /desktop/ibus/general/preload-engines "['xkb:us::eng', 'Bamboo']" && gsettings set org.gnome.desktop.input-sources sources "[('xkb', 'us'), ('ibus', 'Bamboo')]"
+#   - Install tlp becase I use a laptop?
+sudo pacman -S --needed --noconfirm tlp tlp-rdw
+yay -S --needed --noconfirm --removemake tlpui
+sudo systemctl enable tlp.service
+sudo systemctl enable NetworkManager-dispatcher.service
+sudo systemctl mask systemd-rfkill.service
+sudo systemctl mask systemd-rfkill.socket
+sudo tlp start
 
 # What to do after this:
 #     1. If you are using a touchpad: https://stackoverflow.com/questions/62990795/cannot-set-tapping-enabled-default-on-archlinux

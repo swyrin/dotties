@@ -38,7 +38,7 @@
   :geometry 
     (geometry 
       :x "10px"
-      :y "10px"
+      :y "5px"
       :width "765px"
       :height "50px")
   :stacking "bg"
@@ -55,7 +55,7 @@
   :geometry 
     (geometry 
       :x "1255px"
-      :y "10px"
+      :y "5px"
       :width "180px"
       :height "50px")
   :stacking "bg"
@@ -72,7 +72,7 @@
   :geometry 
     (geometry 
       :x "1445px"
-      :y "10px"
+      :y "5px"
       :width "463px"
       :height "50px")
   :stacking "bg"
@@ -89,7 +89,7 @@
   :geometry 
     (geometry 
       :x "1455px" 
-      :y "55px"
+      :y "50px"
       :width "435px"
       :height "100px")
   :stacking "fg"
@@ -113,7 +113,7 @@
   :geometry
     (geometry
       :x "178px"
-      :y "55px"
+      :y "50px"
       :width "515px"
       :height "200px")
     :stacking "fg"

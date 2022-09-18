@@ -22,10 +22,10 @@ killall ibus-daemon
 wal -i $DOTTIES_DIR/desktop.jpg -n -s -t
 . "${HOME}/.cache/wal/colors.sh"
 feh --bg-fill $DOTTIES_DIR/desktop.jpg
-eww -c ~/.config/eww/mybar open bar_right
-eww -c ~/.config/eww/mybar open bar_center
-eww -c ~/.config/eww/mybar open bar_left
-polybar -c ~/.config/eww/mybar/polybar_tray.ini tray&
+eww -c $HOME/.config/eww/mybar open bar_right
+eww -c $HOME/.config/eww/mybar open bar_center
+eww -c $HOME/.config/eww/mybar open bar_left
+polybar -c $HOME/.config/eww/mybar/polybar_tray.ini tray&
 
 sxhkd -c $HOME/.config/bspwm/sxhkdrc &
 picom &

@@ -17,6 +17,7 @@ killall pasystray
 killall flameshot
 killall dunst
 killall sxhkd
+killall ibus-daemon
 
 wal -i $DOTTIES_DIR/desktop.jpg -n -s -t
 . "${HOME}/.cache/wal/colors.sh"
@@ -33,6 +34,7 @@ nm-applet &
 pasystray &
 flameshot &
 dunst &
+ibus-daemon -drx &
 
 $HOME/.bscripts/sounds.sh &
 # ================================

@@ -134,6 +134,7 @@ sudo pacman -S --needed --noconfirm arc-gtk-theme
 sudo pacman -S --needed --noconfirm thunar neofetch btop viewnior geany kitty xclip font-manager
 sudo pacman -S --needed --noconfirm gvfs tumbler ffmpegthumbnailer poppler-glib libgsf libgepub libopenraw freetype2 thunar-volman thunar-archive-plugin thunar-media-tags-plugin
 yay -S --needed --noconfirm --removemake peazip-gtk2-bin
+yay -S --needed --noconfirm --removemake ibus-bamboo
 
 # Need to be installed manually I guess?
 # - GitKraken     - I love this Git GUI client
@@ -171,12 +172,15 @@ sudo ln -sf $DOTTIES_DIR/.gtkrc-2.0 $HOME/.gtkrc-2.0
 source $DOTTIES_DIR/env.sh
 source $HOME/.bashrc
 
+# After setup:
+env DCONF_PROFILE=ibus dconf write /desktop/ibus/general/preload-engines "['xkb:us::eng', 'Bamboo']" && gsettings set org.gnome.desktop.input-sources sources "[('xkb', 'us'), ('ibus', 'Bamboo')]"
+
 # What to do after this:
 #     1. If you are using a touchpad: https://stackoverflow.com/questions/62990795/cannot-set-tapping-enabled-default-on-archlinux
 #     2. If your keyboard has a NumLk: https://wiki.archlinux.org/title/Activating_numlock_on_bootup
 #     3. If you want to use ibus-unkey?: idk
 
-# Bye! 
+# Bye!
 echo "Installation finished!!!"
 echo "And please, for the love of god, DO **NOT** REMOVE THE $DOTTIES_DIR FOLDER!!!! Why? They are **ALL SYMLINKED**!"
 echo "Remember to check $HOME/.config_backup directory"

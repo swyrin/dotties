@@ -171,10 +171,10 @@ sudo ln -sf $DOTTIES_DIR/.gtkrc-2.0 $HOME/.gtkrc-2.0
 source $DOTTIES_DIR/env.sh
 source $HOME/.bashrc
 
-# Postinstallations
-xinput set-prop 14 302 1
-xinput set-prop 14 323 1
-xinput set-prop 14 336 1
+# What to do after this:
+#     1. If you are using a touchpad: https://stackoverflow.com/questions/62990795/cannot-set-tapping-enabled-default-on-archlinux
+#     2. If your keyboard has a NumLk: https://wiki.archlinux.org/title/Activating_numlock_on_bootup
+#     3. If you want to use ibus-unkey?: idk
 
 # Bye! 
 echo "Installation finished!!!"

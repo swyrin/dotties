@@ -54,7 +54,7 @@ fi
 
 if [[ -z $(grep "set tabsize 4" $HOME/.nanorc) ]]
 then
-  echo "set tabsize" >> $HOME/.nanorc
+  echo "set tabsize 4" >> $HOME/.nanorc
 else
   echo "'set tabsize 4' set in $HOME/.nanorc"
 fi
@@ -169,6 +169,12 @@ sudo ln -sf $DOTTIES_DIR/.gtkrc-2.0 $HOME/.gtkrc-2.0
 
 # Export some environment
 source $DOTTIES_DIR/env.sh
+source $HOME/.bashrc
+
+# Postinstallations
+xinput set-prop 14 302 1
+xinput set-prop 14 323 1
+xinput set-prop 14 336 1
 
 # Bye! 
 echo "Installation finished!!!"

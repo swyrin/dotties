@@ -4,9 +4,17 @@ pgrep -x sxhkd > /dev/null || sxhkd &
 # Customized stuffs
 
 # When in doubt, f NVIDIA
-xrandr -s 1920x1080
+# xrandr -s 1920x1080
 
 DOTTIES_DIR=$(find $HOME -type d -name "dotties")
+LOCATION=$(curl -s "https://location.services.mozilla.com/v1/geolocate?key=geoclue" -m 10 --connect-timeout 10 | awk 'OFS=":" {print $3,$5}' | tr -d ',}')
+
+# Fall back to hardcoded location if I am offline
+# Currently I am in Vietnam, so default Vietnam?
+if [[ -z $LOCATION ]]
+then
+    LOCATION="10.8326:106.6581"
+fi
 
 # Kill processes
 killall picom
@@ -29,7 +37,7 @@ polybar -c $HOME/.config/eww/mybar/polybar_tray.ini tray&
 
 sxhkd -c $HOME/.config/bspwm/sxhkdrc &
 picom &
-redshift-gtk -l $(curl -s "https://location.services.mozilla.com/v1/geolocate?key=geoclue" | awk 'OFS=":" {print $3,$5}' | tr -d ',}') &
+redshift-gtk -l $LOCATION &
 nm-applet &
 pasystray &
 flameshot &
@@ -43,7 +51,6 @@ bspc monitor -d 1 2 3 4
 
 bspc config border_width        5
 bspc config window_gap          12
-bspc config border_radius       10
 
 bspc config pointer_action1 move
 bspc config pointer_action2 resize_side

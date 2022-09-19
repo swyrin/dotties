@@ -31,6 +31,13 @@
     # Format for how notifications will be displayed
     # Usage: `notify-send 'Title' 'Summary'`
     format = "<b>%s</b>: %b"
+    icon_theme = "Papirus-Dark"
+    icon_position = left
+    min_icon_size = 32
+    max_icon_size = 64
+    show_indicators = yes
+    enable_recursive_icon_lookup = true
+    icon_path = /usr/share/icons/Papirus/32x32/status/:/usr/share/icons/Papirus/32x32/devices/
 
     # Allow some HTML tags like <i> and <u> in notifications
     markup = full

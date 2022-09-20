@@ -124,7 +124,7 @@ sudo pacman -S  --needed --noconfirm  ttf-dejavu ttf-liberation ttf-font-awesome
 yay -S  --needed --noconfirm --removemake noto-fonts-tc \
                                           siji-git \
                                           nerd-fonts-complete \
-                                          ttf-unifont ttf-gelasio-ib ttf-caladea ttf-material-design-icons ttf-carlito ttf-liberation-sans-narrow ttf-ms-fonts
+                                          ttf-unifont ttf-gelasio-ib ttf-caladea ttf-material-design-icons ttf-carlito ttf-liberation-sans-narrow ttf-ms-fonts ttf-material-icons-git
 
 # Install GTK 3 themes
 wget -qO- https://git.io/papirus-icon-theme-install | sh
@@ -220,5 +220,6 @@ sudo chown $USER /sys/class/backlight/$BL_PROVIDER/brightness
 echo "Installation finished!!!"
 echo "And please, for the love of god, DO **NOT** REMOVE THE $DOTTIES_DIR FOLDER!!!! Why? They are **ALL SYMLINKED**!"
 echo "Remember to check $HOME/.config_backup directory"
+echo "And fill your OpenWeatherMap API key in $HOME/.owm-key"
 echo "AND REMEMBER TO REBOOT!!!! DO **NOT** USE 'startx' AFTER THIS!!!"
 echo "That is all, have a good day and happy ricing!"

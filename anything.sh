@@ -31,7 +31,7 @@ sudo systemctl enable dhcpcd.service
 
 # Install Xorg and friends
 sudo pacman -S --needed --noconfirm xorg xorg-apps xorg-server xorg-xinit \
-                                    mesa libva-intel-driver \
+                                    mesa mesa-utils libva-intel-driver \
                                     intel-media-driver vulkan-intel \
                                     xf86-video-nouveau
 
@@ -117,7 +117,8 @@ sudo pacman -S  --needed --noconfirm  ttf-dejavu ttf-liberation ttf-font-awesome
                                       adobe-source-han-sans-otc-fonts adobe-source-han-serif-otc-fonts
 yay -S  --needed --noconfirm --removemake noto-fonts-tc \
                                           siji-git \
-                                          ttf-unifont ttf-gelasio-ib ttf-caladea ttf-carlito ttf-liberation-sans-narrow ttf-ms-fonts
+                                          nerd-fonts-complete \
+                                          ttf-unifont ttf-gelasio-ib ttf-caladea ttf-material-design-icons ttf-carlito ttf-liberation-sans-narrow ttf-ms-fonts
 
 # Install GTK 3 themes
 wget -qO- https://git.io/papirus-icon-theme-install | sh

@@ -155,7 +155,7 @@ yay -S --needed --noconfirm --removemake ibus-bamboo
 
 # Setup files
 # Make all executable(?), backup old ones and then, symlink
-sudo chmod -R 777 $DOTTIES_DIR
+# sudo chmod -R 777 $DOTTIES_DIR
 mv $HOME/.config/ $HOME/.config_backup/
 mkdir -p $HOME/.config/
 sudo ln -sf $HOME/.cache/wal/dunstrc $DOTTIES_DIR/.config/dunst/dunstrc

@@ -107,7 +107,7 @@ sudo pacman -Syu --needed --noconfirm python-pywal
 sudo wal -i $DOTTIES_DIR/desktop.jpg -n -s -t
 
 # Install stuffs for bars
-sudo pacman -S --needed --noconfirm acpi alsa-utils playerctl sysstat xdotool
+sudo pacman -S --needed --noconfirm acpi alsa-utils playerctl sysstat xdotool jq bc
 
 # Install stuffs for system tray
 sudo pacman -S --needed --noconfirm redshift python-gobject

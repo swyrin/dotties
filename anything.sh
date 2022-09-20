@@ -169,6 +169,7 @@ sudo ln -sf $DOTTIES_DIR/.config/kitty/ $HOME/.config/
 sudo ln -sf $DOTTIES_DIR/.config/picom/ $HOME/.config/
 sudo ln -sf $DOTTIES_DIR/.config/vis/ $HOME/.config/
 sudo ln -sf $DOTTIES_DIR/.config/wal/ $HOME/.config/
+sudo ln -sf $DOTTIES_DIR/.config/btop/ $HOME/.config/
 sudo ln -sf $DOTTIES_DIR/.config/Thunar/ $HOME/.config/
 sudo ln -sf $DOTTIES_DIR/.config/rofi/ $HOME/.config/
 sudo ln -sf $DOTTIES_DIR/.config/flameshot/ $HOME/.config/
@@ -193,10 +194,14 @@ sudo tlp start
 # What to do after this:
 #     1. If you are using a touchpad: https://stackoverflow.com/questions/62990795/cannot-set-tapping-enabled-default-on-archlinux
 #     2. If your keyboard has a NumLk: https://wiki.archlinux.org/title/Activating_numlock_on_bootup
-#     3. If you want to use ibus-daemon?: idk
+#     3. If you want to use ibus-daemon by default?
 #     4. Extract certs
 #     5. Install stuffs for pop_report (but install 'pip' first)
 #     6. You can't control backlight?
+
+# 3.
+# env DCONF_PROFILE=ibus dconf write /desktop/ibus/general/preload-engines "['xkb:us::eng', 'Bamboo']"
+# gsettings set org.gnome.desktop.input-sources sources "[('xkb', 'us'), ('ibus', 'Bamboo')]"
 
 # 4.
 sudo trust extract-compat
@@ -210,7 +215,6 @@ pip install PyQt5 inotify
 BL_PROVIDER=$(ls /sys/class/backlight/ | head -n 1)
 sudo usermod -aG video $USER
 sudo chown $USER /sys/class/backlight/$BL_PROVIDER/brightness
-
 
 # Bye!
 echo "Installation finished!!!"

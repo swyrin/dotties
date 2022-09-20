@@ -11,11 +11,15 @@ super + r
 	rofi -show combi
 
 super + shift + r
-    $HOME/.config/rofi/powermenu.sh 2> /dev/null
+    $HOME/.config/rofi/powermenu.sh
 
 # make sxhkd reload its configuration files:
 super + Escape
 	pkill -USR1 -x sxhkd
+
+# Shot?
+Print
+    flameshot gui
 
 #
 # bspwm hotkeys

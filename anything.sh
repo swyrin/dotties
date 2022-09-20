@@ -23,11 +23,18 @@ sudo sed -i 's/#ParallelDownloads = 5/ParallelDownloads = 8/g' /etc/pacman.conf
 # As usual, pacman -Syu
 sudo pacman -Syu --noconfirm
 
+# Sort mirrors
+# This might take a while
+sudo pacman -S --needed --noconfirm pacman-contrib
+curl -s https://archlinux.org/mirrorlist/all/ | sudo tee /etc/pacman.d/mirrorlist
+sudo sed -i 's/^#Server/Server/' -e '/^#/d' /etc/pacman.d/mirrorlist
+sudo cp /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.backup
+sudo rankmirrors -n 6 /etc/pacman.d/mirrorlist.backup | sudo tee /etc/pacman.d/mirrorlist
+
 # Install server packages
 # I assume that you will run this file after boot Arch for the first time
-sudo pacman -S --needed --noconfirm pulseaudio networkmanager dhcpcd
+sudo pacman -S --needed --noconfirm pulseaudio networkmanager
 sudo systemctl enable NetworkManager.service
-sudo systemctl enable dhcpcd.service
 
 # Install Xorg and friends
 sudo pacman -S --needed --noconfirm xorg xorg-apps xorg-server xorg-xinit \
@@ -73,11 +80,10 @@ else
   echo "AUR helper yay already installed"
 fi
 
-# Install BSPWM, eww, rofi, picom (fork), sxhkd, polybar, feh, inetutils
+# Install BSPWM, rofi, picom (fork), sxhkd, polybar, feh, inetutils
 # Technically, setup the desktop
 sudo pacman -S --needed --noconfirm bspwm rofi sxhkd polybar dunst feh
 yay -S --noconfirm --removemake picom-ibhagwan-git
-yay -S --noconfirm --removemake eww
 
 # Install and enable LightDM
 sudo pacman -S --needed --noconfirm lightdm lightdm-gtk-greeter
@@ -157,7 +163,7 @@ sudo ln -sf $DOTTIES_DIR/.bscripts/ $HOME/
 sudo ln -sf $DOTTIES_DIR/Documents/ $HOME/
 sudo ln -sf $DOTTIES_DIR/.config/bspwm/ $HOME/.config/
 sudo ln -sf $DOTTIES_DIR/.config/dunst/ $HOME/.config/
-sudo ln -sf $DOTTIES_DIR/.config/eww/ $HOME/.config/
+sudo ln -sf $DOTTIES_DIR/.config/polybar/ $HOME/.config/
 sudo ln -sf $DOTTIES_DIR/.config/systemd/ $HOME/.config/
 sudo ln -sf $DOTTIES_DIR/.config/kitty/ $HOME/.config/
 sudo ln -sf $DOTTIES_DIR/.config/picom/ $HOME/.config/
@@ -175,8 +181,7 @@ sudo ln -sf $DOTTIES_DIR/.gtkrc-2.0 $HOME/.gtkrc-2.0
 source $DOTTIES_DIR/env.sh
 source $HOME/.bashrc
 
-# After setup:
-#   - Install tlp becase I use a laptop?
+# After setup
 sudo pacman -S --needed --noconfirm tlp tlp-rdw
 yay -S --needed --noconfirm --removemake tlpui
 sudo systemctl enable tlp.service
@@ -188,7 +193,24 @@ sudo tlp start
 # What to do after this:
 #     1. If you are using a touchpad: https://stackoverflow.com/questions/62990795/cannot-set-tapping-enabled-default-on-archlinux
 #     2. If your keyboard has a NumLk: https://wiki.archlinux.org/title/Activating_numlock_on_bootup
-#     3. If you want to use ibus-unkey?: idk
+#     3. If you want to use ibus-daemon?: idk
+#     4. Extract certs
+#     5. Install stuffs for pop_report (but install 'pip' first)
+#     6. You can't control backlight?
+
+# 4.
+sudo trust extract-compat
+
+# 5.
+sudo pacman -S --needed --noconfirm python-pip
+pip install PyQt5 inotify
+
+# 6.
+# Usually this is for single monitors, edit it as you like
+BL_PROVIDER=$(ls /sys/class/backlight/ | head -n 1)
+sudo usermod -aG video $USER
+sudo chown $USER /sys/class/backlight/$BL_PROVIDER/brightness
+
 
 # Bye!
 echo "Installation finished!!!"

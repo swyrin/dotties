@@ -39,7 +39,7 @@ Print
     playerctl stop && notify-send "Playback "Stopped playback" --expire-time=500
 
 @XF86Audio{Prev,Next}
-  playerctl {prev,next} && notify-send "Playback" "Switching track" --expire-time=500
+  playerctl {previous,next} && notify-send "Playback" "Switching track" --expire-time=500
 
 #
 # bspwm hotkeys

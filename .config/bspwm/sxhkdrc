@@ -15,11 +15,31 @@ super + shift + r
 
 # make sxhkd reload its configuration files:
 super + Escape
-	pkill -USR1 -x sxhkd
+	pkill -USR1 -x sxhkd; \
+    notify-send "Keybind" "Reset all keybinds" --expire-time=500
 
 # Shot?
 Print
     flameshot gui
+
+@XF86AudioMute
+    pactl set-sink-mute @DEFAULT_SINK@ toggle; \
+    stat=`pacmd list-sinks | awk '/muted/ \{print $2\}'`; \
+    notify-send "Audio" "Is Muted: $stat" --expire-time=500
+
+@XF86Audio{Raise,Lower}Volume
+    pactl set-sink-volume @DEFAULT_SINK@ {+,-}1%; \
+    stat=`pactl get-sink-volume @DEFAULT_SINK@ | grep "Volume:" | awk '\{print $5\}'`; \
+    notify-send "Audio" "Volume set to $stat" --expire-time=500
+
+@XF86AudioPlay
+    playerctl play-pause && notify-send "Playback" "Toggled playback status" --expire-time=500
+
+@XF86AudioStop
+    playerctl stop && notify-send "Playback "Stopped playback" --expire-time=500
+
+@XF86Audio{Prev,Next}
+  playerctl {prev,next} && notify-send "Playback" "Switching track" --expire-time=500
 
 #
 # bspwm hotkeys

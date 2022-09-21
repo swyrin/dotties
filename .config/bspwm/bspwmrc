@@ -40,7 +40,6 @@ picom &
 redshift-gtk -l $LOCATION &
 nm-applet &
 pasystray &
-flameshot &
 dunst &
 ibus-daemon -drx &
 
@@ -66,4 +65,5 @@ bspc config gapless_monocle      true
 
 bspc rule -a Pavucontrol state=floating
 bspc rule -a GitKraken state=floating
-bspc rule -a Google-chrome state=floating
+# bspc rule -a Google-chrome state=floating
+bspc rule -a Gnome-screenshot state=floating

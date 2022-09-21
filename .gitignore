@@ -1,15 +1,4 @@
-import_config.sh
-
-.config/mimeapps.list
-.config/arkrc
-.config/gwenviewrc
-.config/kconf_updaterc
-.config/dolphinrc
-.config/kdeglobals
-
-.config/session/
 .config/btop/error.log
 .config/vis/vis.log
-.config/pulse/
-.config/google-chrome/
-.config/kde.org/
+.config/polybar/.curplayer.log
+.config/dunst/dunstrc

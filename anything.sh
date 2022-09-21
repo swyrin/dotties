@@ -216,6 +216,9 @@ BL_PROVIDER=$(ls /sys/class/backlight/ | head -n 1)
 sudo usermod -aG video $USER
 sudo chown $USER /sys/class/backlight/$BL_PROVIDER/brightness
 
+# Something something
+sudo touch $HOME/.config/polybar/.curplayer.log
+
 # Bye!
 echo "Installation finished!!!"
 echo "And please, for the love of god, DO **NOT** REMOVE THE $DOTTIES_DIR FOLDER!!!! Why? They are **ALL SYMLINKED**!"

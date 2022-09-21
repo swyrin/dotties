@@ -22,7 +22,7 @@ killall polybar
 killall redshift-gtk
 killall nm-applet
 killall pasystray
-killall flameshot
+# killall flameshot
 killall dunst
 killall sxhkd
 killall ibus-daemon

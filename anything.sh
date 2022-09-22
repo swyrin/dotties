@@ -107,7 +107,7 @@ sudo pacman -Syu --needed --noconfirm python-pywal
 sudo wal -i $DOTTIES_DIR/desktop.jpg -n -s -t
 
 # Install stuffs for bars
-sudo pacman -S --needed --noconfirm acpi alsa-utils playerctl sysstat xdotool jq bc
+sudo pacman -S --needed --noconfirm acpi alsa-utils playerctl sysstat xdotool jq bc brightnessctl
 
 # Install stuffs for system tray
 sudo pacman -S --needed --noconfirm redshift python-gobject
@@ -200,8 +200,8 @@ sudo tlp start
 #     6. You can't control backlight?
 
 # 3.
-# env DCONF_PROFILE=ibus dconf write /desktop/ibus/general/preload-engines "['xkb:us::eng', 'Bamboo']"
-# gsettings set org.gnome.desktop.input-sources sources "[('xkb', 'us'), ('ibus', 'Bamboo')]"
+env DCONF_PROFILE=ibus dconf write /desktop/ibus/general/preload-engines "['xkb:us::eng', 'Bamboo']"
+gsettings set org.gnome.desktop.input-sources sources "[('xkb', 'us'), ('ibus', 'Bamboo')]"
 
 # 4.
 sudo trust extract-compat

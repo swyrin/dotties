@@ -22,7 +22,6 @@ killall polybar
 killall redshift-gtk
 killall nm-applet
 killall pasystray
-# killall flameshot
 killall dunst
 killall sxhkd
 killall ibus-daemon
@@ -37,12 +36,11 @@ polybar -c $HOME/.config/polybar/config.ini bottom &
 
 sxhkd -c $HOME/.config/bspwm/sxhkdrc &
 picom &
-redshift-gtk -l $LOCATION &
+redshift-gtk -l $LOCATION -x &
 nm-applet &
 pasystray &
 dunst &
 ibus-daemon -drx &
-
 $HOME/.bscripts/sounds.sh &
 # ================================
 
@@ -65,5 +63,3 @@ bspc config gapless_monocle      true
 
 bspc rule -a Pavucontrol state=floating
 bspc rule -a GitKraken state=floating
-# bspc rule -a Google-chrome state=floating
-bspc rule -a Gnome-screenshot state=floating

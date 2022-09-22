@@ -42,8 +42,16 @@ super + shift + S
     playerctl stop && notify-send "Playback "Stopped playback" --expire-time=500
 
 @XF86Audio{Prev,Next}
-  playerctl {previous,next} && notify-send "Playback" "Switching track" --expire-time=500
+    playerctl {previous,next} && notify-send "Playback" "Switching track" --expire-time=500
 
+@XF86MonBrightness{Down,Up}
+    now=$(brightnessctl get); \
+    now=$(( now {-,+} 1200 )); \
+    now=$(( $now >= 0 ? $now : 0 )); \
+    now=$(( $now <= 120000 ? $now : 120000 )); \
+    brightnessctl s $now --quiet && \
+    notify-send "Brightness" "Brightness is now $now ($(($now / 1200))%)" --expire-time=500;
+    
 #
 # bspwm hotkeys
 #

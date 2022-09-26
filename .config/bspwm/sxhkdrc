@@ -32,7 +32,7 @@ super + shift + s
 
 @XF86Audio{Raise,Lower}Volume
     pactl set-sink-volume @DEFAULT_SINK@ {+,-}2% && \
-    stat=`pactl get-sink-volume @DEFAULT_SINK@ | awk '\{printf substr($5,1,2)\}'` && \
+    stat=`pactl get-sink-volume @DEFAULT_SINK@ | awk '\{printf substr($5,1,3)\}' | sed 's/%//g'` && \
     notify-send "Volume $stat%" --expire-time=1000 -u low -h int:value:$stat -h string:synchronous:volumectrl
 
 @XF86AudioPlay

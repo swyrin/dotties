@@ -303,7 +303,7 @@ function setIcons {
 function outputCompact {
     OUTPUT="$WIND %{T$WEATHER_FONT_CODE}%{F$ICON_COLOR}$ICON%{F-}%{T-} $ERR_MSG$COLOR_TEXT_BEGIN$DESCRIPTION$COLOR_TEXT_END| $TEMP"
     CITY_NAME=${CITY_NAME//%20/ }
-    echo "$CITY_NAME,$COUNTRY_CODE $OUTPUT"
+    echo "$CITY_NAME, $COUNTRY_CODE $OUTPUT"
 }
 
 getData $1

@@ -1,4 +1,4 @@
-visualizer.fps=60
+visualizer.fps=30
 audio.stereo.enabled=false
 colors.scheme=wal
 visualizer.spectrum.smoothing.mode=monstercat

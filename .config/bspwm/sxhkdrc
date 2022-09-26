@@ -8,7 +8,7 @@ super + Return
 
 # program launcher
 super + r
-	rofi -show combi
+	rofi -show drun
 
 super + shift + r
     $HOME/.config/rofi/powermenu.sh
@@ -22,7 +22,7 @@ super + Escape
 Print
     $HOME/dotties/flameshot.sh
 
-super + shift + S
+super + shift + s
     $HOME/dotties/flameshot.sh
 
 @XF86AudioMute
@@ -58,7 +58,7 @@ super + shift + S
 
 # quit/restart bspwm
 super + alt + {q,r}
-	bspc {quit,wm -r}
+	bspc {quit,wm -r} && notify-send "BSPWM" "Successfully reset" --expire-time=500;
 
 # close and kill
 super + {_,shift + }w

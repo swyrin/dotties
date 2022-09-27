@@ -46,10 +46,9 @@ super + shift + s
 
 @XF86MonBrightness{Down,Up}
     now=$(brightnessctl get); \
-    now=$(( now {-,+} 960 )); \
+    now=$(( now {-,+} 1200 )); \
     now=$(( $now >= 0 ? $now : 0 )); \
-    now=$(( $now <= 19200 ? $now : 19200 )); \
-    per=$(($now / 192)); \
+    now=$(( $now <= 120000 ? $now : 120000 )); \
     brightnessctl s $now --quiet && \
     notify-send "Brightness $per%" --expire-time=500 -u low -h int:value:$per -h string:synchronous:brightnesscrtl;
     

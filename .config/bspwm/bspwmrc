@@ -26,9 +26,7 @@ killall dunst
 killall sxhkd
 killall ibus-daemon
 
-wal -i "/home/foxeiz/Downloads/bg/f29ed167861796c03485239f846dba8c.png" -t
-# . "${HOME}/.cache/wal/colors.sh"
-# feh --bg-fill $DOTTIES_DIR/desktop.jpg
+feh --bg-fill $DOTTIES_DIR/desktop.jpg
 polybar -c $HOME/.config/polybar/config.ini top_left &
 polybar -c $HOME/.config/polybar/config.ini top_center &
 polybar -c $HOME/.config/polybar/config.ini top_right &

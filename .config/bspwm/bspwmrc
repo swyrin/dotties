@@ -43,7 +43,7 @@ pasystray &
 dunst &
 ibus-daemon -drx &
 greenclip daemon &
-# $HOME/.bscripts/sounds.sh &
+$HOME/.bscripts/sounds.sh &
 # ================================
 
 bspc monitor -d 1 2 3 4

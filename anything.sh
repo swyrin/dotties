@@ -5,7 +5,7 @@
 # No, DO NOT BLINDLY RUN THIS FILE!!!!
 #
 # Basically this is just my autosetup file when I (re)install Arch (btw)!
-# Just clone this file, make anything.sh an executable, if it was not.
+# Just clone this repo, make anything.sh an executable, if it was not.
 # ###############################################
 
 # ONE MORE LAST WORD: THIS SCRIPT IS MEANT FOR **ME**!!!!!!!!!!!!!!!!!
@@ -107,7 +107,7 @@ sudo pacman -Syu --needed --noconfirm python-pywal
 sudo wal -i $DOTTIES_DIR/desktop.jpg -n -s -t
 
 # Install stuffs for bars
-sudo pacman -S --needed --noconfirm acpi alsa-utils playerctl sysstat xdotool jq bc brightnessctl
+sudo pacman -S --needed --noconfirm acpi alsa-utils playerctl sysstat xdotool jq bc
 
 # Install stuffs for system tray
 sudo pacman -S --needed --noconfirm redshift python-gobject
@@ -126,9 +126,11 @@ yay -S  --needed --noconfirm --removemake noto-fonts-tc \
                                           nerd-fonts-complete \
                                           ttf-unifont ttf-gelasio-ib ttf-caladea ttf-material-design-icons ttf-carlito ttf-liberation-sans-narrow ttf-ms-fonts ttf-material-icons-git
 
+# Install Greenclip
+yay -S --needed --noconfirm --removemake rofi-greenclip
+
 # Install GTK themes
 wget -qO- https://git.io/papirus-icon-theme-install | sh
-# sudo pacman -S --needed --noconfirm arc-gtk-theme
 
 # Setup needed packages (for me, you should change) as final run!!!
 # - Thunar        - File manager (+plugins)
@@ -143,15 +145,12 @@ wget -qO- https://git.io/papirus-icon-theme-install | sh
 sudo pacman -S --needed --noconfirm thunar neofetch btop viewnior geany kitty xclip font-manager
 sudo pacman -S --needed --noconfirm gvfs tumbler ffmpegthumbnailer poppler-glib libgsf libgepub libopenraw freetype2 thunar-volman thunar-archive-plugin thunar-media-tags-plugin
 yay -S --needed --noconfirm --removemake peazip-gtk2-bin
-yay -S --needed --noconfirm --removemake ibus-bamboo
 
 # Need to be installed manually I guess?
 # - GitKraken     - I love this Git GUI client
 # - Google Chrome - Web Browser
-# - Discord       - Discord (+with system Electron)
 # yay -S --needed --noconfirm --removemake gitkraken
 # yay -S --needed --noconfirm --removemake google-chrome
-# yay -S --needed --noconfirm --removemake discord_arch_electron
 
 # Setup files
 # Make all executable(?), backup old ones and then, symlink
@@ -194,24 +193,14 @@ sudo tlp start
 # What to do after this:
 #     1. If you are using a touchpad: https://stackoverflow.com/questions/62990795/cannot-set-tapping-enabled-default-on-archlinux
 #     2. If your keyboard has a NumLk: https://wiki.archlinux.org/title/Activating_numlock_on_bootup
-#     3. If you want to use ibus-daemon by default?
-#     4. Extract certs
-#     5. Install stuffs for pop_report (but install 'pip' first)
-#     6. You can't control backlight?
+#     3. Extract certs
+#     4. You can't control backlight?
 
 # 3.
-env DCONF_PROFILE=ibus dconf write /desktop/ibus/general/preload-engines "['xkb:us::eng', 'Bamboo']"
-gsettings set org.gnome.desktop.input-sources sources "[('xkb', 'us'), ('ibus', 'Bamboo')]"
-
-# 4.
 sudo trust extract-compat
 
-# 5.
-sudo pacman -S --needed --noconfirm python-pip
-pip install PyQt5 inotify
-
-# 6.
-# Usually this is for single monitors, edit it as you like
+# 4.
+# Usually this is for single monitor, edit it as you like
 BL_PROVIDER=$(ls /sys/class/backlight/ | head -n 1)
 sudo usermod -aG video $USER
 sudo chown $USER /sys/class/backlight/$BL_PROVIDER/brightness

@@ -1,6 +1,4 @@
 DOTTIES_DIR=$(find $HOME -type d -name "dotties")
-VIS_ALIAS="alias vis='$DOTTIES_DIR/viswal.sh'"
-POP_REPORT_ALIAS="alias pop_report='$DOTTIES_DIR/pop_report'"
 
+VIS_ALIAS="alias vis='$DOTTIES_DIR/viswal.sh'"
 echo $VIS_ALIAS | tee -a $HOME/.bashrc $HOME/.zshrc
-echo $POP_REPORT_ALIAS | tee -a $HOME/.bashrc $HOME/.zshrc

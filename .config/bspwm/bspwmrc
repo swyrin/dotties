@@ -25,6 +25,7 @@ killall pasystray
 killall dunst
 killall sxhkd
 killall ibus-daemon
+killall greenclip
 
 wal -i $DOTTIES_DIR/desktop.jpg -n -s -t
 # . "${HOME}/.cache/wal/colors.sh"
@@ -36,11 +37,12 @@ polybar -c $HOME/.config/polybar/config.ini bottom &
 
 sxhkd -c $HOME/.config/bspwm/sxhkdrc &
 picom &
-redshift -l $LOCATION -x &
+redshift -l $LOCATION &
 nm-applet &
 pasystray &
 dunst &
 ibus-daemon -drx &
+greenclip daemon &
 # $HOME/.bscripts/sounds.sh &
 # ================================
 

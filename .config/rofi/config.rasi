@@ -11,12 +11,13 @@
 
 /*****----- Configuration -----*****/
 configuration {
-	modi:                       "drun,run,filebrowser,window";
+	modi:                       "drun,run,window,clipboard:greenclip print";
     	show-icons:                 true;
     	display-drun:               "APPS";
     	display-run:                "RUN";
-    	display-filebrowser:        "FILES";
+    	/* display-filebrowser:        "FILES"; */
     	display-window:             "WINDOW";
+        display-clipboard:          "CLIP";
 	hover-select:               true;
 	me-select-entry: 	    "";
 	me-accept-entry: [ MousePrimary, MouseDPrimary ];

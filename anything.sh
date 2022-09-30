@@ -132,6 +132,9 @@ yay -S --needed --noconfirm --removemake rofi-greenclip
 # Install GTK themes
 wget -qO- https://git.io/papirus-icon-theme-install | sh
 
+# BSPWM border is bad
+yay -S --needed --noconfirm --removemake xborder-git
+
 # Setup needed packages (for me, you should change) as final run!!!
 # - Thunar        - File manager (+plugins)
 # - neofetch      - Neofetch
@@ -173,6 +176,7 @@ sudo ln -sf $DOTTIES_DIR/.config/Thunar/ $HOME/.config/
 sudo ln -sf $DOTTIES_DIR/.config/rofi/ $HOME/.config/
 sudo ln -sf $DOTTIES_DIR/.config/flameshot/ $HOME/.config/
 sudo ln -sf $DOTTIES_DIR/.config/gtk-3.0/ $HOME/.config/
+sudo ln -sf $DOTTIES_DIR/.config/xborders/ $HOME/.config/
 sudo ln -sf $DOTTIES_DIR/.zshrc $HOME/.zshrc
 sudo ln -sf $DOTTIES_DIR/.p10k.zsh $HOME/.p10k.zsh
 sudo ln -sf $DOTTIES_DIR/.gtkrc-2.0 $HOME/.gtkrc-2.0

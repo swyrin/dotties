@@ -80,9 +80,9 @@ else
   echo "AUR helper yay already installed"
 fi
 
-# Install BSPWM, rofi, picom (fork), sxhkd, polybar, feh, inetutils
+# Install BSPWM, rofi, picom (fork), sxhkd, polybar
 # Technically, setup the desktop
-sudo pacman -S --needed --noconfirm bspwm rofi sxhkd polybar dunst feh
+sudo pacman -S --needed --noconfirm bspwm rofi sxhkd polybar dunst
 yay -S --noconfirm --removemake picom-ibhagwan-git
 
 # Install and enable LightDM
@@ -101,10 +101,6 @@ then
 else
   echo "cli-visualizer already installed"
 fi
-
-# Install python-pywal
-sudo pacman -Syu --needed --noconfirm python-pywal
-sudo wal -i $DOTTIES_DIR/desktop.jpg -n -s -t
 
 # Install stuffs for bars
 sudo pacman -S --needed --noconfirm acpi alsa-utils playerctl sysstat xdotool jq bc
@@ -132,9 +128,6 @@ yay -S --needed --noconfirm --removemake rofi-greenclip
 # Install GTK themes
 wget -qO- https://git.io/papirus-icon-theme-install | sh
 
-# BSPWM border is bad
-yay -S --needed --noconfirm --removemake xborder-git
-
 # Setup needed packages (for me, you should change) as final run!!!
 # - Thunar        - File manager (+plugins)
 # - neofetch      - Neofetch
@@ -145,9 +138,13 @@ yay -S --needed --noconfirm --removemake xborder-git
 # - xclip         - Commandline clipboard stuffs
 # - font-manager  - Font manager
 # - Peazip        - Archive manager
-sudo pacman -S --needed --noconfirm thunar neofetch btop viewnior geany kitty xclip font-manager
+# - Plank         - The dock
+# - Komorebi      - Live wallpaper setter (+extensions)
+sudo pacman -S --needed --noconfirm thunar neofetch btop viewnior geany kitty xclip font-manager plank
 sudo pacman -S --needed --noconfirm gvfs tumbler ffmpegthumbnailer poppler-glib libgsf libgepub libopenraw freetype2 thunar-volman thunar-archive-plugin thunar-media-tags-plugin
-yay -S --needed --noconfirm --removemake peazip-gtk2-bin
+yay -S --needed --noconfirm --removemake peazip-gtk2-bin komorebi
+sudo pacman -S --needed --noconfirm gst-libav gstreamer-vaapi gst-plugins-bad gst-plugins-base gst-plugins-good gst-plugins-ugly libde265
+yay -S --needed --noconfirm --removemake gst-plugin-libde265
 
 # Need to be installed manually I guess?
 # - GitKraken     - I love this Git GUI client
@@ -157,10 +154,8 @@ yay -S --needed --noconfirm --removemake peazip-gtk2-bin
 
 # Setup files
 # Make all executable(?), backup old ones and then, symlink
-# sudo chmod -R 777 $DOTTIES_DIR
 mv $HOME/.config/ $HOME/.config_backup/
 mkdir -p $HOME/.config/
-sudo ln -sf $HOME/.cache/wal/dunstrc $DOTTIES_DIR/.config/dunst/dunstrc
 sudo ln -sf $DOTTIES_DIR/.bscripts/ $HOME/
 sudo ln -sf $DOTTIES_DIR/Documents/ $HOME/
 sudo ln -sf $DOTTIES_DIR/.config/bspwm/ $HOME/.config/
@@ -170,20 +165,18 @@ sudo ln -sf $DOTTIES_DIR/.config/systemd/ $HOME/.config/
 sudo ln -sf $DOTTIES_DIR/.config/kitty/ $HOME/.config/
 sudo ln -sf $DOTTIES_DIR/.config/picom/ $HOME/.config/
 sudo ln -sf $DOTTIES_DIR/.config/vis/ $HOME/.config/
-sudo ln -sf $DOTTIES_DIR/.config/wal/ $HOME/.config/
 sudo ln -sf $DOTTIES_DIR/.config/btop/ $HOME/.config/
 sudo ln -sf $DOTTIES_DIR/.config/Thunar/ $HOME/.config/
 sudo ln -sf $DOTTIES_DIR/.config/rofi/ $HOME/.config/
 sudo ln -sf $DOTTIES_DIR/.config/flameshot/ $HOME/.config/
 sudo ln -sf $DOTTIES_DIR/.config/gtk-3.0/ $HOME/.config/
-sudo ln -sf $DOTTIES_DIR/.config/xborders/ $HOME/.config/
 sudo ln -sf $DOTTIES_DIR/.zshrc $HOME/.zshrc
 sudo ln -sf $DOTTIES_DIR/.p10k.zsh $HOME/.p10k.zsh
 sudo ln -sf $DOTTIES_DIR/.gtkrc-2.0 $HOME/.gtkrc-2.0
 
 # Export some environment
-source $DOTTIES_DIR/env.sh
-source $HOME/.bashrc
+# source $DOTTIES_DIR/env.sh
+# source $HOME/.bashrc
 
 # After setup
 sudo pacman -S --needed --noconfirm tlp tlp-rdw

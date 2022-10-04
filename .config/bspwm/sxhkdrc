@@ -20,7 +20,7 @@ super + Escape
 
 # https://github.com/flameshot-org/flameshot/issues/784#issuecomment-918382722
 Print
-    $HOME/dotties/flameshot.sh
+    flameshot full --clipboard
 
 super + shift + s
     $HOME/dotties/flameshot.sh

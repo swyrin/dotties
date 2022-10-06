@@ -24,7 +24,7 @@ sudo sed -i 's/#ParallelDownloads = 5/ParallelDownloads = 8/g' /etc/pacman.conf
 sudo pacman -Syu --noconfirm
 
 # Sort mirrors
-# This might take a while
+# This might take a while, so feel free to comment out
 sudo pacman -S --needed --noconfirm pacman-contrib
 curl -s https://archlinux.org/mirrorlist/all/ | sudo tee /etc/pacman.d/mirrorlist
 sudo sed -i 's/^#Server/Server/' -e '/^#/d' /etc/pacman.d/mirrorlist
@@ -82,7 +82,7 @@ fi
 
 # Install BSPWM, rofi, picom (fork), sxhkd, polybar
 # Technically, setup the desktop
-sudo pacman -S --needed --noconfirm bspwm rofi sxhkd polybar dunst
+sudo pacman -S --needed --noconfirm bspwm rofi sxhkd polybar dunst feh
 yay -S --noconfirm --removemake picom-ibhagwan-git
 
 # Install and enable LightDM
@@ -129,7 +129,7 @@ yay -S --needed --noconfirm --removemake rofi-greenclip
 wget -qO- https://git.io/papirus-icon-theme-install | sh
 
 # Setup needed packages (for me, you should change) as final run!!!
-# - Thunar        - File manager (+plugins)
+# - Thunar        - File manager (+plugins,mpv,xfce-polkit)
 # - neofetch      - Neofetch
 # - btop          - Better htop
 # - Viewnior      - Image viewer
@@ -141,10 +141,11 @@ wget -qO- https://git.io/papirus-icon-theme-install | sh
 # - Plank         - The dock
 # - Komorebi      - Live wallpaper setter (+extensions)
 sudo pacman -S --needed --noconfirm thunar neofetch btop viewnior geany kitty xclip font-manager plank
-sudo pacman -S --needed --noconfirm gvfs tumbler ffmpegthumbnailer poppler-glib libgsf libgepub libopenraw freetype2 thunar-volman thunar-archive-plugin thunar-media-tags-plugin
+sudo pacman -S --needed --noconfirm gvfs tumbler ffmpegthumbnailer poppler-glib libgsf libgepub libopenraw freetype2 thunar-volman thunar-archive-plugin thunar-media-tags-plugin mpv
 yay -S --needed --noconfirm --removemake peazip-gtk2-bin komorebi
 sudo pacman -S --needed --noconfirm gst-libav gstreamer-vaapi gst-plugins-bad gst-plugins-base gst-plugins-good gst-plugins-ugly libde265
 yay -S --needed --noconfirm --removemake gst-plugin-libde265
+yay -S --needed --noconfirm --removemake xfce-polkit
 
 # Need to be installed manually I guess?
 # - GitKraken     - I love this Git GUI client
@@ -153,7 +154,6 @@ yay -S --needed --noconfirm --removemake gst-plugin-libde265
 # yay -S --needed --noconfirm --removemake google-chrome
 
 # Setup files
-# Make all executable(?), backup old ones and then, symlink
 mv $HOME/.config/ $HOME/.config_backup/
 mkdir -p $HOME/.config/
 sudo ln -sf $DOTTIES_DIR/.bscripts/ $HOME/

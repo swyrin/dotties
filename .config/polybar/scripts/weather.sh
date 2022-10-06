@@ -3,7 +3,7 @@
 # SETTINGS vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
 
 # API settings ________________________________________________________________
-APIKEY=`cat $HOME/.owm-key`
+APIKEY="72dfa509e921fea9f64aa397e2cd336c"
 # if you leave these empty location will be picked based on your ip-adres
 CITY_NAME=''
 COUNTRY_CODE=''
@@ -56,7 +56,7 @@ DISPLAY_WIND="yes"
 BEAUFORTICON="yes"
 
 # Display in knots. yes/no
-KNOTS="yes"
+KNOTS="no"
 
 # How many decimals after the floating point
 DECIMALS=0
@@ -143,6 +143,7 @@ function getData {
     #     echo `date +%s` >> "$HOME/.weather-last"
     fi
 }
+
 function setIcons {
     if [ $WID -le 232 ]; then
         #Thunderstorm
@@ -303,7 +304,7 @@ function setIcons {
 function outputCompact {
     OUTPUT="$WIND %{T$WEATHER_FONT_CODE}%{F$ICON_COLOR}$ICON%{F-}%{T-} $ERR_MSG$COLOR_TEXT_BEGIN$DESCRIPTION$COLOR_TEXT_END| $TEMP"
     CITY_NAME=${CITY_NAME//%20/ }
-    echo "$CITY_NAME, $COUNTRY_CODE |$OUTPUT"
+    echo "$CITY_NAME, $COUNTRY_CODE | $OUTPUT"
 }
 
 getData $1

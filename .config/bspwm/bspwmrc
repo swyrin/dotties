@@ -25,8 +25,8 @@ killall dunst
 killall sxhkd
 killall ibus-daemon
 killall greenclip
-killall plank
-killall feh
+# killall plank
+# killall feh
 killall xfce-polkit
 
 picom &
@@ -43,7 +43,7 @@ pasystray &
 dunst &
 ibus-daemon -drx &
 greenclip daemon &
-plank &
+# plank &
 /usr/lib/xfce-polkit/xfce-polkit &
 
 # ================================

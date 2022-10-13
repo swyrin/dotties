@@ -170,9 +170,11 @@ sudo ln -sf $DOTTIES_DIR/.config/Thunar/ $HOME/.config/
 sudo ln -sf $DOTTIES_DIR/.config/rofi/ $HOME/.config/
 sudo ln -sf $DOTTIES_DIR/.config/flameshot/ $HOME/.config/
 sudo ln -sf $DOTTIES_DIR/.config/gtk-3.0/ $HOME/.config/
+sudo ln -sf $DOTTIES_DIR/.config/eww/ $HOME/.config/
 sudo ln -sf $DOTTIES_DIR/.zshrc $HOME/.zshrc
 sudo ln -sf $DOTTIES_DIR/.p10k.zsh $HOME/.p10k.zsh
 sudo ln -sf $DOTTIES_DIR/.gtkrc-2.0 $HOME/.gtkrc-2.0
+sudo ln -sf $DOTTIES_DIR/life_scripts $HOME
 
 # Export some environment
 # source $DOTTIES_DIR/env.sh
@@ -204,6 +206,10 @@ sudo chown $USER /sys/class/backlight/$BL_PROVIDER/brightness
 
 # Something something
 sudo touch $HOME/.config/polybar/.curplayer.log
+
+# Clear cache
+sudo pacman -Sc
+yay -Sc
 
 # Bye!
 echo "Installation finished!!!"

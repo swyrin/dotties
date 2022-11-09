@@ -2,3 +2,5 @@
 .config/vis/vis.log
 .config/polybar/.curplayer.log
 .config/eww/hosf/images/
+.config/systemd/user/default.target.wants
+.config/systemd/user/graphical.target.wants

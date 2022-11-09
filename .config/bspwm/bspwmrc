@@ -1,14 +1,7 @@
-#! /bin/sh
+#!/bin/bash
 
 # DOTTIES_DIR=$(find $HOME -type d -name "dotties")
 # LOCATION=$(curl -s "https://location.services.mozilla.com/v1/geolocate?key=geoclue" -m 10 --connect-timeout 10 | awk 'OFS=":" {print $3,$5}' | tr -d ',}')
-
-# Fall back to hardcoded location if I am offline
-# Currently I am in Vietnam, so default Vietnam?
-# if [[ -z $LOCATION ]]
-# then
-#    LOCATION="10.8326:106.6581"
-# fi
 
 LOCATION="10.8326:106.6581"
 DOTTIES_DIR="$HOME/dotties"
@@ -26,10 +19,20 @@ killall ibus-daemon
 killall greenclip
 killall eww
 killall xfce-polkit
+killall xfce4-power-manager
+killall flameshot
+killall komorebi
+
+# Set wallpaper?
+if [ $(cat $HOME/.config/bspwm/wallpaper_mode.txt) == "A" ]
+then
+    komorebi &
+else
+    feh --bg-fill $DOTTIES_DIR/assets/desktop.png --no-fehbg
+fi
 
 # Start apps
 picom &
-feh --bg-fill $DOTTIES_DIR/assets/desktop.png --no-fehbg
 polybar -c $HOME/.config/polybar/config.ini top_left &
 polybar -c $HOME/.config/polybar/config.ini top_center &
 polybar -c $HOME/.config/polybar/config.ini top_right &
@@ -40,13 +43,12 @@ eww -c $HOME/.config/eww/hosf daemon &
 redshift-gtk -l $LOCATION &
 nm-applet &
 pasystray &
+flameshot &
 dunst &
 ibus-daemon -drx &
 greenclip daemon &
 /usr/lib/xfce-polkit/xfce-polkit &
-
-# Run some pollings
-$HOME/life_scripts/battery_polling.sh
+xfce4-power-manager --daemon
 
 # ================================
 bspc monitor -d 1 2 3 4
@@ -56,13 +58,16 @@ bspc config pointer_action1 move
 bspc config pointer_action2 resize_side
 bspc config pointer_action2 resize_corner
 
-bspc config split_ratio          0.5
-bspc config borderless_monocle   true
-bspc config gapless_monocle      true
+bspc config split_ratio                 0.5
+bspc config remove_disabled_monitors    true
+bspc config remove_unplugged_monitors   true
 
 bspc config border_width 5
+bspc config normal_border_color \#000000
 bspc config active_border_color \#F0C674
 bspc config focused_border_color \#F0C674
 
+bspc rule -a Plank manage=off
+bspc rule -a viewnior state=floating center=true
 bspc rule -a Pavucontrol state=floating
 bspc rule -a GitKraken state=floating

@@ -5,13 +5,12 @@
 # No, DO NOT BLINDLY RUN THIS FILE!!!!
 #
 # Basically this is just my autosetup file when I (re)install Arch (btw)!
-# Just clone this repo, make anything.sh an executable, if it was not.
 # ###############################################
 
 # ONE MORE LAST WORD: THIS SCRIPT IS MEANT FOR **ME**!!!!!!!!!!!!!!!!!
 
 # For debugging sake, but it *should* work as I want
-echo "Finding 'dotties' directory..."
+echo "Finding 'dotties' directory... This should not take long"
 DOTTIES_DIR=$(find $HOME -type d -name "dotties")
 echo "Found and using dotties directory $DOTTIES_DIR"
 echo "The script *might* ask you the password below"
@@ -22,14 +21,6 @@ sudo sed -i 's/#ParallelDownloads = 5/ParallelDownloads = 8/g' /etc/pacman.conf
 
 # As usual, pacman -Syu
 sudo pacman -Syu --noconfirm
-
-# Sort mirrors
-# This might take a while, so feel free to comment out
-sudo pacman -S --needed --noconfirm pacman-contrib
-curl -s https://archlinux.org/mirrorlist/all/ | sudo tee /etc/pacman.d/mirrorlist
-sudo sed -i 's/^#Server/Server/' -e '/^#/d' /etc/pacman.d/mirrorlist
-sudo cp /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.backup
-sudo rankmirrors -n 6 /etc/pacman.d/mirrorlist.backup | sudo tee /etc/pacman.d/mirrorlist
 
 # Install server packages
 # I assume that you will run this file after boot Arch for the first time
@@ -47,21 +38,21 @@ sudo pacman -S --needed --noconfirm nano
 sudo pacman -S --needed --noconfirm unzip wget
 wget https://raw.githubusercontent.com/scopatz/nanorc/master/install.sh -O- | sh
 
-if [[ -z $(grep "set linenumbers" $HOME/.nanorc) ]]
+if [ -z $(grep "set linenumbers" $HOME/.nanorc) ]
 then
   echo "set linenumbers" >> $HOME/.nanorc
 else
   echo "'set linenumbers' set in $HOME/.nanorc"
 fi
 
-if [[ -z $(grep "set tabstospaces" $HOME/.nanorc) ]]
+if [ -z $(grep "set tabstospaces" $HOME/.nanorc) ]
 then
   echo "set tabstospaces" >> $HOME/.nanorc
 else
   echo "'set tabstospaces' set in $HOME/.nanorc"
 fi
 
-if [[ -z $(grep "set tabsize 4" $HOME/.nanorc) ]]
+if [ -z $(grep "set tabsize 4" $HOME/.nanorc) ]
 then
   echo "set tabsize 4" >> $HOME/.nanorc
 else
@@ -69,7 +60,7 @@ else
 fi
 
 # Install yay AUR helper
-if [[ -z $(which yay) ]]
+if [ -z $(which yay) ]
 then
   git clone https://aur.archlinux.org/yay.git
   cd yay
@@ -89,7 +80,7 @@ yay -S --noconfirm --removemake picom-ibhagwan-git
 sudo pacman -S --needed --noconfirm lightdm lightdm-gtk-greeter
 sudo systemctl enable lightdm.service
 
-if [[ -z $(which vis) ]]
+if [ -z $(which vis) ]
 then
   # Install cli-visualizer and override with PyWal colors
   sudo pacman -S --needed --noconfirm ncurses fftw cmake
@@ -103,7 +94,7 @@ else
 fi
 
 # Install stuffs for bars
-sudo pacman -S --needed --noconfirm acpi alsa-utils playerctl sysstat xdotool jq bc
+sudo pacman -S --needed --noconfirm acpi alsa-utils playerctl sysstat xdotool jq bc brightnessctl
 
 # Install stuffs for system tray
 sudo pacman -S --needed --noconfirm redshift python-gobject
@@ -174,42 +165,34 @@ sudo ln -sf $DOTTIES_DIR/.config/eww/ $HOME/.config/
 sudo ln -sf $DOTTIES_DIR/.zshrc $HOME/.zshrc
 sudo ln -sf $DOTTIES_DIR/.p10k.zsh $HOME/.p10k.zsh
 sudo ln -sf $DOTTIES_DIR/.gtkrc-2.0 $HOME/.gtkrc-2.0
-sudo ln -sf $DOTTIES_DIR/life_scripts $HOME
 
-# Export some environment
-# source $DOTTIES_DIR/env.sh
-# source $HOME/.bashrc
+# Setup battery saving "bloatwares"
+if ! [ -z $(upower) ];
+then
+    sudo pacman -S --needed --noconfirm tlp tlp-rdw cpupower powertop xfce4-power-manager
+    yay -S --needed --noconfirm --removemake tlpui auto-cpufreq
+    sudo systemctl enable --now tlp.service
+    sudo systemctl enable --now NetworkManager-dispatcher.service
+    sudo systemctl enable --now auto-cpufreq.service
+    sudo systemctl mask systemd-rfkill.service
+    sudo systemctl mask systemd-rfkill.socket
+    sudo tlp start
+else
+    echo "No battery installed, skipping installing power savers"
+fi
 
-# After setup
-sudo pacman -S --needed --noconfirm tlp tlp-rdw
-yay -S --needed --noconfirm --removemake tlpui
-sudo systemctl enable tlp.service
-sudo systemctl enable NetworkManager-dispatcher.service
-sudo systemctl mask systemd-rfkill.service
-sudo systemctl mask systemd-rfkill.socket
-sudo tlp start
+# Post-install stuffs
+systemctl enable --user sxhkd.service
+systemctl enable --user greenclip.service
+sudo touch $HOME/.config/polybar/.curplayer.log
+
+# Clear PM cache
+sudo pacman -Sc
+yay -Sc
 
 # What to do after this:
 #     1. If you are using a touchpad: https://stackoverflow.com/questions/62990795/cannot-set-tapping-enabled-default-on-archlinux
 #     2. If your keyboard has a NumLk: https://wiki.archlinux.org/title/Activating_numlock_on_bootup
-#     3. Extract certs
-#     4. You can't control backlight?
-
-# 3.
-sudo trust extract-compat
-
-# 4.
-# Usually this is for single monitor, edit it as you like
-BL_PROVIDER=$(ls /sys/class/backlight/ | head -n 1)
-sudo usermod -aG video $USER
-sudo chown $USER /sys/class/backlight/$BL_PROVIDER/brightness
-
-# Something something
-sudo touch $HOME/.config/polybar/.curplayer.log
-
-# Clear cache
-sudo pacman -Sc
-yay -Sc
 
 # Bye!
 echo "Installation finished!!!"

@@ -29,6 +29,7 @@ super + shift + s
 ctrl + shift + a
     killall komorebi; \
     feh --no-fehbg --bg-fill $HOME/dotties/assets/desktop.png && \
+    echo "S" > $HOME/.config/bspwm/wallpaper_mode.txt; \
     notify-send "System" "Using static wallpaper" --expire-time=1000 \ 
         -i $HOME/dotties/assets/desktop.png;
     
@@ -36,6 +37,7 @@ ctrl + shift + a
 ctrl + alt + a
     killall komorebi; \
     komorebi &; \
+    echo "A" > $HOME/.config/bspwm/wallpaper_mode.txt; \
     notify-send "System" "Using animated wallpaper" --expire-time=1000 \ 
         -i $HOME/dotties/assets/desktop.png;
 

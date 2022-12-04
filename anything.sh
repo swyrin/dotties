@@ -118,6 +118,9 @@ yay -S --needed --noconfirm --removemake rofi-greenclip
 
 # Install GTK themes
 wget -qO- https://git.io/papirus-icon-theme-install | sh
+wget -qO- https://git.io/papirus-folders-install | sh
+yay -S catppuccin-gtk-theme-latte
+papirus-folders -C yellow --theme Papirus-Light
 
 # Setup needed packages (for me, you should change) as final run!!!
 # - Thunar        - File manager (+plugins,mpv,xfce-polkit)
@@ -147,8 +150,6 @@ yay -S --needed --noconfirm --removemake xfce-polkit
 # Setup files
 mv $HOME/.config/ $HOME/.config_backup/
 mkdir -p $HOME/.config/
-sudo ln -sf $DOTTIES_DIR/.bscripts/ $HOME/
-sudo ln -sf $DOTTIES_DIR/Documents/ $HOME/
 sudo ln -sf $DOTTIES_DIR/.config/bspwm/ $HOME/.config/
 sudo ln -sf $DOTTIES_DIR/.config/dunst/ $HOME/.config/
 sudo ln -sf $DOTTIES_DIR/.config/polybar/ $HOME/.config/

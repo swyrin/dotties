@@ -1,5 +1,5 @@
 [global]
-    width = 400
+     width = 400
 
      corner_radius = 8
      separator_height = 8
@@ -16,7 +16,7 @@
      word_wrap = yes
 
      format = "<b>%s</b>\n%b"
-     icon_theme = "Papirus-Dark"
+     icon_theme = "Papirus-Light"
      icon_position = left
      min_icon_size = 32
      max_icon_size = 64
@@ -26,13 +26,13 @@
      markup = full
 
 [urgency_low]
-    background = "#282A2E"
-    foreground = "#FFFFFF"
+    background = "#FFFFFF"
+    foreground = "#000000"
 
 [urgency_normal]
-    background = "#282A2E"
-    foreground = "#FFFFFF"
+    background = "#FFFFFF"
+    foreground = "#000000"
 
 [urgency_critical]
-    background = "#282A2E"
-    foreground = "#FFFFFF"
+    background = "#FFFFFF"
+    foreground = "#000000"

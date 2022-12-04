@@ -36,7 +36,7 @@ ctrl + shift + a
 # Set animated wallpaper
 ctrl + alt + a
     killall komorebi; \
-    komorebi &; \
+    komorebi & > /dev/null; \
     echo "A" > $HOME/.config/bspwm/wallpaper_mode.txt; \
     notify-send "System" "Using animated wallpaper" --expire-time=1000 \ 
         -i $HOME/dotties/assets/desktop.png;

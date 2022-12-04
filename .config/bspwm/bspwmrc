@@ -5,6 +5,8 @@
 
 LOCATION="10.8326:106.6581"
 DOTTIES_DIR="$HOME/dotties"
+POLYBAR="polybar -c $HOME/.config/polybar/config.ini"
+EWW="eww -c $HOME/.config/eww/hosf"
 
 # Kill processes
 killall picom
@@ -33,13 +35,14 @@ fi
 
 # Start apps
 picom &
-polybar -c $HOME/.config/polybar/config.ini top_left &
-polybar -c $HOME/.config/polybar/config.ini top_center &
-polybar -c $HOME/.config/polybar/config.ini top_right &
-polybar -c $HOME/.config/polybar/config.ini bottom_left &
-polybar -c $HOME/.config/polybar/config.ini bottom_right &
+$POLYBAR top_speckeys &
+$POLYBAR top_workspaces &
+$POLYBAR top_center &
+$POLYBAR top_right &
+$POLYBAR bottom_left &
+$POLYBAR bottom_right &
 sxhkd -c $HOME/.config/bspwm/sxhkdrc &
-eww -c $HOME/.config/eww/hosf daemon &
+$EWW daemon &
 redshift-gtk -l $LOCATION &
 nm-applet &
 pasystray &
@@ -62,12 +65,11 @@ bspc config split_ratio                 0.5
 bspc config remove_disabled_monitors    true
 bspc config remove_unplugged_monitors   true
 
-bspc config border_width 5
+bspc config border_width 3
 bspc config normal_border_color \#000000
 bspc config active_border_color \#F0C674
 bspc config focused_border_color \#F0C674
 
-bspc rule -a Plank manage=off
 bspc rule -a viewnior state=floating center=true
 bspc rule -a Pavucontrol state=floating
 bspc rule -a GitKraken state=floating

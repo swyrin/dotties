@@ -1,15 +1,12 @@
-*{
+* {
     all: unset;
     font-family: "Nova Mono";
     font-weight: 800;
 }
 
-// Music
-.music_box {
-}
-
 .music_box_popup {
-    background-color: #282a2e;
+    border-bottom: none;
+    background-color: #ffffff;
     border: solid 2px #f0c674;
     border-radius: 10 10 0 0;
 }
@@ -20,7 +17,7 @@
 }
 
 .media_art_popup {
-    border: solid 5px #ffffff;
+    border: solid 5px #282a2e;
     border-radius: 5px;
     min-height: 130px;
     min-width: 130px;
@@ -38,7 +35,7 @@
 
 .media_title {
     font-size: 15px;
-    color: #ffc994;
+    color: #282a2e;
     margin-top: -100px;
     margin-bottom: -70px;
 }
@@ -46,13 +43,15 @@
 .media_title_popup {
     font-size: 18px;
     margin: 0 15 -30 10;
-    color: #ffc994;
+    color: #282a2e;
 }
+
 .media_artist_popup {
     font-size: 14px;
     margin: 0 15 0 10;
-    color: #ffffff;
+    color: #282a2e;
 }
+
 .media_buttons {
     font-size: 20px;
     margin-bottom: 2px;
@@ -62,7 +61,7 @@
     font-size: 30px;
     margin-right: 10px;
     margin-left: 10px;
-    color: #ffffff;
+    color: #282a2e;
 }
 .move_popup {
     font-size: 30px;
@@ -75,8 +74,6 @@
     margin-right: 10px;
     margin-left: 10px;
     color: #ff6156;
-}
-.media_buttons_box_popup {
 }
 
 .toggle_button {
@@ -97,20 +94,20 @@
     min-height: 15px;
     margin: 0 15 15 15;
     border-radius: 15px;
-    border: solid 5px #ffffff;
+    border: solid 5px #282a2e;
 }
 .bar_highlighted_popup scale trough highlight {
     all: unset;
-    background-color: #ffffff;
+    background-color: #027A8D;
     border-radius: 15px;
 }
 .bar_highlighted_popup scale trough {
     all: unset;
-    // background-color: rgba(255,201,148, 1);
+    background-color: rgba(255,201,148, 0.4);
     min-height: 15px;
     margin: 0 15 15 15;
     border-radius: 15px;
-    border: solid 5px #ffffff;
+    border: solid 5px #282a2e;
 }
 .bar_normal scale trough highlight {
     all: unset;
@@ -126,6 +123,7 @@
     margin-bottom: 5px;
     margin-top: 0px;
 }
+
 .bar_highlighted scale trough highlight {
     all: unset;
     background-color: #019fb8;
@@ -141,23 +139,24 @@
     margin-top: 0px;
 }
 
-
 .cal {
+    border-top: none;
     font-size: 16px;
-    background-color: #282a2e;
-    color: #f0c674;
+    background-color: #ffffff;
+    color: #bda509;
     border: 1px solid #f0c674;
-    border-radius: 20 20 20 20;
+    border-radius: 0 0 20 20;
     padding: 10px;
 }
 
 calendar:selected {
-    background: teal;
+    color: #ffffff;
+    background: red;
     border-radius: 10px;
 }
 
 calendar.highlight {
-    color: #ffffff;
+    color: #ff0000;
     font-weight: bold;
 }
 

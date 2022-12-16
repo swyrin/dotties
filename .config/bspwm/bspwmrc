@@ -54,8 +54,8 @@ greenclip daemon &
 xfce4-power-manager --daemon
 
 # ================================
-bspc monitor -d 1 2 3 4
-bspc config window_gap          8
+bspc monitor -d 1 2 3 4 5 6 7
+bspc config window_gap          10
 
 bspc config pointer_action1 move
 bspc config pointer_action2 resize_side
@@ -64,6 +64,11 @@ bspc config pointer_action2 resize_corner
 bspc config split_ratio                 0.5
 bspc config remove_disabled_monitors    true
 bspc config remove_unplugged_monitors   true
+bspc config borderless_monocle          true
+bspc config gapless_monocle             true
+bspc config focus_by_distance           true
+bspc config history_aware_focus         true
+bspc config pointer_modifier            alt
 
 bspc config border_width 3
 bspc config normal_border_color \#000000

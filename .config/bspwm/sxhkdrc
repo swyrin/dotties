@@ -193,3 +193,12 @@ super + alt + shift + {h,j,k,l}
 # move a floating window
 super + {Left,Down,Up,Right}
 	bspc node -v {-20 0,0 20,0 -20,20 0}
+
+alt + button{1,2}
+	bspc pointer -g {resize_side,resize_corner}
+
+alt + !button{1,2}
+      bspc pointer -t %i, %i
+
+alt + @button{1,2}
+	bspc pointer -u

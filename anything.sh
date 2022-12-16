@@ -178,6 +178,7 @@ then
     sudo systemctl enable --now auto-cpufreq.service
     sudo systemctl mask systemd-rfkill.service
     sudo systemctl mask systemd-rfkill.socket
+
     sudo tlp start
 else
     echo "No battery installed, skipping installing power savers"

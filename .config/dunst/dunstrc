@@ -3,7 +3,7 @@
 
     origin = top-right
     offset = 8x60
-    corner_radius = 8
+    corner_radius = 4
     separator_height = 8
     padding = 24
     horizontal_padding = 24

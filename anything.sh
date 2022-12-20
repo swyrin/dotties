@@ -17,7 +17,7 @@ echo "The script *might* ask you the password below"
 
 # Setup custom pacman stuffs: parallel downloads, c o l o r s
 sudo sed -i 's/#Color/Color/g' /etc/pacman.conf
-sudo sed -i 's/#ParallelDownloads = 5/ParallelDownloads = 8/g' /etc/pacman.conf
+sudo sed -i 's/#ParallelDownloads = 5/ParallelDownloads = 5/g' /etc/pacman.conf
 
 # As usual, pacman -Syu
 sudo pacman -Syu --noconfirm
@@ -171,15 +171,37 @@ sudo ln -sf $DOTTIES_DIR/.gtkrc-2.0 $HOME/.gtkrc-2.0
 # Setup battery saving "bloatwares"
 if ! [ -z $(upower) ];
 then
-    sudo pacman -S --needed --noconfirm tlp tlp-rdw cpupower powertop xfce4-power-manager
-    yay -S --needed --noconfirm --removemake tlpui auto-cpufreq
+    # You should consume these links for more battery saving
+    # https://wiki.archlinux.org/title/Power_management
+    # https://wiki.archlinux.org/title/CPU_frequency_scaling
+
+    # Intel HW acceleration
+    sudo pacman -S --needed --noconfirm intel-media-driver libva-intel-driver
+    sudo sed -i 's/MODULES=()/MODULES=(i915,i965,iHD)/g' /etc/mkinitcpio.conf
+
+    # Powertop
+    sudo pacman -S --needed --noconfirm powertop
+    sudo cp $DOTTIES_DIR/.config/systemd/system/powertop.service /etc/systemd/system/powertop.service
+    sudo systemctl enable --now powertop.service
+
+    # Laptop setup
+    sudo pacman -S --needed --noconfirm acpid
+    sudo systemctl enable --now acpid.service
+
+    sudo pacman -S --needed --noconfirm tlp tlp-rdw
+    yay -S --needed --noconfirm tlpui
     sudo systemctl enable --now tlp.service
-    sudo systemctl enable --now NetworkManager-dispatcher.service
-    sudo systemctl enable --now auto-cpufreq.service
     sudo systemctl mask systemd-rfkill.service
     sudo systemctl mask systemd-rfkill.socket
 
-    sudo tlp start
+    sudo pacman -S --needed --noconfirm thermald
+    sudo systemctl enable --now thermald.service
+
+    yay -S --needed --noconfirm auto-cpufreq
+    sudo systemctl enable --now auto-cpufreq.service
+
+    # Apps
+    sudo pacman -S --needed --noconfirm xfce4-power-manager
 else
     echo "No battery installed, skipping installing power savers"
 fi

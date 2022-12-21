@@ -46,27 +46,10 @@ ctrl + alt + a
     stat=`pacmd list-sinks | awk '/muted/ \{print $2\}'` && \
     notify-send "Audio" "Is Muted: $stat" --expire-time=500
 
-@XF86AudioRaiseVolume
-    stat=`pactl get-sink-volume @DEFAULT_SINK@ | awk '\{printf substr($5,1,3)\}' | sed 's/%//g'`;\
-    stat=$(( stat + 1 )); \
-    if [[ $(( stat )) -le 100 ]] \
-    then \
-        pactl set-sink-volume @DEFAULT_SINK@ +1% && \
-        notify-send "System" "Volume set at $stat%" --expire-time=500 -u low -h int:value:$stat -h string:synchronous:volumectrl; \
-    else \
-        notify-send "System" "Volume is now 100%" --expire-time=500; \
-    fi
-
-@XF86AudioLowerVolume
-    stat=`pactl get-sink-volume @DEFAULT_SINK@ | awk '\{printf substr($5,1,3)\}' | sed 's/%//g'`;\
-    stat=$(( stat - 1 )); \
-    if [[ $(( stat )) -ge 0 ]] \
-    then \
-        pactl set-sink-volume @DEFAULT_SINK@ -1% && \
-        notify-send "System" "Volume set at $stat%" --expire-time=500 -u low -h int:value:$stat -h string:synchronous:volumectrl; \
-    else \
-        notify-send "System" "Volume is now 0%" --expire-time=500; \
-    fi
+@XF86Audio{Raise,Lower}Volume
+    stat=$(pactl get-sink-volume @DEFAULT_SINK@ | awk '\{printf substr($5,1,3)\}' | sed 's/%//g');\
+    pactl set-sink-volume @DEFAULT_SINK@ {+,-}1%; \
+    notify-send "System" "Volume set at $((stat {+,-} 1))%" --expire-time=500 -u low -h int:value:$stat -h string:synchronous:volumectrl;
     
 @XF86AudioPlay
     playerctl play-pause && notify-send "Playback" "Toggled playback status" --expire-time=500
@@ -193,12 +176,3 @@ super + alt + shift + {h,j,k,l}
 # move a floating window
 super + {Left,Down,Up,Right}
 	bspc node -v {-20 0,0 20,0 -20,20 0}
-
-alt + button{1,2}
-	bspc pointer -g {resize_side,resize_corner}
-
-alt + !button{1,2}
-      bspc pointer -t %i, %i
-
-alt + @button{1,2}
-	bspc pointer -u

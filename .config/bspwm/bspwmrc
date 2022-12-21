@@ -35,11 +35,11 @@ fi
 
 # Start apps
 picom &
-$POLYBAR top_speckeys &
 $POLYBAR top_workspaces &
 $POLYBAR top_center &
 $POLYBAR top_right &
-$POLYBAR bottom_left &
+# $POLYBAR bottom_left &
+$POLYBAR bottom_middle &
 $POLYBAR bottom_right &
 sxhkd -c $HOME/.config/bspwm/sxhkdrc &
 $EWW daemon &

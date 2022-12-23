@@ -127,7 +127,7 @@
   :geometry 
     (geometry 
       :x "730px" 
-      :y "48px"
+      :y "47px"
       :width "415px"
       :height "100px")
   :stacking "fg"

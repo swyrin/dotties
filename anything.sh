@@ -71,10 +71,11 @@ else
   echo "AUR helper yay already installed"
 fi
 
-# Install BSPWM, rofi, picom (fork), sxhkd, polybar
+# Install BSPWM, rofi, picom (fork), sxhkd, polybar, notification center(TM)
 # Technically, setup the desktop
-sudo pacman -S --needed --noconfirm bspwm rofi sxhkd polybar dunst feh
+sudo pacman -S --needed --noconfirm bspwm rofi sxhkd polybar feh
 yay -S --noconfirm --removemake picom-pijulius-git
+yay -S --noconfirm --removemake deadd-notification-center-bin notify-send-py
 
 # Install and enable LightDM
 sudo pacman -S --needed --noconfirm lightdm lightdm-gtk-greeter
@@ -134,10 +135,9 @@ papirus-folders -C yellow --theme Papirus-Light
 # - xclip               - Commandline clipboard stuffs
 # - font-manager        - Font manager
 # - Peazip              - Archive manager
-# - Plank               - The dock
 # - XFCE Power Manager  - Brightness and stuffs
 # - Komorebi            - Live wallpaper setter (+extensions)
-sudo pacman -S --needed --noconfirm thunar neofetch btop viewnior geany kitty xclip font-manager plank
+sudo pacman -S --needed --noconfirm thunar neofetch btop viewnior geany kitty xclip font-manager
 sudo pacman -S --needed --noconfirm gvfs tumbler ffmpegthumbnailer poppler-glib libgsf libgepub libopenraw freetype2 thunar-volman thunar-archive-plugin thunar-media-tags-plugin mpv
 yay -S --needed --noconfirm --removemake peazip-gtk2-bin komorebi
 sudo pacman -S --needed --noconfirm gst-libav gstreamer-vaapi gst-plugins-bad gst-plugins-base gst-plugins-good gst-plugins-ugly libde265
@@ -149,7 +149,6 @@ sudo pacman -S --needed --noconfirm xfce4-power-manager
 mv $HOME/.config/ $HOME/.config_backup/
 mkdir -p $HOME/.config/
 sudo ln -sf $DOTTIES_DIR/.config/bspwm/ $HOME/.config/
-sudo ln -sf $DOTTIES_DIR/.config/dunst/ $HOME/.config/
 sudo ln -sf $DOTTIES_DIR/.config/polybar/ $HOME/.config/
 sudo ln -sf $DOTTIES_DIR/.config/systemd/ $HOME/.config/
 sudo ln -sf $DOTTIES_DIR/.config/kitty/ $HOME/.config/
@@ -162,6 +161,7 @@ sudo ln -sf $DOTTIES_DIR/.config/flameshot/ $HOME/.config/
 sudo ln -sf $DOTTIES_DIR/.config/gtk-3.0/ $HOME/.config/
 sudo ln -sf $DOTTIES_DIR/.config/eww/ $HOME/.config/
 sudo ln -sf $DOTTIES_DIR/.config/komorebi/ $HOME/.config/
+sudo ln -sf $DOTTIES_DIR/.config/deadd/ $HOME/.config/
 sudo ln -sf $DOTTIES_DIR/.zshrc $HOME/.zshrc
 sudo ln -sf $DOTTIES_DIR/.p10k.zsh $HOME/.p10k.zsh
 sudo ln -sf $DOTTIES_DIR/.gtkrc-2.0 $HOME/.gtkrc-2.0

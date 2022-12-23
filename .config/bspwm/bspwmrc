@@ -1,8 +1,20 @@
 #!/bin/bash
 
+##### IMPORTANT
+if [ -z $(pidof deadd-notification-center) ]
+then
+    deadd-notification-center &
+    notify-send "System" "Done loading notification center"
+else
+    killall deadd-notification-center
+    deadd-notification-center &
+    notify-send "System" "Done reloading notification center"
+fi
+##### IMPORTANT
+
+
 # DOTTIES_DIR=$(find $HOME -type d -name "dotties")
 # LOCATION=$(curl -s "https://location.services.mozilla.com/v1/geolocate?key=geoclue" -m 10 --connect-timeout 10 | awk 'OFS=":" {print $3,$5}' | tr -d ',}')
-
 LOCATION="10.8326:106.6581"
 DOTTIES_DIR="$HOME/dotties"
 POLYBAR="polybar -c $HOME/.config/polybar/config.ini"
@@ -15,7 +27,6 @@ killall redshift
 killall redshift-gtk
 killall nm-applet
 killall pasystray
-killall dunst
 killall sxhkd
 killall ibus-daemon
 killall greenclip
@@ -46,8 +57,6 @@ $EWW daemon &
 redshift-gtk -l $LOCATION &
 nm-applet &
 pasystray &
-flameshot &
-dunst &
 ibus-daemon -drx &
 greenclip daemon &
 /usr/lib/xfce-polkit/xfce-polkit &
@@ -67,7 +76,6 @@ bspc config remove_unplugged_monitors   true
 bspc config borderless_monocle          true
 bspc config gapless_monocle             true
 bspc config focus_by_distance           true
-bspc config history_aware_focus         true
 bspc config ignore_ewmh_struts          true
 
 bspc config border_width 3
@@ -77,6 +85,5 @@ bspc config focused_border_color \#F0C674
 
 bspc rule -a viewnior       state=floating center=true
 bspc rule -a Pavucontrol    state=floating
-bspc rule -a Polybar        layer=below manage=off
 bspc rule -a Rofi			manage=off
-bspc rule -a flameshot      manage=off
+bspc rule -a Polybar        manage=off

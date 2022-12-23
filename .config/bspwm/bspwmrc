@@ -68,13 +68,15 @@ bspc config borderless_monocle          true
 bspc config gapless_monocle             true
 bspc config focus_by_distance           true
 bspc config history_aware_focus         true
-bspc config pointer_modifier            alt
+bspc config ignore_ewmh_struts          true
 
 bspc config border_width 3
 bspc config normal_border_color \#000000
 bspc config active_border_color \#F0C674
 bspc config focused_border_color \#F0C674
 
-bspc rule -a viewnior state=floating center=true
-bspc rule -a Pavucontrol state=floating
-bspc rule -a GitKraken state=floating
+bspc rule -a viewnior       state=floating center=true
+bspc rule -a Pavucontrol    state=floating
+bspc rule -a Polybar        layer=below manage=off
+bspc rule -a Rofi			manage=off
+bspc rule -a flameshot      manage=off

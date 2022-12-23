@@ -29,9 +29,9 @@ sudo systemctl enable NetworkManager.service
 
 # Install Xorg and friends
 sudo pacman -S --needed --noconfirm xorg xorg-apps xorg-server xorg-xinit \
-                                    mesa mesa-utils libva-intel-driver \
+                                    mesa mesa-utils libva-intel-driver mesa-amber \
                                     intel-media-driver vulkan-intel \
-                                    xf86-video-nouveau
+                                    xf86-video-nouveau xf86-video-intel
 
 # Setup my beloved nano
 sudo pacman -S --needed --noconfirm nano
@@ -74,7 +74,7 @@ fi
 # Install BSPWM, rofi, picom (fork), sxhkd, polybar
 # Technically, setup the desktop
 sudo pacman -S --needed --noconfirm bspwm rofi sxhkd polybar dunst feh
-yay -S --noconfirm --removemake picom-ibhagwan-git
+yay -S --noconfirm --removemake picom-pijulius-git
 
 # Install and enable LightDM
 sudo pacman -S --needed --noconfirm lightdm lightdm-gtk-greeter
@@ -105,9 +105,11 @@ sudo pacman -S --needed --noconfirm flameshot
 # Install fonts
 # References: https://www.reddit.com/r/archlinux/comments/a2g77x/what_are_your_default_font_packages_you_install/
 sudo mkdir -p /usr/share/fonts/ && sudo cp -a $DOTTIES_DIR/fonts/. /usr/share/fonts/
+
 sudo pacman -S  --needed --noconfirm  ttf-dejavu ttf-liberation ttf-font-awesome ttf-liberation ttf-droid ttf-ubuntu-font-family \
                                       noto-fonts noto-fonts-cjk noto-fonts-extra noto-fonts-emoji \
                                       adobe-source-han-sans-otc-fonts adobe-source-han-serif-otc-fonts
+
 yay -S  --needed --noconfirm --removemake noto-fonts-tc \
                                           siji-git \
                                           nerd-fonts-complete \
@@ -123,29 +125,25 @@ yay -S catppuccin-gtk-theme-latte
 papirus-folders -C yellow --theme Papirus-Light
 
 # Setup needed packages (for me, you should change) as final run!!!
-# - Thunar        - File manager (+plugins,mpv,xfce-polkit)
-# - neofetch      - Neofetch
-# - btop          - Better htop
-# - Viewnior      - Image viewer
-# - Geany         - GUI text editor
-# - Kitty         - Terminal emulator
-# - xclip         - Commandline clipboard stuffs
-# - font-manager  - Font manager
-# - Peazip        - Archive manager
-# - Plank         - The dock
-# - Komorebi      - Live wallpaper setter (+extensions)
+# - Thunar              - File manager (+plugins,mpv,xfce-polkit)
+# - neofetch            - Neofetch
+# - btop                - Better htop
+# - Viewnior            - Image viewer
+# - Geany               - GUI text editor
+# - Kitty               - Terminal emulator
+# - xclip               - Commandline clipboard stuffs
+# - font-manager        - Font manager
+# - Peazip              - Archive manager
+# - Plank               - The dock
+# - XFCE Power Manager  - Brightness and stuffs
+# - Komorebi            - Live wallpaper setter (+extensions)
 sudo pacman -S --needed --noconfirm thunar neofetch btop viewnior geany kitty xclip font-manager plank
 sudo pacman -S --needed --noconfirm gvfs tumbler ffmpegthumbnailer poppler-glib libgsf libgepub libopenraw freetype2 thunar-volman thunar-archive-plugin thunar-media-tags-plugin mpv
 yay -S --needed --noconfirm --removemake peazip-gtk2-bin komorebi
 sudo pacman -S --needed --noconfirm gst-libav gstreamer-vaapi gst-plugins-bad gst-plugins-base gst-plugins-good gst-plugins-ugly libde265
 yay -S --needed --noconfirm --removemake gst-plugin-libde265
 yay -S --needed --noconfirm --removemake xfce-polkit
-
-# Need to be installed manually I guess?
-# - GitKraken     - I love this Git GUI client
-# - Google Chrome - Web Browser
-# yay -S --needed --noconfirm --removemake gitkraken
-# yay -S --needed --noconfirm --removemake google-chrome
+sudo pacman -S --needed --noconfirm xfce4-power-manager
 
 # Setup files
 mv $HOME/.config/ $HOME/.config_backup/
@@ -199,9 +197,6 @@ then
 
     yay -S --needed --noconfirm auto-cpufreq
     sudo systemctl enable --now auto-cpufreq.service
-
-    # Apps
-    sudo pacman -S --needed --noconfirm xfce4-power-manager
 else
     echo "No battery installed, skipping installing power savers"
 fi

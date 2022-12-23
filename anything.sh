@@ -223,6 +223,5 @@ yay -Sc
 echo "Installation finished!!!"
 echo "And please, for the love of god, DO **NOT** REMOVE THE $DOTTIES_DIR FOLDER!!!! Why? They are **ALL SYMLINKED**!"
 echo "Remember to check $HOME/.config_backup directory"
-echo "And fill your OpenWeatherMap API key in $HOME/.owm-key"
 echo "AND REMEMBER TO REBOOT!!!! DO **NOT** USE 'startx' AFTER THIS!!!"
 echo "That is all, have a good day and happy ricing!"

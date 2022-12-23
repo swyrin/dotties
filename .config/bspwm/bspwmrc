@@ -34,7 +34,7 @@ else
 fi
 
 # Start apps
-picom &
+picom --experimental-backends &
 $POLYBAR top_workspaces &
 $POLYBAR top_center &
 $POLYBAR top_right &

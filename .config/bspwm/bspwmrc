@@ -1,18 +1,5 @@
 #!/bin/bash
 
-##### IMPORTANT
-if [ -z $(pidof deadd-notification-center) ]
-then
-    deadd-notification-center &
-    notify-send "System" "Done loading notification center"
-else
-    killall deadd-notification-center
-    deadd-notification-center &
-    notify-send "System" "Done reloading notification center"
-fi
-##### IMPORTANT
-
-
 # DOTTIES_DIR=$(find $HOME -type d -name "dotties")
 # LOCATION=$(curl -s "https://location.services.mozilla.com/v1/geolocate?key=geoclue" -m 10 --connect-timeout 10 | awk 'OFS=":" {print $3,$5}' | tr -d ',}')
 LOCATION="10.8326:106.6581"
@@ -35,6 +22,7 @@ killall xfce-polkit
 killall xfce4-power-manager
 killall flameshot
 killall komorebi
+killall flameshot
 
 # Set wallpaper?
 if [ $(cat $HOME/.config/bspwm/wallpaper_mode.txt) == "A" ]
@@ -45,7 +33,7 @@ else
 fi
 
 # Start apps
-picom --experimental-backends &
+picom --experimental-backend &
 $POLYBAR top_workspaces &
 $POLYBAR top_center &
 $POLYBAR top_right &
@@ -61,11 +49,12 @@ ibus-daemon -drx &
 greenclip daemon &
 /usr/lib/xfce-polkit/xfce-polkit &
 xfce4-power-manager --daemon
+flameshot &
 
 # ================================
+
 bspc monitor -d 1 2 3 4 5 6 7
 bspc config window_gap          10
-
 bspc config pointer_action1 move
 bspc config pointer_action2 resize_side
 bspc config pointer_action2 resize_corner
@@ -75,15 +64,16 @@ bspc config remove_disabled_monitors    true
 bspc config remove_unplugged_monitors   true
 bspc config borderless_monocle          true
 bspc config gapless_monocle             true
-bspc config focus_by_distance           true
-bspc config ignore_ewmh_struts          true
 
-bspc config border_width 3
-bspc config normal_border_color \#000000
-bspc config active_border_color \#F0C674
-bspc config focused_border_color \#F0C674
+bspc config border_width 4
+bspc config normal_border_color "#1f1e33"
+bspc config active_border_color "#FFB6C1"
+bspc config focused_border_color "#FFB6C1"
+bspc config urgent_border_color "#FF0000"
 
 bspc rule -a viewnior       state=floating center=true
 bspc rule -a Pavucontrol    state=floating
 bspc rule -a Rofi			manage=off
-bspc rule -a Polybar        manage=off
+
+# https://wiki.archlinux.org/title/bspwm#Problems_with_Java_applications
+wmname LG3D

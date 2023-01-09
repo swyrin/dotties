@@ -23,7 +23,7 @@ Print
     flameshot full --clipboard
 
 super + shift + s
-    $HOME/dotties/flameshot.sh
+    flameshot gui --clipboard
 
 # Set static wallpaper
 ctrl + shift + a

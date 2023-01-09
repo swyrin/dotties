@@ -23,7 +23,7 @@ sudo sed -i 's/#ParallelDownloads = 5/ParallelDownloads = 5/g' /etc/pacman.conf
 sudo pacman -Syu --noconfirm
 
 # Install server packages
-# I assume that you will run this file after boot Arch for the first time
+# I assume that you will run this file after booting Arch for the first time
 sudo pacman -S --needed --noconfirm pulseaudio networkmanager
 sudo systemctl enable NetworkManager.service
 
@@ -71,11 +71,14 @@ else
   echo "AUR helper yay already installed"
 fi
 
-# Install BSPWM, rofi, picom (fork), sxhkd, polybar, notification center(TM)
+# Install BSPWM, rofi, picom (fork), sxhkd, polybar, notification center(TM), eww
 # Technically, setup the desktop
-sudo pacman -S --needed --noconfirm bspwm rofi sxhkd polybar feh
-yay -S --noconfirm --removemake picom-pijulius-git
-yay -S --noconfirm --removemake deadd-notification-center-bin notify-send-py
+sudo pacman -S --needed --noconfirm rofi sxhkd feh
+yay -S --needed --noconfirm --removemake eww
+yay -S --needed --noconfirm --removemake bspwm-git
+yay -S --needed --noconfirm --removemake picom-animations-git
+yay -S --needed --noconfirm --removemake polybar-git
+yay -S --needed --noconfirm --removemake deadd-notification-center-bin notify-send-py
 
 # Install and enable LightDM
 sudo pacman -S --needed --noconfirm lightdm lightdm-gtk-greeter
@@ -122,7 +125,7 @@ yay -S --needed --noconfirm --removemake rofi-greenclip
 # Install GTK themes
 wget -qO- https://git.io/papirus-icon-theme-install | sh
 wget -qO- https://git.io/papirus-folders-install | sh
-yay -S catppuccin-gtk-theme-latte
+yay -S --needed --noconfirm --removemake catppuccin-gtk-theme-latte
 papirus-folders -C yellow --theme Papirus-Light
 
 # Setup needed packages (for me, you should change) as final run!!!
@@ -176,6 +179,7 @@ then
     # Intel HW acceleration
     sudo pacman -S --needed --noconfirm intel-media-driver libva-intel-driver
     sudo sed -i 's/MODULES=()/MODULES=(i915,i965,iHD)/g' /etc/mkinitcpio.conf
+    sudo mkinitcpio -P
 
     # Powertop
     sudo pacman -S --needed --noconfirm powertop
@@ -187,7 +191,7 @@ then
     sudo systemctl enable --now acpid.service
 
     sudo pacman -S --needed --noconfirm tlp tlp-rdw
-    yay -S --needed --noconfirm tlpui
+    yay -S --needed --noconfirm --removemake tlpui
     sudo systemctl enable --now tlp.service
     sudo systemctl mask systemd-rfkill.service
     sudo systemctl mask systemd-rfkill.socket
@@ -195,7 +199,7 @@ then
     sudo pacman -S --needed --noconfirm thermald
     sudo systemctl enable --now thermald.service
 
-    yay -S --needed --noconfirm auto-cpufreq
+    yay -S --needed --noconfirm --removemake auto-cpufreq
     sudo systemctl enable --now auto-cpufreq.service
 else
     echo "No battery installed, skipping installing power savers"

@@ -59,10 +59,6 @@ greenclip daemon &
 xfce4-power-manager --daemon
 flameshot &
 
-# https://github.com/dunst-project/dunst/issues/611#issue-418030618
-# TL;DR: startx shuts notify-send, so this is a workaround.
-source /etc/X11/xinit/xinitrc.d/50-systemd-user.sh
-
 # https://wiki.archlinux.org/title/bspwm#Problems_with_Java_applications
 # use both methods
 wmname LG3D

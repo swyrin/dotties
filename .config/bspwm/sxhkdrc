@@ -77,7 +77,7 @@ ctrl + alt + a
 
 # quit/restart bspwm
 super + alt + {q,r}
-	bspc {quit,wm -r} && notify-send "BSPWM" "Successfully reset" --expire-time=500;
+	bspc {quit,wm -r} && notify-send "BSPWM" "Resetting the WM" --expire-time=500;
 
 # close and kill
 super + {_,shift + }w

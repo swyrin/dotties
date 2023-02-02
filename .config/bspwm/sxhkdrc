@@ -25,22 +25,6 @@ Print
 super + shift + s
     flameshot gui --clipboard
 
-# Set static wallpaper
-ctrl + shift + a
-    killall komorebi; \
-    feh --no-fehbg --bg-fill $HOME/dotties/assets/desktop.png && \
-    echo "S" > $HOME/.config/bspwm/wallpaper_mode.txt; \
-    notify-send "System" "Using static wallpaper" --expire-time=1000 \ 
-        -i $HOME/dotties/assets/desktop.png;
-    
-# Set animated wallpaper
-ctrl + alt + a
-    killall komorebi; \
-    komorebi & > /dev/null; \
-    echo "A" > $HOME/.config/bspwm/wallpaper_mode.txt; \
-    notify-send "System" "Using animated wallpaper" --expire-time=1000 \ 
-        -i $HOME/dotties/assets/desktop.png;
-
 @XF86AudioMute
     pactl set-sink-mute @DEFAULT_SINK@ toggle && \
     stat=`pacmd list-sinks | awk '/muted/ \{print $2\}'` && \

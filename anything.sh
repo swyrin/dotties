@@ -116,10 +116,12 @@ papirus-folders -C yellow --theme Papirus-Light
 # - font-manager        - Font manager
 # - Peazip              - Archive manager
 # - XFCE Power Manager  - Brightness and stuffs
+# - btop                - Think it like the infamous "Task Manager" on Windows
 # - GNOME Keyring       - Password storage (+libsecret)
 $YAY    rofi-greenclip \
         peazip-gtk2-bin \
-        xfce-polkit
+        xfce-polkit \
+        btop
 
 $PACMAN thunar gvfs tumbler ffmpegthumbnailer poppler-glib libgsf libgepub libopenraw freetype2 thunar-volman thunar-archive-plugin thunar-media-tags-plugin mpv \
         viewnior \
@@ -132,16 +134,8 @@ $PACMAN thunar gvfs tumbler ffmpegthumbnailer poppler-glib libgsf libgepub libop
 
 # **WARNING**: BLOATWARES ZONE!!!!!!!!!
 # Which means: They are classified as "bloatwares" and DO NOT serve any purposes!!!
-# - Komorebi            - Live wallpaper setter (+extensions)
 # - pfetch              - Neofetch but simplified
-# - btop                - Better htop
-$YAY    komorebi gst-plugin-libde265 \
-        pfetch
-
-$PACMAN gst-libav gstreamer-vaapi \
-        gst-plugins-bad gst-plugins-base gst-plugins-good gst-plugins-ugly \
-        libde265 \
-        btop
+# $YAY pfetch
 
 # Setup files
 mv $HOME/.config/ $HOME/.config_backup/
@@ -151,13 +145,11 @@ sudo ln -sf $DOTTIES_DIR/.config/polybar/ $HOME/.config/
 sudo ln -sf $DOTTIES_DIR/.config/systemd/ $HOME/.config/
 sudo ln -sf $DOTTIES_DIR/.config/kitty/ $HOME/.config/
 sudo ln -sf $DOTTIES_DIR/.config/picom/ $HOME/.config/
-sudo ln -sf $DOTTIES_DIR/.config/vis/ $HOME/.config/
 sudo ln -sf $DOTTIES_DIR/.config/Thunar/ $HOME/.config/
 sudo ln -sf $DOTTIES_DIR/.config/rofi/ $HOME/.config/
 sudo ln -sf $DOTTIES_DIR/.config/flameshot/ $HOME/.config/
 sudo ln -sf $DOTTIES_DIR/.config/gtk-3.0/ $HOME/.config/
 sudo ln -sf $DOTTIES_DIR/.config/eww/ $HOME/.config/
-sudo ln -sf $DOTTIES_DIR/.config/komorebi/ $HOME/.config/
 sudo ln -sf $DOTTIES_DIR/.config/deadd/ $HOME/.config/
 sudo ln -sf $DOTTIES_DIR/.zshrc $HOME/.zshrc
 sudo ln -sf $DOTTIES_DIR/.xinitrc $HOME/.xinitrc

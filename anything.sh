@@ -44,6 +44,10 @@ grep "set linenumbers" $HOME/.nanorc || echo "set linenumbers" >> $HOME/.nanorc
 grep "set tabstospaces" $HOME/.nanorc || echo "set tabstospaces" >> $HOME/.nanorc
 grep "set tabsize 4" $HOME/.nanorc || echo "set tabsize 4" >> $HOME/.nanorc
 
+# Setup firewalld
+$PACMAN firewalld
+$SYSCTL_ENABLE firewalld.service
+
 # Install yay AUR helper
 if [ -z $(which yay) ]
 then
@@ -53,6 +57,16 @@ then
   cd ..
   sudo rm -r yay
 fi
+
+# Build optimization for make
+# 1. https://wiki.archlinux.org/title/makepkg#Building_optimized_binaries
+# 2. https://wiki.archlinux.org/title/makepkg#Improving_compile_times
+# Normally sse{,2,3}, mmx and 3dnow! are included in new CPUs
+# Use '-ftree-vectorize' to abuse ymm registers
+# further reading: https://en.wikipedia.org/wiki/3DNow!
+sudo sed -i 's/#MAKEFLAGS=\"-j2\"/MAKEFLAGS=\"-j\$\(nproc\)\"/g' /etc/makepkg.conf
+sudo sed -i 's/-march=x86-64 -mtune=generic/-march=native -ftree-vectorize -fomit-frame-pointer/g' /etc/makepkg.conf
+sudo sed -i 's/#RUSTFLAGS=\"-C opt-level=2\"/RUSTFLAGS=\"-C opt-level=2 -C target-cpu=native\"/g' /etc/makepkg.conf
 
 # Install BSPWM, rofi, picom (fork), sxhkd, polybar, notification center(TM), eww
 # Technically, setup the desktop
@@ -82,7 +96,7 @@ $PACMAN ttf-dejavu ttf-liberation ttf-font-awesome ttf-liberation ttf-droid ttf-
 
 $YAY noto-fonts-tc \
      siji-git \
-     nerd-fonts-complete \
+     nerd-fonts-git \
      tf-unifont ttf-gelasio-ib ttf-caladea ttf-material-design-icons ttf-carlito ttf-liberation-sans-narrow ttf-ms-fonts ttf-material-icons-git
 
 
@@ -95,8 +109,6 @@ papirus-folders -C yellow --theme Papirus-Light
 # Setup needed packages (for me, you should change) as final run!!!
 # - Greenclip           - Clipboard manager for rofi
 # - Thunar              - File manager (+plugins,mpv,xfce-polkit)
-# - pfetch              - Neofetch but simplified (+cat patch)
-# - btop                - Better htop
 # - Viewnior            - Image viewer
 # - Geany               - GUI text editor
 # - Kitty               - Terminal emulator
@@ -104,27 +116,32 @@ papirus-folders -C yellow --theme Papirus-Light
 # - font-manager        - Font manager
 # - Peazip              - Archive manager
 # - XFCE Power Manager  - Brightness and stuffs
-# - Komorebi            - Live wallpaper setter (+extensions) -
+# - GNOME Keyring       - Password storage (+libsecret)
 $YAY    rofi-greenclip \
-        pfetch \
         peazip-gtk2-bin \
-        komorebi \
-        gst-plugin-libde265 \
         xfce-polkit
 
 $PACMAN thunar gvfs tumbler ffmpegthumbnailer poppler-glib libgsf libgepub libopenraw freetype2 thunar-volman thunar-archive-plugin thunar-media-tags-plugin mpv \
-        btop \
         viewnior \
         geany \
         kitty \
         xclip \
         font-manager \
-        xfce4-power-manager
+        xfce4-power-manager \
+        gnome-keyring libsecret libgnome-keyring
 
-# Stuffs for komorebi
+# **WARNING**: BLOATWARES ZONE!!!!!!!!!
+# Which means: They are classified as "bloatwares" and DO NOT serve any purposes!!!
+# - Komorebi            - Live wallpaper setter (+extensions)
+# - pfetch              - Neofetch but simplified
+# - btop                - Better htop
+$YAY    komorebi gst-plugin-libde265 \
+        pfetch
+
 $PACMAN gst-libav gstreamer-vaapi \
         gst-plugins-bad gst-plugins-base gst-plugins-good gst-plugins-ugly \
-        libde265
+        libde265 \
+        btop
 
 # Setup files
 mv $HOME/.config/ $HOME/.config_backup/
@@ -135,7 +152,6 @@ sudo ln -sf $DOTTIES_DIR/.config/systemd/ $HOME/.config/
 sudo ln -sf $DOTTIES_DIR/.config/kitty/ $HOME/.config/
 sudo ln -sf $DOTTIES_DIR/.config/picom/ $HOME/.config/
 sudo ln -sf $DOTTIES_DIR/.config/vis/ $HOME/.config/
-sudo ln -sf $DOTTIES_DIR/.config/btop/ $HOME/.config/
 sudo ln -sf $DOTTIES_DIR/.config/Thunar/ $HOME/.config/
 sudo ln -sf $DOTTIES_DIR/.config/rofi/ $HOME/.config/
 sudo ln -sf $DOTTIES_DIR/.config/flameshot/ $HOME/.config/
@@ -199,6 +215,7 @@ yay -Sc
 #       3. You should consume these links for more battery saving on laptops:
 #           https://wiki.archlinux.org/title/Power_management
 #           https://wiki.archlinux.org/title/CPU_frequency_scaling
+#       4. If you can, use `linux-zen` kernel instead.
 
 # Bye!
 echo "Installation finished!!!"

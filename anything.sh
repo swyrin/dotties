@@ -161,11 +161,6 @@ rm -rf $DOTTIES_DIR/.config_backup/
 # Setup battery saving "bloatwares"
 if ! [ -z $(upower) ];
 then
-    # Intel HW acceleration
-    $PACMAN intel-media-driver libva-intel-driver
-    sudo sed -i 's/MODULES=()/MODULES=(i915,i965,iHD)/g' /etc/mkinitcpio.conf
-    sudo mkinitcpio -P
-
     # Powertop
     $PACMAN powertop
     sudo cp $DOTTIES_DIR/.config/systemd/system/powertop.service /etc/systemd/system/powertop.service

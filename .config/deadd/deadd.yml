@@ -121,10 +121,10 @@ notification:
 
     ### The margin around the top, bottom, left, and right of
     ### notification images.
-    margin-top: 15
-    margin-bottom: 15
-    margin-left: 15
-    margin-right: 0
+    margin-top: 60
+    margin-bottom: 60
+    # margin-left: 0
+    margin-right: 10
 
   ### Apply modifications to certain notifications:
   ### Each modification rule needs a "match" and either a "modify" or

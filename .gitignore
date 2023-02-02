@@ -1,8 +1,8 @@
-.config/btop
+.config/btop/
 .config/polybar/.curplayer.log
 .config/eww/hosf/images/
 .config/systemd/user/default.target.wants
 .config/systemd/user/graphical.target.wants
 .config/systemd/user/multi-user.target.wants
 .config/gtk-3.0/bookmarks
-.config/vis/vis.log
+.config/vis/

@@ -29,18 +29,9 @@ killall eww
 killall xfce-polkit
 killall xfce4-power-manager
 killall flameshot
-killall komorebi
-killall flameshot
-
-# Set wallpaper?
-if [ $(cat $HOME/.config/bspwm/wallpaper_mode.txt) == "A" ]
-then
-    komorebi &
-else
-    feh --bg-fill $DOTTIES_DIR/assets/desktop.png --no-fehbg
-fi
 
 # Start apps
+feh --bg-fill $DOTTIES_DIR/assets/desktop.png --no-fehbg
 picom --experimental-backend &
 $POLYBAR top_workspaces &
 $POLYBAR top_center &
@@ -86,4 +77,3 @@ bspc config urgent_border_color "#FF0000"
 bspc rule -a viewnior       state=floating center=true
 bspc rule -a Pavucontrol    state=floating
 bspc rule -a Rofi			manage=off
-

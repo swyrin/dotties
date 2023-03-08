@@ -6,7 +6,10 @@ export XMODIFIERS=@im=ibus
 export QT4_IM_MODULE=ibus
 export CLUTTER_IM_MODULE=ibus
 export _JAVA_AWT_WM_NONREPARENTING=1
-export PF_ASCII="Catppuccin"
+
+# If you use the patch:
+# https://github.com/andreasgrafen/pfetch-with-kitties
+# export PF_ASCII="Catppuccin"
 
 # DOTTIES_DIR=$(find $HOME -type d -name "dotties")
 # LOCATION=$(curl -s "https://location.services.mozilla.com/v1/geolocate?key=geoclue" -m 10 --connect-timeout 10 | awk 'OFS=":" {print $3,$5}' | tr -d ',}')
@@ -31,9 +34,9 @@ killall xfce4-power-manager
 killall flameshot
 
 # Start apps
-feh --bg-fill $DOTTIES_DIR/assets/desktop.png --no-fehbg
-picom --experimental-backend &
-$POLYBAR top_workspaces &
+feh --bg-fill $DOTTIES_DIR/assets/hosf.png --no-fehbg
+picom --experimental-backends &
+$POLYBAR top_left &
 $POLYBAR top_center &
 $POLYBAR top_right &
 # $POLYBAR bottom_left &
@@ -51,7 +54,7 @@ xfce4-power-manager --daemon
 flameshot &
 
 # https://wiki.archlinux.org/title/bspwm#Problems_with_Java_applications
-# use both methods
+export _JAVA_AWT_WM_NONREPARENTING=1
 wmname LG3D
 
 # ===============================
@@ -75,5 +78,6 @@ bspc config focused_border_color "#F0C674"
 bspc config urgent_border_color "#FF0000"
 
 bspc rule -a viewnior       state=floating center=true
-bspc rule -a Pavucontrol    state=floating
+bspc rule -a Pavucontrol    state=floating center=true
 bspc rule -a Rofi			manage=off
+bspc rule -a Peazip         state=floating center=true

@@ -6,7 +6,6 @@
 #
 # Basically this is just my autosetup file when I (re)install Arch (btw)!
 # ###############################################
-
 # ONE MORE LAST WORD: THIS SCRIPT IS MEANT FOR **ME**!!!!!!!!!!!!!!!!!
 
 # For debugging sake, but it *should* work as I want
@@ -75,7 +74,10 @@ $YAY    eww \
         bspwm-git \
         picom-animations-git \
         polybar-git \
-        deadd-notification-center-bin notify-send-py
+		dunst \
+        alttab-git \
+        xwinwrap-git
+#       deadd-notification-center-bin notify-send-py
 
 # Install stuffs for notifications
 $PACMAN playerctl brightnessctl
@@ -91,14 +93,13 @@ $PACMAN redshift python-gobject \
 sudo mkdir -p /usr/share/fonts/ && sudo cp -a $DOTTIES_DIR/fonts/. /usr/share/fonts/
 
 $PACMAN ttf-dejavu ttf-liberation ttf-font-awesome ttf-liberation ttf-droid ttf-ubuntu-font-family \
+        ttf-jetbrains-mono-nerd \
         noto-fonts noto-fonts-cjk noto-fonts-extra noto-fonts-emoji \
         adobe-source-han-sans-otc-fonts adobe-source-han-serif-otc-fonts
 
 $YAY noto-fonts-tc \
      siji-git \
-     nerd-fonts-git \
      tf-unifont ttf-gelasio-ib ttf-caladea ttf-material-design-icons ttf-carlito ttf-liberation-sans-narrow ttf-ms-fonts ttf-material-icons-git
-
 
 # Setup GTK themes
 wget -qO- https://git.io/papirus-icon-theme-install | sh
@@ -150,7 +151,7 @@ sudo ln -sf $DOTTIES_DIR/.config/rofi/ $HOME/.config/
 sudo ln -sf $DOTTIES_DIR/.config/flameshot/ $HOME/.config/
 sudo ln -sf $DOTTIES_DIR/.config/gtk-3.0/ $HOME/.config/
 sudo ln -sf $DOTTIES_DIR/.config/eww/ $HOME/.config/
-sudo ln -sf $DOTTIES_DIR/.config/deadd/ $HOME/.config/
+sudo ln -sf $DOTTIES_DIR/.config/dunst/ $HOME/.config/
 sudo ln -sf $DOTTIES_DIR/.zshrc $HOME/.zshrc
 sudo ln -sf $DOTTIES_DIR/.xinitrc $HOME/.xinitrc
 sudo ln -sf $DOTTIES_DIR/.p10k.zsh $HOME/.p10k.zsh
@@ -191,6 +192,10 @@ fi
 # Post-install stuffs
 $SYSCTL_ENABLE_USER sxhkd.service
 $SYSCTL_ENABLE_USER greenclip.service
+
+# xdg directories because why not? they are the standard!
+$PACMAN xdg-user-dirs
+LC_ALL=C xdg-user-dirs-update --force
 
 # Clear PM cache
 sudo pacman -Sc

@@ -16,6 +16,7 @@
     font = Jetbrains Mono
     alignment = center
     word_wrap = yes
+    frame_color = "#F0C674"
 
     format = "<b>%s</b>\n%b"
     icon_theme = "Papirus"
@@ -28,12 +29,10 @@
     markup = full
 
 [urgency_low]
-    frame_color = "#808080"
     background = "#FFFFFF"
     foreground = "#000000"
 
 [urgency_normal]
-    frame_color = "#F0C674"
     background = "#FFFFFF"
     foreground = "#000000"
 

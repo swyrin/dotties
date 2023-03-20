@@ -2,7 +2,7 @@
 # wm independent hotkeys
 #
 
-# Switch wallpaper
+# Switch wallpaper mode
 super + shift + w
     mode=`cat $HOME/.config/bspwm/wallpaper_mode.txt`; \
     if [ $mode = "A" ]; \
@@ -30,6 +30,10 @@ super + Return
 super + r
 	rofi -show drun
 
+# emoji picker
+super + e
+    rofi -modi emoji -show emoji
+
 # The button at top right corner
 super + shift + r
     $HOME/.config/rofi/powermenu.sh
@@ -47,34 +51,25 @@ super + shift + s
     flameshot gui
 
 @XF86AudioMute
-    pactl set-sink-mute @DEFAULT_SINK@ toggle && \
-    stat=`pacmd list-sinks | awk '/muted/ \{print $2\}'` && \
-    notify-send "Audio" "Is Muted: $stat" --expire-time=500
+    pactl set-sink-mute @DEFAULT_SINK@ toggle;
+    notify-send "Audio" "Switching mute status" --expire-time=500
 
 @XF86Audio{Raise,Lower}Volume
-    stat=$(pactl get-sink-volume @DEFAULT_SINK@ | awk '\{printf substr($5,1,3)\}' | sed 's/%//g');\
-    pactl set-sink-volume @DEFAULT_SINK@ {+,-}1%; \
-    notify-send "System" "Volume set at $((stat {+,-} 1))%" --expire-time=500 -u low -h int:value:$stat -h string:synchronous:volumectrl;
+    stat=$(pactl get-sink-volume @DEFAULT_SINK@ | awk '\{printf substr($5,1,3)\}' | sed 's/%//g') && \
+    pactl set-sink-volume @DEFAULT_SINK@ {+,-}1% && \
+    notify-send "Audio" "Volume set at $((stat {+,-} 1))%" --expire-time=500 -u low -h int:value:$stat -h string:synchronous:volumectrl
     
 @XF86AudioPlay
-    playerctl play-pause && notify-send "Playback" "Toggled playback status" --expire-time=500
+    playerctl play-pause && notify-send "Audio" "Toggled playback status" --expire-time=500
 
 @XF86AudioStop
-    playerctl stop && notify-send "Playback "Stopped playback" --expire-time=500
+    playerctl stop && notify-send "Audio" "Stopped playback" --expire-time=500
 
 @XF86Audio{Prev,Next}
     playerctl {previous,next} && notify-send "Playback" "Switching track" --expire-time=500
 
 @XF86MonBrightness{Down,Up}
-    max=$( cat /sys/class/backlight/intel_backlight/max_brightness ); \
-    unit=$(( $max / 100 )); \
-    now=$( cat /sys/class/backlight/intel_backlight/brightness ); \
-    now=$(( $now {-,+} $unit )); \
-    now=$(( $now >= 0 ? $now : 0 )); \
-    now=$(( $now <= $unit * 100 ? $now : $unit * 100 )); \
-    per=$(( $now / $unit )); \
-    brightnessctl s $now --quiet && \
-    notify-send "Brightness $per%" --expire-time=500 -u low -h int:value:$per -h string:synchronous:brightnesscrtl;
+    xbacklight -{inc,dec} 5
     
 #
 # bspwm hotkeys

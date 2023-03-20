@@ -16,7 +16,7 @@ echo "The script *might* ask you the password below"
 sudo sed -i 's/#Color/Color/g' /etc/pacman.conf
 sudo sed -i 's/#ParallelDownloads = 5/ParallelDownloads = 5/g' /etc/pacman.conf
 
-# fast commands
+# fast commands typing?
 PACMAN="sudo pacman -S --needed --noconfirm"
 YAY="yay -S --needed --noconfirm --removemake"
 SYSCTL_ENABLE="sudo systemctl enable --now"
@@ -25,36 +25,40 @@ SYSCTL_ENABLE_USER="systemctl enable --user --now"
 # As usual, pacman -Syu
 sudo pacman -Syu --noconfirm
 
-# Install packages for sounds and internet
-$PACMAN networkmanager \
-        pulseaudio
+# Install packages for sound
+$PACMAN pipewire wireplumber qpwgraph pipewire-audio pipewire-alsa pipewire-pulse pipewire-jack
+$SYSCTL_ENABLE pipewire-pulse.service
+$SYSCTL_ENABLE pipewire-pulse.socket
+$PACMAN easyeffects calf lsp-plugins-lv2 zam-plugins-lv2 mda.lv2 yelp
+echo "1" > bash -c "$(curl -fsSL https://raw.githubusercontent.com/JackHack96/PulseEffects-Presets/master/install.sh)"
+
+# Install package for internet
+$PACMAN networkmanager wpa_supplicant dhcpcd
+$SYSCTL_ENABLE wpa_supplicant.service
 $SYSCTL_ENABLE NetworkManager.service
 
 # Install Xorg and friends
 $PACMAN xorg xorg-apps xorg-xinit \
-        mesa mesa-utils libva-intel-driver mesa-amber \
+        mesa mesa-utils libva-intel-driver libva-mesa-driver mesa-amber \
         intel-media-driver vulkan-intel \
         xf86-video-nouveau xf86-video-intel
 
 # Setup my beloved nano
-$PACMAN nano unzip wget
+$PACMAN nano unzip wget curl
 wget https://raw.githubusercontent.com/scopatz/nanorc/master/install.sh -O- | sh
 grep "set linenumbers" $HOME/.nanorc || echo "set linenumbers" >> $HOME/.nanorc
 grep "set tabstospaces" $HOME/.nanorc || echo "set tabstospaces" >> $HOME/.nanorc
 grep "set tabsize 4" $HOME/.nanorc || echo "set tabsize 4" >> $HOME/.nanorc
 
-# Setup firewalld
-$PACMAN firewalld
-$SYSCTL_ENABLE firewalld.service
-
 # Install yay AUR helper
 if [ -z $(which yay) ]
 then
-  git clone https://aur.archlinux.org/yay.git
-  cd yay
-  makepkg -si --noconfirm
-  cd ..
-  sudo rm -r yay
+    git clone https://aur.archlinux.org/yay.git
+    cd yay
+    makepkg -si --noconfirm
+    cd ..
+    sudo rm -r yay
+    sudo pacman -Rc $(pacman -Qqs go)
 fi
 
 # Build optimization for make
@@ -67,7 +71,22 @@ sudo sed -i 's/#MAKEFLAGS=\"-j2\"/MAKEFLAGS=\"-j\$\(nproc\)\"/g' /etc/makepkg.co
 sudo sed -i 's/-march=x86-64 -mtune=generic/-march=native -ftree-vectorize -fomit-frame-pointer/g' /etc/makepkg.conf
 sudo sed -i 's/#RUSTFLAGS=\"-C opt-level=2\"/RUSTFLAGS=\"-C opt-level=2 -C target-cpu=native\"/g' /etc/makepkg.conf
 
-# Install BSPWM, rofi, picom (fork), sxhkd, polybar, notification center(TM), eww
+# Setup firewalld
+$PACMAN firewalld
+$SYSCTL_ENABLE firewalld.service
+
+# Setup clamav
+# I consider this a bloatware.
+# Either buy some RAM and give yourself an extra layer of protection.
+# Or don't download bad stuffs, it's up to you.
+# $PACMAN clamav
+# sudo freshclam
+# $SYSCTL_ENABLE clamav-freshclam.service
+# $SYSCTL_ENABLE clamav-daemon.service
+# $YAY clamav-unofficial-sigs
+# $SYSCTL_ENABLE clamav-unofficial-sigs.timer
+
+# Install BSPWM, rofi, picom (fork), sxhkd, polybar, dunst, eww, xwinwrap
 # Technically, setup the desktop
 $PACMAN rofi sxhkd feh
 $YAY    eww \
@@ -77,10 +96,9 @@ $YAY    eww \
 		dunst \
         alttab-git \
         xwinwrap-git
-#       deadd-notification-center-bin notify-send-py
 
 # Install stuffs for notifications
-$PACMAN playerctl brightnessctl
+$PACMAN playerctl
 
 # Install stuffs for system tray
 $PACMAN redshift python-gobject \
@@ -92,14 +110,15 @@ $PACMAN redshift python-gobject \
 # References: https://www.reddit.com/r/archlinux/comments/a2g77x/what_are_your_default_font_packages_you_install/
 sudo mkdir -p /usr/share/fonts/ && sudo cp -a $DOTTIES_DIR/fonts/. /usr/share/fonts/
 
-$PACMAN ttf-dejavu ttf-liberation ttf-font-awesome ttf-liberation ttf-droid ttf-ubuntu-font-family \
+$PACMAN ttf-nerd-fonts-symbols-1000-em-mono ttf-nerd-fonts-symbols-common \
+        ttf-dejavu ttf-liberation ttf-font-awesome ttf-liberation ttf-droid ttf-ubuntu-font-family \
         ttf-jetbrains-mono-nerd \
         noto-fonts noto-fonts-cjk noto-fonts-extra noto-fonts-emoji \
         adobe-source-han-sans-otc-fonts adobe-source-han-serif-otc-fonts
 
 $YAY noto-fonts-tc \
      siji-git \
-     tf-unifont ttf-gelasio-ib ttf-caladea ttf-material-design-icons ttf-carlito ttf-liberation-sans-narrow ttf-ms-fonts ttf-material-icons-git
+     ttf-unifont ttf-gelasio-ib ttf-caladea ttf-material-design-icons ttf-carlito ttf-liberation-sans-narrow ttf-ms-fonts ttf-material-icons-git ttf-symbola
 
 # Setup GTK themes
 wget -qO- https://git.io/papirus-icon-theme-install | sh
@@ -116,12 +135,13 @@ papirus-folders -C yellow --theme Papirus-Light
 # - xclip               - Commandline clipboard stuffs
 # - font-manager        - Font manager
 # - Peazip              - Archive manager
-# - XFCE Power Manager  - Brightness and stuffs
+# - Illum               - Brightness setter
 # - btop                - Think it like the infamous "Task Manager" on Windows
+# - polkit-gnome        - GNOME polkit
 # - GNOME Keyring       - Password storage (+libsecret)
+# - rofi-emoji          - Emoji picker for rofi
 $YAY    rofi-greenclip \
-        peazip-gtk2-bin \
-        xfce-polkit \
+        peazip-qt-bin \
         btop
 
 $PACMAN thunar gvfs tumbler ffmpegthumbnailer poppler-glib libgsf libgepub libopenraw freetype2 thunar-volman thunar-archive-plugin thunar-media-tags-plugin mpv \
@@ -131,12 +151,10 @@ $PACMAN thunar gvfs tumbler ffmpegthumbnailer poppler-glib libgsf libgepub libop
         xclip \
         font-manager \
         xfce4-power-manager \
-        gnome-keyring libsecret libgnome-keyring
-
-# **WARNING**: BLOATWARES ZONE!!!!!!!!!
-# Which means: They are classified as "bloatwares" and DO NOT serve any purposes!!!
-# - pfetch              - Neofetch but simplified
-# $YAY pfetch
+        gnome-keyring libsecret libgnome-keyring \
+        polkit-gnome \
+        rofi-emoji \
+        xdg-user-dirs
 
 # Setup files
 mv $HOME/.config/ $HOME/.config_backup/
@@ -185,16 +203,15 @@ then
     # auto-cpufreq
     $YAY auto-cpufreq
     $SYSCTL_ENABLE auto-cpufreq.service
-else
-    echo "No battery installed, skipping installing power savers"
+
+    # Install battery icon
+    $PACMAN cbatticon
 fi
 
 # Post-install stuffs
+$SYSCTL_ENABLE illum.service
 $SYSCTL_ENABLE_USER sxhkd.service
 $SYSCTL_ENABLE_USER greenclip.service
-
-# xdg directories because why not? they are the standard!
-$PACMAN xdg-user-dirs
 LC_ALL=C xdg-user-dirs-update --force
 
 # Clear PM cache

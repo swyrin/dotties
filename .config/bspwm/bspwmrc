@@ -18,6 +18,8 @@ POLYBAR="polybar -c $HOME/.config/polybar/config.ini"
 EWW="eww -c $HOME/.config/eww/hosf"
 
 # Kill processes
+killall cbatticon
+killall easyeffects
 killall alttab
 killall picom
 killall polybar
@@ -29,16 +31,15 @@ killall sxhkd
 killall ibus-daemon
 killall greenclip
 killall eww
-killall xfce-polkit
-killall xfce4-power-manager
+killall polkit-gnome-authentication-agent-1
 killall flameshot
+killall xbacklight-notify
 killall dunst
 killall mpv
 killall xwinwrap
 
 # Start apps
 picom --experimental-backends &
-feh --bg-fill $DOTTIES_DIR/assets/hosf.png --no-fehbg
 $POLYBAR top_left &
 $POLYBAR top_center &
 $POLYBAR top_right &
@@ -53,21 +54,31 @@ nm-applet &
 pasystray &
 ibus-daemon -drx &
 greenclip daemon &
-/usr/lib/xfce-polkit/xfce-polkit &
-xfce4-power-manager --daemon
+# /usr/lib/xfce-polkit/xfce-polkit &
+# xfce4-power-manager --daemon
+/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+cbatticon &
+xbacklight-notify --timeout 1 &
 flameshot &
-alttab -fg "#d58681" -bg "#4a4a4a" -frame "#f0c674" -t 128x150 -i 127x64 -font "Jetbrains Mono" &
+alttab -w 1 -fg "#d58681" -bg "#4a4a4a" -frame "#f0c674" -t 128x150 -i 127x64 -font "Jetbrains Mono" &
 
-# Wallpaper set
+# Easy effects setup
+if ! pgrep -f /usr/bin/easyeffects; then
+    easyeffects --gapplication-service &
+fi
+
+# Wallpaper setup
 if [ $(cat $HOME/.config/bspwm/wallpaper_mode.txt) = "A" ];
 then
     xwinwrap -fs -fdt -ni -b -nf -- \
         mpv --no-audio --loop --hwdec=vaapi -wid %WID $HOME/dotties/assets/hosf_trim.mp4 &
+else
+    feh --bg-fill $DOTTIES_DIR/assets/hosf.png --no-fehbg
 fi
 
 # https://wiki.archlinux.org/title/bspwm#Problems_with_Java_applications
 export _JAVA_AWT_WM_NONREPARENTING=1
-wmname LG3D
+wmname Amiya
 
 # ===============================
 #  BSPWM zone
@@ -92,8 +103,8 @@ bspc config urgent_border_color "#FF0000"
 bspc rule -a viewnior       state=floating center=true
 bspc rule -a Pavucontrol    state=floating center=true
 bspc rule -a Rofi			manage=off
-bspc rule -a Peazip         state=floating center=true
-
+bspc rule -a PeaZip         state=floating center=true
+bspc rule -a easyeffects    state=floating center=true
 # ============ Hi ! ==============
 notify-send "Hello, $USER" "Welcome aboard!"
 # ================================

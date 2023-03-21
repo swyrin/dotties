@@ -69,7 +69,7 @@ super + shift + s
     playerctl {previous,next} && notify-send "Playback" "Switching track" --expire-time=500
 
 @XF86MonBrightness{Down,Up}
-    xbacklight -{inc,dec} 5
+    xbacklight -{dec,inc} 5
     
 #
 # bspwm hotkeys

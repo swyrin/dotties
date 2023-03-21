@@ -214,6 +214,10 @@ $SYSCTL_ENABLE_USER sxhkd.service
 $SYSCTL_ENABLE_USER greenclip.service
 LC_ALL=C xdg-user-dirs-update --force
 
+# Install numlockx?
+# https://wiki.archlinux.org/title/Activating_numlock_on_bootup
+$PACMAN numlockx
+
 # Clear PM cache
 sudo pacman -Sc
 yay -Sc

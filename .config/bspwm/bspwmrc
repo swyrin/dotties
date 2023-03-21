@@ -54,10 +54,8 @@ nm-applet &
 pasystray &
 ibus-daemon -drx &
 greenclip daemon &
-# /usr/lib/xfce-polkit/xfce-polkit &
-# xfce4-power-manager --daemon
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
-cbatticon &
+cbatticon -u 2 &
 xbacklight-notify --timeout 1 &
 flameshot &
 alttab -w 1 -fg "#d58681" -bg "#4a4a4a" -frame "#f0c674" -t 128x150 -i 127x64 -font "Jetbrains Mono" &

@@ -1,18 +1,20 @@
 #!/bin/bash
 
+set -U SXHKD_SHELL /usr/bin/sh
+
 export GTK_IM_MODULE=ibus
 export QT_IM_MODULE=ibus
 export XMODIFIERS=@im=ibus
 export QT4_IM_MODULE=ibus
 export _JAVA_AWT_WM_NONREPARENTING=1
 
-# If you use the patch:
-# https://github.com/andreasgrafen/pfetch-with-kitties
-# export PF_ASCII="Catppuccin"
+# https://wiki.archlinux.org/title/Hardware_video_acceleration#Configuring_VA-API
+export LIBVA_DRIVER_NAME=i965
+export VDPAU_DRIVER=va_gl
 
 # DOTTIES_DIR=$(find $HOME -type d -name "dotties")
 # LOCATION=$(curl -s "https://location.services.mozilla.com/v1/geolocate?key=geoclue" -m 10 --connect-timeout 10 | awk 'OFS=":" {print $3,$5}' | tr -d ',}')
-LOCATION="10.8326:106.6581"
+LOCATION=$(echo location.txt || "10.8326:106.6581")
 DOTTIES_DIR="$HOME/dotties"
 POLYBAR="polybar -c $HOME/.config/polybar/config.ini"
 EWW="eww -c $HOME/.config/eww/hosf"
@@ -33,37 +35,24 @@ killall greenclip
 killall eww
 killall polkit-gnome-authentication-agent-1
 killall flameshot
-killall xbacklight-notify
 killall dunst
-killall mpv
-killall xwinwrap
+killall firewall-applet
 
 # Start apps
-picom --experimental-backends &
+dex -a
 $POLYBAR top_left &
 $POLYBAR top_center &
 $POLYBAR top_right &
 $POLYBAR power_button &
-# $POLYBAR bottom_left &
 $POLYBAR bottom_middle &
 $POLYBAR bottom_right &
 sxhkd -c $HOME/.config/bspwm/sxhkdrc &
 $EWW daemon &
-redshift-gtk -l $LOCATION &
-nm-applet &
-pasystray &
+cbatticon -u 2 &
 ibus-daemon -drx &
 greenclip daemon &
-/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
-cbatticon -u 2 &
-xbacklight-notify --timeout 1 &
-flameshot &
 alttab -w 1 -fg "#d58681" -bg "#4a4a4a" -frame "#f0c674" -t 128x150 -i 127x64 -font "Jetbrains Mono" &
 
-# Easy effects setup
-if ! pgrep -f /usr/bin/easyeffects; then
-    easyeffects --gapplication-service &
-fi
 
 # Wallpaper setup
 if [ $(cat $HOME/.config/bspwm/wallpaper_mode.txt) = "A" ];
@@ -98,11 +87,13 @@ bspc config active_border_color "#F0C674"
 bspc config focused_border_color "#F0C674"
 bspc config urgent_border_color "#FF0000"
 
-bspc rule -a viewnior       state=floating center=true
-bspc rule -a Pavucontrol    state=floating center=true
-bspc rule -a Rofi			manage=off
-bspc rule -a PeaZip         state=floating center=true
-bspc rule -a easyeffects    state=floating center=true
+bspc rule -a viewnior               state=floating center=true
+bspc rule -a Pavucontrol            state=floating center=true
+bspc rule -a Rofi			        manage=off
+bspc rule -a PeaZip                 state=floating center=true
+bspc rule -a easyeffects            state=floating center=true
+bspc rule -a "laptop mode tools"    state=floating center=true
+
 # ============ Hi ! ==============
 notify-send "Hello, $USER" "Welcome aboard!"
 # ================================

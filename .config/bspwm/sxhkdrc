@@ -9,7 +9,7 @@ super + shift + w
     then \
         notify-send "System" "Changing to static wallpaper"; \
         echo "S" > $HOME/.config/bspwm/wallpaper_mode.txt; \
-        killall xwinwrap; \
+        pgrep -f "mpv.*hosf" | xargs kill -9; \
     else \
         killall feh; \
         notify-send "System" "Changing to animated wallpaper"; \
@@ -40,10 +40,9 @@ super + shift + r
 
 # make sxhkd reload its configuration files:
 super + Escape
-	pkill -USR1 -x sxhkd && \
+	pkill -USR1 -x sxhkd; \
     notify-send "Keybind" "Reset all keybinds" --expire-time=500
 
-# https://github.com/flameshot-org/flameshot/issues/784#issuecomment-918382722
 Print
     flameshot full --clipboard
 
@@ -51,13 +50,14 @@ super + shift + s
     flameshot gui
 
 @XF86AudioMute
-    pactl set-sink-mute @DEFAULT_SINK@ toggle;
+    amixer set Master toggle; \
     notify-send "Audio" "Switching mute status" --expire-time=500
 
 @XF86Audio{Raise,Lower}Volume
-    stat=$(pactl get-sink-volume @DEFAULT_SINK@ | awk '\{printf substr($5,1,3)\}' | sed 's/%//g') && \
-    pactl set-sink-volume @DEFAULT_SINK@ {+,-}1% && \
-    notify-send "Audio" "Volume set at $((stat {+,-} 1))%" --expire-time=500 -u low -h int:value:$stat -h string:synchronous:volumectrl
+    amixer set Master 5%{+,-} > /dev/null; \
+    stat=$(amixer sget Master | awk -F"[][]" '/Left:/ \{ print $2 \}' | sed 's/%//g'); \
+    notify-send "Audio" "Volume set at $stat%" --expire-time=500 \
+            -u low -h int:value:$stat -h string:synchronous:volumectrl
     
 @XF86AudioPlay
     playerctl play-pause && notify-send "Audio" "Toggled playback status" --expire-time=500
@@ -69,7 +69,11 @@ super + shift + s
     playerctl {previous,next} && notify-send "Playback" "Switching track" --expire-time=500
 
 @XF86MonBrightness{Down,Up}
-    xbacklight -{dec,inc} 5
+    xbacklight -{dec,inc} 5; \
+    stat=$(xbacklight -get); \
+    notify-send "Screen" "Brightness set at $stat%" -u low --expire-time=3000 \
+                -h int:value:$stat \
+                -h string:synchronous:anything
     
 #
 # bspwm hotkeys

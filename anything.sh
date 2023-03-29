@@ -1,15 +1,24 @@
 #!/bin/bash
 
+set -e
+set -u
+set -o pipefail
+set -x
+
 # ########### Arch with BSPWM install ###########
-# No, this is not Ubuntu!
-# No, DO NOT BLINDLY RUN THIS FILE!!!!
+# DO NOT BLINDLY RUN THIS FILE!!!!
 #
-# Basically this is just my autosetup file when I (re)install Arch (btw)!
+# This is just my autoinstall when I (re)install Arch!
+# This will run well on:
+# - My machine <3
+# - Arch Linux (and derivates)
+# - anything that has pacman as the PM
 # ###############################################
-# ONE MORE LAST WORD: THIS SCRIPT IS MEANT FOR **ME**!!!!!!!!!!!!!!!!!
 
 # For debugging sake, but it *should* work as I want
-DOTTIES_DIR=$(find $HOME -type d -name "dotties")
+# DOTTIES_DIR=$(find $HOME -type d -name "dotties")
+DOTTIES_DIR=$(pwd)
+echo $DOTTIES_DIR
 echo "The script *might* ask you the password below"
 
 # Setup custom pacman stuffs: parallel downloads, c o l o r s
@@ -18,19 +27,18 @@ sudo sed -i 's/#ParallelDownloads = 5/ParallelDownloads = 5/g' /etc/pacman.conf
 
 # fast commands typing?
 PACMAN="sudo pacman -S --needed --noconfirm"
+PACMAN_YEET="sudo pacman -Rnc"
 YAY="yay -S --needed --noconfirm --removemake"
 SYSCTL_ENABLE="sudo systemctl enable --now"
 SYSCTL_ENABLE_USER="systemctl enable --user --now"
 
-# As usual, pacman -Syu
-sudo pacman -Syu --noconfirm
-
 # Install packages for sound
 $PACMAN pipewire wireplumber qpwgraph pipewire-audio pipewire-alsa pipewire-pulse pipewire-jack
-$SYSCTL_ENABLE pipewire-pulse.service
-$SYSCTL_ENABLE pipewire-pulse.socket
-$PACMAN easyeffects calf lsp-plugins-lv2 zam-plugins-lv2 mda.lv2 yelp
-echo "1" > bash -c "$(curl -fsSL https://raw.githubusercontent.com/JackHack96/PulseEffects-Presets/master/install.sh)"
+$SYSCTL_ENABLE_USER pipewire-pulse.service
+$SYSCTL_ENABLE_USER pipewire-pulse.socket
+$SYSCTL_ENABLE_USER wireplumber.service
+# $PACMAN easyeffects calf lsp-plugins-lv2 zam-plugins-lv2 mda.lv2 yelp curl
+# echo "1" > bash -c "$(curl -fsSL https://raw.githubusercontent.com/JackHack96/PulseEffects-Presets/master/install.sh)"
 
 # Install package for internet
 $PACMAN networkmanager wpa_supplicant dhcpcd
@@ -38,17 +46,31 @@ $SYSCTL_ENABLE wpa_supplicant.service
 $SYSCTL_ENABLE NetworkManager.service
 
 # Install Xorg and friends
+# Nuke xbacklight for acpilight
+echo "y" | $PACMAN_YEET acpilight
+
 $PACMAN xorg xorg-apps xorg-xinit \
-        mesa mesa-utils libva-intel-driver libva-mesa-driver mesa-amber \
+        mesa mesa-utils libva-intel-driver libva-mesa-driver \
         intel-media-driver vulkan-intel \
-        xf86-video-nouveau xf86-video-intel
+        xf86-video-intel
+
+echo "y" | $PACMAN_YEET xorg-xbacklight
+$PACMAN acpilight
 
 # Setup my beloved nano
-$PACMAN nano unzip wget curl
+# If you don't use nano, just comment out them.
+$PACMAN nano unzip wget
 wget https://raw.githubusercontent.com/scopatz/nanorc/master/install.sh -O- | sh
 grep "set linenumbers" $HOME/.nanorc || echo "set linenumbers" >> $HOME/.nanorc
 grep "set tabstospaces" $HOME/.nanorc || echo "set tabstospaces" >> $HOME/.nanorc
 grep "set tabsize 4" $HOME/.nanorc || echo "set tabsize 4" >> $HOME/.nanorc
+
+# Build optimization for make
+# 1. https://wiki.archlinux.org/title/makepkg#Building_optimized_binaries
+# 2. https://wiki.archlinux.org/title/makepkg#Improving_compile_times
+sudo sed -i 's/#MAKEFLAGS=\"-j2\"/MAKEFLAGS=\"-j\$\(nproc\)\"/g' /etc/makepkg.conf
+sudo sed -i 's/-march=x86-64 -mtune=generic/-march=native -ftree-vectorize -fomit-frame-pointer/g' /etc/makepkg.conf
+sudo sed -i 's/#RUSTFLAGS=\"-C opt-level=2\"/RUSTFLAGS=\"-C opt-level=2 -C target-cpu=native\"/g' /etc/makepkg.conf
 
 # Install yay AUR helper
 if [ -z $(which yay) ]
@@ -58,22 +80,14 @@ then
     makepkg -si --noconfirm
     cd ..
     sudo rm -r yay
-    sudo pacman -Rc $(pacman -Qqs go)
+    sudo pacman -Rnc $(pacman -Qq go)
 fi
 
-# Build optimization for make
-# 1. https://wiki.archlinux.org/title/makepkg#Building_optimized_binaries
-# 2. https://wiki.archlinux.org/title/makepkg#Improving_compile_times
-# Normally sse{,2,3}, mmx and 3dnow! are included in new CPUs
-# Use '-ftree-vectorize' to abuse ymm registers
-# further reading: https://en.wikipedia.org/wiki/3DNow!
-sudo sed -i 's/#MAKEFLAGS=\"-j2\"/MAKEFLAGS=\"-j\$\(nproc\)\"/g' /etc/makepkg.conf
-sudo sed -i 's/-march=x86-64 -mtune=generic/-march=native -ftree-vectorize -fomit-frame-pointer/g' /etc/makepkg.conf
-sudo sed -i 's/#RUSTFLAGS=\"-C opt-level=2\"/RUSTFLAGS=\"-C opt-level=2 -C target-cpu=native\"/g' /etc/makepkg.conf
-
 # Setup firewalld
-$PACMAN firewalld
+# https://bbs.archlinux.org/viewtopic.php?id=284588
+$PACMAN firewalld python-pyqt5
 $SYSCTL_ENABLE firewalld.service
+pip uninstall dbus-python 
 
 # Setup clamav
 # I consider this a bloatware.
@@ -86,12 +100,11 @@ $SYSCTL_ENABLE firewalld.service
 # $YAY clamav-unofficial-sigs
 # $SYSCTL_ENABLE clamav-unofficial-sigs.timer
 
-# Install BSPWM, rofi, picom (fork), sxhkd, polybar, dunst, eww, xwinwrap
-# Technically, setup the desktop
+# Technically, setup base parts of the desktop
 $PACMAN rofi sxhkd feh
 $YAY    eww \
         bspwm-git \
-        picom-animations-git \
+        picom-git \
         polybar-git \
 		dunst \
         alttab-git \
@@ -107,8 +120,8 @@ $PACMAN redshift python-gobject \
         flameshot
 
 # Setup fonts
-# References: https://www.reddit.com/r/archlinux/comments/a2g77x/what_are_your_default_font_packages_you_install/
-sudo mkdir -p /usr/share/fonts/ && sudo cp -a $DOTTIES_DIR/fonts/. /usr/share/fonts/
+# https://www.reddit.com/r/archlinux/comments/a2g77x/what_are_your_default_font_packages_you_install/
+cp -av $DOTTIES_DIR/fonts/. /usr/share/fonts/
 
 $PACMAN ttf-nerd-fonts-symbols-1000-em-mono ttf-nerd-fonts-symbols-common \
         ttf-dejavu ttf-liberation ttf-font-awesome ttf-liberation ttf-droid ttf-ubuntu-font-family \
@@ -118,7 +131,7 @@ $PACMAN ttf-nerd-fonts-symbols-1000-em-mono ttf-nerd-fonts-symbols-common \
 
 $YAY noto-fonts-tc \
      siji-git \
-     ttf-unifont ttf-gelasio-ib ttf-caladea ttf-material-design-icons ttf-carlito ttf-liberation-sans-narrow ttf-ms-fonts ttf-material-icons-git ttf-symbola
+     ttf-unifont ttf-gelasio-ib ttf-caladea ttf-carlito ttf-liberation-sans-narrow ttf-ms-fonts ttf-symbola
 
 # Setup GTK themes
 wget -qO- https://git.io/papirus-icon-theme-install | sh
@@ -128,73 +141,75 @@ papirus-folders -C yellow --theme Papirus-Light
 
 # Setup needed packages (for me, you should change) as final run!!!
 # - Greenclip           - Clipboard manager for rofi
-# - Thunar              - File manager (+plugins,mpv,xfce-polkit)
+# - Thunar              - File manager (+plugins,mpv)
 # - Viewnior            - Image viewer
 # - Geany               - GUI text editor
 # - Kitty               - Terminal emulator
 # - xclip               - Commandline clipboard stuffs
 # - font-manager        - Font manager
 # - Peazip              - Archive manager
-# - Illum               - Brightness setter
 # - btop                - Think it like the infamous "Task Manager" on Windows
 # - polkit-gnome        - GNOME polkit
 # - GNOME Keyring       - Password storage (+libsecret)
 # - rofi-emoji          - Emoji picker for rofi
+# - numlockx            - Auto activate numlock key
+# - dex                 - XDG autostarter
+# - zsh					- zshell (+powerlevel10k, +completion)
 $YAY    rofi-greenclip \
         peazip-qt-bin \
         btop
 
 $PACMAN thunar gvfs tumbler ffmpegthumbnailer poppler-glib libgsf libgepub libopenraw freetype2 thunar-volman thunar-archive-plugin thunar-media-tags-plugin mpv \
         viewnior \
+        numlockx \
         geany \
         kitty \
         xclip \
         font-manager \
-        xfce4-power-manager \
         gnome-keyring libsecret libgnome-keyring \
         polkit-gnome \
         rofi-emoji \
-        xdg-user-dirs
+        dex xdg-user-dirs \
+		zsh zsh-theme-powerlevel10k zsh-completions
 
-# Setup files
-mv $HOME/.config/ $HOME/.config_backup/
-mkdir -p $HOME/.config/
-sudo ln -sf $DOTTIES_DIR/.config/bspwm/ $HOME/.config/
-sudo ln -sf $DOTTIES_DIR/.config/polybar/ $HOME/.config/
-sudo ln -sf $DOTTIES_DIR/.config/systemd/ $HOME/.config/
-sudo ln -sf $DOTTIES_DIR/.config/kitty/ $HOME/.config/
-sudo ln -sf $DOTTIES_DIR/.config/picom/ $HOME/.config/
-sudo ln -sf $DOTTIES_DIR/.config/Thunar/ $HOME/.config/
-sudo ln -sf $DOTTIES_DIR/.config/rofi/ $HOME/.config/
-sudo ln -sf $DOTTIES_DIR/.config/flameshot/ $HOME/.config/
-sudo ln -sf $DOTTIES_DIR/.config/gtk-3.0/ $HOME/.config/
-sudo ln -sf $DOTTIES_DIR/.config/eww/ $HOME/.config/
-sudo ln -sf $DOTTIES_DIR/.config/dunst/ $HOME/.config/
-sudo ln -sf $DOTTIES_DIR/.zshrc $HOME/.zshrc
-sudo ln -sf $DOTTIES_DIR/.xinitrc $HOME/.xinitrc
-sudo ln -sf $DOTTIES_DIR/.p10k.zsh $HOME/.p10k.zsh
-sudo ln -sf $DOTTIES_DIR/.gtkrc-2.0 $HOME/.gtkrc-2.0
-cp -a $DOTTIES_DIR/.config_backup/. $DOTTIES_DIR/.config/
-rm -rf $DOTTIES_DIR/.config_backup/
+# Symlinking files
+ln -sf $DOTTIES_DIR/.config/autostart 			$HOME/.config
+ln -sf $DOTTIES_DIR/.config/bspwm 				$HOME/.config
+ln -sf $DOTTIES_DIR/.config/polybar 			$HOME/.config
+ln -sf $DOTTIES_DIR/.config/systemd 			$HOME/.config
+ln -sf $DOTTIES_DIR/.config/kitty 				$HOME/.config
+ln -sf $DOTTIES_DIR/.config/picom 				$HOME/.config
+ln -sf $DOTTIES_DIR/.config/Thunar 				$HOME/.config
+ln -sf $DOTTIES_DIR/.config/rofi 				$HOME/.config
+ln -sf $DOTTIES_DIR/.config/flameshot 			$HOME/.config
+ln -sf $DOTTIES_DIR/.config/gtk-3.0 			$HOME/.config
+ln -sf $DOTTIES_DIR/.config/gtk-4.0 			$HOME/.config
+ln -sf $DOTTIES_DIR/.config/eww 				$HOME/.config
+ln -sf $DOTTIES_DIR/.config/dunst 				$HOME/.config
+ln -sf $DOTTIES_DIR/.config/chrome-flags.conf 	$HOME/.config/chrome-flags.conf
+ln -sf $DOTTIES_DIR/.zshrc 						$HOME/.zshrc
+ln -sf $DOTTIES_DIR/.xinitrc 					$HOME/.xinitrc
+ln -sf $DOTTIES_DIR/.p10k.zsh 					$HOME/.p10k.zsh
+ln -sf $DOTTIES_DIR/.gtkrc-2.0 					$HOME/.gtkrc-2.0
+
+$PACMAN upower
 
 # Setup battery saving "bloatwares"
-if ! [ -z $(upower) ];
+# This will be triggered when you are using "laptop", or anything that uses battery.
+if ! [ -z $(upower -e | grep battery) ];
 then
     # Powertop
     $PACMAN powertop
     sudo cp $DOTTIES_DIR/.config/systemd/system/powertop.service /etc/systemd/system/powertop.service
     $SYSCTL_ENABLE powertop.service
 
-    # Laptop setup (acpid)
+    # ACPI for laptop-mode-tools
     $PACMAN acpid
     $SYSCTL_ENABLE acpid.service
 
-    # TLP
-    $PACMAN tlp tlp-rdw
-    $YAY tlpui
-    $SYSCTL_ENABLE tlp.service
-    sudo systemctl mask systemd-rfkill.service
-    sudo systemctl mask systemd-rfkill.socket
+    # laptop-mode-tools
+    $YAY laptop-mode-tools ethtool iw hdparm sdparm hal bluez-utils
+    $SYSCTL_ENABLE laptop-mode.service
 
     # thermald
     $PACMAN thermald
@@ -204,23 +219,22 @@ then
     $YAY auto-cpufreq
     $SYSCTL_ENABLE auto-cpufreq.service
 
-    # Install battery icon
+    # battery icon
     $PACMAN cbatticon
+else
+    # If this is useless, why bother having it?
+    $PACMAN_YEET upower
 fi
 
+# Clear PM cache
+echo "$YES$YES" | sudo pacman -Sc
+echo "$YES$YES" | yay -Sc
+
 # Post-install stuffs
-$SYSCTL_ENABLE illum.service
 $SYSCTL_ENABLE_USER sxhkd.service
 $SYSCTL_ENABLE_USER greenclip.service
 LC_ALL=C xdg-user-dirs-update --force
-
-# Install numlockx?
-# https://wiki.archlinux.org/title/Activating_numlock_on_bootup
-$PACMAN numlockx
-
-# Clear PM cache
-sudo pacman -Sc
-yay -Sc
+chsh -s /usr/bin/zsh
 
 # What to do after this:
 #       1. If you are using a touchpad: https://stackoverflow.com/questions/62990795/cannot-set-tapping-enabled-default-on-archlinux
@@ -229,8 +243,6 @@ yay -Sc
 #           https://wiki.archlinux.org/title/Power_management
 #           https://wiki.archlinux.org/title/CPU_frequency_scaling
 #       4. If you can, use `linux-zen` kernel instead.
-
-# Bye!
 echo "Installation finished!!!"
 echo "And please, for the love of god, DO **NOT** REMOVE THE $DOTTIES_DIR FOLDER!!!! Why? They are **ALL SYMLINKED**!"
 echo "That is all, have a good day and happy ricing!"

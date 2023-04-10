@@ -9,12 +9,9 @@ export QT4_IM_MODULE=ibus
 export _JAVA_AWT_WM_NONREPARENTING=1
 
 # https://wiki.archlinux.org/title/Hardware_video_acceleration#Configuring_VA-API
-export LIBVA_DRIVER_NAME=i965
+export LIBVA_DRIVER_NAME=iHD
 export VDPAU_DRIVER=va_gl
 
-# DOTTIES_DIR=$(find $HOME -type d -name "dotties")
-# LOCATION=$(curl -s "https://location.services.mozilla.com/v1/geolocate?key=geoclue" -m 10 --connect-timeout 10 | awk 'OFS=":" {print $3,$5}' | tr -d ',}')
-LOCATION=$(echo location.txt || "10.8326:106.6581")
 DOTTIES_DIR="$HOME/dotties"
 POLYBAR="polybar -c $HOME/.config/polybar/config.ini"
 EWW="eww -c $HOME/.config/eww/hosf"
@@ -32,7 +29,6 @@ killall pasystray
 killall sxhkd
 killall ibus-daemon
 killall greenclip
-killall eww
 killall polkit-gnome-authentication-agent-1
 killall flameshot
 killall dunst
@@ -47,10 +43,10 @@ $POLYBAR power_button &
 $POLYBAR bottom_middle &
 $POLYBAR bottom_right &
 sxhkd -c $HOME/.config/bspwm/sxhkdrc &
-$EWW daemon &
 cbatticon -u 2 &
 ibus-daemon -drx &
 greenclip daemon &
+/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 alttab -w 1 -fg "#d58681" -bg "#4a4a4a" -frame "#f0c674" -t 128x150 -i 127x64 -font "Jetbrains Mono" &
 
 
@@ -58,7 +54,7 @@ alttab -w 1 -fg "#d58681" -bg "#4a4a4a" -frame "#f0c674" -t 128x150 -i 127x64 -f
 if [ $(cat $HOME/.config/bspwm/wallpaper_mode.txt) = "A" ];
 then
     xwinwrap -fs -fdt -ni -b -nf -- \
-        mpv --no-audio --loop --hwdec=vaapi -wid %WID $HOME/dotties/assets/hosf_trim.mp4 &
+        mpv --no-audio --loop --hwdec=vaapi -wid %WID $DOTTIES_DIR/assets/hosf_trim.mp4 &
 else
     feh --bg-fill $DOTTIES_DIR/assets/hosf.png --no-fehbg
 fi

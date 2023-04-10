@@ -51,6 +51,7 @@ echo "y" | $PACMAN_YEET acpilight
 
 $PACMAN xorg xorg-apps xorg-xinit \
         mesa mesa-utils libva-intel-driver libva-mesa-driver \
+        libvdpau-va-gl libva-utils \
         intel-media-driver vulkan-intel \
         xf86-video-intel
 
@@ -227,8 +228,8 @@ else
 fi
 
 # Clear PM cache
-echo "$YES$YES" | sudo pacman -Sc
-echo "$YES$YES" | yay -Sc
+# echo "$YES$YES$YES" | sudo pacman -Sc
+# echo "$YES$YES$YES" | yay -Sc
 
 # Post-install stuffs
 $SYSCTL_ENABLE_USER sxhkd.service
@@ -242,6 +243,7 @@ chsh -s /usr/bin/zsh
 #       3. You should consume these links for more battery saving on laptops:
 #           https://wiki.archlinux.org/title/Power_management
 #           https://wiki.archlinux.org/title/CPU_frequency_scaling
+#           https://www.reddit.com/r/archlinux/comments/rz6294/arch_linux_laptop_optimization_guide_for/
 #       4. If you can, use `linux-zen` kernel instead.
 echo "Installation finished!!!"
 echo "And please, for the love of god, DO **NOT** REMOVE THE $DOTTIES_DIR FOLDER!!!! Why? They are **ALL SYMLINKED**!"

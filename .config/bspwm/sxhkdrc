@@ -2,6 +2,26 @@
 # wm independent hotkeys
 #
 
+# Switch wallpaper mode
+super + shift + w
+    mode=`cat $HOME/.config/bspwm/wallpaper_mode.txt`; \
+    if [ $mode = "A" ]; \
+    then \
+        notify-send "System" "Changing to static wallpaper"; \
+        echo "S" > $HOME/.config/bspwm/wallpaper_mode.txt; \
+        pgrep -f "mpv.*hosf" | xargs kill -9; \
+    else \
+        killall feh; \
+        notify-send "System" "Changing to animated wallpaper"; \
+        echo "A" > $HOME/.config/bspwm/wallpaper_mode.txt; \
+        xwinwrap -fs -fdt -ni -b -nf -- \
+             mpv -no-audio --hwdec=vaapi --loop -wid %WID $HOME/dotties/assets/hosf_trim.mp4 & ; \
+    fi
+
+# clipboard
+super + v
+    rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}'
+
 # terminal emulator
 super + Return
 	kitty
@@ -10,47 +30,50 @@ super + Return
 super + r
 	rofi -show drun
 
+# emoji picker
+super + e
+    rofi -modi emoji -show emoji
+
+# The button at top right corner
 super + shift + r
     $HOME/.config/rofi/powermenu.sh
 
 # make sxhkd reload its configuration files:
 super + Escape
-	pkill -USR1 -x sxhkd && \
+	pkill -USR1 -x sxhkd; \
     notify-send "Keybind" "Reset all keybinds" --expire-time=500
 
-# https://github.com/flameshot-org/flameshot/issues/784#issuecomment-918382722
 Print
-    $HOME/dotties/flameshot.sh
+    flameshot full --clipboard
 
 super + shift + s
-    $HOME/dotties/flameshot.sh
+    flameshot gui
 
 @XF86AudioMute
-    pactl set-sink-mute @DEFAULT_SINK@ toggle && \
-    stat=`pacmd list-sinks | awk '/muted/ \{print $2\}'` && \
-    notify-send "Audio" "Is Muted: $stat" --expire-time=500
+    amixer set Master toggle; \
+    notify-send "Audio" "Switching mute status" --expire-time=500
 
 @XF86Audio{Raise,Lower}Volume
-    pactl set-sink-volume @DEFAULT_SINK@ {+,-}2% && \
-    stat=`pactl get-sink-volume @DEFAULT_SINK@ | awk '\{printf substr($5,1,3)\}' | sed 's/%//g'` && \
-    notify-send "Volume $stat%" --expire-time=1000 -u low -h int:value:$stat -h string:synchronous:volumectrl
-
+    amixer set Master 5%{+,-} > /dev/null; \
+    stat=$(amixer sget Master | awk -F"[][]" '/Left:/ \{ print $2 \}' | sed 's/%//g'); \
+    notify-send "Audio" "Volume set at $stat%" --expire-time=500 \
+            -u low -h int:value:$stat -h string:synchronous:volumectrl
+    
 @XF86AudioPlay
-    playerctl play-pause && notify-send "Playback" "Toggled playback status" --expire-time=500
+    playerctl play-pause && notify-send "Audio" "Toggled playback status" --expire-time=500
 
 @XF86AudioStop
-    playerctl stop && notify-send "Playback "Stopped playback" --expire-time=500
+    playerctl stop && notify-send "Audio" "Stopped playback" --expire-time=500
 
 @XF86Audio{Prev,Next}
     playerctl {previous,next} && notify-send "Playback" "Switching track" --expire-time=500
 
 @XF86MonBrightness{Down,Up}
-    now=$(brightnessctl get); \
-    now=$(( now {-,+} 1200 )); \
-    now=$(( $now >= 0 ? $now : 0 )); \
-    now=$(( $now <= 120000 ? $now : 120000 )); \
-    brightnessctl s $now --quiet && \
-    notify-send "Brightness $per%" --expire-time=500 -u low -h int:value:$per -h string:synchronous:brightnesscrtl;
+    xbacklight -{dec,inc} 5; \
+    stat=$(xbacklight -get); \
+    notify-send "Screen" "Brightness set at $stat%" -u low --expire-time=3000 \
+                -h int:value:$stat \
+                -h string:synchronous:anything
     
 #
 # bspwm hotkeys
@@ -58,7 +81,7 @@ super + shift + s
 
 # quit/restart bspwm
 super + alt + {q,r}
-	bspc {quit,wm -r} && notify-send "BSPWM" "Successfully reset" --expire-time=500;
+	bspc {quit,wm -r} && notify-send "BSPWM" "Resetting the WM" --expire-time=500;
 
 # close and kill
 super + {_,shift + }w
@@ -149,6 +172,10 @@ super + ctrl + shift + space
 # expand a window by moving one of its side outward
 super + alt + {h,j,k,l}
 	bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
+
+# shrink a window by moving one of its side inward
+super + ctrl + alt + {l,k,j,h}
+	bspc node -z {left 20 0,bottom 0 -20,top 0 20,right -20 0}
 
 # contract a window by moving one of its side inward
 super + alt + shift + {h,j,k,l}

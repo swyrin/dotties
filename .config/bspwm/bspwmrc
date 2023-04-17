@@ -1,72 +1,95 @@
-#! /bin/sh
-# pgrep -x sxhkd > /dev/null || sxhkd &
+#!/bin/bash
 
-# Customized stuffs
+set -U SXHKD_SHELL /usr/bin/sh
 
-# When in doubt, f NVIDIA
-# xrandr -s 1920x1080
+export GTK_IM_MODULE=ibus
+export QT_IM_MODULE=ibus
+export XMODIFIERS=@im=ibus
+export QT4_IM_MODULE=ibus
+export _JAVA_AWT_WM_NONREPARENTING=1
 
-# DOTTIES_DIR=$(find $HOME -type d -name "dotties")
-# LOCATION=$(curl -s "https://location.services.mozilla.com/v1/geolocate?key=geoclue" -m 10 --connect-timeout 10 | awk 'OFS=":" {print $3,$5}' | tr -d ',}')
-# Fall back to hardcoded location if I am offline
-# Currently I am in Vietnam, so default Vietnam?
-# if [[ -z $LOCATION ]]
-# then
-#    LOCATION="10.8326:106.6581"
-# fi
+# https://wiki.archlinux.org/title/Hardware_video_acceleration#Configuring_VA-API
+export LIBVA_DRIVER_NAME=iHD
+export VDPAU_DRIVER=va_gl
 
-LOCATION="10.8326:106.6581"
 DOTTIES_DIR="$HOME/dotties"
+POLYBAR="polybar -c $HOME/.config/polybar/config.ini"
+EWW="eww -c $HOME/.config/eww/hosf"
 
 # Kill processes
-killall xborders
+killall cbatticon
+killall easyeffects
+killall alttab
 killall picom
 killall polybar
 killall redshift
+killall redshift-gtk
 killall nm-applet
 killall pasystray
-killall dunst
 killall sxhkd
 killall ibus-daemon
 killall greenclip
+killall polkit-gnome-authentication-agent-1
+killall flameshot
+killall dunst
+killall firewall-applet
 
-wal -i $DOTTIES_DIR/desktop.jpg -n -s -t
-# . "${HOME}/.cache/wal/colors.sh"
-feh --bg-fill $DOTTIES_DIR/desktop.jpg
-polybar -c $HOME/.config/polybar/config.ini top_left &
-polybar -c $HOME/.config/polybar/config.ini top_center &
-polybar -c $HOME/.config/polybar/config.ini top_right &
-polybar -c $HOME/.config/polybar/config.ini bottom &
-
+# Start apps
+dex -a
+$POLYBAR top_left &
+$POLYBAR top_center &
+$POLYBAR top_right &
+$POLYBAR power_button &
+$POLYBAR bottom_middle &
+$POLYBAR bottom_right &
 sxhkd -c $HOME/.config/bspwm/sxhkdrc &
-picom &
-redshift -l $LOCATION &
-nm-applet &
-pasystray &
-dunst &
+cbatticon -u 2 &
 ibus-daemon -drx &
 greenclip daemon &
-$HOME/.bscripts/sounds.sh &
-xborders -c $HOME/.config/xborders/xborders-conf.json --disable-version-warning &
+/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+alttab -w 1 -fg "#d58681" -bg "#4a4a4a" -frame "#f0c674" -t 128x150 -i 127x64 -font "Jetbrains Mono" &
 
-# ================================
 
-bspc monitor -d 1 2 3 4
+# Wallpaper setup
+if [ $(cat $HOME/.config/bspwm/wallpaper_mode.txt) = "A" ];
+then
+    xwinwrap -fs -fdt -ni -b -nf -- \
+        mpv --no-audio --loop --hwdec=vaapi -wid %WID $DOTTIES_DIR/assets/hosf_trim.mp4 &
+else
+    feh --bg-fill $DOTTIES_DIR/assets/hosf.png --no-fehbg
+fi
 
-# bspc config border_width        5
-bspc config window_gap          8
+# https://wiki.archlinux.org/title/bspwm#Problems_with_Java_applications
+export _JAVA_AWT_WM_NONREPARENTING=1
+wmname Amiya
 
+# ===============================
+#  BSPWM zone
+# ===============================
+bspc monitor -d 1 2 3 4 5 6 7
+bspc config window_gap          10
 bspc config pointer_action1 move
 bspc config pointer_action2 resize_side
 bspc config pointer_action2 resize_corner
 
-bspc config split_ratio          0.5
-bspc config borderless_monocle   true
-bspc config gapless_monocle      true
+bspc config split_ratio                 0.5
+bspc config remove_disabled_monitors    true
+bspc config remove_unplugged_monitors   true
+bspc config borderless_monocle          true
+bspc config gapless_monocle             true
 
-# bspc config normal_border_color  \#000000
-# bspc config active_border_color  \#F0C674
-# bspc config focused_border_color \#F0C674
+bspc config border_width 4
+bspc config active_border_color "#F0C674"
+bspc config focused_border_color "#F0C674"
+bspc config urgent_border_color "#FF0000"
 
-bspc rule -a Pavucontrol state=floating
-bspc rule -a GitKraken state=floating
+bspc rule -a viewnior               state=floating center=true
+bspc rule -a Pavucontrol            state=floating center=true
+bspc rule -a Rofi			        manage=off
+bspc rule -a PeaZip                 state=floating center=true
+bspc rule -a easyeffects            state=floating center=true
+bspc rule -a "laptop mode tools"    state=floating center=true
+
+# ============ Hi ! ==============
+notify-send "Hello, $USER" "Welcome aboard!"
+# ================================

@@ -5,25 +5,27 @@ set -u
 set -o pipefail
 set -x
 
-# ########### Arch with BSPWM install ###########
+# ------- Arch with Hyprland install script -------
 # DO NOT BLINDLY RUN THIS FILE!!!!
 #
 # This is just my autoinstall when I (re)install Arch!
 # This will run well on:
 # - My machine <3
 # - Arch Linux (and derivates)
-# - anything that has pacman as the PM
-# ###############################################
+#
+#
+#
+# !!! MAKE SURE YOU PROPERLY INSTALLED ARCH !!!
+# https://wiki.archlinux.org/title/Installation_guide
+
+./install_scripts/configure_pacman.sh
+./install_scripts/install_aur_helper.sh
 
 # For debugging sake, but it *should* work as I want
 # DOTTIES_DIR=$(find $HOME -type d -name "dotties")
 DOTTIES_DIR=$(pwd)
 echo $DOTTIES_DIR
 echo "The script *might* ask you the password below"
-
-# Setup custom pacman stuffs: parallel downloads, c o l o r s
-sudo sed -i 's/#Color/Color/g' /etc/pacman.conf
-sudo sed -i 's/#ParallelDownloads = 5/ParallelDownloads = 5/g' /etc/pacman.conf
 
 # fast commands typing?
 PACMAN="sudo pacman -S --needed --noconfirm"
@@ -72,17 +74,6 @@ grep "set tabsize 4" $HOME/.nanorc || echo "set tabsize 4" >> $HOME/.nanorc
 sudo sed -i 's/#MAKEFLAGS=\"-j2\"/MAKEFLAGS=\"-j\$\(nproc\)\"/g' /etc/makepkg.conf
 sudo sed -i 's/-march=x86-64 -mtune=generic/-march=native -ftree-vectorize -fomit-frame-pointer/g' /etc/makepkg.conf
 sudo sed -i 's/#RUSTFLAGS=\"-C opt-level=2\"/RUSTFLAGS=\"-C opt-level=2 -C target-cpu=native\"/g' /etc/makepkg.conf
-
-# Install yay AUR helper
-if [ -z $(which yay) ]
-then
-    git clone https://aur.archlinux.org/yay.git
-    cd yay
-    makepkg -si --noconfirm
-    cd ..
-    sudo rm -r yay
-    sudo pacman -Rnc $(pacman -Qq go)
-fi
 
 # Setup firewalld
 # https://bbs.archlinux.org/viewtopic.php?id=284588

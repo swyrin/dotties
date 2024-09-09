@@ -3,5 +3,6 @@ set -euox pipefail
 
 sudo pacman -S --needed base-devel
 git clone https://aur.archlinux.org/paru-bin.git
-cd paru-bin
+cd $(pwd)/paru-bin
 makepkg -si --noconfirm
+rm $(pwd)/paru-bin -rf

@@ -102,3 +102,6 @@ source /usr/share/doc/pkgfile/command-not-found.zsh
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 export FZF_BASE=/usr/share/fzf
+
+# To customize prompt, run `p10k configure` or edit ~/dotties/.p10k.zsh.
+[[ ! -f ~/dotties/.p10k.zsh ]] || source ~/dotties/.p10k.zsh

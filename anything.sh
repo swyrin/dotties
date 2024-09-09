@@ -44,6 +44,7 @@ ln -sf $THIS_PLACE/.config/hypr                $HOME/.config/hypr
 ln -sf $THIS_PLACE/.config/gtk-3.0 			    $HOME/.config/gtk-3.0
 ln -sf $THIS_PLACE/.config/gtk-4.0 			    $HOME/.config/gtk-4.0
 ln -sf $THIS_PLACE/.config/mako                 $HOME/.config/mako
+ln -sf $THIS_PLACE/.config/fastfetch            $HOME/.config/fastfetch
 ln -sf $THIS_PLACE/.config/chrome-flags.conf 	$HOME/.config/chrome-flags.conf
 ln -sf $THIS_PLACE/.config/chrome-flags.conf 	$HOME/.config/electron-flags.conf
 ln -sf $THIS_PLACE/.zshrc 						$HOME/.zshrc

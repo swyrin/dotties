@@ -11,7 +11,7 @@
     "modules-left": [
         "hyprland/workspaces",
         "temperature",
-	"battery",
+    	"battery",
         "custom/media"
     ],
 
@@ -25,7 +25,7 @@
         "memory",
         "cpu",
         "wireplumber",
-	"tray",
+	    "tray",
         "custom/power"
     ],
 

@@ -102,7 +102,7 @@ window#waybar.hidden {
 #custom-weather.snowyIcyNight,
 #custom-weather.default {
   padding: 0px 15px;
-  color: #e5e5e5;
+  /* color: #e5e5e5; */
   /* color: #bf616a; */
   border-radius: 20px;
   background-color: #1e1e1e;
@@ -258,11 +258,12 @@ label:focus {
 }
 
 #temperature {
-  background-color: #f0932b;
+  padding: 0 10px;
+  color: #f0932b;
 }
 
 #temperature.critical {
-  background-color: #eb4d4b;
+  color: #eb4d4b;
 }
 
 #tray > .passive {

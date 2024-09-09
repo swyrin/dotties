@@ -36,8 +36,8 @@
     "temperature": {
         "interval": 4,
         "critical-threshold": 80,
-        "format-critical": "  {temperatureC}°C",
-        "format": "{icon}  {temperatureC}°C",
+        "format-critical": "  {temperatureC}",
+        "format": "{icon}  {temperatureC}",
         "format-icons": [""],
         "max-length": 7,
         "min-length": 7,
@@ -55,7 +55,7 @@
             "warning": 30,
             "critical": 15
         },
-        "format": "{icon} {capacity}",
+        "format": "{icon}  {capacity}",
         "format-icons": [
             "",
             "",
@@ -66,8 +66,7 @@
     },
 
     "backlight": {
-        "device": "intel_backlight",
-        "format": "{icon} {percent}",
+        "format": "{icon}  {percent}",
         "format-icons": ["", ""],
         "on-scroll-down": "brightnessctl s 5%-",
         "on-scroll-up": "brightnessctl s +5%"
@@ -102,7 +101,7 @@
     },
 
     "custom/power": {
-        "format": "      ",
+        "format": "     ",
         "tooltip": false,
         "on-click": "wlogout"
     },

@@ -21,3 +21,4 @@ $PACMAN zsh-theme-powerlevel10k	# --- z shell but on steroid
 $PACMAN zsh-completions			# --- yes?
 $PACMAN uwufetch                # --- system fetch
 $PACMAN alsa-utils              # --- CLI tool for controlling audio, but works closely with Linux
+$PACMAN brightnessctl           # --- CLI tool for controlling brightness

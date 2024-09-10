@@ -31,19 +31,19 @@ multiplier = 3
 size = 12
 
 [font.normal]
-family = "monospace"
+family = "MesloLGS NF"
 style = "Regular"
 
 [font.bold]
-family = "monospace"
+family = "MesloLGS NF"
 style = "Bold"
 
 [font.italic]
-family = "monospace"
+family = "MesloLGS NF"
 style = "Italic"
 
 [font.bold_italic]
-family = "monospace"
+family = "MesloLGS NF"
 style = "Bold Italic"
 
 [selection]

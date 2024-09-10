@@ -35,27 +35,12 @@ $THIS_PLACE/install_scripts/install_software.sh
 # Setup system
 $THIS_PLACE/install_scripts/install_fonts.sh
 $THIS_PLACE/install_scripts/setup_system.sh
-
-# Setup symbolic links
-ln -sf $THIS_PLACE/.config/alacritty            $HOME/.config/alacritty
-ln -sf $THIS_PLACE/.config/waybar               $HOME/.config/waybar
-ln -sf $THIS_PLACE/.config/rofi 				$HOME/.config/rofi
-ln -sf $THIS_PLACE/.config/hypr                $HOME/.config/hypr
-ln -sf $THIS_PLACE/.config/gtk-3.0 			    $HOME/.config/gtk-3.0
-ln -sf $THIS_PLACE/.config/gtk-4.0 			    $HOME/.config/gtk-4.0
-ln -sf $THIS_PLACE/.config/mako                 $HOME/.config/mako
-ln -sf $THIS_PLACE/.config/fastfetch            $HOME/.config/fastfetch
-ln -sf $THIS_PLACE/.config/chrome-flags.conf 	$HOME/.config/chrome-flags.conf
-ln -sf $THIS_PLACE/.config/chrome-flags.conf 	$HOME/.config/electron-flags.conf
-ln -sf $THIS_PLACE/.zshrc 						$HOME/.zshrc
-ln -sf $THIS_PLACE/.zprofile                    $HOME/.zprofile
-ln -sf $THIS_PLACE/.p10k.zsh 					$HOME/.p10k.zsh
-ln -sf $THIS_PLACE/.nanorc                      $HOME/.nanorc
+$THIS_PLACE/install_scripts/symlink.sh
 
 # -- HIGHLY NOT RECOMMENDED.
 # -- Un-comment if you are using a laptop
 # -- AND OBSESSED WITH 1.0 W USAGE.
-# . $THIS_PLACE/install_scripts/i_am_using_laptop.sh
+# -- $THIS_PLACE/install_scripts/i_am_using_laptop.sh
 
 # Post-installation
 $THIS_PLACE/install_scripts/post_install.sh

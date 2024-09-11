@@ -26,6 +26,3 @@ $LINK $THIS_PLACE/.p10k.zsh 					$HOME/.p10k.zsh
 $LINK $THIS_PLACE/.nanorc                       $HOME/.nanorc
 
 $LINK $THIS_PLACE/assets/wallpaper.png          $HOME/Pictures/wallpaper.png
-
-sudo $LINK $THIS_PLACE/.config/sddm/theme.conf  /usr/share/sddm/themes/sddm-astronaut-theme/theme.conf               
-sudo $LINK $THIS_PLACE/.config/sddm/sddm.conf   /etc/sddm.conf

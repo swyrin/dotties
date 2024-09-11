@@ -37,10 +37,5 @@ $THIS_PLACE/install_scripts/install_fonts.sh
 $THIS_PLACE/install_scripts/setup_system.sh
 $THIS_PLACE/install_scripts/symlink.sh
 
-# -- HIGHLY NOT RECOMMENDED.
-# -- Un-comment if you are using a laptop
-# -- AND OBSESSED WITH 1.0 W USAGE.
-# -- $THIS_PLACE/install_scripts/i_am_using_laptop.sh
-
 # Post-installation
 $THIS_PLACE/install_scripts/post_install.sh

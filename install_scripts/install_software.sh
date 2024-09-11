@@ -8,7 +8,8 @@ $PACMAN mako				                # --- libappnotify-compliant notification daemon
 $PACMAN waybar				                # --- the bar 
 $PACMAN alacritty        		            # --- terminal emulator
 $PACMAN rofi-wayland     		            # --- application launcher
-$PARU   cliphist                            # --- clipboard history
+$PARU   bemoji                              # --- emoji picker for rofi
+$PARU   cliphist wtype                      # --- clipboard history for rofi
 $PACMAN fcitx5{,-unikey}		            # --- input method (plus I am from 'nam)
 $PACMAN network-manager-applet	            # --- tray icon for networkmanager
 $PACMAN playerctl			                # --- CLI tool for controlling MPRIS-compliant media

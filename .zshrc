@@ -1,4 +1,5 @@
 fastfetch
+sleep 0.3
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]

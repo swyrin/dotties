@@ -23,3 +23,4 @@ $LINK $THIS_PLACE/.zprofile                    $HOME/.zprofile
 $LINK $THIS_PLACE/.p10k.zsh 					$HOME/.p10k.zsh
 $LINK $THIS_PLACE/.nanorc                      $HOME/.nanorc
 
+$LINK $THIS_PLACE/assets/wallpaper.png          $HOME/Pictures/wallpaper.png

@@ -1,16 +1,37 @@
-max-visible=10
-layer=top
-font=MesloLGS
-text-color=#d8dee9
-max-icon-size=48
-default-timeout=10000
-anchor=top-right
-margin=20
-background-color=#282a36
-border-color=#006acd
-border-radius=10
+# Configuration for mako
 
-[app-name=discord]
-border-color=#9000ff
-ignore-timeout=0
-default-timeout=7000
+# Global config
+max-history=5
+sort=-time
+
+font=MesloLGS Nerd Font 12
+width=450
+height=250
+border-size=3
+border-radius=5
+icons=1
+text-alignment=center
+default-timeout=5000
+layer=overlay
+anchor=top-right
+
+# Start flavours
+## Base16 Mountain Darker
+# Author: gnsfujiwara (https://github.com/gnsfujiwara)
+#
+# You can use these variables anywhere in the mako configuration file.
+
+background-color=#1e1e1ecf
+text-color=#ffffff
+border-color=#df5296
+
+[urgency=low]
+background-color=#000000bb
+text-color=#ac8a8cbb
+border-color=#ac8a8cbb
+
+[urgency=high]
+background-color=#000000ff
+text-color=#ac8a8cff
+border-color=#ac8a8cff
+# End flavours

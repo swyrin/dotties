@@ -10,3 +10,4 @@ $PACMAN hyprland hyprland hyprlock hypridle hyprpaper
 $PARU   hyprshot
 $PACMAN xdg-desktop-portal-hyprland
 $PACMAN polkit-kde-agent
+$PARU   wlogout

@@ -9,7 +9,7 @@ set -x
 LC_ALL=en_US.UTF-8 xdg-user-dirs-update --force
 
 # Change shell to zsh
-chsh -s /usr/bin/zsh $(whoami)
+sudo chsh -s /usr/bin/zsh $(whoami)
 
 # Set dns server to quad9
 nmcli -g name,type connection show | awk -F: '/ethernet|wireless/ { print $1 }' | while read connection

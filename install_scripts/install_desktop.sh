@@ -16,3 +16,4 @@ $PACMAN sddm
 $PARU   sddm-astronaut-theme
 $PACMAN qt5-base qt5-quickcontrols2 qt5-svg
 $PARU   hyprshade
+$PARU   hyprpicker

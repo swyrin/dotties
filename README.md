@@ -55,8 +55,8 @@ $ ./anything.sh
 
 | Rofi             |  fastfetch         |
 |----------------------------|--------------------------|
-![](https://raw.githubusercontent.com/swyrin/dotties/rework/screenshots/s1.png)  |  ![](https://raw.githubusercontent.com/swyrin/dotties/rework/screenshots/s2.png)
+![](https://raw.githubusercontent.com/swyrin/dotties/main/screenshots/s1.png)  |  ![](https://raw.githubusercontent.com/swyrin/dotties/main/screenshots/s2.png)
 
 |    SDDM | Hyprlock |
 |----------------------------|--------------------------|
-![](https://raw.githubusercontent.com/swyrin/dotties/rework/screenshots/s3.png)  |  ![](https://raw.githubusercontent.com/swyrin/dotties/rework/screenshots/s4.png)
+![](https://raw.githubusercontent.com/swyrin/dotties/main/screenshots/s3.png)  |  ![](https://raw.githubusercontent.com/swyrin/dotties/main/screenshots/s4.png)

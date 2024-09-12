@@ -17,7 +17,6 @@ $PACMAN network-manager-applet	                # --- tray icon for networkmanage
 $PACMAN playerctl			                    # --- CLI tool for controlling MPRIS-compliant media
 $PACMAN pamixer				                    # --- CLI tool for controlling audio
 $PACMAN pavucontrol			                    # --- GUI tool for controlling audio
-$PACMAN wlsunset   			                    # --- shut up blue light
 $PACMAN btop 				                    # --- think like task manager
 $PACMAN zsh				                        # --- z shell
 $PARU   zsh-theme-powerlevel10k-bin-git         # --- z shell but on steroid

@@ -29,3 +29,7 @@ $SYSCTL_ENABLE NetworkManager.service
 # ------ AUR builds ------
 sudo sed -i 's/#MAKEFLAGS=\"-j2\"/MAKEFLAGS=\"-j\$\(nproc\)\"/g' /etc/makepkg.conf
 sudo sed -i 's/#RUSTFLAGS=\"-C opt-level=2\"/RUSTFLAGS=\"-C opt-level=2 -C target-cpu=native\"/g' /etc/makepkg.conf
+
+# ------ Desktop ------
+hyprshade install
+$SYSCTL_ENABLE_USER hyprshade.timer

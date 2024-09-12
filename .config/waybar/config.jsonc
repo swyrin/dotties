@@ -1,0 +1,148 @@
+{
+    // -------------------------------------------------------------------------
+    // Global configuration
+    // -------------------------------------------------------------------------
+
+    "layer": "top",
+    "position": "top",
+
+    "margin-bottom": -5,
+
+    "modules-left": [
+        "hyprland/workspaces",
+        "temperature",
+    	"battery",
+        "custom/media"
+    ],
+
+    "modules-center": [
+        "clock",
+    ],
+
+    "modules-right": [
+        "tray",
+        "memory",
+        "cpu",
+        "wireplumber",
+        "backlight",
+        "custom/power"
+    ],
+
+    // -------------------------------------------------------------------------
+    // Modules
+    // -------------------------------------------------------------------------
+
+    "temperature": {
+        "interval": 4,
+        "critical-threshold": 80,
+        "format-critical": "  {temperatureC}",
+        "format": "{icon}  {temperatureC}",
+        "format-icons": [""],
+        "max-length": 7,
+        "min-length": 7,
+    },
+
+    "memory": {
+        "interval": 30,
+        "format": "  {used:0.2f} GB",
+    },
+
+    "battery": {
+        "interval": 10,
+        "states": {
+            "good": 95,
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{icon}  {capacity}",
+        "format-icons": [
+            "",
+            "",
+            "",
+            "",
+            ""
+        ]
+    },
+
+    "backlight": {
+        "format": "{icon}  {percent}",
+        "format-icons": ["", ""],
+        "on-scroll-down": "brightnessctl s 5%-",
+        "on-scroll-up": "brightnessctl s +5%"
+    },
+
+    "custom/media": {
+        "format": "{icon} {}",
+        "return-type": "json",
+        "max-length": 40,
+        "format-icons": {
+            "spotify": "",
+            "default": "🎜"
+        },
+        "escape": true,
+        "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" 
+    },
+
+    "custom/power": {
+        "format": "     ",
+        "tooltip": false,
+        "on-click": "wlogout"
+    },
+
+    "clock": {
+        "format": "❤️ {:%H:%M    %a, %B %d}",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "today-format": "<b>{}</b>",
+    },
+
+    "cpu": {
+        "interval": 5,
+        "format": "{max_frequency}GHz <span color=\"darkgray\">| {usage}%</span>",
+        "max-length": 13,
+        "min-length": 13
+    },
+
+    "mpd": {
+        "max-length": 25,
+        "format": "<span foreground='#bb9af7'></span> {title}",
+        "format-paused": " {title}",
+        "format-stopped": "<span foreground='#bb9af7'></span>",
+        "format-disconnected": "",
+        "on-click": "mpc --quiet toggle",
+        "on-click-right": "mpc update; mpc ls | mpc add",
+        "on-click-middle": "alacritty -e ncmpcpp",
+        "on-scroll-up": "mpc --quiet prev",
+        "on-scroll-down": "mpc --quiet next",
+        "smooth-scrolling-threshold": 5,
+        "tooltip-format": "{title} - {artist} ({elapsedTime:%M:%S}/{totalTime:%H:%M:%S})"
+    },
+
+    "hyprland/workspaces": {
+        "all-outputs": true,
+        "format": "{name}",
+        "on-scroll-up": "hyprctl dispatch workspace e+1 1>/dev/null",
+        "on-scroll-down": "hyprctl dispatch workspace e-1 1>/dev/null",
+        "sort-by-number": true,
+        "active-only": false,
+    },
+
+    "hyprland/window": {
+        "max-length": 100,
+        "separate-outputs": true
+    },
+
+    "wireplumber": {
+        "on-click": "pavucontrol",
+        "on-click-right": "amixer sset Master toggle 1>/dev/null",
+        "format": "<span foreground='#fab387'>{icon}</span>",
+        "format-muted": " ",
+        "format-icons": {
+            "default": [" ", " ", " "]
+        },
+    },
+
+    "tray": {
+        "icon-size": 15,
+        "spacing": 3
+    }
+}

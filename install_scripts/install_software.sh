@@ -8,8 +8,6 @@ $PACMAN nautilus                                # --- file manager
 $PACMAN zed                                     # --- text editor
 $PACMAN meld                                    # --- diff viewer
 $PACMAN mako				                    # --- libappnotify-compliant notification daemon
-$PACMAN waybar				                    # --- the bar 
-$PARU   wlogout                                 # --- powerbutton
 $PACMAN alacritty        		                # --- terminal emulator
 $PACMAN rofi-wayland     		                # --- application launcher
 $PARU   rofimoji                                # --- emoji picker for rofi

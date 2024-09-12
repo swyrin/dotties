@@ -17,15 +17,14 @@
 
     "modules-center": [
         "clock",
-        "custom/weather"
     ],
 
     "modules-right": [
-        "backlight",
+        "tray",
         "memory",
         "cpu",
         "wireplumber",
-	    "tray",
+        "backlight",
         "custom/power"
     ],
 
@@ -72,22 +71,6 @@
         "on-scroll-up": "brightnessctl s +5%"
     },
 
-    "idle_inhibitor": {
-        "format": "{icon}",
-        "format-icons": {
-            "activated": "",
-            "deactivated": ""
-        },
-        "tooltip": "true"
-    },
-
-    "custom/weather": {
-        "format": "{}",
-        "interval": 3600,
-        "exec": "curl -s 'https://wttr.in/?format=1'",
-        "exec-if": "ping wttr.in -c1"
-    },
-
     "custom/media": {
         "format": "{icon} {}",
         "return-type": "json",
@@ -107,14 +90,13 @@
     },
 
     "clock": {
-        "format": "❤️  {:%H:%M   %e %b %Y}",
+        "format": "❤️ {:%H:%M    %a, %B %d}",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         "today-format": "<b>{}</b>",
-	"timezone": "Asia/Ho_Chi_Minh"
     },
 
     "cpu": {
-        "interval": 1,
+        "interval": 5,
         "format": "{max_frequency}GHz <span color=\"darkgray\">| {usage}%</span>",
         "max-length": 13,
         "min-length": 13
@@ -133,22 +115,6 @@
         "on-scroll-down": "mpc --quiet next",
         "smooth-scrolling-threshold": 5,
         "tooltip-format": "{title} - {artist} ({elapsedTime:%M:%S}/{totalTime:%H:%M:%S})"
-    },
-
-    "custom/title": {
-        "format": "{}",
-        "interval": 0,
-        "return-type": "json",
-        "tooltip": false
-    },
-
-    "custom/title#name": {
-        "format": "{}",
-        "interval": 0,
-        "return-type": "json",
-
-        "max-length": 35,
-        "exec": "$HOME/.scripts/title"
     },
 
     "hyprland/workspaces": {

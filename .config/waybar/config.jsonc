@@ -43,7 +43,9 @@
     "memory": {
         "interval": 30,
         "format": "  {used:0.2f} GB",
-        "tooltip": false
+        "tooltip": false,
+        "min-length": 12,
+        "max-length": 12
     },
 
     "battery": {
@@ -51,7 +53,7 @@
         "states": {
             "good": 95,
             "warning": 30,
-            "critical": 15
+            "critical": 20
         },
         "format": "{icon}  {capacity}",
         "format-icons": [
@@ -60,7 +62,9 @@
             "",
             "",
             ""
-        ]
+        ],
+        "max-length": 6,
+        "min-length": 6
     },
 
     "backlight": {
@@ -68,18 +72,18 @@
         "format-icons": ["", ""],
         "on-scroll-down": "brightnessctl s 5%-",
         "on-scroll-up": "brightnessctl s +5%",
-        "tooltip": false
+        "tooltip": false,
+        "min-length": 6,
+        "max-length": 6
     },
 
     "custom/media": {
-        "format": "{icon} {}",
+        "format": "🎜 {}",
+        "tooltip-format": "{}",
         "return-type": "json",
-        "max-length": 40,
-        "format-icons": {
-            "spotify": "",
-            "default": "🎜"
-        },
-        "escape": true,
+        "hide-on-empty": false,
+        "max-length": 20,
+        "min-length": 20,
         "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null"
     },
 
@@ -92,14 +96,14 @@
     "clock": {
         "format": "❤️ {:%H:%M    %a, %B %d}",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "today-format": "<b>{}</b>",
+        "today-format": "{}",
     },
 
     "cpu": {
         "interval": 5,
-        "format": "  {max_frequency} GHz ({usage}%)",
-        "max-length": 20,
-        "min-length": 14
+        "format": "  {load} GHz ({usage}%)",
+        "max-length": 18,
+        "min-length": 18
     },
 
     "mpd": {
@@ -123,7 +127,7 @@
         "on-scroll-up": "hyprctl dispatch workspace e+1 1>/dev/null",
         "on-scroll-down": "hyprctl dispatch workspace e-1 1>/dev/null",
         "sort-by-number": true,
-        "active-only": false,
+        "active-only": false
     },
 
     "hyprland/window": {
@@ -135,10 +139,12 @@
         "on-click": "pavucontrol",
         "on-click-right": "amixer sset Master toggle 1>/dev/null",
         "format": "{icon}",
-        "format-muted": " ",
+        "format-muted": "",
         "format-icons": {
             "default": [" ", " ", " "]
         },
+        "min-length": 2,
+        "max-length": 2
     },
 
     "tray": {

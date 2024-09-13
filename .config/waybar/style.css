@@ -5,19 +5,20 @@
 
   font-family: "JetBrainsMono Nerd Font";
 
-  font-size: 12px;
+  font-size: 8pt;
   font-weight: 900;
 
   margin: 0.2em 0.3em 0.2em 0.3em;
 }
 
-#waybar {
+window#waybar {
   background-color: @base;
-  border-radius: 25px;
+  border-radius: 12px;
 }
 
 tooltip {
   background-color: @base;
+  color: @text;
 }
 
 /* Module base CSS */
@@ -30,14 +31,15 @@ tooltip {
 #wireplumber,
 #tray,
 #workspaces,
+#custom-media,
 #custom-power {
   padding: 0px 15px;
-  border-radius: 20px;
+  border-radius: 8px;
   color: @mantle;
 }
 
 #workspaces {
-  padding: 0px 2px;
+  padding: 0px 1px;
   background-color: @surface0;
   margin-left: 3px;
 }
@@ -82,40 +84,23 @@ tooltip {
   background-color: @flamingo;
 }
 
+#battery.good,
 #battery.charging,
 #battery.full,
 #battery.plugged {
   background-color: @green;
 }
 
-@keyframes blink {
-  to {
-    background-color: rgba(30, 34, 42, 0.5);
-    color: #abb2bf;
-  }
+#battery.warning:not(.charging) {
+  background-color: @yellow;
 }
 
 #battery.critical:not(.charging) {
-  color: @peach;
-  animation-name: blink;
-  animation-duration: 0.5s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
+  background-color: @red;
 }
 
 #custom-media {
-  background-color: #66cc99;
-  color: #2a5c45;
-  min-width: 100px;
-}
-
-#custom-media.custom-spotify {
-  background-color: #66cc99;
-}
-
-#custom-media.custom-vlc {
-  background-color: #ffa000;
+  background-color: @teal;
 }
 
 #temperature {
@@ -128,5 +113,5 @@ tooltip {
 
 #tray {
   padding: 0px 5px;
-  background-color: @overlay0;
+  background-color: @surface2;
 }

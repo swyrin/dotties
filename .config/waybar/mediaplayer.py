@@ -14,7 +14,7 @@ logger = logging.getLogger(__name__)
 def write_output(text, player):
     logger.info('Writing output')
 
-    output = {'text': text,
+    output = {'text': text if len(text) > 0 else "Nothing...",
               'class': 'custom-' + player.props.player_name,
               'alt': player.props.player_name}
 
@@ -42,7 +42,7 @@ def on_metadata(player, metadata, manager):
         track_info = player.get_title()
 
     if player.props.status != 'Playing' and track_info:
-        track_info = ' ' + track_info
+        track_info = '  ' + track_info
     write_output(track_info, player)
 
 
@@ -89,6 +89,12 @@ def parse_arguments():
 
 
 def main():
+    # write once to initialize the bar
+    output = {'text': "Nothing...", 'class': 'custom-empty', 'alt': 'empty'}
+    sys.stdout.write(json.dumps(output) + '\n')
+    sys.stdout.flush()
+
+    # the actual run
     arguments = parse_arguments()
 
     # Initialize logging
@@ -106,7 +112,7 @@ def main():
     loop = GLib.MainLoop()
 
     manager.connect('name-appeared', lambda *args: on_player_appeared(*args, arguments.player))
-    manager.connect('player-vanished', on_player_vanished)
+#    manager.connect('player-vanished', on_player_vanished)
 
     signal.signal(signal.SIGINT, signal_handler)
     signal.signal(signal.SIGTERM, signal_handler)

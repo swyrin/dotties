@@ -12,6 +12,7 @@ $PACMAN alacritty        		                # --- terminal emulator
 $PACMAN rofi-wayland     		                # --- application launcher
 $PARU   rofimoji                                # --- emoji picker for rofi
 $PARU   cliphist wtype                          # --- clipboard history for rofi
+$PACMAN nwg-clipman                             # --- clipboard manager
 $PACMAN fcitx5{,-unikey}		                # --- input method (plus I am from 'nam)
 $PACMAN network-manager-applet	                # --- tray icon for networkmanager
 $PACMAN playerctl			                    # --- CLI tool for controlling MPRIS-compliant media

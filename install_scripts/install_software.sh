@@ -30,7 +30,8 @@ $PACMAN alsa-utils                              # --- CLI tool for controlling a
 $PACMAN brightnessctl                           # --- CLI tool for controlling brightness
 $PACMAN powerline-fonts                         # --- powerline fonts
 $PACMAN fzf                                     # --- (f)u(z)zy (f)inder
-$PACMAN pkgfile                                 # --- Arch repo package lookup 
+$PACMAN pkgfile                                 # --- Arch repo package lookup
 $PARU   oh-my-zsh-git                           # --- oh my zsh for powerlevel10k
 $PACMAN python                                  # --- for python scripts
 $PACMAN python-gobject gobject-introspection    # --- for waybar and stuffs
+$PARU   nano-syntax-highlighting-git            # --- highlights for nano

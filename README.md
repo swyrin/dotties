@@ -21,7 +21,8 @@
 - Application launcher: Rofi with [clipboard history](https://wiki.hyprland.org/Useful-Utilities/Clipboard-Managers/#cliphist) and [emoji picker](https://github.com/fdw/rofimoji) 
 - System information: fastfetch
 - Notification: mako
-- Soundsystem: Pipewire with PulseAudio compatibility layer.
+- Sound system: Pipewire with PulseAudio compatibility layer.
+- Cursor: Hyprcursor with [rose-pine-hyprcursor](https://github.com/ndom91/rose-pine-hyprcursor)
 
 # 😳 Can I use it?
 

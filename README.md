@@ -23,6 +23,7 @@
 - Notification: mako
 - Sound system: Pipewire with PulseAudio compatibility layer.
 - Cursor: Hyprcursor with [rose-pine-hyprcursor](https://github.com/ndom91/rose-pine-hyprcursor)
+- Color picker: Hyprpicker with a dedicated keybind.
 
 # 😳 Can I use it?
 

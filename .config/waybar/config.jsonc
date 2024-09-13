@@ -1,17 +1,14 @@
 {
-    // -------------------------------------------------------------------------
-    // Global configuration
-    // -------------------------------------------------------------------------
-
-    "layer": "top",
     "position": "top",
 
-    "margin-bottom": -5,
+    "margin-top": 7,
+    "margin-left": 5,
+    "margin-right": 5,
 
     "modules-left": [
         "hyprland/workspaces",
         "temperature",
-    	"battery",
+        "battery",
         "custom/media"
     ],
 
@@ -34,17 +31,19 @@
 
     "temperature": {
         "interval": 4,
+        "tooltip": false,
         "critical-threshold": 80,
         "format-critical": "  {temperatureC}",
         "format": "{icon}  {temperatureC}",
         "format-icons": [""],
-        "max-length": 7,
-        "min-length": 7,
+        "max-length": 6,
+        "min-length": 6
     },
 
     "memory": {
         "interval": 30,
         "format": "  {used:0.2f} GB",
+        "tooltip": false
     },
 
     "battery": {
@@ -68,7 +67,8 @@
         "format": "{icon}  {percent}",
         "format-icons": ["", ""],
         "on-scroll-down": "brightnessctl s 5%-",
-        "on-scroll-up": "brightnessctl s +5%"
+        "on-scroll-up": "brightnessctl s +5%",
+        "tooltip": false
     },
 
     "custom/media": {
@@ -80,11 +80,11 @@
             "default": "🎜"
         },
         "escape": true,
-        "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" 
+        "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null"
     },
 
     "custom/power": {
-        "format": "     ",
+        "format": " ",
         "tooltip": false,
         "on-click": "wlogout"
     },
@@ -97,9 +97,9 @@
 
     "cpu": {
         "interval": 5,
-        "format": "{max_frequency}GHz <span color=\"darkgray\">| {usage}%</span>",
-        "max-length": 13,
-        "min-length": 13
+        "format": "  {max_frequency} GHz ({usage}%)",
+        "max-length": 20,
+        "min-length": 14
     },
 
     "mpd": {
@@ -134,7 +134,7 @@
     "wireplumber": {
         "on-click": "pavucontrol",
         "on-click-right": "amixer sset Master toggle 1>/dev/null",
-        "format": "<span foreground='#fab387'>{icon}</span>",
+        "format": "{icon}",
         "format-muted": " ",
         "format-icons": {
             "default": [" ", " ", " "]

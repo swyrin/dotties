@@ -40,20 +40,25 @@ tooltip {
 
 #workspaces {
   padding: 0px 1px;
-  background-color: @surface0;
+  background-color: @crust;
   margin-left: 3px;
 }
 
 #workspaces button {
-  color: @lavender;
+  color: @blue;
 }
 
-#workspaces button.active {
-  color: @maroon;
+#workspaces button.active:not(:hover) {
+  color: @red;
 }
 
-#workspaces button:hover {
-  color: @sky;
+#workspaces *:hover {
+  color: @yellow;
+}
+
+#workspaces button.empty:not(.active):not(:hover) {
+  color: @text;
+  opacity: 0.6;
 }
 
 #cpu {

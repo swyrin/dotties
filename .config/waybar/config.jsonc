@@ -8,12 +8,13 @@
     "modules-left": [
         "hyprland/workspaces",
         "temperature",
-        "battery",
-        "custom/media"
+        "battery"
+        // "custom/media"
     ],
 
     "modules-center": [
         "clock",
+        "power-profiles-daemon",
     ],
 
     "modules-right": [
@@ -30,10 +31,9 @@
     // -------------------------------------------------------------------------
 
     "temperature": {
-        "interval": 4,
+        "interval": 5,
         "tooltip": false,
         "critical-threshold": 80,
-        "format-critical": "  {temperatureC}",
         "format": "{icon}  {temperatureC}",
         "format-icons": [""],
         "max-length": 6,
@@ -43,9 +43,9 @@
     "memory": {
         "interval": 30,
         "format": "  {used:0.2f} GB",
-        "tooltip": false,
-        "min-length": 12,
-        "max-length": 12
+        "tooltip-format": "{used:0.2f} GB / {total:0.2f} GB",
+        "min-length": 11,
+        "max-length": 11
     },
 
     "battery": {
@@ -101,9 +101,9 @@
 
     "cpu": {
         "interval": 5,
-        "format": "  {load} GHz ({usage}%)",
-        "max-length": 18,
-        "min-length": 18
+        "format": "  {avg_frequency:0.2f} GHz",
+        "max-length": 11,
+        "min-length": 11
     },
 
     "hyprland/workspaces": {
@@ -121,11 +121,6 @@
         }
     },
 
-    "hyprland/window": {
-        "max-length": 100,
-        "separate-outputs": true
-    },
-
     "wireplumber": {
         "on-click": "pavucontrol",
         "on-click-right": "amixer sset Master toggle 1>/dev/null",
@@ -135,11 +130,24 @@
             "default": [" ", " ", " "]
         },
         "min-length": 2,
-        "max-length": 2
+        "max-length": 2,
+        "tooltip": false
     },
 
     "tray": {
         "icon-size": 15,
         "spacing": 3
+    },
+
+    "power-profiles-daemon": {
+        "format": " {icon} ",
+        "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
+        "tooltip": true,
+        "format-icons": {
+            "default": "",
+            "performance": " ",
+            "balanced": " ",
+            "power-saver": " "
+        }
     }
 }

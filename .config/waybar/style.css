@@ -12,7 +12,7 @@
 }
 
 window#waybar {
-  background-color: @base;
+  background-color: @mantle;
   border-radius: 12px;
 }
 
@@ -30,6 +30,7 @@ tooltip {
 #backlight,
 #wireplumber,
 #tray,
+#power-profiles-daemon,
 #workspaces,
 #custom-media,
 #custom-power {
@@ -40,7 +41,7 @@ tooltip {
 
 #workspaces {
   padding: 0px 1px;
-  background-color: @crust;
+  background-color: @base;
   margin-left: 3px;
 }
 
@@ -89,7 +90,6 @@ tooltip {
   background-color: @flamingo;
 }
 
-#battery.good,
 #battery.charging,
 #battery.full,
 #battery.plugged {
@@ -119,4 +119,25 @@ tooltip {
 #tray {
   padding: 0px 5px;
   background-color: @surface2;
+}
+
+#tray menu {
+  background-color: @base;
+  color: @text;
+}
+
+#power-profiles-daemon {
+  padding: 0px 5px 0px 5px;
+}
+
+#power-profiles-daemon.performance {
+  background-color: @red;
+}
+
+#power-profiles-daemon.balanced {
+  background-color: @text;
+}
+
+#power-profiles-daemon.power-saver {
+  background-color: @green;
 }

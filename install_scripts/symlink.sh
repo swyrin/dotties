@@ -17,6 +17,7 @@ $LINK $THIS_PLACE/.config/gtk-4.0 			    $HOME/.config/gtk-4.0
 $LINK $THIS_PLACE/.config/mako                  $HOME/.config/mako
 $LINK $THIS_PLACE/.config/fastfetch             $HOME/.config/fastfetch
 $LINK $THIS_PLACE/.config/wlogout               $HOME/.config/wlogout
+$LINK $THIS_PLACE/.config/xdg-desktop-portal    $HOME/.config/xdg-desktop-portal
 
 $LINK $THIS_PLACE/.config/chrome-flags.conf 	$HOME/.config/chrome-flags.conf
 $LINK $THIS_PLACE/.config/chrome-flags.conf 	$HOME/.config/electron-flags.conf

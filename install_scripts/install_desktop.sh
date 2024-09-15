@@ -9,6 +9,7 @@ PARU="paru -S --needed --noconfirm --removemake"
 $PACMAN hyprland hyprland hyprlock hypridle hyprpaper hyprcursor
 $PARU   hyprshot
 $PACMAN xdg-desktop-portal-hyprland
+$PACMAN xdg-desktop-portal-gtk
 $PACMAN polkit-kde-agent
 $PARU   wlogout
 $PACMAN waybar

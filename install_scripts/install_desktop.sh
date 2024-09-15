@@ -12,7 +12,7 @@ $PACMAN xdg-desktop-portal-hyprland
 $PACMAN polkit-kde-agent
 $PARU   wlogout
 $PACMAN waybar
-$PACMAN sddm
+$PACMAN sddm kwin layer-shell-qt{,5}
 $PARU   sddm-astronaut-theme
 $PACMAN qt5-base qt5-quickcontrols2 qt5-svg
 $PARU   hyprshade

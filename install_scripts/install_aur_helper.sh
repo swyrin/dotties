@@ -3,10 +3,10 @@ set -euox pipefail
 
 if [ -z $(which paru) ]
 then
-    sudo pacman -S --needed git base base-devel
-    git clone https://aur.archlinux.org/paru-bin.git
-    cd $(pwd)/paru-bin
+    sudo pacman -S --needed git base base-devel rust
+    git clone https://aur.archlinux.org/paru-git.git
+    cd $(pwd)/paru-git
     makepkg -si --noconfirm
     cd ../
-    rm $(pwd)/paru-bin -rf
+    rm $(pwd)/paru-git -rf
 fi

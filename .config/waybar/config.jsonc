@@ -106,28 +106,19 @@
         "min-length": 18
     },
 
-    "mpd": {
-        "max-length": 25,
-        "format": "<span foreground='#bb9af7'></span> {title}",
-        "format-paused": " {title}",
-        "format-stopped": "<span foreground='#bb9af7'></span>",
-        "format-disconnected": "",
-        "on-click": "mpc --quiet toggle",
-        "on-click-right": "mpc update; mpc ls | mpc add",
-        "on-click-middle": "alacritty -e ncmpcpp",
-        "on-scroll-up": "mpc --quiet prev",
-        "on-scroll-down": "mpc --quiet next",
-        "smooth-scrolling-threshold": 5,
-        "tooltip-format": "{title} - {artist} ({elapsedTime:%M:%S}/{totalTime:%H:%M:%S})"
-    },
-
     "hyprland/workspaces": {
-        "all-outputs": true,
         "format": "{name}",
         "on-scroll-up": "hyprctl dispatch workspace e+1 1>/dev/null",
         "on-scroll-down": "hyprctl dispatch workspace e-1 1>/dev/null",
         "sort-by-number": true,
-        "active-only": false
+        "active-only": false,
+        "persistent-workspaces": {
+            "1": [],
+            "2": [],
+            "3": [],
+            "4": [],
+            "5": []
+        }
     },
 
     "hyprland/window": {

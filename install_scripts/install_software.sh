@@ -4,21 +4,16 @@ set -euox pipefail
 PACMAN="sudo pacman -S --needed --noconfirm"
 PARU="paru -S --needed --noconfirm --removemake"
 
-$PACMAN nautilus                                # --- file manager
-$PACMAN zed                                     # --- text editor
-$PACMAN meld                                    # --- diff viewer
 $PACMAN mako				                    # --- libappnotify-compliant notification daemon
 $PACMAN alacritty        		                # --- terminal emulator
 $PACMAN rofi-wayland     		                # --- application launcher
 $PARU   rofimoji                                # --- emoji picker for rofi
-$PARU   cliphist wtype                          # --- clipboard history for rofi
+$PARU   cliphist wtype                          # --- clipboard history for nwg-clipman
 $PACMAN nwg-clipman                             # --- clipboard manager
-$PACMAN fcitx5{,-unikey}		                # --- input method (plus I am from 'nam)
 $PACMAN network-manager-applet	                # --- tray icon for networkmanager
 $PACMAN playerctl			                    # --- CLI tool for controlling MPRIS-compliant media
 $PACMAN pamixer				                    # --- CLI tool for controlling audio
 $PACMAN pavucontrol			                    # --- GUI tool for controlling audio
-$PACMAN btop 				                    # --- think like task manager
 $PACMAN zsh				                        # --- z shell
 $PARU   zsh-theme-powerlevel10k-bin-git         # --- z shell but on steroid
 $PARU   ttf-meslo-nerd-font-powerlevel10k       # --- PL10k recommended font
@@ -35,4 +30,3 @@ $PACMAN pkgfile                                 # --- Arch repo package lookup
 $PARU   oh-my-zsh-git                           # --- oh my zsh for powerlevel10k
 $PACMAN python                                  # --- for python scripts
 $PACMAN python-gobject gobject-introspection    # --- for waybar and stuffs
-$PARU   nano-syntax-highlighting-git            # --- highlights for nano

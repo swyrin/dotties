@@ -43,13 +43,6 @@ $ ./anything.sh
 > 
 > In that case - feel free to [fire a pull request](https://github.com/swyrin/dotties/pulls) and we can talk about it.
 
-#### 🤨 What about `extension_scripts`?
-
-- This customization is made with no optimizations/adjustments in mind. So that is what they will do - some examples:
-   - Tune down resource usage if you are on laptop **AND** on battery.
-   - Fix up gamma adjustment on NVIDIA.
-   - *Motivate your machine so that it should run at its highest peak.* 
-
 # 📸 Screenshots
 
 > [!NOTE]

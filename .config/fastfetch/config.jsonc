@@ -3,8 +3,9 @@
   "logo": {
     "source": "~/.config/fastfetch/arch.txt",
     "padding": {
-        "top": 3,
-        "right": 6
+        "top": 2,
+        "left": 2,
+        "right": 2
     }
   },
   "display": {

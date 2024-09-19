@@ -12,7 +12,7 @@
 }
 
 window#waybar {
-  background-color: @mantle;
+  background-color: @base;
   border-radius: 12px;
 }
 
@@ -41,7 +41,7 @@ tooltip {
 
 #workspaces {
   padding: 0px 1px;
-  background-color: @base;
+  background-color: @mantle;
   margin-left: 3px;
 }
 

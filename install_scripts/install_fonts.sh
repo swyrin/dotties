@@ -16,5 +16,5 @@ $PACMAN ttf-hack ttf-fira-sans \
         adobe-source-han-sans-otc-fonts adobe-source-han-serif-otc-fonts
 
 $PARU noto-fonts-tc \
-     siji-git \
-     ttf-unifont ttf-gelasio-ib ttf-caladea ttf-carlito ttf-liberation-sans-narrow ttf-ms-fonts
+     siji-ng \
+     ttf-unifont ttf-gelasio ttf-caladea ttf-carlito ttf-liberation-sans-narrow ttf-ms-fonts

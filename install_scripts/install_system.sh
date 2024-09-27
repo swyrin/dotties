@@ -11,7 +11,3 @@ $PACMAN pipewire-audio
 $PACMAN pipewire-alsa
 $PACMAN pipewire-pulse
 $PACMAN {lib32-,}pipewire-jack
-
-# ------ Network ------
-$PACMAN networkmanager
-$PACMAN wpa_supplicant

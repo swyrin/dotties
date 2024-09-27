@@ -10,7 +10,6 @@ $PACMAN rofi-wayland     		                # --- application launcher
 $PARU   rofimoji                                # --- emoji picker for rofi
 $PARU   cliphist wtype                          # --- clipboard history for nwg-clipman
 $PACMAN nwg-clipman                             # --- clipboard manager
-$PACMAN network-manager-applet	                # --- tray icon for networkmanager
 $PACMAN playerctl			                    # --- CLI tool for controlling MPRIS-compliant media
 $PACMAN pamixer				                    # --- CLI tool for controlling audio
 $PACMAN pavucontrol			                    # --- GUI tool for controlling audio

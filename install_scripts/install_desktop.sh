@@ -20,3 +20,4 @@ $PARU   hyprshade
 $PARU   hyprpicker
 $PACMAN papirus-icon-theme
 $PACMAN power-profiles-daemon
+$PARU   catppuccin-cursors-mocha

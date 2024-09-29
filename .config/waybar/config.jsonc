@@ -136,7 +136,7 @@
 
     "tray": {
         "icon-size": 15,
-        "spacing": 3
+        "spacing": 15
     },
 
     "power-profiles-daemon": {

@@ -5,7 +5,7 @@
 
   font-family: "JetBrainsMono Nerd Font";
 
-  font-size: 8pt;
+  font-size: 10pt;
   font-weight: 900;
 
   margin: 0.2em 0.3em 0.2em 0.3em;
@@ -32,7 +32,6 @@ tooltip {
 #tray,
 #power-profiles-daemon,
 #workspaces,
-#custom-media,
 #custom-power {
   padding: 0px 15px;
   border-radius: 8px;
@@ -104,10 +103,6 @@ tooltip {
   background-color: @red;
 }
 
-#custom-media {
-  background-color: @teal;
-}
-
 #temperature {
   background-color: @rosewater;
 }
@@ -117,13 +112,19 @@ tooltip {
 }
 
 #tray {
-  padding: 0px 5px;
+  padding: 0px 0px;
   background-color: @surface2;
 }
 
 #tray menu {
+  padding: 0px 0px;
   background-color: @base;
   color: @text;
+}
+
+#tray menu menuitem:hover {
+  background-color: @overlay1;
+  color: @base;
 }
 
 #power-profiles-daemon {

@@ -10,7 +10,7 @@ $PACMAN hyprland hyprland hyprlock hypridle hyprpaper hyprcursor
 $PARU   hyprshot
 $PACMAN xdg-desktop-portal-hyprland
 $PACMAN xdg-desktop-portal-gtk
-$PACMAN polkit-kde-agent
+$PACMAN polkit-gnome
 $PARU   wlogout
 $PACMAN waybar
 $PACMAN sddm weston

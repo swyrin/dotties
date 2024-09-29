@@ -13,10 +13,11 @@ $LINK $THIS_PLACE/.config/waybar                $HOME/.config/waybar
 $LINK $THIS_PLACE/.config/rofi 				    $HOME/.config/rofi
 $LINK $THIS_PLACE/.config/hypr                  $HOME/.config/hypr
 $LINK $THIS_PLACE/.config/gtk-3.0 			    $HOME/.config/gtk-3.0
-$LINK $THIS_PLACE/.config/gtk-4.0 			    $HOME/.config/gtk-4.0
 $LINK $THIS_PLACE/.config/mako                  $HOME/.config/mako
 $LINK $THIS_PLACE/.config/fastfetch             $HOME/.config/fastfetch
 $LINK $THIS_PLACE/.config/wlogout               $HOME/.config/wlogout
+$LINK $THIS_PLACE/.config/qt5ct                 $HOME/.config/qt5ct
+$LINK $THIS_PLACE/.config/qt6ct                 $HOME/.config/qt6ct
 $LINK $THIS_PLACE/.zshrc 						$HOME/.zshrc
 $LINK $THIS_PLACE/.zprofile                     $HOME/.zprofile
 $LINK $THIS_PLACE/.p10k.zsh 					$HOME/.p10k.zsh

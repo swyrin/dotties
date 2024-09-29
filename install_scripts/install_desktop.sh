@@ -22,3 +22,6 @@ $PACMAN papirus-icon-theme
 $PACMAN power-profiles-daemon
 $PARU   catppuccin-cursors-mocha
 $PARU   catppuccin-gtk-theme-mocha
+$PARU   lightly-kf{5,6}-git
+$PACMAN qt{5,6}ct
+$PACMAN qt{5,6}-wayland

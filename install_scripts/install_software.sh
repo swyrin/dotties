@@ -14,7 +14,7 @@ $PACMAN playerctl			                    # --- CLI tool for controlling MPRIS-com
 $PACMAN pamixer				                    # --- CLI tool for controlling audio
 $PACMAN pavucontrol			                    # --- GUI tool for controlling audio
 $PACMAN zsh				                        # --- z shell
-$PARU   zsh-theme-powerlevel10k-bin-git         # --- z shell but on steroid
+$PARU   zsh-theme-powerlevel10k-git             # --- z shell but on steroid
 $PARU   ttf-meslo-nerd-font-powerlevel10k       # --- PL10k recommended font
 $PACMAN zsh-completions			                # --- z shell completions on tab
 $PACMAN zsh-autosuggestions                     # --- z shell suggestions (as a shadow text)

@@ -8,6 +8,7 @@ PARU="paru -S --needed --noconfirm --removemake"
 # Packages to make Hyprland functional
 $PACMAN hyprland hyprland hyprlock hypridle hyprpaper hyprcursor
 $PARU   hyprshot
+$PACMAN xdg-desktop-portal
 $PACMAN xdg-desktop-portal-hyprland
 $PACMAN xdg-desktop-portal-gtk
 $PACMAN polkit-gnome

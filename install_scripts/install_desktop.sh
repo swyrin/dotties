@@ -26,3 +26,4 @@ $PARU   catppuccin-gtk-theme-mocha
 $PARU   lightly-kf{5,6}-git
 $PACMAN qt{5,6}ct
 $PACMAN qt{5,6}-wayland
+$PACMAN libnotify mako

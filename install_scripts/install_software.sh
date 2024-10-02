@@ -4,7 +4,6 @@ set -euox pipefail
 PACMAN="sudo pacman -S --needed --noconfirm"
 PARU="paru -S --needed --noconfirm --removemake"
 
-$PACMAN mako				                    # --- libappnotify-compliant notification daemon
 $PACMAN alacritty        		                # --- terminal emulator
 $PACMAN rofi-wayland     		                # --- application launcher
 $PARU   rofimoji                                # --- emoji picker for rofi

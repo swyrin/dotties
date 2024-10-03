@@ -1,0 +1,30 @@
+(defvar eww "eww -c $HOME/.config/eww/")
+(defvar day 0)
+(defvar month 0)
+(defvar year 0)
+
+(defwindow calendar
+  :geometry 
+    (geometry 
+      :x "570px" 
+      :y "2px"
+      :width "400px"
+      :height "100px")
+  :stacking "fg"
+  :windowtype "dock"
+  :wm-ignore "false"
+  :monitor 0
+  (box
+    :class "cal"
+    :orientation "h"
+    :valign "fill"
+    :halign "fill"
+    (calendar
+      :day day
+      :month month
+      :year year
+      :show-details "true"
+      :show-heading "true"
+      :show-day-names "true")
+  )
+)

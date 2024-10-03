@@ -94,9 +94,9 @@
     },
 
     "clock": {
-        "format": "❤️ {:%H:%M    %a, %B %d}",
-        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "today-format": "{}",
+        "format": "❤️ {:%H:%M    %a, %B %d %Y}",
+        "tooltip": false,
+        "on-click": "~/.config/waybar/scripts/eww_calendar.sh"
     },
 
     "cpu": {

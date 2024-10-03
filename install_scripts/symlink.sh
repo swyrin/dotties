@@ -18,6 +18,7 @@ $LINK $THIS_PLACE/.config/fastfetch             $HOME/.config/fastfetch
 $LINK $THIS_PLACE/.config/wlogout               $HOME/.config/wlogout
 $LINK $THIS_PLACE/.config/qt5ct                 $HOME/.config/qt5ct
 $LINK $THIS_PLACE/.config/qt6ct                 $HOME/.config/qt6ct
+$LINK $THIS_PLACE/.config/eww                   $HOME/.config/eww
 $LINK $THIS_PLACE/.zshrc 						$HOME/.zshrc
 $LINK $THIS_PLACE/.zprofile                     $HOME/.zprofile
 $LINK $THIS_PLACE/.p10k.zsh 					$HOME/.p10k.zsh

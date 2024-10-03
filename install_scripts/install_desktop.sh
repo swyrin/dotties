@@ -28,3 +28,4 @@ $PACMAN qt{5,6}ct
 $PACMAN qt{5,6}-wayland
 $PACMAN libnotify mako
 $PARU   eww
+$PACMAN dex

@@ -9,7 +9,6 @@
         "hyprland/workspaces",
         "temperature",
         "battery"
-        // "custom/media"
     ],
 
     "modules-center": [
@@ -94,7 +93,7 @@
     },
 
     "clock": {
-        "format": "❤️ {:%H:%M    %a, %B %d %Y}",
+        "format": "  {:%H:%M    %a, %B %d %Y}",
         "tooltip": false,
         "on-click": "~/.config/waybar/scripts/eww_calendar.sh"
     },

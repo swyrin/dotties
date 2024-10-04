@@ -29,3 +29,7 @@ $PACMAN qt{5,6}-wayland
 $PACMAN libnotify mako
 $PARU   eww
 $PACMAN dex
+$PACMAN xdg-user-dirs
+
+# https://wiki.archlinux.org/title/XDG_user_directories#Creating_default_directories
+LC_ALL=C.UTF-8 xdg-user-dirs-update --force

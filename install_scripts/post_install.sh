@@ -5,8 +5,9 @@ set -u
 set -o pipefail
 set -x
 
-# Create XDG user directories
-LC_ALL=en_US.UTF-8 xdg-user-dirs-update --force
-
 # Change shell to zsh
 sudo chsh -s /usr/bin/zsh $(whoami)
+
+# Clear leftovers
+paru -Qtdq | sudo pacman -Rncsd -
+yes | paru -Sccd

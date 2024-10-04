@@ -22,4 +22,7 @@ $LINK $THIS_PLACE/.config/eww                   $HOME/.config/eww
 $LINK $THIS_PLACE/.zshrc 						$HOME/.zshrc
 $LINK $THIS_PLACE/.zprofile                     $HOME/.zprofile
 $LINK $THIS_PLACE/.p10k.zsh 					$HOME/.p10k.zsh
+
 $LINK $THIS_PLACE/assets/wallpaper.png          $HOME/Pictures/wallpaper.png
+
+sudo $LINK /usr/share/fontconfig/conf.avail/75-twemoji.conf /etc/fonts/conf.d/75-twemoji.conf

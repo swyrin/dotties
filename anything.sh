@@ -34,8 +34,8 @@ $THIS_PLACE/install_scripts/install_software.sh
 
 # Setup system
 $THIS_PLACE/install_scripts/install_fonts.sh
-$THIS_PLACE/install_scripts/setup_system.sh
 $THIS_PLACE/install_scripts/symlink.sh
+$THIS_PLACE/install_scripts/setup_system.sh
 
 # Post-installation
 $THIS_PLACE/install_scripts/post_install.sh

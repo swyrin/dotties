@@ -12,6 +12,7 @@
     ],
 
     "modules-center": [
+        "custom/notification",
         "clock",
         "power-profiles-daemon",
     ],
@@ -90,6 +91,12 @@
         "format": " ",
         "tooltip": false,
         "on-click": "wlogout"
+    },
+
+    "custom/notification": {
+        "format": " ",
+        "tooltip": false,
+        "on-click": "notify-send 'Not yet, brother'"
     },
 
     "clock": {

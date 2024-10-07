@@ -32,6 +32,7 @@ tooltip {
 #tray,
 #power-profiles-daemon,
 #workspaces,
+#custom-notification,
 #custom-power {
   padding: 0px 10px;
   border-radius: 8px;
@@ -141,4 +142,8 @@ tooltip {
 
 #power-profiles-daemon.power-saver {
   background-color: @green;
+}
+
+#custom-notification {
+  background-color: @rosewater;
 }

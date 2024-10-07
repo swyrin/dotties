@@ -26,3 +26,4 @@ $PACMAN powerline-fonts                         # --- powerline fonts
 $PACMAN fzf                                     # --- (f)u(z)zy (f)inder
 $PACMAN pkgfile                                 # --- Arch repo package lookup
 $PARU   oh-my-zsh-git                           # --- oh my zsh for powerlevel10k
+$PARU   spoofdpi-bin                            # --- DPI spoofer

@@ -6,7 +6,7 @@ set -euox pipefail
 THIS_PLACE=$(dirname "$(realpath $0)")
 THIS_PLACE="$(dirname "$THIS_PLACE")"
 
-LINK="ln -snf"
+LINK="sudo ln -snf"
 
 $LINK $THIS_PLACE/.config/alacritty                         $HOME/.config/alacritty
 $LINK $THIS_PLACE/.config/waybar                            $HOME/.config/waybar
@@ -25,5 +25,4 @@ $LINK $THIS_PLACE/.p10k.zsh 			                    $HOME/.p10k.zsh
 $LINK $THIS_PLACE/.nanorc			                        $HOME/.nanorc
 
 $LINK $THIS_PLACE/assets/wallpaper.png                      $HOME/Pictures/wallpaper.png
-
-sudo $LINK /usr/share/fontconfig/conf.avail/75-twemoji.conf /etc/fonts/conf.d/75-twemoji.conf
+$LINK /usr/share/fontconfig/conf.avail/75-twemoji.conf      /etc/fonts/conf.d/75-twemoji.conf

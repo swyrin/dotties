@@ -4,8 +4,8 @@ set -u
 set -o pipefail
 set -x
 
-SYSCTL_ENABLE="sudo systemctl enable --now"
-SYSCTL_ENABLE_USER="systemctl enable --user --now"
+SYSCTL_ENABLE="sudo systemctl enable"
+SYSCTL_ENABLE_USER="systemctl enable --user"
 
 # get dots directory
 THIS_PLACE=$(dirname "$(realpath $0)")

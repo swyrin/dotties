@@ -12,7 +12,7 @@ THIS_PLACE=$(dirname "$(realpath $0)")
 THIS_PLACE="$(dirname "$THIS_PLACE")"
 
 # ------ Login ------
-sudo systemctl enable sddm.service
+$SYSCTL_ENABLE sddm.service
 sudo mkdir /etc/sddm.conf.d -p
 sudo cp -f $THIS_PLACE/assets/wallpaper.png         /usr/share/sddm/themes/sddm-astronaut-theme/background.png
 sudo cp -f $THIS_PLACE/.config/sddm/theme.conf      /usr/share/sddm/themes/sddm-astronaut-theme/theme.conf
@@ -30,5 +30,5 @@ hyprshade install
 $SYSCTL_ENABLE_USER hyprshade.timer
 
 # ------ Network ------
-$SYSCTL_ENABLE NetworkManager
-$SYSCTL_ENABLE wpa_supplicant
+$SYSCTL_ENABLE NetworkManager.service
+$SYSCTL_ENABLE wpa_supplicant.service

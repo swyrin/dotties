@@ -10,4 +10,4 @@ $PACMAN wireplumber
 $PACMAN pipewire-audio
 $PACMAN pipewire-alsa
 $PACMAN pipewire-pulse
-$PACMAN {lib32-,}pipewire-jack
+$PACMAN {lib32-,}jack2

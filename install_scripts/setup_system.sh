@@ -28,3 +28,7 @@ $SYSCTL_ENABLE_USER wireplumber.service
 # ------ Desktop ------
 hyprshade install
 $SYSCTL_ENABLE_USER hyprshade.timer
+
+# ------ Network ------
+$SYSCTL_ENABLE NetworkManager
+$SYSCTL_ENABLE wpa_supplicant

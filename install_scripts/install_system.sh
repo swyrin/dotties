@@ -18,3 +18,7 @@ $PACMAN {lib32-,}vulkan-radeon
 $PACMAN {lib32-,}libva-mesa-driver
 $PACMAN {lib32-,}mesa-vdpau
 $PACMAN xf86-video-amdgpu
+
+# ------ Network ------
+$PACMAN networkmanager
+$PACMAN wpa_supplicant

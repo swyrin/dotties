@@ -27,3 +27,5 @@ $PACMAN fzf                                     # --- (f)u(z)zy (f)inder
 $PACMAN pkgfile                                 # --- Arch repo package lookup
 $PARU   oh-my-zsh-git                           # --- oh my zsh for powerlevel10k
 $PARU   spoofdpi-bin                            # --- DPI spoofer
+$PACMAN nano						                # --- simple editor runs on terminal
+$PARU 	nano-syntax-highlighting-git			    # --- nano syntax highlighting

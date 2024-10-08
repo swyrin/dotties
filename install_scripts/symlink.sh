@@ -21,7 +21,7 @@ $LINK $THIS_PLACE/.config/qt6ct                 $HOME/.config/qt6ct
 $LINK $THIS_PLACE/.config/eww                   $HOME/.config/eww
 $LINK $THIS_PLACE/.zshrc 						$HOME/.zshrc
 $LINK $THIS_PLACE/.p10k.zsh 			$HOME/.p10k.zsh
-$LINK $THIS_PLACE/.p10k.zsh 					$HOME/.p10k.zsh
+$LINK $THIS_PLACE/.nanorc			                        $HOME/.nanorc
 
 $LINK $THIS_PLACE/assets/wallpaper.png          $HOME/Pictures/wallpaper.png
 

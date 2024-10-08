@@ -4,6 +4,7 @@ set -euox pipefail
 PACMAN="sudo pacman -S --needed --noconfirm"
 PARU="paru -S --needed --noconfirm --removemake"
 
+$PACMAN nwg-look                                    # --- GTK theme configuration
 $PACMAN gnome-keyring libsecret libgnome-keyring	# --- GNOME keyring
 $PACMAN nautilus					                # --- GNOME Files
 $PACMAN file-roller					                # --- GNOME archive manager

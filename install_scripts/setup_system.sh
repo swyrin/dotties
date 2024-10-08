@@ -11,6 +11,9 @@ SYSCTL_ENABLE_USER="systemctl enable --user"
 THIS_PLACE=$(dirname "$(realpath $0)")
 THIS_PLACE="$(dirname "$THIS_PLACE")"
 
+# ------ System ------
+$SYSCTL_ENABLE power-profiles-daemon.service
+
 # ------ Login ------
 $SYSCTL_ENABLE sddm.service
 sudo mkdir /etc/sddm.conf.d -p

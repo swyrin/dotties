@@ -20,6 +20,7 @@ $PACMAN qt5-base qt5-quickcontrols2 qt5-svg
 $PARU   hyprshade
 $PARU   hyprpicker
 $PACMAN papirus-icon-theme
+$PARU   papirus-folders-catppuccin-git
 $PACMAN power-profiles-daemon
 $PARU   catppuccin-cursors-mocha
 $PARU   catppuccin-gtk-theme-mocha
@@ -33,3 +34,5 @@ $PACMAN xdg-user-dirs
 
 # https://wiki.archlinux.org/title/XDG_user_directories#Creating_default_directories
 LC_ALL=C.UTF-8 xdg-user-dirs-update --force
+
+papirus-folders -C cat-mocha-pink --theme Papirus-Dark
